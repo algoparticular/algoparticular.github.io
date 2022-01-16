@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         anime({
             targets: this,
             scale: 1.1,
-            fill: '#F26A25'
+            fill: '#FBB189'
         });
     });
     
