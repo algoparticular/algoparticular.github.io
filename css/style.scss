@@ -215,6 +215,9 @@ header {
     
     @media screen and (max-width: 768px) {
         height: 10vh;
+        flex-direction: column-reverse;
+        gap: 32px;
+        margin-top: 16px;
     }
     
     #logo {
@@ -226,11 +229,9 @@ header {
            height: 80px; 
         }
         
-        @media screen and (max-width: 768px) {
-            justify-content: flex-start;
-            
+        @media screen and (max-width: 768px) {            
             img {
-                height: 50px;
+                height: 60px;
             }
         }
     }
@@ -240,23 +241,27 @@ header {
         position: absolute;
         right: 0;
         justify-content: flex-end;
-        padding: 8px;             
+        padding: 8px;
+        
+        @media screen and (max-width: 768px) {
+            position: relative;
+        }
         
         .navbar-nav {
             display: flex;
             align-items: center;
             
-            @media screen and (min-width: 769px) and (max-width: 991px) {
+            @media screen and (max-width: 991px) {
                 flex-direction: row;
             }
 
             li {
-                padding: 0 10px;
-                margin-bottom: 0;
+                padding: 0 12px;
+                margin-bottom: 0;  
                 
                 @media screen and (max-width: 768px) {
-                    padding: 8px 0;
-                }                
+                    padding: 0 24px;
+                }
 
                 a {
                     font-size: 16px;
@@ -352,7 +357,7 @@ main {
     
             .drawingWrapper {
                 img {
-                    width: 100%;
+                    width: 85%;
                 }
             }
         }        
