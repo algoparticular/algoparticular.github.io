@@ -132,6 +132,17 @@ a {
         text-decoration: none;
     }
    
+    &:focus {
+        border-radius: 4px;
+        box-shadow: rgba(12, 151, 139, .3) 0px 0px 0px 4px;
+        outline: 0px;
+
+        -webkit-transition: all 300ms ease-out;
+        -moz-transition: all 300ms ease-out;
+        -o-transition: all 300ms ease-out;
+        transition: all 300ms ease-out;
+    }
+    
     .underline {
         display: block;
         position: absolute;
@@ -161,7 +172,7 @@ button,
     
     &:hover {
         color: $color-whiteMana;
-        background: $color-nepaliGreen;
+        background: $color-samaOrange;
         -webkit-transition: all 250ms ease-out;
         -moz-transition: all 250ms ease-out;
         -o-transition: all 250ms ease-out;
@@ -190,70 +201,106 @@ button,
 }
 
 
-/* ICONS */
-.icon {
-    position: fixed;
-    cursor: pointer;
-    width: 48px;
-    height: auto;    
-    z-index: 1040;
-    
-    &.primary {   
-        top: 18px;
-        left: 18px;
-    }
-    
-    &.bottom-left {
-        left: 18px;
-        bottom: 18px;          
-    }
-    
-    &.bottom-right {
-        right: 18px;
-        bottom: 18px;          
-    }
-    
-    &.instagram {
-        width: 30px;
-        height: auto;
-
-        -webkit-transition: all 250ms ease-out;
-        -moz-transition: all 250ms ease-out;
-        -o-transition: all 250ms ease-out;
-        transition: all 250ms ease-out;
-        
-        &:hover {
-            fill: $color-huitPurple;            
-        }        
-    }    
-    
-    @media screen and (max-width: 990px) {
-        width: 40px;        
-    }    
-}
-
 a.icon-link {
     display: contents;
 }
 
 
-/* BODY - Background */
+/* Header */
 header {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 18vh;
     
-    #logo {
-        height: 80px;
+    @media screen and (max-width: 768px) {
+        height: 10vh;
     }
+    
+    #logo {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        
+        img {
+           height: 80px; 
+        }
+        
+        @media screen and (max-width: 768px) {
+            justify-content: flex-start;
+            
+            img {
+                height: 50px;
+            }
+        }
+    }
+    
+    /*NAV*/
+    .navbar {
+        position: absolute;
+        right: 0;
+        justify-content: flex-end;
+        padding: 8px;             
+        
+        .navbar-nav {
+            display: flex;
+            align-items: center;
+            
+            @media screen and (min-width: 769px) and (max-width: 991px) {
+                flex-direction: row;
+            }
+
+            li {
+                padding: 0 10px;
+                margin-bottom: 0;
+                
+                @media screen and (max-width: 768px) {
+                    padding: 8px 0;
+                }                
+
+                a {
+                    font-size: 16px;
+                }
+
+                &.social {
+                    display: flex;
+                    align-items: center;
+                    
+                    a {
+                        height: 30px;
+                        
+                        &:focus {
+                            border-radius: 6px;
+                            box-shadow: rgba(12, 151, 139, .3) 0px 0px 0px 4px;
+                            outline: 0px;
+
+                            -webkit-transition: all 300ms ease-out;
+                            -moz-transition: all 300ms ease-out;
+                            -o-transition: all 300ms ease-out;
+                            transition: all 300ms ease-out;
+                        }                        
+                    }
+
+                    .icon {
+                        width: 30px;
+                        height: auto;
+
+                        &:hover {
+                            fill: $color-samaOrange;
+                            -webkit-transition: all 250ms ease-out;
+                            -moz-transition: all 250ms ease-out;
+                            -o-transition: all 250ms ease-out;
+                            transition: all 250ms ease-out;
+                        }                        
+                    }  
+                }
+            }
+        }
+    }    
 }
 
+/* Main sections */
 main {
-//    @media screen and (max-width: 768px) {
-//        padding: 0;
-//    }
-    
     section {
         display: flex;
         flex-direction: column;
@@ -270,6 +317,14 @@ main {
             display: flex;
             flex-direction: column;
             align-items: center;
+            
+            p {
+                margin-bottom: 4px;
+            }
+            
+            span {
+                color: $color-sonicSilver;
+            }
         }
          
         
@@ -285,7 +340,7 @@ main {
                 
                 &:hover {
                     transform: scale(1.1);                    
-                }
+                }                
             }
         }
         
@@ -304,17 +359,62 @@ main {
     }
 }
 
+/* Footer */
 footer {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: flex-end;
-    height: 10vh;
+    align-items: center;
+    margin-top: 5vh;
     
     .symbol {
         width: 36px;
+        margin-bottom: 5vh;
+    }
+    
+//    .rowWrapper {
+//        width: 100%;
+//        display: flex;
+//        justify-content: space-evenly;
+//        
+//        @media screen and (max-width: 768px) {
+//            flex-direction: column;
+//        }
+//        
+//        ul {
+//            li {
+//                
+//                @media screen and (max-width: 768px) {
+//                    text-align: center;
+//                }
+//                
+//                a {
+//                    font-size: 14px;
+//
+//                    &:hover {
+//                        color: $color-samaOrange;
+//                    }
+//                }
+//            }
+//        }
+//    }
+    
+    .copyright {
+        font-size: 14px;
+//        color: $color-sonicSilver;
+        
+        a {
+            font-size: 14px;
+            color: inherit;
+            
+            &:hover {
+                color: $color-samaOrange;
+            }
+        }        
     }
 }
 
+/* Background */
 #grain{
     z-index:-2;
     content:"";

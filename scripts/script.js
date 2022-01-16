@@ -1,6 +1,6 @@
 
 // wait until DOM is ready
-document.addEventListener("DOMContentLoaded", function(event) {
+document.addEventListener("DOMContentLoaded", function (event) {
 
 /////////////////////////////////////////////////////////////////////
 ///////////////////  + Grain background effect  /////////////////////
@@ -18,60 +18,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
                         loop: true,
                         autoplay: true
                     });
-    
-    function zoomAnim(element) {
-        anime({
-            targets: element,
-            scale: 1.1
-        });
-    }
-    
-    function leaveZoomAnim(element) {
-        anime({
-            targets: element,
-            scale: 1
-        });
-    }
-    
-    function animPath(path) {
-        var tl = anime.timeline();
-        tl.add({
-          targets: path,
-          strokeDashoffset: [0, anime.setDashoffset],
-          easing: 'easeInOutQuint',
-          duration: 1200,
-          delay: function(el, i) { return i * 150 },          
-        })       
-        .add({
-          targets: path,
-          strokeDashoffset: [anime.setDashoffset, 0],
-          duration: 1000,
-          easing: 'easeInExpo'       
-        }, '+=1000');            
-    }    
-    
-    /*HEART ICON*/
-    let heart = document.querySelector(".heart");
-    
-//    heart.addEventListener("mouseenter", function () {
-//        zoomAnim(this);
-//    });
-//    
-//    heart.addEventListener("mouseleave", function () {
-//        leaveZoomAnim(this);
-//    });
-    
-//    heart.addEventListener("click", function () {
-    heart.addEventListener("mouseenter", function () {
-        animPath('.heart path'); 
-        
-        //toggle grain animation
-        if(grainAnim.paused){
-            grainAnim.play();    
-        } else {
-            grainAnim.pause();   
-        }  
-    });
     
 /////////////////////////////////////////////////////////////////////
 ///////////////////  - Grain background effect  /////////////////////
@@ -157,9 +103,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
     // window load event makes sure image is 
     // loaded before running animation
     window.onload = function() {
-         $('.navbar-nav>li>a').on('click', function(){
-            $('.navbar-collapse').collapse('hide');
-        });
+//         $('.navbar-nav>li>a').on('click', function(){
+//            $('.navbar-collapse').collapse('hide');
+//        });
     };
     
     
