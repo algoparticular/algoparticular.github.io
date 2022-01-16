@@ -90,16 +90,16 @@ h4 {
 p {
   line-height: 150%;
   font-size: 18px;
-  margin: 0 0 24px;
-
-    span {
-        color: $color-sonicSilver;
-    }
+  margin: 0 0 24px;    
     
     @media screen and (max-width: 768px) {
         font-size: 16px;
         padding: 0 16px;
     }
+}
+
+span {
+    color: $color-sonicSilver;
 }
 
 ul {   
@@ -326,10 +326,6 @@ main {
             p {
                 margin-bottom: 4px;
             }
-            
-            span {
-                color: $color-sonicSilver;
-            }
         }
          
         
@@ -347,10 +343,9 @@ main {
                     transform: scale(1.1);                    
                 }                
             }
-        }
+        }        
         
         @media screen and (max-width: 768px) {
-            
             .rowWrapper {
                 flex-direction: column;
             }
@@ -360,7 +355,31 @@ main {
                     width: 85%;
                 }
             }
-        }        
+        }
+        
+        &#hero {
+            .drawingWrapper {
+                img {
+                    width: 80%;
+                }                
+            }
+            
+            @media screen and (max-width: 768px) {
+                padding-bottom: 5vh;
+                
+                .drawingWrapper {
+                    img {
+                        width: 100%;
+                    }                
+                }
+            }
+        }
+        
+        &#shops {
+            h2 {
+                margin-bottom: 0;
+            }
+        }
     }
 }
 
