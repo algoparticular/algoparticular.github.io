@@ -215,8 +215,8 @@ header {
     
     @media screen and (max-width: 768px) {
 //        height: 10vh;
-        flex-direction: column-reverse;
-        gap: 40px;
+//        flex-direction: column-reverse;
+//        gap: 40px;
 //        margin-top: 16px;
     }
     
@@ -237,31 +237,52 @@ header {
     }
     
     /*NAV*/
-    .navbar {
-        position: absolute;
-        right: 0;
-        justify-content: flex-end;
-        padding: 8px;
+//    .navbar {
+//        position: absolute;
+//        right: 0;
+//        justify-content: flex-end;
+//        padding: 8px;
+//        
+//        @media screen and (max-width: 768px) {
+//            position: relative;
+//        }
+//        
+//        
+//    }    
+}
+
+/* Main sections */
+main {
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10vh 0;
         
-        @media screen and (max-width: 768px) {
-            position: relative;
+        .rowWrapper {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
         }
         
-        .navbar-nav {
+        .column {
             display: flex;
+            flex-direction: column;
             align-items: center;
             
-            @media screen and (max-width: 991px) {
-                flex-direction: row;
+            p {
+                margin-bottom: 4px;
             }
+        }
+         
+        .social-nav {
+            display: flex;
+            align-items: center;
+            padding: 60px 0 0;
 
             li {
-                padding: 0 12px;
+                padding: 0 24px;
                 margin-bottom: 0;  
-                
-                @media screen and (max-width: 768px) {
-                    padding: 0 24px;
-                }
 
                 a {
                     font-size: 16px;
@@ -301,33 +322,7 @@ header {
                 }
             }
         }
-    }    
-}
-
-/* Main sections */
-main {
-    section {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 10vh 0;
         
-        .rowWrapper {
-            display: flex;
-            justify-content: space-around;
-            width: 100%;
-        }
-        
-        .column {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            
-            p {
-                margin-bottom: 4px;
-            }
-        }
-         
         
         .drawingWrapper {
             display: flex;
@@ -379,6 +374,10 @@ main {
             h2 {
                 margin-bottom: 0;
             }
+        }
+        
+        &#crypto {
+//            background-color: $color-black;
         }
     }
 }
