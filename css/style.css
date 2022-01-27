@@ -218,26 +218,50 @@ main section {
     main section .column p {
       margin-bottom: 4px; }
   /* line 278, /Users/juanmanuelynz/Library/Mobile Documents/com~apple~CloudDocs/Algo Particular iCloud/algoparticular.github.io/css/style.scss */
-  main section .social-nav {
+  main section .drawingWrapper {
+    display: flex;
+    justify-content: center; }
+    /* line 282, /Users/juanmanuelynz/Library/Mobile Documents/com~apple~CloudDocs/Algo Particular iCloud/algoparticular.github.io/css/style.scss */
+    main section .drawingWrapper.linked {
+      -webkit-transition: all 200ms ease-out;
+      -moz-transition: all 200ms ease-out;
+      -o-transition: all 200ms ease-out;
+      transition: all 200ms ease-out; }
+      /* line 288, /Users/juanmanuelynz/Library/Mobile Documents/com~apple~CloudDocs/Algo Particular iCloud/algoparticular.github.io/css/style.scss */
+      main section .drawingWrapper.linked:hover {
+        transform: scale(1.1); }
+  @media screen and (max-width: 767px) {
+    /* line 295, /Users/juanmanuelynz/Library/Mobile Documents/com~apple~CloudDocs/Algo Particular iCloud/algoparticular.github.io/css/style.scss */
+    main section .rowWrapper {
+      flex-direction: column; }
+    /* line 300, /Users/juanmanuelynz/Library/Mobile Documents/com~apple~CloudDocs/Algo Particular iCloud/algoparticular.github.io/css/style.scss */
+    main section .drawingWrapper img {
+      width: 85%; } }
+  @media screen and (min-width: 768px) {
+    /* line 306, /Users/juanmanuelynz/Library/Mobile Documents/com~apple~CloudDocs/Algo Particular iCloud/algoparticular.github.io/css/style.scss */
+    main section#hero {
+      padding-top: 0; } }
+  /* line 311, /Users/juanmanuelynz/Library/Mobile Documents/com~apple~CloudDocs/Algo Particular iCloud/algoparticular.github.io/css/style.scss */
+  main section#hero .social-nav {
     display: flex;
     align-items: center;
-    padding: 60px 0 0; }
-    /* line 283, /Users/juanmanuelynz/Library/Mobile Documents/com~apple~CloudDocs/Algo Particular iCloud/algoparticular.github.io/css/style.scss */
-    main section .social-nav li {
+    padding: 80px 0 0; }
+    /* line 316, /Users/juanmanuelynz/Library/Mobile Documents/com~apple~CloudDocs/Algo Particular iCloud/algoparticular.github.io/css/style.scss */
+    main section#hero .social-nav li {
       padding: 0 24px;
       margin-bottom: 0; }
-      /* line 287, /Users/juanmanuelynz/Library/Mobile Documents/com~apple~CloudDocs/Algo Particular iCloud/algoparticular.github.io/css/style.scss */
-      main section .social-nav li a {
+      /* line 320, /Users/juanmanuelynz/Library/Mobile Documents/com~apple~CloudDocs/Algo Particular iCloud/algoparticular.github.io/css/style.scss */
+      main section#hero .social-nav li a {
         font-size: 16px; }
-      /* line 291, /Users/juanmanuelynz/Library/Mobile Documents/com~apple~CloudDocs/Algo Particular iCloud/algoparticular.github.io/css/style.scss */
-      main section .social-nav li.social {
+      /* line 324, /Users/juanmanuelynz/Library/Mobile Documents/com~apple~CloudDocs/Algo Particular iCloud/algoparticular.github.io/css/style.scss */
+      main section#hero .social-nav li.social {
         display: flex;
         align-items: center; }
-        /* line 295, /Users/juanmanuelynz/Library/Mobile Documents/com~apple~CloudDocs/Algo Particular iCloud/algoparticular.github.io/css/style.scss */
-        main section .social-nav li.social a {
+        /* line 328, /Users/juanmanuelynz/Library/Mobile Documents/com~apple~CloudDocs/Algo Particular iCloud/algoparticular.github.io/css/style.scss */
+        main section#hero .social-nav li.social a {
           height: 30px; }
-          /* line 298, /Users/juanmanuelynz/Library/Mobile Documents/com~apple~CloudDocs/Algo Particular iCloud/algoparticular.github.io/css/style.scss */
-          main section .social-nav li.social a:focus {
+          /* line 331, /Users/juanmanuelynz/Library/Mobile Documents/com~apple~CloudDocs/Algo Particular iCloud/algoparticular.github.io/css/style.scss */
+          main section#hero .social-nav li.social a:focus {
             border-radius: 6px;
             box-shadow: rgba(12, 151, 139, 0.3) 0px 0px 0px 4px;
             outline: 0px;
@@ -245,79 +269,59 @@ main section {
             -moz-transition: all 300ms ease-out;
             -o-transition: all 300ms ease-out;
             transition: all 300ms ease-out; }
-        /* line 310, /Users/juanmanuelynz/Library/Mobile Documents/com~apple~CloudDocs/Algo Particular iCloud/algoparticular.github.io/css/style.scss */
-        main section .social-nav li.social .icon {
+        /* line 343, /Users/juanmanuelynz/Library/Mobile Documents/com~apple~CloudDocs/Algo Particular iCloud/algoparticular.github.io/css/style.scss */
+        main section#hero .social-nav li.social .icon {
           width: 30px;
           height: auto; }
-          /* line 314, /Users/juanmanuelynz/Library/Mobile Documents/com~apple~CloudDocs/Algo Particular iCloud/algoparticular.github.io/css/style.scss */
-          main section .social-nav li.social .icon:hover {
+          /* line 347, /Users/juanmanuelynz/Library/Mobile Documents/com~apple~CloudDocs/Algo Particular iCloud/algoparticular.github.io/css/style.scss */
+          main section#hero .social-nav li.social .icon:hover {
             fill: #FBB189;
             -webkit-transition: all 250ms ease-out;
             -moz-transition: all 250ms ease-out;
             -o-transition: all 250ms ease-out;
             transition: all 250ms ease-out; }
-  /* line 327, /Users/juanmanuelynz/Library/Mobile Documents/com~apple~CloudDocs/Algo Particular iCloud/algoparticular.github.io/css/style.scss */
-  main section .drawingWrapper {
-    display: flex;
-    justify-content: center; }
-    /* line 331, /Users/juanmanuelynz/Library/Mobile Documents/com~apple~CloudDocs/Algo Particular iCloud/algoparticular.github.io/css/style.scss */
-    main section .drawingWrapper.linked {
-      -webkit-transition: all 200ms ease-out;
-      -moz-transition: all 200ms ease-out;
-      -o-transition: all 200ms ease-out;
-      transition: all 200ms ease-out; }
-      /* line 337, /Users/juanmanuelynz/Library/Mobile Documents/com~apple~CloudDocs/Algo Particular iCloud/algoparticular.github.io/css/style.scss */
-      main section .drawingWrapper.linked:hover {
-        transform: scale(1.1); }
-  @media screen and (max-width: 767px) {
-    /* line 344, /Users/juanmanuelynz/Library/Mobile Documents/com~apple~CloudDocs/Algo Particular iCloud/algoparticular.github.io/css/style.scss */
-    main section .rowWrapper {
-      flex-direction: column; }
-    /* line 349, /Users/juanmanuelynz/Library/Mobile Documents/com~apple~CloudDocs/Algo Particular iCloud/algoparticular.github.io/css/style.scss */
-    main section .drawingWrapper img {
-      width: 85%; } }
-  /* line 357, /Users/juanmanuelynz/Library/Mobile Documents/com~apple~CloudDocs/Algo Particular iCloud/algoparticular.github.io/css/style.scss */
+  /* line 360, /Users/juanmanuelynz/Library/Mobile Documents/com~apple~CloudDocs/Algo Particular iCloud/algoparticular.github.io/css/style.scss */
   main section#hero .drawingWrapper img {
     width: 80%; }
   @media screen and (max-width: 767px) {
-    /* line 366, /Users/juanmanuelynz/Library/Mobile Documents/com~apple~CloudDocs/Algo Particular iCloud/algoparticular.github.io/css/style.scss */
+    /* line 369, /Users/juanmanuelynz/Library/Mobile Documents/com~apple~CloudDocs/Algo Particular iCloud/algoparticular.github.io/css/style.scss */
     main section#hero .drawingWrapper img {
       width: 100%; } }
-  /* line 374, /Users/juanmanuelynz/Library/Mobile Documents/com~apple~CloudDocs/Algo Particular iCloud/algoparticular.github.io/css/style.scss */
+  /* line 377, /Users/juanmanuelynz/Library/Mobile Documents/com~apple~CloudDocs/Algo Particular iCloud/algoparticular.github.io/css/style.scss */
   main section#shops h2 {
     margin-bottom: 0; }
-  /* line 379, /Users/juanmanuelynz/Library/Mobile Documents/com~apple~CloudDocs/Algo Particular iCloud/algoparticular.github.io/css/style.scss */
+  /* line 382, /Users/juanmanuelynz/Library/Mobile Documents/com~apple~CloudDocs/Algo Particular iCloud/algoparticular.github.io/css/style.scss */
   main section#crypto {
     background-color: #10100F; }
-    /* line 382, /Users/juanmanuelynz/Library/Mobile Documents/com~apple~CloudDocs/Algo Particular iCloud/algoparticular.github.io/css/style.scss */
+    /* line 385, /Users/juanmanuelynz/Library/Mobile Documents/com~apple~CloudDocs/Algo Particular iCloud/algoparticular.github.io/css/style.scss */
     main section#crypto h2, main section#crypto p {
       color: #E9EDD8; }
 
 /* Footer */
-/* line 390, /Users/juanmanuelynz/Library/Mobile Documents/com~apple~CloudDocs/Algo Particular iCloud/algoparticular.github.io/css/style.scss */
+/* line 393, /Users/juanmanuelynz/Library/Mobile Documents/com~apple~CloudDocs/Algo Particular iCloud/algoparticular.github.io/css/style.scss */
 footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 5vh; }
-  /* line 397, /Users/juanmanuelynz/Library/Mobile Documents/com~apple~CloudDocs/Algo Particular iCloud/algoparticular.github.io/css/style.scss */
+  /* line 400, /Users/juanmanuelynz/Library/Mobile Documents/com~apple~CloudDocs/Algo Particular iCloud/algoparticular.github.io/css/style.scss */
   footer .symbol {
     width: 36px;
     margin-bottom: 5vh; }
-  /* line 429, /Users/juanmanuelynz/Library/Mobile Documents/com~apple~CloudDocs/Algo Particular iCloud/algoparticular.github.io/css/style.scss */
+  /* line 432, /Users/juanmanuelynz/Library/Mobile Documents/com~apple~CloudDocs/Algo Particular iCloud/algoparticular.github.io/css/style.scss */
   footer .copyright {
     font-size: 14px; }
-    /* line 433, /Users/juanmanuelynz/Library/Mobile Documents/com~apple~CloudDocs/Algo Particular iCloud/algoparticular.github.io/css/style.scss */
+    /* line 436, /Users/juanmanuelynz/Library/Mobile Documents/com~apple~CloudDocs/Algo Particular iCloud/algoparticular.github.io/css/style.scss */
     footer .copyright a {
       font-size: 14px;
       color: inherit; }
-      /* line 437, /Users/juanmanuelynz/Library/Mobile Documents/com~apple~CloudDocs/Algo Particular iCloud/algoparticular.github.io/css/style.scss */
+      /* line 440, /Users/juanmanuelynz/Library/Mobile Documents/com~apple~CloudDocs/Algo Particular iCloud/algoparticular.github.io/css/style.scss */
       footer .copyright a:hover {
         color: #FBB189; }
 
 /* Background */
-/* line 445, /Users/juanmanuelynz/Library/Mobile Documents/com~apple~CloudDocs/Algo Particular iCloud/algoparticular.github.io/css/style.scss */
+/* line 448, /Users/juanmanuelynz/Library/Mobile Documents/com~apple~CloudDocs/Algo Particular iCloud/algoparticular.github.io/css/style.scss */
 #grain {
   z-index: -2;
   content: "";
