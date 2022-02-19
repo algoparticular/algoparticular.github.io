@@ -199,13 +199,44 @@ for (let item of images) {
 }
 
 /////////////////////////////////////////////////////////////////////
-////////////////////  - Gallery implementation  //////////////////////
+////////////////////  - Gallery implementation  /////////////////////
+/////////////////////////////////////////////////////////////////////    
+
+/////////////////////////////////////////////////////////////////////
+/////////////////////////  + Shop Gallery  //////////////////////////
+/////////////////////////////////////////////////////////////////////    
+
+//Create Flashcookie slides
+let fcGallery = document.getElementById("flashcookie");
+const fcImages = fcGallery.getElementsByTagName('img');
+let fcIndex = 0;
+
+//Create Threadless slides
+let tlGallery = document.getElementById("threadless");
+const tlImages = tlGallery.getElementsByTagName('img');
+let tlIndex = 0;
+
+function updateShops() {
+    fcImages[fcIndex].classList.add('hidden');
+    fcIndex < fcImages.length-1 ? fcIndex++ : fcIndex = 0;
+    fcImages[fcIndex].classList.remove('hidden');
+
+    tlImages[tlIndex].classList.add('hidden');
+    tlIndex < tlImages.length-1 ? tlIndex++ : tlIndex = 0;
+    tlImages[tlIndex].classList.remove('hidden');
+}
+
+setInterval(updateShops, 3000);
+
+
+/////////////////////////////////////////////////////////////////////
+/////////////////////////  - Shop Gallery  //////////////////////////
 /////////////////////////////////////////////////////////////////////    
 
     
     // window load event makes sure image is 
     // loaded before running animation
-    window.onload = function() {
+    window.onload = function() {        
 //         $('.navbar-nav>li>a').on('click', function(){
 //            $('.navbar-collapse').collapse('hide');
 //        });

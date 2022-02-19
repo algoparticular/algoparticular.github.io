@@ -1,6 +1,6 @@
 /* FONT IMPORT */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import url("https://use.typekit.net/tsq5whw.css");
+@import url("https://use.typekit.net/lni6mis.css");
 
 $color-white: #F7F8F1;
 $color-black: #10100F;
@@ -47,9 +47,9 @@ h1,h2,h3,h4,h5,h6,p {
 }
 
 h1 { 
-  font-family: kepler-std-subhead, serif;
-  font-weight: 700;
-  font-size: 4.25em;
+  font-family: six-hands-condensed, sans-serif;
+  font-weight: 400;
+  font-size: 6.25em;
   line-height: 1.01470588em;
   letter-spacing: -0.01em;
   margin: 0 0 8px;
@@ -61,17 +61,17 @@ h1 {
 }
 
 h2 {
-  font-family: kepler-std-subhead, serif;
-  font-weight: 700;
-  font-size: 2.625em;
+  font-family: six-hands-condensed, sans-serif;
+  font-weight: 400;
+  font-size: 4.625em;
   line-height: 1.0952381em;
   letter-spacing: -0.01em;
   margin: 0 0 8px;
 }
 
 h3 {
-  font-family: kepler-std-subhead, serif;
-  font-weight: 700;
+  font-family: six-hands-condensed, sans-serif;
+  font-weight: 400;
   font-size: 1.625em;
   line-height: 1.76923077em;
   letter-spacing: -0.01em;
@@ -190,6 +190,10 @@ button,
     }
 }
 
+.hidden {
+    display: none;
+}
+
 .align-end {
     align-self: flex-end;
 }
@@ -273,6 +277,7 @@ main {
             
             p {
                 margin-bottom: 4px;
+                text-align: center;
             }
         }
         
@@ -378,6 +383,16 @@ main {
             h2 {
                 margin-bottom: 0;
             }
+
+            .shop {
+                margin: 64px 0 16px;
+                border-radius: 18px;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                }
+            }
         }
         
         &#crypto {
@@ -432,6 +447,7 @@ footer {
     
     .copyright {
         font-size: 14px;
+        text-align: center;
 //        color: $color-sonicSilver;
         
         a {
@@ -458,6 +474,7 @@ footer {
     background-repeat: repeat;
 }
 
+/* Art gallery */
 #galleryWrapper {
     padding: 150px 7vw 200px;
     background-color: $color-black;
@@ -563,5 +580,4 @@ footer {
         }
     }
 }
-  
   
