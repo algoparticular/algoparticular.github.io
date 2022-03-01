@@ -382,22 +382,49 @@ main {
         &#shops {
             h2 {
                 margin-bottom: 0;
+                background: url(/assets/title_shop.svg) no-repeat;
+                background-size: contain;
+                height: 60px;
+                width: 180px;
+
+                span {
+                    display: none;
+                }
             }
 
             .shop {
                 margin: 64px 0 16px;
-                border-radius: 18px;
-                overflow: hidden;
+                // border-radius: 18px;                
+                // overflow: hidden;
+                clip-path: url(#atomClip);
+                width: 100%;
 
                 img {
                     width: 100%;
                 }
+
+                &:hover {
+                    transform: scale(1);
+                    opacity: .7;                    
+                } 
             }
         }
         
         &#crypto {
             background-color: $color-black;
-            
+            padding: 80px 0;
+
+            h2 {
+                background: url(/assets/title_nft.svg) no-repeat;
+                background-size: contain;
+                height: 60px;
+                width: 100px;
+
+                span {
+                    display: none;
+                }
+            }
+
             h2, p {
                 color: $color-whiteMana;   
             }            

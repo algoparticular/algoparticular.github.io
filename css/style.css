@@ -377,20 +377,47 @@ main section#hero .drawingWrapper img {
 
 main section#shops h2 {
   margin-bottom: 0;
+  background: url(/assets/title_shop.svg) no-repeat;
+  background-size: contain;
+  height: 60px;
+  width: 180px;
+}
+
+main section#shops h2 span {
+  display: none;
 }
 
 main section#shops .shop {
   margin: 64px 0 16px;
-  border-radius: 18px;
-  overflow: hidden;
+  -webkit-clip-path: url(#atomClip);
+          clip-path: url(#atomClip);
+  width: 100%;
 }
 
 main section#shops .shop img {
   width: 100%;
 }
 
+main section#shops .shop:hover {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: .7;
+}
+
 main section#crypto {
   background-color: #10100F;
+  padding: 80px 0;
+}
+
+main section#crypto h2 {
+  background: url(/assets/title_nft.svg) no-repeat;
+  background-size: contain;
+  height: 60px;
+  width: 100px;
+}
+
+main section#crypto h2 span {
+  display: none;
 }
 
 main section#crypto h2, main section#crypto p {
