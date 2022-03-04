@@ -394,18 +394,16 @@ main {
 
             .shop {
                 margin: 64px 0 16px;
-                // border-radius: 18px;                
-                // overflow: hidden;
-                clip-path: url(#atomClip);
-                width: 100%;
+                clip-path: inset(3% round 48% 43%);           
+                transition: clip-path .2s ease-in-out;
 
                 img {
                     width: 100%;
                 }
 
-                &:hover {
+                &:hover {                    
                     transform: scale(1);
-                    opacity: .7;                    
+                    clip-path: inset(0% round 42% 47%);
                 } 
             }
         }

@@ -389,9 +389,12 @@ main section#shops h2 span {
 
 main section#shops .shop {
   margin: 64px 0 16px;
-  -webkit-clip-path: url(#atomClip);
-          clip-path: url(#atomClip);
-  width: 100%;
+  -webkit-clip-path: inset(3% round 48% 43%);
+          clip-path: inset(3% round 48% 43%);
+  -webkit-transition: -webkit-clip-path .2s ease-in-out;
+  transition: -webkit-clip-path .2s ease-in-out;
+  transition: clip-path .2s ease-in-out;
+  transition: clip-path .2s ease-in-out, -webkit-clip-path .2s ease-in-out;
 }
 
 main section#shops .shop img {
@@ -401,7 +404,8 @@ main section#shops .shop img {
 main section#shops .shop:hover {
   -webkit-transform: scale(1);
           transform: scale(1);
-  opacity: .7;
+  -webkit-clip-path: inset(0% round 42% 47%);
+          clip-path: inset(0% round 42% 47%);
 }
 
 main section#crypto {
