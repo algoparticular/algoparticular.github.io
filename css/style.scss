@@ -24,12 +24,9 @@ html, .root {
 }
 
 body {
+    margin: 0;
     position: relative;
-    padding: 18px 0;
     background-color: $color-whiteMana;
-    width: 100%; 
-    overflow-x: hidden;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -39,6 +36,12 @@ body {
     
     font-size: 1em;
     line-height: 1.4375em;
+}
+
+#app {
+    padding: 18px 0;
+    width: 100%; 
+    overflow-x: hidden;
 }
 
 /* TEXT */
@@ -209,6 +212,53 @@ a.icon-link {
     display: contents;
 }
 
+// GRID
+.row {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 16px;
+    row-gap: 16px;    
+    
+    @media screen and (max-width: 767px) {
+        grid-template-columns: repeat(4, [col] 1fr);
+    }
+}
+
+.col-4 {
+    grid-column: span 4;
+}
+
+.col-8 {
+    grid-column: span 8;
+}
+
+.col-3 {
+    grid-column: span 3;
+}
+
+.col-6 {
+    grid-column: span 6;
+}
+
+.col-12 {
+    grid-column: span 12;
+}
+
+// Mobile grid
+// .col-sm-2 {
+//     grid-column: span 2;
+// }
+  
+// .col-sm-4 {
+//     grid-column: span 4;
+// }
+
 
 /* Header */
 header {
@@ -262,13 +312,7 @@ main {
         flex-direction: column;
         align-items: center;
         padding: 10vh 0;
-        margin-bottom: 10vh;
-        
-        .rowWrapper {
-            display: flex;
-            justify-content: space-around;
-            width: 100%;
-        }
+        margin-bottom: 10vh;        
         
         .column {
             display: flex;
@@ -283,7 +327,7 @@ main {
         
         .drawingWrapper {
             display: flex;
-            justify-content: center;
+            justify-content: center;            
             
             &.linked {
                 -webkit-transition: all 200ms ease-out;
@@ -298,7 +342,7 @@ main {
         }        
         
         @media screen and (max-width: 767px) {
-            .rowWrapper {
+            .row {
                 flex-direction: column;
             }
     
@@ -393,6 +437,7 @@ main {
             }
 
             .shop {
+                width: 60% !important;
                 margin: 64px 0 16px;
                 clip-path: inset(3% round 48% 43%);           
                 transition: clip-path .2s ease-in-out;
@@ -436,14 +481,14 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 5vh;
+    margin-top: 90px;
     
     .symbol {
         width: 36px;
         margin-bottom: 5vh;
     }
     
-//    .rowWrapper {
+//    .row {
 //        width: 100%;
 //        display: flex;
 //        justify-content: space-evenly;
@@ -550,7 +595,7 @@ footer {
 }
 
 .modal {
-    display: none; 
+    display: flex; 
     position: fixed; 
     z-index: 2; 
     padding-top: 0; 
@@ -585,18 +630,7 @@ footer {
             color: $color-whiteMana;
             padding: 10px 0;
         }
-    }    
-    
-    /* Add Animation - Zoom in the Modal */
-    .modal-content, #caption { 
-        animation-name: zoom;
-        animation-duration: 0.6s;
     }
-    
-    @keyframes zoom {
-        from {transform:scale(0)} 
-        to {transform:scale(1)}
-    }       
     
     /* 100% Image Width on Smaller Screens */
     @media only screen and (max-width: 700px){
