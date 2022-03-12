@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta property="og:title" content="Algo Particular">
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Algo Particular cuenta las historias de una partícula que al volverse consciente de sí, aprende a navegar el Universo libremente transmitiendo su verdad: todos somos iguales, todos somos uno, (no) somos (de) aquí.">
+    <meta property="og:image" content="https://algoparticular.com/assets/socialImage.jpg">
+    <meta property="og:url" content="https://algoparticular.com">
+    <meta property="og:site_name" content="Algo Particular">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@algoparticular">
+    <meta name="twitter:image:alt" content="Welcome particles!">
+
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+
+    <title>Algo Particular</title>
+
+    <!-- import the webpage's stylesheet -->    
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- This is Vue -->
+	<script src="https://unpkg.com/vue@next"></script>
+    <script src="https://unpkg.com/vue-i18n@9"></script>
+    
+  </head>  
+    
+  <body>
+    <div id="app">
+        <header class="not-home">
+            <nav>
+                <a href="index.html">{{ $t("message.back") }}</a>
+            </nav>
+            <div id="logo">
+                <img src="/assets/Logo.svg">
+                <!-- <img src="/assets/Logo_comunidad.svg"> -->
+            </div>
+            <nav>
+                <select class="lang" v-model="$i18n.locale">
+                    <option v-for="locale in $i18n.availableLocales" :key="`locale-${locale}`" :value="locale">{{ locale.toUpperCase() }}</option>
+                </select>
+            </nav>     
+        </header>
+        
+        <main>
+            <section class="intro">
+                <p>{{ $t("message.community") }}</p>
+            </section>
+            <section>
+                <h2>{{ $t("message.communityA") }}</h2>
+                <div class="grid">
+                    <particle v-for="item in particles.proton" :particle="item" :key="item.id"></particle>
+                </div>
+            </section>
+            <section>
+                <h2>{{ $t("message.communityB") }}</h2>
+                <div class="grid">
+                    <particle v-for="item in particles.neutron" :particle="item" :key="item.id"></particle>               
+                </div>
+            </section>
+            <section>
+                <h2>{{ $t("message.communityC") }}</h2>
+                <div class="grid">
+                    <particle v-for="item in particles.electron" :particle="item" :key="item.id"></particle>                   
+                </div>
+            </section>
+        </main>  
+
+        <footer>
+            <a href="index.html">
+                <svg class="symbol seed" v-on:mouseenter="zoomAnim" v-on:mouseleave="leaveZoomAnim" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 59 56">
+                    <path class="a" d="M27.93,43.12v-8c-.13-3.81-.4-4.08-4.15-3.95C17.31,31.41,5.34,33.19,3,33.18A2.85,2.85,0,0,1,.28,31.41a2.83,2.83,0,0,1,.55-3.2,8.84,8.84,0,0,1,7.08-2.93,126,126,0,0,0,13.42-.89c5.79-.61,5.79-.61,5.79-6.54,0-3.06-.75-6-1.16-9.06a19.41,19.41,0,0,1-.27-5A4.09,4.09,0,0,1,29.43.35C31.14.48,32.16,1.64,32.5,4c.41,4.83.75,9.6.88,14.3,0,4.36.14,4.36,4.36,4.36,4.91,0,12.74.13,17.51.13,2,0,3.74,1.3,3.74,2.8s-1.18,5-4.15,4.63c-5.85-1.21-13.35,0-18.66-.14-1.91,0-2.46.75-2.32,2.45.27,6,.41,11.11.89,17A4.28,4.28,0,0,1,32.57,54c-2.32,1.29-4.64.14-4.77-2.66C27.8,49,27.8,46.05,27.93,43.12Z"/>
+                    <path class="a" d="M49.05,49.52c.27-2.45,2.18-4.36,4.36-4.22a3.76,3.76,0,0,1,3.47,4.09,4.9,4.9,0,0,1-4.63,4.08A3.68,3.68,0,0,1,49.05,49.52Z"/>
+                    <path class="a" d="M11.32,6.55C11.32,8,8.59,10.63,7,10.77A3.69,3.69,0,0,1,3.35,7.09C3.48,4.91,5.53,2.6,7.09,2.6,9,2.8,11.32,5,11.32,6.55Z"/>
+                    <path class="a" d="M48.09,4.5C48.23,1.57,49.8-.13,52.45,0a3.5,3.5,0,0,1,3.07,3.47c-.14,2.18-2.32,4.63-4.16,4.63S48.09,6.68,48.09,4.5Z"/>
+                    <path class="a" d="M8.73,56a2.84,2.84,0,0,1-2.86-3.2A4.64,4.64,0,0,1,10.5,48.3a3.5,3.5,0,0,1,3.06,3.33A5,5,0,0,1,8.73,56Z"/>
+                </svg>
+            </a>
+
+            <p class="copyright"></p>        
+        </footer>
+
+    </div>
+    <div id="grain"></div>
+      
+    <!-- import the webpage's javascript file -->
+    <script src="/plugins/anime.min.js"></script>  
+    <script type="module" src="/scripts/script.js"></script>
+  </body>
+</html>

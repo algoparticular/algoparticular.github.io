@@ -31,6 +31,7 @@
   <body>
     <div id="app">
         <header>
+            <nav></nav>
             <div id="logo">
                 <img src="/assets/Logo.svg">
             </div>
@@ -88,11 +89,11 @@
             </div>
 
             <section id="shops">
-                <h2><span>Tiendas</span></h2>
+                <h2><span>{{ $t("message.shops") }}</span></h2>
                 <!-- <span>Shops</span> -->
                 <div class="grid">
                     <div class="column col-6 col-sm-4">
-                        <a id="flashcookie" class="drawingWrapper shop" href="https://algoparticular.flashcookie.com" target="_blank">
+                        <a id="flashcookie" class="drawingWrapper atom shop" href="https://algoparticular.flashcookie.com" target="_blank">
                             <img v-bind:src="shops.current_fc"/>
                         </a>
                         <p class="">
@@ -100,7 +101,7 @@
                         </p>
                     </div>
                     <div class="column col-6 col-sm-4">
-                        <a id="threadless" class="drawingWrapper shop" href="https://algoparticular.threadless.com" target="_blank">
+                        <a id="threadless" class="drawingWrapper atom shop" href="https://algoparticular.threadless.com" target="_blank">
                             <img v-bind:src="shops.current_tl"/>
                         </a>
                         <p class="">
@@ -114,7 +115,7 @@
                 <h2><span>NFTs</span></h2>            
                 <div class="row">
                     <div class="column col-6 col-sm-4">
-                        <a class="drawingWrapper linked" href="https://hicetnunc.art/algoparticular" target="_blank">
+                        <a class="drawingWrapper zoom" href="https://hicetnunc.art/algoparticular" target="_blank">
                             <img src="assets/shop/HEN_white.svg" />
                         </a>              
                         <p class="">
@@ -134,7 +135,7 @@
                 <path class="a" d="M8.73,56a2.84,2.84,0,0,1-2.86-3.2A4.64,4.64,0,0,1,10.5,48.3a3.5,3.5,0,0,1,3.06,3.33A5,5,0,0,1,8.73,56Z"/>
             </svg>
 
-            <p class="copyright">{{ $t("message.copyrightA") }} <a href="https://juanmanuelynz.com" target="_blank" >Juan</a>{{ $t("message.copyrightB") }}</p>        
+            <p class="copyright">{{ $t("message.copyrightA") }} <a href="https://juanmanuelynz.com" target="_blank" >Juan</a><br>{{ $t("message.copyrightB") }} <a href="community.html">{{ $t("message.copyrightC") }}</a></p>        
         </footer>
 
     </div>

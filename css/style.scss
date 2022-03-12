@@ -31,13 +31,17 @@ html, .root {
 }
 
 .grid {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    column-gap: 16px;
-    row-gap: 16px;    
+    // display: grid;
+    // grid-template-columns: repeat(12, 1fr);
+    // column-gap: 16px;
+    // row-gap: 16px;   
+    display: flex;
+    justify-content: space-around; 
+    width: 100%;
     
-    @media screen and (max-width: 767px) {
-        grid-template-columns: repeat(4, [col] 1fr);
+    @media screen and (max-width: 600px) {
+        flex-direction: column;
+        // grid-template-columns: repeat(4, [col] 1fr);
     }
 }
 
@@ -54,7 +58,8 @@ html, .root {
 }
 
 .col-6 {
-    grid-column: span 6;
+    // grid-column: span 6;
+    width: 42%;
 }
 
 .col-12 {
@@ -97,9 +102,9 @@ h1,h2,h3,h4,h5,h6,p {
 }
 
 h1 { 
-  font-family: six-hands-condensed, sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 400;
-  font-size: 6.25em;
+  font-size: 4.25em;
   line-height: 1.01470588em;
   letter-spacing: -0.01em;
   margin: 0 0 8px;
@@ -111,16 +116,16 @@ h1 {
 }
 
 h2 {
-  font-family: six-hands-condensed, sans-serif;
-  font-weight: 400;
-  font-size: 4.625em;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 2.625em;
   line-height: 1.0952381em;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.05em;
   margin: 0 0 8px;
 }
 
 h3 {
-  font-family: six-hands-condensed, sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-size: 1.625em;
   line-height: 1.76923077em;
@@ -222,7 +227,7 @@ button,
     
     &:hover {
         color: $color-whiteMana;
-        background: $color-samaOrange;
+        background: $color-lorange;
         -webkit-transition: all 250ms ease-out;
         -moz-transition: all 250ms ease-out;
         -o-transition: all 250ms ease-out;
@@ -266,14 +271,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 18vh;
-    
-    @media screen and (max-width: 767px) {
-//        height: 10vh;
-//        flex-direction: column-reverse;
-//        gap: 40px;
-//        margin-top: 16px;
-    }
+    height: 18vh;    
     
     #logo {
         flex-grow: 1;
@@ -284,7 +282,7 @@ header {
            height: 80px; 
         }
         
-        @media screen and (max-width: 767px) {            
+        @media screen and (max-width: 600px) {            
             img {
                 height: 60px;
             }
@@ -293,17 +291,16 @@ header {
     
     /*NAV*/
     nav {
-        position: absolute;
-        top: 16px;
-        right: 32px;
+        min-width: 10%;
         padding: 8px;
         border-radius: 8px;
         backdrop-filter: blur(4.2px);
         -webkit-backdrop-filter: blur(4.2px);
+        display: flex;
+        justify-content: center;
 
-        @media screen and (max-width: 767px) {            
-            top: 0;
-            right: 16px;
+        @media screen and (max-width: 600px) {            
+
         }
 
         .lang {
@@ -334,6 +331,16 @@ header {
             }
         }
     }
+
+    &.not-home {
+
+        @media screen and (max-width: 600px) {
+            //        height: 10vh;
+            //        flex-direction: column-reverse;
+            //        gap: 40px;
+            //        margin-top: 16px;
+        }
+    }
 }
 
 /* Main sections */
@@ -358,9 +365,9 @@ main {
         
         .drawingWrapper {
             display: flex;
-            justify-content: center;            
+            justify-content: center;
             
-            &.linked {
+            &.zoom {
                 -webkit-transition: all 200ms ease-out;
                 -moz-transition: all 200ms ease-out;
                 -o-transition: all 200ms ease-out;
@@ -370,9 +377,38 @@ main {
                     transform: scale(1.1);                    
                 }                
             }
+
+            &.atom {
+                clip-path: inset(3% round 48% 43%);           
+                transition: clip-path .2s ease-in-out;
+                margin: 64px 0 16px;
+
+                img {
+                    width: 100%; 
+                }
+
+                &:hover {
+                    clip-path: inset(0% round 42% 47%);
+                }
+            }                
+
+            &.particle {
+                background: $color-black;
+                width: 200px !important;
+                height: 200px;
+
+                &.electron {
+                    width: 130px !important;
+                    height: 130px;
+                }
+
+                &:hover + p {
+                    font-weight: 600;
+                }
+            }
         }        
         
-        @media screen and (max-width: 767px) {
+        @media screen and (max-width: 600px) {
             .row {
                 flex-direction: column;
             }
@@ -380,6 +416,19 @@ main {
             .drawingWrapper {
                 img {
                     width: 85%;
+                }
+            }
+        }
+
+        &.intro {
+            padding-bottom: 0;
+
+            p {
+                width: 45%;
+                text-align: center;
+
+                @media screen and (max-width: 600px) {
+                    width: 100%;
                 }
             }
         }
@@ -426,7 +475,7 @@ main {
                             height: auto;
 
                             &:hover {
-                                fill: $color-samaOrange;
+                                fill: $color-lorange;
                                 -webkit-transition: all 250ms ease-out;
                                 -moz-transition: all 250ms ease-out;
                                 -o-transition: all 250ms ease-out;
@@ -468,19 +517,7 @@ main {
             }
 
             .shop {
-                width: 60% !important;
-                margin: 64px 0 16px;
-                clip-path: inset(3% round 48% 43%);           
-                transition: clip-path .2s ease-in-out;
-
-                img {
-                    width: 100%;
-                }
-
-                &:hover {                    
-                    transform: scale(1);
-                    clip-path: inset(0% round 42% 47%);
-                } 
+                width: 70% !important;               
             }
         }
         
@@ -539,7 +576,7 @@ footer {
 //                    font-size: 14px;
 //
 //                    &:hover {
-//                        color: $color-samaOrange;
+//                        color: $color-lorange;
 //                    }
 //                }
 //            }
@@ -556,7 +593,7 @@ footer {
             color: inherit;
             
             &:hover {
-                color: $color-samaOrange;
+                color: $color-lorange;
             }
         }        
     }
