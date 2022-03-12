@@ -312,6 +312,8 @@ header {
             padding: 4px 10px;
             -webkit-appearance: none;
             background-color: transparent;
+            border-color: $color-black;
+            border-radius: 4px;
 
             &:hover {
                 color: $color-lorange;

@@ -307,6 +307,8 @@ header nav .lang {
   padding: 4px 10px;
   -webkit-appearance: none;
   background-color: transparent;
+  border-color: #10100F;
+  border-radius: 4px;
 }
 
 header nav .lang:hover {
