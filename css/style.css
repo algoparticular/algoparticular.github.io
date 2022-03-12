@@ -294,6 +294,13 @@ header nav {
   -webkit-backdrop-filter: blur(4.2px);
 }
 
+@media screen and (max-width: 767px) {
+  header nav {
+    top: 8px;
+    right: 16px;
+  }
+}
+
 header nav .lang {
   color: #10100F;
   font-weight: 400;

@@ -301,6 +301,11 @@ header {
         backdrop-filter: blur(4.2px);
         -webkit-backdrop-filter: blur(4.2px);
 
+        @media screen and (max-width: 767px) {            
+            top: 8px;
+            right: 16px;
+        }
+
         .lang {
             color: $color-black;
             font-weight: 400;
