@@ -296,7 +296,7 @@ header nav {
 
 @media screen and (max-width: 767px) {
   header nav {
-    top: 8px;
+    top: 0;
     right: 16px;
   }
 }
