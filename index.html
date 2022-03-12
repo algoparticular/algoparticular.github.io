@@ -24,6 +24,7 @@
 
     <!-- This is Vue -->
 	<script src="https://unpkg.com/vue@next"></script>
+    <script src="https://unpkg.com/vue-i18n@9"></script>
     
   </head>  
     
@@ -32,7 +33,12 @@
         <header>
             <div id="logo">
                 <img src="/assets/Logo.svg">
-            </div>        
+            </div>
+            <nav>
+                <select class="lang" v-model="$i18n.locale">
+                    <option v-for="locale in $i18n.availableLocales" :key="`locale-${locale}`" :value="locale">{{ locale.toUpperCase() }}</option>
+                </select>
+            </nav>     
         </header>
         
         <main>
@@ -65,11 +71,7 @@
             
             <section id="galleryWrapper">
                 <p>
-                    Algo Particular cuenta las historias de una partícula que al volverse consciente de sí, aprende a navegar el Universo libremente.<br>Bajo la premisa hermética "Como es arriba, es abajo", transmite su verdad: todos somos iguales, todos somos uno, (no) somos (de) aquí.
-                    <br>
-                    <span>
-                        Something Particular tells the stories of a particle that upon becoming self-aware, learns to navigate the Universe freely.<br>Under the Hermetic premise "As above, so below", it conveys its truth: we are all the same, we are all one, we are (not from) here.
-                    </span>
+                    {{ $t("message.hello") }}
                 </p>            
                 <div id="gallery">
                     <a class="gallery-item" v-for="(item, i) of gallery" v-on:click="openModal(i)">
@@ -87,25 +89,23 @@
 
             <section id="shops">
                 <h2><span>Tiendas</span></h2>
-                <span>Shops</span>
+                <!-- <span>Shops</span> -->
                 <div class="grid">
                     <div class="column col-6 col-sm-4">
                         <a id="flashcookie" class="drawingWrapper shop" href="https://algoparticular.flashcookie.com" target="_blank">
                             <img v-bind:src="shops.current_fc"/>
                         </a>
                         <p class="">
-                            Tienda FlashCookie, sólo para Argentina
+                            {{ $t("message.shopFC") }}
                         </p>
-                        <span>Flashcookie store, only in Argentina</span>
                     </div>
                     <div class="column col-6 col-sm-4">
                         <a id="threadless" class="drawingWrapper shop" href="https://algoparticular.threadless.com" target="_blank">
                             <img v-bind:src="shops.current_tl"/>
                         </a>
                         <p class="">
-                            Tienda Threadless, envíos a todo el mundo
+                            {{ $t("message.shopTL") }}
                         </p>
-                        <span>Threadless store, shipping worldwide from the US</span>
                     </div>
                 </div>
             </section>
@@ -118,9 +118,8 @@
                             <img src="assets/shop/HEN_white.svg" />
                         </a>              
                         <p class="">
-                            Colecciona partículas en Hic et Nunc!
+                            {{ $t("message.shopHEN") }}
                         </p>
-                        <span>Collect particles on Hic et Nunc!</span>
                     </div>                
                 </div>
             </section>      
@@ -135,7 +134,7 @@
                 <path class="a" d="M8.73,56a2.84,2.84,0,0,1-2.86-3.2A4.64,4.64,0,0,1,10.5,48.3a3.5,3.5,0,0,1,3.06,3.33A5,5,0,0,1,8.73,56Z"/>
             </svg>
 
-            <p class="copyright">Ideado por <a href="https://juanmanuelynz.com" target="_blank" >Juan</a>, co-creado con el &#10084; de una comunidad</p>        
+            <p class="copyright">{{ $t("message.copyrightA") }} <a href="https://juanmanuelynz.com" target="_blank" >Juan</a>{{ $t("message.copyrightB") }}</p>        
         </footer>
 
     </div>

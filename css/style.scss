@@ -23,6 +23,53 @@ html, .root {
   line-height: 23px;
 }
 
+// GRID
+.row {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 16px;
+    row-gap: 16px;    
+    
+    @media screen and (max-width: 767px) {
+        grid-template-columns: repeat(4, [col] 1fr);
+    }
+}
+
+.col-4 {
+    grid-column: span 4;
+}
+
+.col-8 {
+    grid-column: span 8;
+}
+
+.col-3 {
+    grid-column: span 3;
+}
+
+.col-6 {
+    grid-column: span 6;
+}
+
+.col-12 {
+    grid-column: span 12;
+}
+
+// Mobile grid
+// .col-sm-2 {
+//     grid-column: span 2;
+// }
+  
+// .col-sm-4 {
+//     grid-column: span 4;
+// }
+
 body {
     margin: 0;
     position: relative;
@@ -212,56 +259,10 @@ a.icon-link {
     display: contents;
 }
 
-// GRID
-.row {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    column-gap: 16px;
-    row-gap: 16px;    
-    
-    @media screen and (max-width: 767px) {
-        grid-template-columns: repeat(4, [col] 1fr);
-    }
-}
-
-.col-4 {
-    grid-column: span 4;
-}
-
-.col-8 {
-    grid-column: span 8;
-}
-
-.col-3 {
-    grid-column: span 3;
-}
-
-.col-6 {
-    grid-column: span 6;
-}
-
-.col-12 {
-    grid-column: span 12;
-}
-
-// Mobile grid
-// .col-sm-2 {
-//     grid-column: span 2;
-// }
-  
-// .col-sm-4 {
-//     grid-column: span 4;
-// }
-
 
 /* Header */
 header {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -291,18 +292,41 @@ header {
     }
     
     /*NAV*/
-//    .navbar {
-//        position: absolute;
-//        right: 0;
-//        justify-content: flex-end;
-//        padding: 8px;
-//        
-//        @media screen and (max-width: 767px) {
-//            position: relative;
-//        }
-//        
-//        
-//    }    
+    nav {
+        position: absolute;
+        top: 16px;
+        right: 32px;
+        padding: 8px;
+        border-radius: 8px;
+        backdrop-filter: blur(4.2px);
+        -webkit-backdrop-filter: blur(4.2px);
+
+        .lang {
+            color: $color-black;
+            font-weight: 400;
+            padding: 4px 10px;
+            -webkit-appearance: none;
+            background-color: transparent;
+
+            &:hover {
+                color: $color-lorange;
+                -webkit-transition: all 250ms ease-out;
+                -moz-transition: all 250ms ease-out;
+                -o-transition: all 250ms ease-out;
+                transition: all 250ms ease-out;
+            }
+
+            &:focus {
+                box-shadow: rgba(254, 136, 36, 0.36) 0px 0px 0px 4px;
+                outline: 0px;
+
+                -webkit-transition: all 300ms ease-out;
+                -moz-transition: all 300ms ease-out;
+                -o-transition: all 300ms ease-out;
+                transition: all 300ms ease-out;
+            }
+        }
+    }
 }
 
 /* Main sections */

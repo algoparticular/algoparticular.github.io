@@ -2,7 +2,7 @@
 const VueApp = {
     // Put variables here
     data() {
-        return {
+        return {            
             showModal: false,
             modal: {
                 src: '',
@@ -117,6 +117,37 @@ const VueApp = {
         this.updateShops();
     }
   };
+
+  const messages = {
+    es: {
+        message: {
+            hello: 'Algo Particular cuenta las historias de una partícula que al volverse consciente de sí, aprende a navegar el Universo libremente.<br>Bajo la premisa hermética "Como es arriba, es abajo", transmite su verdad: todos somos iguales, todos somos uno, (no) somos (de) aquí.',
+            shopFC: 'Tienda FlashCookie, sólo para Argentina',
+            shopTL: 'Tienda Threadless, envíos a todo el mundo',
+            shopHEN: 'Colecciona partículas en Hic et Nunc!',
+            copyrightA: 'Ideado por',
+            copyrightB: ', co-creado con el ❤ de una comunidad',
+          }
+    },
+    en: {
+        message: {
+            hello: 'Something Particular tells the stories of a particle that upon becoming self-aware, learns to navigate the Universe freely.<br>Under the Hermetic premise "As above, so below", it conveys its truth: we are all the same, we are all one, we are (not from) here.',
+            shopFC: 'Flashcookie store, only in Argentina',
+            shopTL: 'Threadless store, shipping worldwide from the US',
+            shopHEN: 'Collect particles on Hic et Nunc!',
+            copyrightA: 'Ideated by',
+            copyrightB: ', co-created with the ❤ of a community.',
+          }
+    }
+  }
   
+  // Initialize Lang
+  const i18n = VueI18n.createI18n({
+    locale: 'es', // set locale
+    fallbackLocale: 'en', // set fallback locale
+    messages, // set locale messages
+  });
+
   // Initialize Vue
-  Vue.createApp(VueApp).mount('#app');
+  Vue.createApp(VueApp).use(i18n).mount('#app');
+  
