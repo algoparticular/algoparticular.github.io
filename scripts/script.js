@@ -200,7 +200,7 @@ const VueApp = {
             communityC: 'Electrones',
             back: 'Volver',
             aMessage: 'Descubre tu mensaje Particular de hoy',
-            aMessageButton: 'Descubrir',
+            aMessageButton: 'Sacar una carta',
           }
     },
     en: {
@@ -219,7 +219,7 @@ const VueApp = {
             communityC: 'Electrons',
             back: 'Back',
             aMessage: 'Discover your Particular message for today',
-            aMessageButton: 'Discover',
+            aMessageButton: 'Take a card',
           }
     }
   }
