@@ -41,7 +41,7 @@
                     </select>
                 </nav>
             </div>
-            <div id="logo" class="community">                
+            <div id="logo">                
                 <img src="/assets/Logo.svg">
             </div>     
         </header>
@@ -49,13 +49,13 @@
         <main>
             <section class="intro">
                 <p>{{ $t("message.aMessage") }}</p>
+                <button @click="getMessage()">{{ $t("message.aMessageButton") }}</button>
             </section>
             <section>
                 <!-- <h2>{{ $t("message.communityA") }}</h2> -->
                 <div class="column">                    
-	                <button @click="getMessage()">{{ $t("message.aMessageButton") }}</button>
-                    
-                    <p>{{ randomNumber }}</p>
+                    <!-- <p>{{ randomNumber }}</p> -->
+                    <card :message="randomCard"></card>
                 </div>
             </section>
             

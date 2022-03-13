@@ -498,6 +498,7 @@ main section .drawingWrapper.particle:hover + p {
 
 main section.intro {
   padding-bottom: 0;
+  margin-bottom: 0;
 }
 
 main section.intro p {

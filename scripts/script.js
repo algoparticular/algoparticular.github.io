@@ -1,9 +1,11 @@
 import Particle from './Particle.js';
+import Card from './Card.js';
 
 // Configure Vue here
 const VueApp = {
     components: {
-        Particle
+        Particle,
+        Card
     },
 
     // Put variables here
@@ -108,6 +110,7 @@ const VueApp = {
                 ],
             },
             randomNumber: '',
+            randomCard: {},
         }
     },    
   
@@ -154,6 +157,8 @@ const VueApp = {
         getMessage() {		
             this.randomNumber = Math.random() * this.gallery.length;
             this.randomNumber = this.randomNumber.toFixed();
+            
+            this.randomCard = this.gallery[this.randomNumber];
         }
     },
 
@@ -194,8 +199,8 @@ const VueApp = {
             communityB: 'Neutrones',
             communityC: 'Electrones',
             back: 'Volver',
-            aMessage: 'Empieza el día con un mensaje de los guías',
-            aMessageButton: 'Dame mi mensaje Particular',
+            aMessage: 'Descubre tu mensaje Particular de hoy',
+            aMessageButton: 'Descubrir',
           }
     },
     en: {
@@ -213,8 +218,8 @@ const VueApp = {
             communityB: 'Neutrons',
             communityC: 'Electrons',
             back: 'Back',
-            aMessage: 'Start the day with a message from the guides',
-            aMessageButton: 'Dame mi mensaje Particular',
+            aMessage: 'Discover your Particular message for today',
+            aMessageButton: 'Discover',
           }
     }
   }
