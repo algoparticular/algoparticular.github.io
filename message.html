@@ -31,17 +31,19 @@
   <body>
     <div id="app">
         <header class="not-home">
-            <nav>
-                <a href="index.html">{{ $t("message.back") }}</a>
-            </nav>
-            <div id="logo">
-                <img src="/assets/Logo.svg">
+            <div class="navigation">
+                <nav>
+                    <a href="index.html">{{ $t("message.back") }}</a>
+                </nav>
+                <nav>
+                    <select class="lang" v-model="$i18n.locale">
+                        <option v-for="locale in $i18n.availableLocales" :key="`locale-${locale}`" :value="locale">{{ locale.toUpperCase() }}</option>
+                    </select>
+                </nav>
             </div>
-            <nav>
-                <select class="lang" v-model="$i18n.locale">
-                    <option v-for="locale in $i18n.availableLocales" :key="`locale-${locale}`" :value="locale">{{ locale.toUpperCase() }}</option>
-                </select>
-            </nav>     
+            <div id="logo" class="community">                
+                <img src="/assets/Logo.svg">
+            </div>     
         </header>
         
         <main>
@@ -51,7 +53,7 @@
             <section>
                 <!-- <h2>{{ $t("message.communityA") }}</h2> -->
                 <div class="column">                    
-	                <button @click="getMessage()">Dame mi mensaje</button>
+	                <button @click="getMessage()">{{ $t("message.aMessageButton") }}</button>
                     
                     <p>{{ randomNumber }}</p>
                 </div>

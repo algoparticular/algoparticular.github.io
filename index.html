@@ -31,15 +31,18 @@
   <body>
     <div id="app">
         <header>
-            <nav></nav>
+            <div class="navigation">
+                <nav></nav>
+                
+                <nav>
+                    <select class="lang" v-model="$i18n.locale">
+                        <option v-for="locale in $i18n.availableLocales" :key="`locale-${locale}`" :value="locale">{{ locale.toUpperCase() }}</option>
+                    </select>
+                </nav>
+            </div>
             <div id="logo">
                 <img src="/assets/Logo.svg">
             </div>
-            <nav>
-                <select class="lang" v-model="$i18n.locale">
-                    <option v-for="locale in $i18n.availableLocales" :key="`locale-${locale}`" :value="locale">{{ locale.toUpperCase() }}</option>
-                </select>
-            </nav>     
         </header>
         
         <main>

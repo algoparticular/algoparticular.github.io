@@ -37,10 +37,12 @@ html, .root {
     // row-gap: 16px;   
     display: flex;
     justify-content: space-around; 
+    align-items: center;
     width: 100%;
     
     @media screen and (max-width: 600px) {
-        flex-direction: column;
+        flex-direction: column;   
+        justify-content: center;     
         // grid-template-columns: repeat(4, [col] 1fr);
     }
 }
@@ -48,11 +50,19 @@ html, .root {
 .col-4 {
     // grid-column: span 4;
     width: 23%;
+
+    @media screen and (max-width: 600px) {
+        width: 90%;
+    }
 }
 
 .col-6 {
     // grid-column: span 6;
     width: 42%;
+
+    @media screen and (max-width: 600px) {
+        width: 100%;
+    }
 }
 
 
@@ -180,7 +190,7 @@ p {
   font-size: 18px;
   margin: 0 0 24px;    
     
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 600px) {
         font-size: 16px;
         padding: 0 16px;
     }
@@ -304,7 +314,15 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 18vh;    
+    flex-direction: column;
+    gap: 16px;
+    height: 18vh;
+
+    .navigation {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
     
     #logo {
         flex-grow: 1;
@@ -324,6 +342,12 @@ header {
         @media screen and (max-width: 600px) {            
             img {
                 height: 60px;
+            }
+
+            &.community {
+                img {
+                    height: 36px;
+                }
             }
         }
     }

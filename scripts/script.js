@@ -195,6 +195,7 @@ const VueApp = {
             communityC: 'Electrones',
             back: 'Volver',
             aMessage: 'Empieza el día con un mensaje de los guías',
+            aMessageButton: 'Dame mi mensaje Particular',
           }
     },
     en: {
@@ -213,6 +214,7 @@ const VueApp = {
             communityC: 'Electrons',
             back: 'Back',
             aMessage: 'Start the day with a message from the guides',
+            aMessageButton: 'Dame mi mensaje Particular',
           }
     }
   }
