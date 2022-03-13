@@ -34,23 +34,11 @@ html, .root {
 }
 
 .col-4 {
-  grid-column: span 4;
-}
-
-.col-8 {
-  grid-column: span 8;
-}
-
-.col-3 {
-  grid-column: span 3;
+  width: 23%;
 }
 
 .col-6 {
   width: 42%;
-}
-
-.col-12 {
-  grid-column: span 12;
 }
 
 body {
@@ -106,7 +94,55 @@ h2 {
   font-size: 2.625em;
   line-height: 1.0952381em;
   letter-spacing: -0.05em;
-  margin: 0 0 8px;
+  margin: 0;
+}
+
+h2 span {
+  display: none;
+}
+
+h2.svg {
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 60px;
+  width: 180px;
+}
+
+h2.shopTitle.es {
+  background-image: url(/assets/titles/title_shop_es.svg);
+}
+
+h2.shopTitle.en {
+  background-image: url(/assets/titles/title_shop_en.svg);
+}
+
+h2.nftTitle {
+  background-image: url(/assets/titles/title_nft.svg);
+  width: 100px;
+}
+
+h2.protonTitle.es {
+  background-image: url(/assets/titles/title_proton_es.svg);
+}
+
+h2.protonTitle.en {
+  background-image: url(/assets/titles/title_proton_en.svg);
+}
+
+h2.neutronTitle.es {
+  background-image: url(/assets/titles/title_neutron_es.svg);
+}
+
+h2.neutronTitle.en {
+  background-image: url(/assets/titles/title_neutron_en.svg);
+}
+
+h2.electronTitle.es {
+  background-image: url(/assets/titles/title_electron_es.svg);
+}
+
+h2.electronTitle.en {
+  background-image: url(/assets/titles/title_electron_en.svg);
 }
 
 h3 {
@@ -214,7 +250,7 @@ button,
 button:hover,
 .button:hover {
   color: #E9EDD8;
-  background: #F26A25;
+  background: #F4844C;
   -webkit-transition: all 250ms ease-out;
   transition: all 250ms ease-out;
 }
@@ -279,6 +315,10 @@ header #logo img {
   height: 80px;
 }
 
+header #logo.community img {
+  height: 50px;
+}
+
 @media screen and (max-width: 600px) {
   header #logo img {
     height: 60px;
@@ -310,7 +350,7 @@ header nav .lang {
 }
 
 header nav .lang:hover {
-  color: #F26A25;
+  color: #F4844C;
   -webkit-transition: all 250ms ease-out;
   transition: all 250ms ease-out;
 }
@@ -490,7 +530,7 @@ main section#hero .social-nav li.social .icon {
 }
 
 main section#hero .social-nav li.social .icon:hover {
-  fill: #F26A25;
+  fill: #F4844C;
   -webkit-transition: all 250ms ease-out;
   transition: all 250ms ease-out;
 }
@@ -505,18 +545,6 @@ main section#hero .drawingWrapper img {
   }
 }
 
-main section#shops h2 {
-  margin-bottom: 0;
-  background: url(/assets/title_shop.svg) no-repeat;
-  background-size: contain;
-  height: 60px;
-  width: 180px;
-}
-
-main section#shops h2 span {
-  display: none;
-}
-
 main section#shops .shop {
   width: 70% !important;
 }
@@ -524,17 +552,6 @@ main section#shops .shop {
 main section#crypto {
   background-color: #10100F;
   padding: 80px 0;
-}
-
-main section#crypto h2 {
-  background: url(/assets/title_nft.svg) no-repeat;
-  background-size: contain;
-  height: 60px;
-  width: 100px;
-}
-
-main section#crypto h2 span {
-  display: none;
 }
 
 main section#crypto h2, main section#crypto p {
@@ -575,7 +592,7 @@ footer .copyright a {
 }
 
 footer .copyright a:hover {
-  color: #F26A25;
+  color: #F4844C;
 }
 
 /* Background */

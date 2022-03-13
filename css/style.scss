@@ -13,7 +13,7 @@ $color-katusYellow: #F7E4AA;
 $color-samaOrange: #FBB189;
 $color-sporaRed: #F18B7E;
 
-$color-lorange: #F26A25;
+$color-lorange: #F4844C;
 $color-sonicSilver: #777777;
 
 $grid-gutter-width: 24px !default;
@@ -46,15 +46,8 @@ html, .root {
 }
 
 .col-4 {
-    grid-column: span 4;
-}
-
-.col-8 {
-    grid-column: span 8;
-}
-
-.col-3 {
-    grid-column: span 3;
+    // grid-column: span 4;
+    width: 23%;
 }
 
 .col-6 {
@@ -62,18 +55,6 @@ html, .root {
     width: 42%;
 }
 
-.col-12 {
-    grid-column: span 12;
-}
-
-// Mobile grid
-// .col-sm-2 {
-//     grid-column: span 2;
-// }
-  
-// .col-sm-4 {
-//     grid-column: span 4;
-// }
 
 body {
     margin: 0;
@@ -121,7 +102,59 @@ h2 {
   font-size: 2.625em;
   line-height: 1.0952381em;
   letter-spacing: -0.05em;
-  margin: 0 0 8px;
+  margin: 0;
+
+    span {
+        display: none;
+    }
+
+    &.svg {
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 60px;
+        width: 180px;
+    }
+
+    &.shopTitle {
+        &.es {
+            background-image: url(/assets/titles/title_shop_es.svg);
+        }
+        &.en {
+            background-image: url(/assets/titles/title_shop_en.svg);
+        }
+    }
+
+    &.nftTitle {
+        background-image: url(/assets/titles/title_nft.svg);
+        width: 100px;        
+    }
+
+    &.protonTitle {
+        &.es {
+            background-image: url(/assets/titles/title_proton_es.svg);
+        }
+        &.en {
+            background-image: url(/assets/titles/title_proton_en.svg);
+        }
+    }
+
+    &.neutronTitle {
+        &.es {
+            background-image: url(/assets/titles/title_neutron_es.svg);
+        }
+        &.en {
+            background-image: url(/assets/titles/title_neutron_en.svg);
+        }
+    }
+
+    &.electronTitle {
+        &.es {
+            background-image: url(/assets/titles/title_electron_es.svg);
+        }
+        &.en {
+            background-image: url(/assets/titles/title_electron_en.svg);
+        }
+    }
 }
 
 h3 {
@@ -280,6 +313,12 @@ header {
         
         img {
            height: 80px; 
+        }
+
+        &.community {
+            img {
+                height: 50px;
+            }
         }
         
         @media screen and (max-width: 600px) {            
@@ -504,18 +543,6 @@ main {
         }
         
         &#shops {
-            h2 {
-                margin-bottom: 0;
-                background: url(/assets/title_shop.svg) no-repeat;
-                background-size: contain;
-                height: 60px;
-                width: 180px;
-
-                span {
-                    display: none;
-                }
-            }
-
             .shop {
                 width: 70% !important;               
             }
@@ -524,17 +551,6 @@ main {
         &#crypto {
             background-color: $color-black;
             padding: 80px 0;
-
-            h2 {
-                background: url(/assets/title_nft.svg) no-repeat;
-                background-size: contain;
-                height: 60px;
-                width: 100px;
-
-                span {
-                    display: none;
-                }
-            }
 
             h2, p {
                 color: $color-whiteMana;   

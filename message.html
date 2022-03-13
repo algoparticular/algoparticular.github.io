@@ -17,7 +17,7 @@
 
     <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 
-    <title>Algo Particular</title>
+    <title>Un Mensaje Particular</title>
 
     <!-- import the webpage's stylesheet -->    
     <link rel="stylesheet" href="/css/style.css">
@@ -34,8 +34,8 @@
             <nav>
                 <a href="index.html">{{ $t("message.back") }}</a>
             </nav>
-            <div id="logo" class="community">                
-                <img src="/assets/Logo_comunidad.svg">
+            <div id="logo">
+                <img src="/assets/Logo.svg">
             </div>
             <nav>
                 <select class="lang" v-model="$i18n.locale">
@@ -49,29 +49,12 @@
                 <p>{{ $t("message.community") }}</p>
             </section>
             <section>
-                <h2 class="svg protonTitle es" v-if="$i18n.locale === 'es'"><span>{{ $t("message.communityA") }}</span></h2>
-                <h2 class="svg protonTitle en" v-if="$i18n.locale === 'en'"><span>{{ $t("message.communityA") }}</span></h2>
-                
+                <h2>{{ $t("message.communityA") }}</h2>
                 <div class="grid">
-                    <particle v-for="item in particles.proton" :particle="item" :key="item.id"></particle>
-                </div>
-            </section>
-            <section>
-                <h2 class="svg neutronTitle es" v-if="$i18n.locale === 'es'"><span>{{ $t("message.communityB") }}</span></h2>
-                <h2 class="svg neutronTitle en" v-if="$i18n.locale === 'en'"><span>{{ $t("message.communityB") }}</span></h2>
-                
-                <div class="grid">
-                    <particle v-for="item in particles.neutron" :particle="item" :key="item.id"></particle>               
-                </div>
-            </section>
-            <section>
-                <h2 class="svg electronTitle es" v-if="$i18n.locale === 'es'"><span>{{ $t("message.communityC") }}</span></h2>
-                <h2 class="svg electronTitle en" v-if="$i18n.locale === 'en'"><span>{{ $t("message.communityC") }}</span></h2>
 
-                <div class="grid">
-                    <particle v-for="item in particles.electron" :particle="item" :key="item.id"></particle>                   
                 </div>
             </section>
+            
         </main>  
 
         <footer>
