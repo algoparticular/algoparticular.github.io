@@ -13,58 +13,58 @@ const VueApp = {
         return {            
             showModal: false,
             modal: {
-                src: '',
+                image: '',
                 caption: ''
             },
             gallery: [
                 {
                     title: "Nekkhamma",
-                    src: "/assets/gallery/1 Nekkhamma.jpg",
+                    image: "/assets/gallery/1 Nekkhamma.jpg",
                     description: "",
                 },
                 {
                     title: "Sila",
-                    src: "/assets/gallery/2 Sila.jpg",
+                    image: "/assets/gallery/2 Sila.jpg",
                     description: "",
                 },
                 {
                     title: "Dana",
-                    src: "/assets/gallery/3 Dana.jpg",
+                    image: "/assets/gallery/3 Dana.jpg",
                     description: "",
                 },
                 {
                     title: "Pañña",
-                    src: "/assets/gallery/4 Pañña.jpg",
+                    image: "/assets/gallery/4 Pañña.jpg",
                     description: "",
                 },
                 {
                     title: "Viriya",
-                    src: "/assets/gallery/5 Viriya.jpg",
+                    image: "/assets/gallery/5 Viriya.jpg",
                     description: "",
                 },
                 {
                     title: "Kshanti",
-                    src: "/assets/gallery/6 Kshanti.jpg",
+                    image: "/assets/gallery/6 Kshanti.jpg",
                     description: "",
                 },
                 {
                     title: "Sacca",
-                    src: "/assets/gallery/7 Sacca.jpg",
+                    image: "/assets/gallery/7 Sacca.jpg",
                     description: "",
                 },
                 {
                     title: "Addhitthana",
-                    src: "/assets/gallery/8 Addhitthana.jpg",
+                    image: "/assets/gallery/8 Addhitthana.jpg",
                     description: "",
                 },
                 {
                     title: "Metta",
-                    src: "/assets/gallery/9 Metta.jpg",
+                    image: "/assets/gallery/9 Metta.jpg",
                     description: "",
                 },
                 {
                     title: "Upekka",
-                    src: "/assets/gallery/10 Upekka.jpg",
+                    image: "/assets/gallery/10 Upekka.jpg",
                     description: "",
                 },
             ],
@@ -110,14 +110,36 @@ const VueApp = {
                 ],
             },
             randomNumber: '',
-            randomCard: {},
+            randomCard: {
+                name: '',
+                description: '',
+                image: '',
+                afirmation: '',
+                invitation: ''
+            },
+            cards: [
+                {
+                    name: 'Aceptación',
+                    description: 'La aceptación es la capacidad para asumir la vida y a los otros tal como son, sin intentar cambiar o luchar contra aquello que no podemos controlar. Aceptar que hay realidades que exceden tu control, no es una actitud estática, es una decisión activa, que nos invita a no cargar  ninguna malicia hacia nada o nadie. Al reconocer la diversidad, somos capaces de transformarnos. Al aceptar aquello que te hace único, eso particular que habita en vos, te vuelves más confiado y tu ser divino se revela.',
+                    image: '/assets/gallery/8 Addhitthana.jpg',
+                    afirmation: 'Acepto quien soy y lo que me rodea.',
+                    invitation: 'Dale aceptate como sos!'
+                },
+                {
+                    name: 'Belleza',
+                    description: 'Experimentar un profundo placer en un mundo lleno de muchas clases de belleza es una alegría de la vida. Creer que existe una sola clase de belleza equivale a no prestar atenciòn a la naturaleza. Poder ver lo bello aun en la apariencia más desafiante es un alimento para el alma. A medida que sintonizas con la particular belleza de tu ser, de los otros y de la naturaleza, tu resonancia se convierte en la de la belleza, y se irradia hacia todo lo que te rodea, volviéndolo luminoso.',
+                    image: '/assets/gallery/9 Metta.jpg',
+                    afirmation: 'Iluminó mi belleza y la de los otros.',
+                    invitation: 'Me miro al espejo y digo, Soy una bella partícula'
+                },
+            ],
         }
     },    
   
     // Functions go here
     methods: {
         openModal(i) {
-            this.modal.src = this.gallery[i].src;
+            this.modal.image = this.gallery[i].image;
             this.modal.caption = this.gallery[i].title;
 
             this.showModal = true;
@@ -125,7 +147,7 @@ const VueApp = {
         closeModal() {
             this.showModal = false;
 
-            this.modal.src = '';
+            this.modal.image = '';
             this.modal.caption = '';
         },
         updateShops(){
@@ -154,11 +176,11 @@ const VueApp = {
                 fill: '#10100F'
             });
         },
-        getMessage() {		
-            this.randomNumber = Math.random() * this.gallery.length;
+        getMessage() {            
+            this.randomNumber = Math.random() * (this.cards.length - 1);
             this.randomNumber = this.randomNumber.toFixed();
             
-            this.randomCard = this.gallery[this.randomNumber];
+            this.randomCard = this.cards[this.randomNumber];
         }
     },
 
@@ -201,6 +223,8 @@ const VueApp = {
             back: 'Volver',
             aMessage: 'Descubre tu mensaje Particular de hoy',
             aMessageButton: 'Sacar una carta',
+            afirmation: 'Afirmación',
+            invitation: 'Invitación',
           }
     },
     en: {
@@ -220,6 +244,8 @@ const VueApp = {
             back: 'Back',
             aMessage: 'Discover your Particular message for today',
             aMessageButton: 'Take a card',
+            afirmation: 'Afirmation',
+            invitation: 'Invitation',
           }
     }
   }

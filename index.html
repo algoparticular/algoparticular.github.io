@@ -79,14 +79,14 @@
                 </p>            
                 <div id="gallery">
                     <a class="gallery-item" v-for="(item, i) of gallery" v-on:click="openModal(i)">
-                        <img v-bind:alt="item.title" v-bind:src="item.src">
+                        <img v-bind:alt="item.title" v-bind:src="item.image">
                     </a>
                 </div>
             </section>
             <!-- The Modal -->
             <div id="gallery-modal" class="modal" v-if="showModal" v-on:click="closeModal()">
                 <div class="modal-content">
-                    <img v-bind:src="modal.src">
+                    <img v-bind:src="modal.image">
                     <div id="caption">{{modal.caption}}</div>
                 </div>            
             </div>

@@ -59,6 +59,16 @@ html, .root {
   }
 }
 
+.col-8 {
+  width: 60%;
+}
+
+@media screen and (max-width: 600px) {
+  .col-8 {
+    width: 100%;
+  }
+}
+
 body {
   margin: 0;
   position: relative;
@@ -259,7 +269,7 @@ button,
   border: none;
   background: #10100F;
   height: 40px;
-  border-radius: 4px;
+  border-radius: 8px;
   color: #E9EDD8;
   padding: 10px 20px;
   cursor: pointer;
@@ -318,7 +328,6 @@ header {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 16px;
-  height: 18vh;
   /*NAV*/
 }
 
@@ -357,7 +366,7 @@ header #logo.community img {
     height: 60px;
   }
   header #logo.community img {
-    height: 36px;
+    height: 40px;
   }
 }
 
@@ -440,6 +449,10 @@ main section .drawingWrapper {
           justify-content: center;
 }
 
+main section .drawingWrapper img {
+  width: 100%;
+}
+
 main section .drawingWrapper.zoom {
   -webkit-transition: all 200ms ease-out;
   transition: all 200ms ease-out;
@@ -458,10 +471,6 @@ main section .drawingWrapper.atom {
   transition: clip-path .2s ease-in-out;
   transition: clip-path .2s ease-in-out, -webkit-clip-path .2s ease-in-out;
   margin: 64px 0 16px;
-}
-
-main section .drawingWrapper.atom img {
-  width: 100%;
 }
 
 main section .drawingWrapper.atom:hover {
@@ -747,5 +756,46 @@ footer .copyright a:hover {
   .modal .modal-content {
     width: 100%;
   }
+}
+
+#card .drawingWrapper {
+  border-radius: 36px;
+  overflow: hidden;
+}
+
+#card h3 {
+  font-weight: 600;
+  margin-top: 24px;
+}
+
+#card p {
+  text-align: justify;
+}
+
+#card .bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  margin-top: 32px;
+}
+
+#card .bottom div {
+  width: 46%;
+  padding: 0 2%;
+}
+
+#card .bottom div h4 {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+#card .bottom div p {
+  text-align: center;
+  color: #777777;
+  font-size: 14px;
 }
 /*# sourceMappingURL=style.css.map */

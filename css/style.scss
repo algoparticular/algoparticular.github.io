@@ -53,12 +53,20 @@ html, .root {
 
     @media screen and (max-width: 600px) {
         width: 90%;
-    }
+    } 
 }
 
 .col-6 {
     // grid-column: span 6;
     width: 42%;
+
+    @media screen and (max-width: 600px) {
+        width: 100%;
+    }
+}
+
+.col-8 {
+    width: 60%;
 
     @media screen and (max-width: 600px) {
         width: 100%;
@@ -263,7 +271,7 @@ button,
     border: none;
     background: $color-black;
     height: 40px;
-    border-radius: 4px;
+    border-radius: 8px;
     color: $color-whiteMana;
     padding: 10px 20px;
     cursor: pointer;
@@ -316,7 +324,7 @@ header {
     align-items: center;
     flex-direction: column;
     gap: 16px;
-    height: 18vh;
+    // height: 18vh;
 
     .navigation {
         display: flex;
@@ -346,7 +354,7 @@ header {
 
             &.community {
                 img {
-                    height: 36px;
+                    height: 40px;
                 }
             }
         }
@@ -429,6 +437,10 @@ main {
         .drawingWrapper {
             display: flex;
             justify-content: center;
+
+            img {
+                width: 100%; 
+            }
             
             &.zoom {
                 -webkit-transition: all 200ms ease-out;
@@ -445,10 +457,6 @@ main {
                 clip-path: inset(3% round 48% 43%);           
                 transition: clip-path .2s ease-in-out;
                 margin: 64px 0 16px;
-
-                img {
-                    width: 100%; 
-                }
 
                 &:hover {
                     clip-path: inset(0% round 42% 47%);
@@ -744,8 +752,48 @@ footer {
     /* 100% Image Width on Smaller Screens */
     @media only screen and (max-width: 700px){
         .modal-content {
-        width: 100%;
+            width: 100%;
         }
     }
 }
   
+// UN MENSAJE PARTICULAR
+#card {
+    .drawingWrapper {
+        // clip-path: url('#atomClip');
+        border-radius: 36px;
+        overflow: hidden;
+    }
+
+    h3 {
+        font-weight: 600;
+        margin-top: 24px;
+    }
+
+    p {
+        text-align: justify;
+    }
+
+    .bottom {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 32px;
+
+        div {
+            width: 46%;
+            padding: 0 2%;
+
+            h4 {
+                text-align: center;
+                margin-bottom: 8px;
+            }
+    
+            p {
+                text-align: center;
+                color: $color-sonicSilver;
+                font-size: 14px;
+            }
+        }        
+    }
+}
