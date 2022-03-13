@@ -107,6 +107,7 @@ const VueApp = {
                     },
                 ],
             },
+            randomNumber: '',
         }
     },    
   
@@ -150,6 +151,10 @@ const VueApp = {
                 fill: '#10100F'
             });
         },
+        getMessage() {		
+            this.randomNumber = Math.random() * this.gallery.length;
+            this.randomNumber = this.randomNumber.toFixed();
+        }
     },
 
     // Code that will run as soon as app is ready
@@ -189,6 +194,7 @@ const VueApp = {
             communityB: 'Neutrones',
             communityC: 'Electrones',
             back: 'Volver',
+            aMessage: 'Empieza el día con un mensaje de los guías',
           }
     },
     en: {
@@ -206,6 +212,7 @@ const VueApp = {
             communityB: 'Neutrons',
             communityC: 'Electrons',
             back: 'Back',
+            aMessage: 'Start the day with a message from the guides',
           }
     }
   }

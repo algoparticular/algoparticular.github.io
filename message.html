@@ -46,12 +46,14 @@
         
         <main>
             <section class="intro">
-                <p>{{ $t("message.community") }}</p>
+                <p>{{ $t("message.aMessage") }}</p>
             </section>
             <section>
-                <h2>{{ $t("message.communityA") }}</h2>
-                <div class="grid">
-
+                <!-- <h2>{{ $t("message.communityA") }}</h2> -->
+                <div class="column">                    
+	                <button @click="getMessage()">Dame mi mensaje</button>
+                    
+                    <p>{{ randomNumber }}</p>
                 </div>
             </section>
             
