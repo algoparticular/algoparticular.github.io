@@ -499,9 +499,6 @@ main section .drawingWrapper.particle:hover + p {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  main section .drawingWrapper img {
-    width: 85%;
-  }
 }
 
 main section.intro {
@@ -603,6 +600,12 @@ main section#crypto {
 
 main section#crypto h2, main section#crypto p {
   color: #E9EDD8;
+}
+
+@media screen and (max-width: 600px) {
+  main section#crypto .drawingWrapper img {
+    width: 85%;
+  }
 }
 
 /* Footer */

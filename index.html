@@ -35,13 +35,13 @@
                 <nav></nav>
                 
                 <nav>
-                    <select class="lang" v-model="$i18n.locale">
+                    <select class="lang" v-model="$i18n.locale" v-on:change="langChanged($i18n.locale)">
                         <option v-for="locale in $i18n.availableLocales" :key="`locale-${locale}`" :value="locale">{{ locale.toUpperCase() }}</option>
                     </select>
                 </nav>
             </div>
             <div id="logo">
-                <img src="/assets/Logo.svg">
+                <img alt="Algo Particular Logo" src="/assets/Logo.svg">
             </div>
         </header>
         
@@ -49,7 +49,7 @@
             <section id="hero">
                 <div class="column">
                     <div class="drawingWrapper">
-                        <img src="assets/ilus.png" />
+                        <img src="assets/ilus.png" alt="Personajes dando la bienvenida"/>
                     </div> 
 
                     <ul class="social-nav">                    
@@ -86,7 +86,7 @@
             <!-- The Modal -->
             <div id="gallery-modal" class="modal" v-if="showModal" v-on:click="closeModal()">
                 <div class="modal-content">
-                    <img v-bind:src="modal.image">
+                    <img v-bind:src="modal.image" alt="modal.caption">
                     <div id="caption">{{modal.caption}}</div>
                 </div>            
             </div>
@@ -98,7 +98,7 @@
                 <div class="grid">
                     <div class="column col-6 col-sm-4">
                         <a id="flashcookie" class="drawingWrapper atom shop" href="https://algoparticular.flashcookie.com" target="_blank">
-                            <img v-bind:src="shops.current_fc"/>
+                            <img v-bind:src="shops.current_fc" alt="Flashcookie merchandising"/>
                         </a>
                         <p class="">
                             {{ $t("message.shopFC") }}
@@ -106,7 +106,7 @@
                     </div>
                     <div class="column col-6 col-sm-4">
                         <a id="threadless" class="drawingWrapper atom shop" href="https://algoparticular.threadless.com" target="_blank">
-                            <img v-bind:src="shops.current_tl"/>
+                            <img v-bind:src="shops.current_tl" alt="Threadless merchandising"/>
                         </a>
                         <p class="">
                             {{ $t("message.shopTL") }}
@@ -120,7 +120,7 @@
                 <div class="row">
                     <div class="column col-6 col-sm-4">
                         <a class="drawingWrapper zoom" href="https://hicetnunc.art/algoparticular" target="_blank">
-                            <img src="assets/shop/HEN_white.svg" />
+                            <img src="assets/shop/HEN_white.svg" alt="HEN merchandising"/>
                         </a>              
                         <p class="">
                             {{ $t("message.shopHEN") }}

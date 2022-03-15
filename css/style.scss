@@ -484,11 +484,11 @@ main {
                 flex-direction: column;
             }
     
-            .drawingWrapper {
-                img {
-                    width: 85%;
-                }
-            }
+            // .drawingWrapper {
+            //     img {
+            //         width: 85%;
+            //     }
+            // } 
         }
 
         &.intro {
@@ -592,7 +592,16 @@ main {
 
             h2, p {
                 color: $color-whiteMana;   
-            }            
+            }  
+            
+            @media screen and (max-width: 600px) {                
+        
+                .drawingWrapper {
+                    img {
+                        width: 85%;
+                    }
+                } 
+            }
         }
     }
 }

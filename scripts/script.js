@@ -139,6 +139,9 @@ const VueApp = {
   
     // Functions go here
     methods: {
+        langChanged(lang) {
+            localStorage.setItem("lang", lang);
+        },
         openModal(i) {
             this.modal.image = this.gallery[i].image;
             this.modal.caption = this.gallery[i].title;
@@ -229,7 +232,7 @@ const VueApp = {
   const messages = {
     es: {
         message: {
-            hello: 'Algo Particular cuenta las historias de una partícula que al volverse consciente de sí, aprende a navegar el Universo libremente.<br>Bajo la premisa hermética "Como es arriba, es abajo", transmite su verdad: todos somos iguales, todos somos uno, (no) somos (de) aquí.',
+            hello: 'Algo Particular cuenta las historias de una partícula que al volverse consciente de sí, aprende a navegar el Universo libremente. Bajo la premisa hermética "Como es arriba, es abajo", transmite su verdad: todos somos iguales, todos somos uno, (no) somos (de) aquí.',
             shops: 'Tiendas',
             shopFC: 'Tienda FlashCookie, sólo para Argentina',
             shopTL: 'Tienda Threadless, envíos a todo el mundo',
@@ -250,7 +253,7 @@ const VueApp = {
     },
     en: {
         message: {
-            hello: 'Algo Particular tells the stories of a particle that upon becoming self-aware, learns to navigate the Universe freely.<br>Under the Hermetic premise "As above, so below", it conveys its truth: we are all the same, we are all one, we are (not from) here.',
+            hello: 'Algo Particular tells the stories of a particle that upon becoming self-aware, learns to navigate the Universe freely. Under the Hermetic premise "As above, so below", it conveys its truth: we are all the same, we are all one, we are (not from) here.',
             shops: 'Shops',
             shopFC: 'Flashcookie store, only in Argentina',
             shopTL: 'Threadless store, shipping worldwide from the US',
@@ -273,7 +276,7 @@ const VueApp = {
   
   // Initialize Lang
   const i18n = VueI18n.createI18n({
-    locale: 'es', // set locale
+    locale: localStorage.getItem("lang") != null ? localStorage.getItem("lang") : 'es', // set locale
     fallbackLocale: 'en', // set fallback locale
     messages, // set locale messages
   });

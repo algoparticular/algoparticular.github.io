@@ -36,13 +36,13 @@
                     <a href="index.html">{{ $t("message.back") }}</a>
                 </nav>
                 <nav>
-                    <select class="lang" v-model="$i18n.locale">
+                    <select class="lang" v-model="$i18n.locale" v-on:change="langChanged($i18n.locale)">
                         <option v-for="locale in $i18n.availableLocales" :key="`locale-${locale}`" :value="locale">{{ locale.toUpperCase() }}</option>
                     </select>
                 </nav>
             </div>
             <div id="logo">                
-                <img src="/assets/Logo.svg">
+                <img alt="Algo Particular Logo" src="/assets/Logo.svg">
             </div>     
         </header>
         

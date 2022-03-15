@@ -13,7 +13,7 @@ export default {
         <p class="">
             {{ card.description }}
         </p>
-        <div class="bottom">
+        <div class="bottom" v-if="card.name != ''">
             <div>
                 <h4>{{ $t("message.afirmation") }}</h4>
                 <p>{{ card.afirmation }}</p>
