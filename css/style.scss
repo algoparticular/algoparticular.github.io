@@ -363,8 +363,8 @@ header {
     /*NAV*/
     nav {
         min-width: 10%;
-        padding: 8px;
-        border-radius: 8px;
+        padding: 8px 16px;
+        // border-radius: 8px;
         // backdrop-filter: blur(4.2px);
         // -webkit-backdrop-filter: blur(4.2px);
         display: flex;
@@ -497,11 +497,16 @@ main {
 
             p {
                 width: 45%;
-                text-align: center;
+                text-align: center;                
+            }
 
-                @media screen and (max-width: 600px) {
+            @media screen and (max-width: 600px) {
+                padding-left: 24px;
+                padding-right: 24px;
+
+                p {
                     width: 100%;
-                }
+                }                
             }
         }
         

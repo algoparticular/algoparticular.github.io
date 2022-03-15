@@ -372,8 +372,7 @@ header #logo.community img {
 
 header nav {
   min-width: 10%;
-  padding: 8px;
-  border-radius: 8px;
+  padding: 8px 16px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -516,6 +515,10 @@ main section.intro p {
 }
 
 @media screen and (max-width: 600px) {
+  main section.intro {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
   main section.intro p {
     width: 100%;
   }
