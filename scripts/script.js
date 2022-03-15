@@ -242,8 +242,8 @@ const VueApp = {
             communityB: 'Neutrones',
             communityC: 'Electrones',
             back: 'Volver',
-            aMessage: 'Descubre tu mensaje Particular de hoy',
-            aMessageButton: 'Sacar una carta',
+            aMessage: 'Cierra tus ojos e intenciona tu mensaje particular de hoy.',
+            aMessageButton: 'Descubre tu carta',
             afirmation: 'Afirmación',
             invitation: 'Invitación',
           }
@@ -263,8 +263,8 @@ const VueApp = {
             communityB: 'Neutrons',
             communityC: 'Electrons',
             back: 'Back',
-            aMessage: 'Discover your Particular message for today',
-            aMessageButton: 'Take a card',
+            aMessage: 'Close your eyes and intend your particular message for today.',
+            aMessageButton: 'Discover your card',
             afirmation: 'Afirmation',
             invitation: 'Invitation',
           }
