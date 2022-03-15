@@ -758,6 +758,11 @@ footer .copyright a:hover {
   }
 }
 
+#cardLoader {
+  width: 108px;
+  margin: 0 auto;
+}
+
 #card .drawingWrapper {
   border-radius: 36px;
   overflow: hidden;

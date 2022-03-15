@@ -109,6 +109,7 @@ const VueApp = {
                     },
                 ],
             },
+            loadingCard: false,
             randomNumber: '',
             randomCard: {
                 name: '',
@@ -176,12 +177,32 @@ const VueApp = {
                 fill: '#10100F'
             });
         },
-        getMessage() {            
+        renderMessage() {
+            this.loadingCard = false;
+
             this.randomNumber = Math.random() * (this.cards.length - 1);
             this.randomNumber = this.randomNumber.toFixed();
             
             this.randomCard = this.cards[this.randomNumber];
-        }
+        },
+        loadingCardAnim() {
+            var self = this;
+            anime({
+              targets: '#cardLoader path',
+              strokeDashoffset: [0, anime.setDashoffset],
+              easing: 'easeInQuint',
+              duration: 2700,
+              delay: 500,
+              complete: function(){
+                self.renderMessage();
+              }
+            });
+        },
+        getMessage() {
+            this.randomNumber = '';
+            this.loadingCard = true;
+            this.loadingCardAnim();
+        },        
     },
 
     // Code that will run as soon as app is ready
