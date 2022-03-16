@@ -16,99 +16,15 @@ const VueApp = {
                 image: '',
                 caption: ''
             },
-            gallery: [
-                {
-                    title: "Nekkhamma",
-                    image: "/assets/gallery/1 Nekkhamma.jpg",
-                    description: "",
-                },
-                {
-                    title: "Sila",
-                    image: "/assets/gallery/2 Sila.jpg",
-                    description: "",
-                },
-                {
-                    title: "Dana",
-                    image: "/assets/gallery/3 Dana.jpg",
-                    description: "",
-                },
-                {
-                    title: "Pañña",
-                    image: "/assets/gallery/4 Pañña.jpg",
-                    description: "",
-                },
-                {
-                    title: "Viriya",
-                    image: "/assets/gallery/5 Viriya.jpg",
-                    description: "",
-                },
-                {
-                    title: "Kshanti",
-                    image: "/assets/gallery/6 Kshanti.jpg",
-                    description: "",
-                },
-                {
-                    title: "Sacca",
-                    image: "/assets/gallery/7 Sacca.jpg",
-                    description: "",
-                },
-                {
-                    title: "Addhitthana",
-                    image: "/assets/gallery/8 Addhitthana.jpg",
-                    description: "",
-                },
-                {
-                    title: "Metta",
-                    image: "/assets/gallery/9 Metta.jpg",
-                    description: "",
-                },
-                {
-                    title: "Upekka",
-                    image: "/assets/gallery/10 Upekka.jpg",
-                    description: "",
-                },
-            ],
+            gallery: [],
             shops: {
                 current_fc: 'assets/shop/fc_0.jpg',
                 current_tl: 'assets/shop/tl_0.jpg',
                 flashcookie: 4,
                 threadless: 5
             },
-            particles: {
-                proton: [
-                    {
-                        name: 'Victoria Revol',
-                        url: 'https://victoriarevol.com',
-                        image: '/assets/community/particle.svg'
-                    },
-                ],
-                neutron: [
-                    {
-                        name: 'Belén Brito',
-                        url: 'https://www.instagram.com/britobelenmaria',
-                        image: '/assets/community/particle.svg'
-                    },
-                    {
-                        name: 'Pepi Prieto',
-                        url: 'https://samasama.studio',
-                        image: '/assets/community/particle.svg'
-                    },
-                ],
-                electron: [
-                    {
-                        name: 'María Laura Yañez',
-                        url: 'https://www.instagram.com/mlauray',
-                        image: '/assets/community/particle.svg',
-                        type: 'electron'
-                    },
-                    {
-                        name: 'Matías Tozzola',
-                        url: 'https://www.instagram.com/mtozzola',
-                        image: '/assets/community/particle.svg',
-                        type: 'electron'
-                    },
-                ],
-            },
+            particles: {},
+            cards: [],
             loadingCard: false,
             randomNumber: '',
             randomCard: {
@@ -118,22 +34,6 @@ const VueApp = {
                 afirmation: '',
                 invitation: ''
             },
-            cards: [
-                {
-                    name: 'Aceptación',
-                    description: 'La aceptación es la capacidad para asumir la vida y a los otros tal como son, sin intentar cambiar o luchar contra aquello que no podemos controlar. Aceptar que hay realidades que exceden tu control, no es una actitud estática, es una decisión activa, que nos invita a no cargar  ninguna malicia hacia nada o nadie. Al reconocer la diversidad, somos capaces de transformarnos. Al aceptar aquello que te hace único, eso particular que habita en vos, te vuelves más confiado y tu ser divino se revela.',
-                    image: '/assets/gallery/8 Addhitthana.jpg',
-                    afirmation: 'Acepto quien soy y lo que me rodea.',
-                    invitation: 'Dale aceptate como sos!'
-                },
-                {
-                    name: 'Belleza',
-                    description: 'Experimentar un profundo placer en un mundo lleno de muchas clases de belleza es una alegría de la vida. Creer que existe una sola clase de belleza equivale a no prestar atenciòn a la naturaleza. Poder ver lo bello aun en la apariencia más desafiante es un alimento para el alma. A medida que sintonizas con la particular belleza de tu ser, de los otros y de la naturaleza, tu resonancia se convierte en la de la belleza, y se irradia hacia todo lo que te rodea, volviéndolo luminoso.',
-                    image: '/assets/gallery/9 Metta.jpg',
-                    afirmation: 'Iluminó mi belleza y la de los otros.',
-                    invitation: 'Me miro al espejo y digo, Soy una bella partícula'
-                },
-            ],
         }
     },    
   
@@ -141,6 +41,16 @@ const VueApp = {
     methods: {
         langChanged(lang) {
             localStorage.setItem("lang", lang);
+        },
+        populateFromJson() {
+            //Particles object
+            fetch('../json/community.json').then(response => response.json()).then((data) => this.particles = data);
+
+            //Gallery object
+            fetch('../json/gallery.json').then(response => response.json()).then((data) => this.gallery = data);
+            
+            //Cards object
+            fetch('../json/cards.json').then(response => response.json()).then((data) => this.cards = data);
         },
         openModal(i) {
             this.modal.image = this.gallery[i].image;
@@ -226,6 +136,8 @@ const VueApp = {
         });
         
         this.updateShops();
+
+        this.populateFromJson();
     }
   };
 
@@ -266,7 +178,7 @@ const VueApp = {
             communityB: 'Neutrons',
             communityC: 'Electrons',
             back: 'Back',
-            aMessage: 'Close your eyes and intend your particular message for today.',
+            aMessage: 'Close your eyes and intend your particular message for today. - Currently only in Spanish -',
             aMessageButton: 'Discover your card',
             afirmation: 'Afirmation',
             invitation: 'Invitation',
