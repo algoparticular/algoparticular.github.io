@@ -84,12 +84,16 @@
                 </div>
             </section>
             <!-- The Modal -->
-            <div id="gallery-modal" class="modal" v-if="showModal" v-on:click="closeModal()">
-                <div class="modal-content">
-                    <img v-bind:src="modal.image" alt="modal.caption">
-                    <div id="caption">{{modal.caption}}</div>
-                </div>            
-            </div>
+            <teleport to="body">
+            <transition name="modal">
+                <div id="gallery-modal" class="modal" v-if="showModal" v-on:click="closeModal()">
+                    <div class="modal-content">
+                        <img v-bind:src="modal.image" alt="modal.caption">
+                        <div id="caption">{{modal.caption}}</div>
+                    </div>            
+                </div>
+            </transition>
+        </teleport>
 
             <section id="shops">
                 <h2 class="svg shopTitle es" v-if="$i18n.locale === 'es'"><span>{{ $t("message.shops") }}</span></h2>

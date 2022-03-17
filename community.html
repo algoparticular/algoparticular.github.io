@@ -55,7 +55,7 @@
                 <h2 class="svg protonTitle en" v-if="$i18n.locale === 'en'"><span>{{ $t("message.communityA") }}</span></h2>
                 
                 <div class="grid">
-                    <particle v-for="item in particles.proton" :particle="item" :key="item.id"></particle>
+                    <community-particle v-for="item in particles.proton" :particle="item" :key="item.id"></community-particle>
                 </div>
             </section>
             <section>
@@ -63,7 +63,7 @@
                 <h2 class="svg neutronTitle en" v-if="$i18n.locale === 'en'"><span>{{ $t("message.communityB") }}</span></h2>
                 
                 <div class="grid">
-                    <particle v-for="item in particles.neutron" :particle="item" :key="item.id"></particle>               
+                    <community-particle v-for="item in particles.neutron" :particle="item" :key="item.id"></community-particle>               
                 </div>
             </section>
             <section>
@@ -71,7 +71,7 @@
                 <h2 class="svg electronTitle en" v-if="$i18n.locale === 'en'"><span>{{ $t("message.communityC") }}</span></h2>
 
                 <div class="grid">
-                    <particle v-for="item in particles.electron" :particle="item" :key="item.id"></particle>                   
+                    <community-particle v-for="item in particles.electron" :particle="item" :key="item.id"></community-particle>                   
                 </div>
             </section>
         </main>  

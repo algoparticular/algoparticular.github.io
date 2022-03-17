@@ -1,16 +1,35 @@
-[
-    {
-        "name": "Aceptación",
-        "description": "La aceptación es la capacidad para asumir la vida y a los otros tal como son, sin intentar cambiar o luchar contra aquello que no podemos controlar. Aceptar que hay realidades que exceden tu control, no es una actitud estática, es una decisión activa, que nos invita a no cargar  ninguna malicia hacia nada o nadie. Al reconocer la diversidad, somos capaces de transformarnos. Al aceptar aquello que te hace único, eso particular que habita en vos, te vuelves más confiado y tu ser divino se revela.",
-        "image": "/assets/gallery/8 Addhitthana.jpg",
-        "afirmation": "Acepto quien soy y lo que me rodea.",
-        "invitation": "Dale aceptate como sos!"
-    },
-    {
-        "name": "Belleza",
-        "description": "Experimentar un profundo placer en un mundo lleno de muchas clases de belleza es una alegría de la vida. Creer que existe una sola clase de belleza equivale a no prestar atenciòn a la naturaleza. Poder ver lo bello aun en la apariencia más desafiante es un alimento para el alma. A medida que sintonizas con la particular belleza de tu ser, de los otros y de la naturaleza, tu resonancia se convierte en la de la belleza, y se irradia hacia todo lo que te rodea, volviéndolo luminoso.",
-        "image": "/assets/gallery/9 Metta.jpg",
-        "afirmation": "Iluminó mi belleza y la de los otros.",
-        "invitation": "Me miro al espejo y digo, Soy una bella partícula"
-    }
-]
+{
+    "es": [
+        {
+            "name": "Aceptación",
+            "description": "La aceptación es la capacidad para asumir la vida y a los otros tal como son, sin intentar cambiar o luchar contra aquello que no podemos controlar. Aceptar que hay realidades que exceden tu control, no es una actitud estática, es una decisión activa, que nos invita a no cargar  ninguna malicia hacia nada o nadie. Al reconocer la diversidad, somos capaces de transformarnos. Al aceptar aquello que te hace único, eso particular que habita en vos, te vuelves más confiado y tu ser divino se revela.",
+            "image": "/assets/gallery/8 Addhitthana.jpg",
+            "afirmation": "Acepto quien soy y lo que me rodea.",
+            "invitation": "Dale aceptate como sos!"
+        },
+        {
+            "name": "Belleza",
+            "description": "Experimentar un profundo placer en un mundo lleno de muchas clases de belleza es una alegría de la vida. Creer que existe una sola clase de belleza equivale a no prestar atenciòn a la naturaleza. Poder ver lo bello aun en la apariencia más desafiante es un alimento para el alma. A medida que sintonizas con la particular belleza de tu ser, de los otros y de la naturaleza, tu resonancia se convierte en la de la belleza, y se irradia hacia todo lo que te rodea, volviéndolo luminoso.",
+            "image": "/assets/gallery/9 Metta.jpg",
+            "afirmation": "Iluminó mi belleza y la de los otros.",
+            "invitation": "Me miro al espejo y digo, Soy una bella partícula"
+        }
+    ],
+    
+    "en": [
+        {
+            "name": "Acceptance",
+            "description": "La aceptación es la capacidad para asumir la vida y a los otros tal como son, sin intentar cambiar o luchar contra aquello que no podemos controlar. Aceptar que hay realidades que exceden tu control, no es una actitud estática, es una decisión activa, que nos invita a no cargar  ninguna malicia hacia nada o nadie. Al reconocer la diversidad, somos capaces de transformarnos. Al aceptar aquello que te hace único, eso particular que habita en vos, te vuelves más confiado y tu ser divino se revela.",
+            "image": "/assets/gallery/8 Addhitthana.jpg",
+            "afirmation": "Acepto quien soy y lo que me rodea.",
+            "invitation": "Dale aceptate como sos!"
+        },
+        {
+            "name": "Beauty",
+            "description": "Experimentar un profundo placer en un mundo lleno de muchas clases de belleza es una alegría de la vida. Creer que existe una sola clase de belleza equivale a no prestar atenciòn a la naturaleza. Poder ver lo bello aun en la apariencia más desafiante es un alimento para el alma. A medida que sintonizas con la particular belleza de tu ser, de los otros y de la naturaleza, tu resonancia se convierte en la de la belleza, y se irradia hacia todo lo que te rodea, volviéndolo luminoso.",
+            "image": "/assets/gallery/9 Metta.jpg",
+            "afirmation": "Iluminó mi belleza y la de los otros.",
+            "invitation": "Me miro al espejo y digo, Soy una bella partícula"
+        }
+    ]
+}

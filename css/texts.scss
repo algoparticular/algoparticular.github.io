@@ -1,0 +1,128 @@
+/* TEXTs */
+h1,h2,h3,h4,h5,h6,p {
+    color: $color-black;
+}
+
+h1 { 
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 4.25em;
+  line-height: 1.01470588em;
+  letter-spacing: -0.01em;
+  margin: 0 0 8px;
+    
+    @media screen and (max-width: 767px) {
+        font-size: 3em;
+        padding: 0 16px;
+    }
+}
+
+h2 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 2.625em;
+  line-height: 1.0952381em;
+  letter-spacing: -0.05em;
+  margin: 0;
+
+    span {
+        display: none;
+    }
+
+    &.svg {
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 60px;
+        width: 180px;
+    }
+
+    &.shopTitle {
+        &.es {
+            background-image: url(/assets/titles/title_shop_es.svg);
+        }
+        &.en {
+            background-image: url(/assets/titles/title_shop_en.svg);
+        }
+    }
+
+    &.nftTitle {
+        background-image: url(/assets/titles/title_nft.svg);
+        width: 100px;        
+    }
+
+    &.protonTitle {
+        &.es {
+            background-image: url(/assets/titles/title_proton_es.svg);
+        }
+        &.en {
+            background-image: url(/assets/titles/title_proton_en.svg);
+        }
+    }
+
+    &.neutronTitle {
+        &.es {
+            background-image: url(/assets/titles/title_neutron_es.svg);
+        }
+        &.en {
+            background-image: url(/assets/titles/title_neutron_en.svg);
+        }
+    }
+
+    &.electronTitle {
+        &.es {
+            background-image: url(/assets/titles/title_electron_es.svg);
+        }
+        &.en {
+            background-image: url(/assets/titles/title_electron_en.svg);
+        }
+    }
+}
+
+h3 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 1.625em;
+  line-height: 1.76923077em;
+  letter-spacing: -0.01em;
+  margin: 0 0 8px;
+}
+
+h4 {
+  font-family: 'Inter', helvetiva, sans-serif;
+  font-weight: 700;
+  font-size: 1em;
+  line-height: 1.4375em;
+  letter-spacing: -0.01em;
+  margin: 0 0 8px;
+}
+
+p {
+  line-height: 150%;
+  font-size: 18px;
+  margin: 0 0 24px;    
+    
+    @media screen and (max-width: 600px) {
+        font-size: 16px;
+        padding: 0 16px;
+    }
+}
+
+span {
+    color: $color-sonicSilver;
+}
+
+ul {   
+    &.no-bullets {
+        list-style-type: none;
+        padding: 0;
+//        margin-top: 16px;
+    }
+    li {
+        margin-bottom: 8px;
+        font-size: 16px;        
+        
+        span {
+            font-weight: 700;
+        }        
+    }
+}

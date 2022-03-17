@@ -3,7 +3,7 @@ export default {
       card: Object
     },
     template: `
-    <div id="card" class="column col-6">
+    <div class="card-container column col-6">
         <div class="drawingWrapper">
             <img v-bind:src="card.image"/>
         </div>

@@ -1,0 +1,75 @@
+a {
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+    color: $color-black;  
+    width: auto !important;
+    font-size: 18px;
+    font-weight: 600;
+
+    &.icon-link {
+        display: contents;
+    }
+    
+    &:hover {
+        color: $color-black;
+        text-decoration: none;
+    }
+   
+    &:focus {
+        border-radius: 4px;
+        box-shadow: rgba(12, 151, 139, .3) 0px 0px 0px 4px;
+        outline: 0px;
+
+        -webkit-transition: all 300ms ease-out;
+        -moz-transition: all 300ms ease-out;
+        -o-transition: all 300ms ease-out;
+        transition: all 300ms ease-out;
+    }
+    
+    .underline {
+        display: block;
+        position: absolute;
+        bottom: -1.8px;
+        left: 0; // Animated via JS
+        width: 0; // Animated via JS
+        height: 2px;
+        background-color: $color-black;
+    }
+    
+     @media screen and (max-width: 767px) {
+        font-size: 16px;
+    }
+}
+
+button, 
+.button {
+    font-weight: 400;
+    font-size: 16px;
+    border: none;
+    background: $color-black;
+    height: 40px;
+    border-radius: 8px;
+    color: $color-whiteMana;
+    padding: 10px 20px;
+    cursor: pointer;
+    
+    &:hover {
+        color: $color-whiteMana;
+        background: $color-lorange;
+        -webkit-transition: all 250ms ease-out;
+        -moz-transition: all 250ms ease-out;
+        -o-transition: all 250ms ease-out;
+        transition: all 250ms ease-out;
+    }
+    
+    &:focus {
+        box-shadow: rgba(12, 151, 139, .3) 0px 0px 0px 4px;
+        outline: 0px;
+
+        -webkit-transition: all 300ms ease-out;
+        -moz-transition: all 300ms ease-out;
+        -o-transition: all 300ms ease-out;
+        transition: all 300ms ease-out;
+    }
+}

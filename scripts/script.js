@@ -1,11 +1,11 @@
-import Particle from './Particle.js';
-import Card from './Card.js';
+import CommunityParticle from './CommunityParticle.js';
+import MessageCard from './MessageCard.js';
 
 // Configure Vue here
 const VueApp = {
     components: {
-        Particle,
-        Card
+        CommunityParticle,
+        MessageCard
     },
 
     // Put variables here
@@ -17,13 +17,16 @@ const VueApp = {
                 caption: ''
             },
             gallery: [],
+
             shops: {
                 current_fc: 'assets/shop/fc_0.jpg',
                 current_tl: 'assets/shop/tl_0.jpg',
                 flashcookie: 4,
                 threadless: 5
             },
+
             particles: {},
+
             cards: [],
             loadingCard: false,
             randomNumber: '',
@@ -93,10 +96,10 @@ const VueApp = {
         renderMessage() {
             this.loadingCard = false;
 
-            this.randomNumber = Math.random() * (this.cards.length - 1);
+            this.randomNumber = Math.random() * (this.cards[localStorage.lang].length - 1);
             this.randomNumber = this.randomNumber.toFixed();
-            
-            this.randomCard = this.cards[this.randomNumber];
+
+            this.randomCard = this.cards[localStorage.lang][this.randomNumber];
         },
         loadingCardAnim() {
             var self = this;
@@ -157,8 +160,8 @@ const VueApp = {
             communityB: 'Neutrones',
             communityC: 'Electrones',
             back: 'Volver',
-            aMessage: 'Cierra tus ojos e intenciona tu mensaje particular de hoy.',
-            aMessageButton: 'Descubre tu carta',
+            cardMessageIntro: 'Cierra tus ojos e intenciona tu mensaje particular de hoy.',
+            cardMessageButton: 'Descubre tu carta',
             afirmation: 'Afirmación',
             invitation: 'Invitación',
           }
@@ -178,8 +181,8 @@ const VueApp = {
             communityB: 'Neutrons',
             communityC: 'Electrons',
             back: 'Back',
-            aMessage: 'Close your eyes and intend your particular message for today. - Currently only in Spanish -',
-            aMessageButton: 'Discover your card',
+            cardMessageIntro: 'Close your eyes and intend your particular message for today. (Currently only in Spanish)',
+            cardMessageButton: 'Discover your card',
             afirmation: 'Afirmation',
             invitation: 'Invitation',
           }
@@ -188,7 +191,7 @@ const VueApp = {
   
   // Initialize Lang
   const i18n = VueI18n.createI18n({
-    locale: localStorage.getItem("lang") != null ? localStorage.getItem("lang") : 'es', // set locale
+    locale: localStorage.lang != null ? localStorage.lang : 'es', // set locale
     fallbackLocale: 'en', // set fallback locale
     messages, // set locale messages
   });
