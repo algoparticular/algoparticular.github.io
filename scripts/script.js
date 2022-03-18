@@ -1,11 +1,13 @@
 import CommunityParticle from './CommunityParticle.js';
 import MessageCard from './MessageCard.js';
+import ModalGallery from './ModalGallery.js';
 
 // Configure Vue here
 const VueApp = {
     components: {
         CommunityParticle,
-        MessageCard
+        MessageCard,
+        ModalGallery
     },
 
     // Put variables here
