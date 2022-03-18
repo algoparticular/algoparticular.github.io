@@ -7,12 +7,24 @@ main {
         padding: 10vh 0;
         margin-bottom: 10vh;        
         
-        .column {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            
+        h2 {
+            &.shopTitle {
+                &.es {
+                    background-image: url(/assets/titles/title_shop_es.svg);
+                }
+                &.en {
+                    height: 50px;
+                    background-image: url(/assets/titles/title_shop_en.svg);
+                }
+            }
+        
+            &.nftTitle {
+                background-image: url(/assets/titles/title_nft.svg);
+                width: 100px;        
+            }
+          }
+
+        .column {            
             p {
                 margin-bottom: 4px;
                 text-align: center;
@@ -46,22 +58,7 @@ main {
                 &:hover {
                     clip-path: inset(0% round 42% 47%);
                 }
-            }                
-
-            &.particle {
-                background: $color-black;
-                width: 200px !important;
-                height: 200px;
-
-                &.electron {
-                    width: 130px !important;
-                    height: 130px;
-                }
-
-                &:hover + p {
-                    font-weight: 600;
-                }
-            }
+            }            
         }        
         
         @media screen and (max-width: 600px) {
@@ -76,7 +73,8 @@ main {
 
             p {
                 width: 45%;
-                text-align: center;                
+                text-align: center;
+                white-space: pre-line;
             }
 
             @media screen and (max-width: 600px) {

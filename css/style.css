@@ -127,13 +127,29 @@ body {
   }
 }
 
+.column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 /* TEXTs */
 h1, h2, h3, h4, h5, h6, p {
   color: #10100F;
 }
 
 h1 {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Alga', sans-serif;
   font-weight: 400;
   font-size: 4.25em;
   line-height: 1.01470588em;
@@ -164,45 +180,9 @@ h2 span {
 h2.svg {
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: 50%;
   height: 60px;
   width: 180px;
-}
-
-h2.shopTitle.es {
-  background-image: url(/assets/titles/title_shop_es.svg);
-}
-
-h2.shopTitle.en {
-  background-image: url(/assets/titles/title_shop_en.svg);
-}
-
-h2.nftTitle {
-  background-image: url(/assets/titles/title_nft.svg);
-  width: 100px;
-}
-
-h2.protonTitle.es {
-  background-image: url(/assets/titles/title_proton_es.svg);
-}
-
-h2.protonTitle.en {
-  background-image: url(/assets/titles/title_proton_en.svg);
-}
-
-h2.neutronTitle.es {
-  background-image: url(/assets/titles/title_neutron_es.svg);
-}
-
-h2.neutronTitle.en {
-  background-image: url(/assets/titles/title_neutron_en.svg);
-}
-
-h2.electronTitle.es {
-  background-image: url(/assets/titles/title_electron_es.svg);
-}
-
-h2.electronTitle.en {
-  background-image: url(/assets/titles/title_electron_en.svg);
 }
 
 h3 {
@@ -472,6 +452,7 @@ footer .copyright a:hover {
   text-align: center;
   width: 55%;
   margin-bottom: 32px;
+  white-space: pre-line;
 }
 
 #galleryWrapper p span {
@@ -686,20 +667,18 @@ main section {
   margin-bottom: 10vh;
 }
 
-main section .column {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+main section h2.shopTitle.es {
+  background-image: url(/assets/titles/title_shop_es.svg);
+}
+
+main section h2.shopTitle.en {
+  height: 50px;
+  background-image: url(/assets/titles/title_shop_en.svg);
+}
+
+main section h2.nftTitle {
+  background-image: url(/assets/titles/title_nft.svg);
+  width: 100px;
 }
 
 main section .column p {
@@ -745,21 +724,6 @@ main section .drawingWrapper.atom:hover {
           clip-path: inset(0% round 42% 47%);
 }
 
-main section .drawingWrapper.particle {
-  background: #10100F;
-  width: 200px !important;
-  height: 200px;
-}
-
-main section .drawingWrapper.particle.electron {
-  width: 130px !important;
-  height: 130px;
-}
-
-main section .drawingWrapper.particle:hover + p {
-  font-weight: 600;
-}
-
 @media screen and (max-width: 600px) {
   main section .row {
     -webkit-box-orient: vertical;
@@ -777,6 +741,7 @@ main section.intro {
 main section.intro p {
   width: 45%;
   text-align: center;
+  white-space: pre-line;
 }
 
 @media screen and (max-width: 600px) {
@@ -874,5 +839,128 @@ main section#crypto h2, main section#crypto p {
   main section#crypto .drawingWrapper img {
     width: 85%;
   }
+}
+
+section h2.svg {
+  height: 50px;
+}
+
+section h2.svg.protonTitle.es {
+  background-image: url(/assets/titles/title_proton_es.svg);
+}
+
+section h2.svg.protonTitle.en {
+  background-image: url(/assets/titles/title_proton_en.svg);
+}
+
+section h2.svg.neutronTitle.es {
+  background-image: url(/assets/titles/title_neutron_es.svg);
+}
+
+section h2.svg.neutronTitle.en {
+  background-image: url(/assets/titles/title_neutron_en.svg);
+}
+
+section h2.svg.electronTitle.es {
+  background-image: url(/assets/titles/title_electron_es.svg);
+}
+
+section h2.svg.electronTitle.en {
+  background-image: url(/assets/titles/title_electron_en.svg);
+}
+
+section .drawingWrapper.particle {
+  background: #10100F;
+  width: 200px !important;
+  height: 200px;
+}
+
+section .drawingWrapper.particle.electron {
+  width: 130px !important;
+  height: 130px;
+}
+
+section .drawingWrapper.particle:hover + p {
+  font-weight: 600;
+}
+
+.communityFooter a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.communityFooter a img {
+  width: 40%;
+}
+
+#notFound {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding-top: 10vh;
+}
+
+#notFound .drawingWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#notFound .drawingWrapper img {
+  width: 80%;
+}
+
+#notFound h1 {
+  margin: 16px 0 32px;
+  color: #E9EDD8;
+}
+
+#notFound p {
+  white-space: pre-line;
+  color: #E9EDD8;
+  text-align: justify;
+}
+
+#notFound .button {
+  background-color: #E9EDD8;
+  color: #10100F;
+  margin-top: 24px;
+  height: auto;
+}
+
+#notFound .button:hover {
+  color: #E9EDD8;
+  background: #F4844C;
+}
+
+#notFound .textContainer {
+  background-color: #10100F;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 3vh 0 20vh;
+  margin-top: 32px;
 }
 /*# sourceMappingURL=style.css.map */

@@ -4,7 +4,7 @@ h1,h2,h3,h4,h5,h6,p {
 }
 
 h1 { 
-  font-family: 'Inter', sans-serif;
+  font-family: 'Alga', sans-serif;
   font-weight: 400;
   font-size: 4.25em;
   line-height: 1.01470588em;
@@ -32,50 +32,10 @@ h2 {
     &.svg {
         background-size: contain;
         background-repeat: no-repeat;
+        background-position: 50%;
         height: 60px;
         width: 180px;
-    }
-
-    &.shopTitle {
-        &.es {
-            background-image: url(/assets/titles/title_shop_es.svg);
-        }
-        &.en {
-            background-image: url(/assets/titles/title_shop_en.svg);
-        }
-    }
-
-    &.nftTitle {
-        background-image: url(/assets/titles/title_nft.svg);
-        width: 100px;        
-    }
-
-    &.protonTitle {
-        &.es {
-            background-image: url(/assets/titles/title_proton_es.svg);
-        }
-        &.en {
-            background-image: url(/assets/titles/title_proton_en.svg);
-        }
-    }
-
-    &.neutronTitle {
-        &.es {
-            background-image: url(/assets/titles/title_neutron_es.svg);
-        }
-        &.en {
-            background-image: url(/assets/titles/title_neutron_en.svg);
-        }
-    }
-
-    &.electronTitle {
-        &.es {
-            background-image: url(/assets/titles/title_electron_es.svg);
-        }
-        &.en {
-            background-image: url(/assets/titles/title_electron_en.svg);
-        }
-    }
+    }   
 }
 
 h3 {

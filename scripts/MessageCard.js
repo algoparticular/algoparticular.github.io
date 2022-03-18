@@ -15,11 +15,11 @@ export default {
         </p>
         <div class="bottom" v-if="card.name != ''">
             <div>
-                <h4>{{ $t("message.afirmation") }}</h4>
+                <h4>{{ $t("message.cardAfirmation") }}</h4>
                 <p>{{ card.afirmation }}</p>
             </div>
             <div>
-                <h4>{{ $t("message.invitation") }}</h4>
+                <h4>{{ $t("message.cardInvitation") }}</h4>
                 <p>{{ card.invitation }}</p>
             </div>
         </div>

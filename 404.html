@@ -8,58 +8,50 @@
 
     <title>Algo Particular</title>
       
-    <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">  
+    <!-- import the webpage's stylesheet -->    
     <link rel="stylesheet" href="/css/style.css">
+
+    <!-- This is Vue -->
+	<script src="https://unpkg.com/vue@next"></script>
+    <script src="https://unpkg.com/vue-i18n@9"></script>
     
   </head>  
     
   <body>
 
     <div id="app">
-      <section>
+      <section id="notFound">
         <div class="column col-6">
             <div class="drawingWrapper">
-                <img src="assets/ilus_404.svg" />
+                <img src="assets/ilus/ilus_tres.svg" />
             </div>
         </div>
-        <div class="column col-6">
-            <h1 class="">Just empty space...</h1>                
-            
-            <p class="">
-                Error or not, I invite you to take this opportunity to be here. No social mask is needed on this 404 page.
-                <br>
-                <br>
-                A simple opportunity to close your eyes and exhale all the air. Releasing every muscle in our face, making very slow movements while we scan our body.
-                <br>
-                <br>
-                How did I get to this page? What frequency am I vibrating at?
-                <br>
-                <br>
-                And when you need it, open your eyes again. Smile and express gratitude to someone, to something, and specially to yourself.
-                <br>
-                <br>
-                I thank you, now you can continue browsing.
-            </p>
-            
-            <a href="/" class="button">
-                Go back to site
-            </a>
-        </div>
+        <div class="textContainer">
+          <div class="column col-6">
+              <h1 class="">{{ $t("message.notFound") }}</h1>                
+              
+              <p class="">
+                  {{ $t("message.notFoundCopy") }}
+              </p>
+              
+              <a href="/" class="button">
+                {{ $t("message.notFoundButton") }}
+              </a>
+          </div>
+        </div> 
       </section>
     </div>
       
     <div id="grain"></div>
+
+    <!-- <svg>
+      <clipPath id="atomClip" clipPathUnits="objectBoundingBox">
+        <path d="M0.426464 0.000219536C0.24876 0.00561448 0.168596 0.0874882 0.077881 0.207917C-0.0128338 0.328345 -0.0496058 0.683579 0.109517 0.828442C0.26864 0.973304 0.550005 1.0213 0.670759 0.991628C0.791514 0.961957 0.8924 0.897332 0.970862 0.668307C1.05431 0.419288 0.939226 0.207917 0.867249 0.149011C0.795272 0.0901057 0.604168 -0.00517541 0.426464 0.000219536Z" fill="#10100F"/>
+      </clipPath>
+    </svg> -->
       
     <!-- import the webpage's javascript file -->
-
-    <!--Boostrap-->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <!--Boostrap-->
-
     <script src="/plugins/anime.min.js"></script>  
-    <script src="/scripts/script.js" defer></script>
+    <script type="module" src="/scripts/script.js"></script>
   </body>
 </html>
