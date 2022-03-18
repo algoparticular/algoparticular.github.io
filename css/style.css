@@ -808,8 +808,8 @@ section .drawingWrapper.particle:hover + p {
           justify-content: center;
 }
 
-.communityFooter a img {
-  width: 40%;
+.communityFooter img {
+  width: 13%;
 }
 
 #cardLoader {
@@ -906,8 +906,8 @@ section .drawingWrapper.particle:hover + p {
           justify-content: center;
 }
 
-.cardsFooter a img {
-  width: 40%;
+.cardsFooter img {
+  width: 7%;
 }
 
 #notFound {
