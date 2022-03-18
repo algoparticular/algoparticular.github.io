@@ -17,7 +17,7 @@
     }
 
     p {
-        text-align: justify;
+        text-align: justify !important;
     }
 
     .bottom {
@@ -35,7 +35,7 @@
             }
     
             p {
-                text-align: center;
+                text-align: center !important;
                 color: $color-sonicSilver;
                 font-size: 14px;
             }
@@ -83,4 +83,15 @@
 .card-enter-active,
 .card-leave-active {
   transition: opacity 0.3s ease;
+}
+
+.cardsFooter {
+    a {
+        display: flex;
+        justify-content: center;
+
+        img {
+            width: 40%;
+        }
+    }
 }
