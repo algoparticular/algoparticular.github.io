@@ -1,9 +1,11 @@
 export default {
     props: {
+      show: Boolean,
       card: Object
     },
     template: `
-    <div class="card-container column col-6">
+    <transition name="card">
+    <div v-if="show" class="card-container column col-6">
         <div class="drawingWrapper">
             <img v-bind:src="card.image"/>
         </div>
@@ -24,6 +26,7 @@ export default {
             </div>
         </div>
     </div>
+    </transition>
     `
   }
   

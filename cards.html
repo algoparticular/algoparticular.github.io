@@ -58,12 +58,10 @@
                         <path d="M83.6 218.6C41 218.6 6.5 184.1 6.5 141.5C6.5 66.9 66.9 6.5 141.5 6.5C216.1 6.5 276.5 66.9 276.5 141.5C276.5 263.1 160.8 257.4 160.8 257.4C139.5 257.4 122.2 240.1 122.2 218.8V218.6V141.5C122.2 130.8 130.9 122.2 141.5 122.2C152.2 122.2 160.8 130.8 160.8 141.5" stroke="#10100F" stroke-width="13" stroke-miterlimit="10" stroke-linecap="round" style="stroke-dashoffset: 0px;"/>
                     </svg>
                 </div>
-                <transition name="card">
-                    <div v-if="randomNumber != ''" class="column">                    
-                        <!-- <p>{{ randomNumber }}</p> -->
-                        <message-card :card="randomCard"></message-card>
-                    </div>
-                </transition>
+
+                <message-card :show="showCard" :card="randomCard"></message-card>
+
+                <!-- <modal-card :show="showCard" :card="randomCard" @close="closeCardModal()"></modal-card> -->
             </section>            
         </main>  
 

@@ -71,21 +71,25 @@
                         </li>                    
                     </ul>                
                 </div>
-            </section>    
+            </section>  
+            
+            <!-- <section id="takeCard">
+
+            </section> -->
             
             <section id="galleryWrapper">
                 <p>
                     {{ $t("message.hello") }}
                 </p>            
                 <div id="gallery">
-                    <a class="gallery-item" v-for="(item, i) of gallery" v-on:click="openModal(i)">
+                    <a class="gallery-item" v-for="(item, i) of gallery" v-on:click="openGalleryModal(i)">
                         <img v-bind:alt="item.title" v-bind:src="item.image">
                     </a>
                 </div>
             </section>
             <!-- The Modal -->
             <teleport to="body">
-                <modal-gallery :show="showModal" :content="modal" @close="closeModal()"></modal-gallery>            
+                <modal-gallery :show="showModal" :content="modal" @close="closeGalleryModal()"></modal-gallery>            
             </teleport>
 
             <section id="shops">

@@ -1,13 +1,15 @@
 import CommunityParticle from './CommunityParticle.js';
 import MessageCard from './MessageCard.js';
 import ModalGallery from './ModalGallery.js';
+import ModalCard from './ModalCard.js';
 
 // Configure Vue here
 const VueApp = {
     components: {
         CommunityParticle,
         MessageCard,
-        ModalGallery
+        ModalGallery,
+        ModalCard
     },
 
     // Put variables here
@@ -31,14 +33,8 @@ const VueApp = {
 
             cards: [],
             loadingCard: false,
-            randomNumber: '',
-            randomCard: {
-                name: '',
-                description: '',
-                image: '',
-                afirmation: '',
-                invitation: ''
-            },
+            showCard: false,
+            randomCard: {},
         }
     },    
   
@@ -57,18 +53,20 @@ const VueApp = {
             //Cards object
             fetch('../json/cards.json').then(response => response.json()).then((data) => this.cards = data);
         },
-        openModal(i) {
+
+        openGalleryModal(i) {
             this.modal.image = this.gallery[i].image;
             this.modal.caption = this.gallery[i].title;
 
             this.showModal = true;
         },
-        closeModal() {
+        closeGalleryModal() {
             this.showModal = false;
 
             this.modal.image = '';
             this.modal.caption = '';
         },
+
         updateShops(){
             let tlIndex = 0;
             let fcIndex = 0;
@@ -81,6 +79,7 @@ const VueApp = {
                 merch.current_tl = 'assets/shop/tl_'+ tlIndex +'.jpg';
              }, 3000);
         },
+
         zoomAnim(event) {
             anime({
                 targets: event.target,
@@ -95,13 +94,19 @@ const VueApp = {
                 fill: '#10100F'
             });
         },
+
+        closeCardModal() {
+            this.showCard = false;
+            this.randomCard = {};
+        },
         renderMessage() {
             this.loadingCard = false;
 
-            this.randomNumber = Math.random() * (this.cards[localStorage.lang].length - 1);
-            this.randomNumber = this.randomNumber.toFixed();
+            let randomNumber = Math.random() * (this.cards[localStorage.lang].length - 1);
+            randomNumber = randomNumber.toFixed();
 
-            this.randomCard = this.cards[localStorage.lang][this.randomNumber];
+            this.randomCard = this.cards[localStorage.lang][randomNumber];
+            this.showCard = true;
         },
         loadingCardAnim() {
             var self = this;
@@ -116,8 +121,8 @@ const VueApp = {
               }
             });
         },
-        getMessage() {
-            this.randomNumber = '';
+        getMessage() {            
+            this.showCard = false;
             this.loadingCard = true;
             this.loadingCardAnim();
         },        
