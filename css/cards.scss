@@ -94,4 +94,10 @@
     img {
         width: 7%;
     }
+
+    @media only screen and (max-width: 600px){
+        img {
+            width: 18%;
+        }   
+    }
 }

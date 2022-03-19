@@ -821,6 +821,12 @@ section .drawingWrapper.particle:hover + p {
   width: 13%;
 }
 
+@media only screen and (max-width: 600px) {
+  .communityFooter img {
+    width: 27%;
+  }
+}
+
 #cardLoader {
   width: 108px;
   margin: 0 auto;
@@ -917,6 +923,12 @@ section .drawingWrapper.particle:hover + p {
 
 .cardsFooter img {
   width: 7%;
+}
+
+@media only screen and (max-width: 600px) {
+  .cardsFooter img {
+    width: 18%;
+  }
 }
 
 #notFound {
