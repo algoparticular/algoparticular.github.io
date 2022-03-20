@@ -780,6 +780,33 @@ section .drawingWrapper.particle:hover + p {
   }
 }
 
+#cardDiscover {
+  height: 60vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#cardDiscover section.intro p {
+  width: 50%;
+  margin-bottom: 40px;
+}
+
+@media only screen and (max-width: 600px) {
+  #cardDiscover {
+    height: 50vh;
+  }
+  #cardDiscover section.intro p {
+    width: 100%;
+  }
+}
+
 #cardLoader {
   width: 108px;
   margin: 0 auto;

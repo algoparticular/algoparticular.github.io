@@ -1,4 +1,29 @@
 // UN MENSAJE PARTICULAR
+#cardDiscover {
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    section.intro {
+        p {
+            width: 50%;
+            margin-bottom: 40px;
+        }
+    }
+
+    @media only screen and (max-width: 600px){
+        height: 50vh;
+
+        section.intro {
+            p {
+                width: 100%;
+            }
+        }
+    }
+}
+
+
 #cardLoader {
     width: 108px;
     margin: 0 auto;
