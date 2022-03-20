@@ -51,24 +51,21 @@
                 <p>{{ $t("message.community") }}</p>
             </section>
             <section>
-                <h2 class="svg protonTitle es" v-if="$i18n.locale === 'es'"><span>{{ $t("message.communityA") }}</span></h2>
-                <h2 class="svg protonTitle en" v-if="$i18n.locale === 'en'"><span>{{ $t("message.communityA") }}</span></h2>
+                <h3 class="communityTitle">{{ $t("message.communityA") }}</h3>
                 
                 <div class="grid">
                     <community-particle v-for="item in particles.proton" :particle="item" :key="item.id"></community-particle>
                 </div>
             </section>
             <section>
-                <h2 class="svg neutronTitle es" v-if="$i18n.locale === 'es'"><span>{{ $t("message.communityB") }}</span></h2>
-                <h2 class="svg neutronTitle en" v-if="$i18n.locale === 'en'"><span>{{ $t("message.communityB") }}</span></h2>
+                <h3 class="communityTitle">{{ $t("message.communityB") }}</h3>
                 
                 <div class="grid">
                     <community-particle v-for="item in particles.neutron" :particle="item" :key="item.id"></community-particle>               
                 </div>
             </section>
             <section>
-                <h2 class="svg electronTitle es" v-if="$i18n.locale === 'es'"><span>{{ $t("message.communityC") }}</span></h2>
-                <h2 class="svg electronTitle en" v-if="$i18n.locale === 'en'"><span>{{ $t("message.communityC") }}</span></h2>
+                <h3 class="communityTitle">{{ $t("message.communityC") }}</h3>
 
                 <div class="grid">
                     <community-particle v-for="item in particles.electron" :particle="item" :key="item.id"></community-particle>                   

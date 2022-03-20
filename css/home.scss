@@ -5,24 +5,7 @@ main {
         flex-direction: column;
         align-items: center;
         padding: 10vh 0;
-        margin-bottom: 10vh;        
-        
-        h2 {
-            &.shopTitle {
-                &.es {
-                    background-image: url(/assets/titles/title_shop_es.svg);
-                }
-                &.en {
-                    height: 50px;
-                    background-image: url(/assets/titles/title_shop_en.svg);
-                }
-            }
-        
-            &.nftTitle {
-                background-image: url(/assets/titles/title_nft.svg);
-                width: 100px;        
-            }
-          }
+        margin-bottom: 10vh;
 
         .column {            
             p {

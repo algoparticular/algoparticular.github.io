@@ -93,8 +93,7 @@
             </teleport>
 
             <section id="shops">
-                <h2 class="svg shopTitle es" v-if="$i18n.locale === 'es'"><span>{{ $t("message.shops") }}</span></h2>
-                <h2 class="svg shopTitle en" v-if="$i18n.locale === 'en'"><span>{{ $t("message.shops") }}</span></h2>
+                <h2 class="shopTitle">{{ $t("message.shops") }}</h2>
                                 
                 <div class="grid">
                     <div class="column col-6 col-sm-4">
@@ -117,7 +116,7 @@
             </section>
             
             <section id="crypto">
-                <h2 class="svg nftTitle"><span>NFTs</span></h2>            
+                <h2 class="nftTitle">NFTs</h2>            
                 <div class="row">
                     <div class="column col-6 col-sm-4">
                         <a class="drawingWrapper zoom" href="https://hicetnunc.art/algoparticular" target="_blank">

@@ -1,6 +1,11 @@
 /* FONT IMPORT */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
-@import url("https://use.typekit.net/lni6mis.css");
+@font-face {
+  font-family: particularFont;
+  src: url(/assets/Particularfont-Regular.ttf);
+  font-style: normal;
+}
+
 ::-webkit-scrollbar {
   width: 0px;
   background: transparent;
@@ -149,56 +154,46 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 h1 {
-  font-family: 'Alga', sans-serif;
+  font-family: 'particularFont', sans-serif;
   font-weight: 400;
-  font-size: 4.25em;
-  line-height: 1.01470588em;
+  font-size: 64px;
+  line-height: 1em;
   letter-spacing: -0.01em;
   margin: 0 0 8px;
 }
 
-@media screen and (max-width: 767px) {
-  h1 {
-    font-size: 3em;
-    padding: 0 16px;
-  }
-}
-
 h2 {
-  font-family: 'Inter', sans-serif;
+  font-family: 'particularFont', sans-serif;
   font-weight: 600;
-  font-size: 2.625em;
-  line-height: 1.0952381em;
-  letter-spacing: -0.05em;
+  font-size: 48px;
+  line-height: 1.1em;
+  letter-spacing: -0.03em;
   margin: 0;
 }
 
-h2 span {
-  display: none;
-}
-
-h2.svg {
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: 50%;
-  height: 60px;
-  width: 180px;
-}
-
 h3 {
-  font-family: 'Inter', sans-serif;
+  font-family: 'particularFont', sans-serif;
   font-weight: 400;
-  font-size: 1.625em;
-  line-height: 1.76923077em;
+  font-size: 40px;
+  line-height: 1.2em;
   letter-spacing: -0.01em;
   margin: 0 0 8px;
 }
 
 h4 {
+  font-family: 'particularFont', sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1.5em;
+  letter-spacing: -0.01em;
+  margin: 0 0 8px;
+}
+
+h5 {
   font-family: 'Inter', helvetiva, sans-serif;
   font-weight: 700;
   font-size: 1em;
-  line-height: 1.4375em;
+  line-height: 1.4em;
   letter-spacing: -0.01em;
   margin: 0 0 8px;
 }
@@ -453,20 +448,6 @@ main section {
           align-items: center;
   padding: 10vh 0;
   margin-bottom: 10vh;
-}
-
-main section h2.shopTitle.es {
-  background-image: url(/assets/titles/title_shop_es.svg);
-}
-
-main section h2.shopTitle.en {
-  height: 50px;
-  background-image: url(/assets/titles/title_shop_en.svg);
-}
-
-main section h2.nftTitle {
-  background-image: url(/assets/titles/title_nft.svg);
-  width: 100px;
 }
 
 main section .column p {
@@ -765,34 +746,6 @@ main section#crypto h2, main section#crypto p {
   }
 }
 
-section h2.svg {
-  height: 50px;
-}
-
-section h2.svg.protonTitle.es {
-  background-image: url(/assets/titles/title_proton_es.svg);
-}
-
-section h2.svg.protonTitle.en {
-  background-image: url(/assets/titles/title_proton_en.svg);
-}
-
-section h2.svg.neutronTitle.es {
-  background-image: url(/assets/titles/title_neutron_es.svg);
-}
-
-section h2.svg.neutronTitle.en {
-  background-image: url(/assets/titles/title_neutron_en.svg);
-}
-
-section h2.svg.electronTitle.es {
-  background-image: url(/assets/titles/title_electron_es.svg);
-}
-
-section h2.svg.electronTitle.en {
-  background-image: url(/assets/titles/title_electron_en.svg);
-}
-
 section .drawingWrapper.particle {
   background: #10100F;
   width: 200px !important;
@@ -832,18 +785,9 @@ section .drawingWrapper.particle:hover + p {
   margin: 0 auto;
 }
 
-.card-container .drawingWrapper {
-  border-radius: 36px;
-  overflow: hidden;
-}
-
-.card-container h3 {
-  font-weight: 600;
-  margin-top: 24px;
-}
-
 .card-container p {
   text-align: justify !important;
+  white-space: pre-line;
 }
 
 .card-container .bottom {
@@ -861,7 +805,7 @@ section .drawingWrapper.particle:hover + p {
   width: 46%;
 }
 
-.card-container .bottom div h4 {
+.card-container .bottom div h5 {
   text-align: center;
   margin-bottom: 4px;
 }
@@ -876,9 +820,6 @@ section .drawingWrapper.particle:hover + p {
   .card-container {
     width: auto;
     padding: 0 24px;
-  }
-  .card-container .drawingWrapper img {
-    width: 100%;
   }
   .card-container p {
     padding: 0;
@@ -898,20 +839,6 @@ section .drawingWrapper.particle:hover + p {
   }
 }
 
-.card-enter-from {
-  opacity: 0;
-}
-
-.card-leave-to {
-  opacity: 0;
-}
-
-.card-enter-active,
-.card-leave-active {
-  -webkit-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
-}
-
 .cardsFooter a {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -928,6 +855,102 @@ section .drawingWrapper.particle:hover + p {
 @media only screen and (max-width: 600px) {
   .cardsFooter img {
     width: 18%;
+  }
+}
+
+.card-enter-from {
+  opacity: 0;
+}
+
+.card-leave-to {
+  opacity: 0;
+}
+
+.card-enter-active,
+.card-leave-active {
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+#card-modal {
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#card-modal .card-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 40px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#card-modal .card-container img {
+  border-radius: 36px;
+  width: 400px;
+  height: 400px;
+}
+
+#card-modal .card-container .textWrapper {
+  width: 45%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#card-modal .card-container .textWrapper h4, #card-modal .card-container .textWrapper h5, #card-modal .card-container .textWrapper p {
+  color: #E9EDD8;
+}
+
+#card-modal .card-container .textWrapper h4 {
+  margin-top: 0;
+}
+
+#card-modal .closeModal {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 10px;
+  font-size: 1.5em;
+  color: #E9EDD8;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 800px) {
+  #card-modal {
+    position: absolute;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  #card-modal .card-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 48px 32px;
+  }
+  #card-modal .card-container img {
+    width: 100%;
+    height: auto;
+  }
+  #card-modal .card-container .textWrapper {
+    width: 100%;
+  }
+  #card-modal #cardLoader {
+    margin-top: 150%;
   }
 }
 
@@ -962,9 +985,10 @@ section .drawingWrapper.particle:hover + p {
   width: 80%;
 }
 
-#notFound h1 {
+#notFound h2 {
   margin: 16px 0 32px;
   color: #E9EDD8;
+  text-align: left;
 }
 
 #notFound p {

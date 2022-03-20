@@ -2,34 +2,90 @@
     "es": [
         {
             "name": "Aceptación",
-            "description": "La aceptación es la capacidad para asumir la vida y a los otros tal como son, sin intentar cambiar o luchar contra aquello que no podemos controlar. Aceptar que hay realidades que exceden tu control, no es una actitud estática, es una decisión activa, que nos invita a no cargar  ninguna malicia hacia nada o nadie. Al reconocer la diversidad, somos capaces de transformarnos. Al aceptar aquello que te hace único, eso particular que habita en vos, te vuelves más confiado y tu ser divino se revela.",
+            "description": "La aceptación es la capacidad para asumir la vida y a los otros tal como son, sin intentar cambiar o luchar contra aquello que no podemos controlar. Aceptar que hay realidades que exceden tu control, no es una actitud estática, es una decisión activa, que te invita a no cargar ninguna malicia hacia nada o nadie. Al reconocer la diversidad, somos capaces de transformarnos. Al aceptar aquello que te hace único, eso particular que habita en vos, te vuelves más confiado y tu ser divino se revela.",
             "image": "/assets/gallery/8 Addhitthana.jpg",
-            "afirmation": "Acepto quien soy y lo que me rodea.",
-            "invitation": "Dale aceptate como sos!"
+            "afirmation": "Acepto y honro quién soy.",
+            "invitation": "Suelto el exceso de control y acepto lo que me rodea aquí y ahora."
         },
         {
             "name": "Belleza",
-            "description": "Experimentar un profundo placer en un mundo lleno de muchas clases de belleza es una alegría de la vida. Creer que existe una sola clase de belleza equivale a no prestar atenciòn a la naturaleza. Poder ver lo bello aun en la apariencia más desafiante es un alimento para el alma. A medida que sintonizas con la particular belleza de tu ser, de los otros y de la naturaleza, tu resonancia se convierte en la de la belleza, y se irradia hacia todo lo que te rodea, volviéndolo luminoso.",
+            "description": "Creer que existe una sola clase de belleza equivale a no prestar atención a la vida y sus multiples expresiones. Poder ver lo bello aún en la apariencia más desafiante es un alimento para el alma.\nA medida que sintonizas con la particular belleza de tu ser, de los otros y de la naturaleza, tu resonancia se convierte en la de la belleza, y se irradia hacia todo lo que te rodea, volviéndote en una expresión de luz que invita a los otros a ver lo bello también.",
             "image": "/assets/gallery/9 Metta.jpg",
-            "afirmation": "Iluminó mi belleza y la de los otros.",
-            "invitation": "Me miro al espejo y digo, Soy una bella partícula"
+            "afirmation": "Reconozco mi belleza y la de los otros.",
+            "invitation": "Mi mirada percibe lo bello aún en la apariencia más desafiante."
+        },
+        {
+            "name": "Celebración",
+            "description": "Celebrar cada experiencia que la vida te regala despierta una actitud de gratitud que alimenta la vision de nuevas celebraciones. Siempre hay un motivo para celebrar y cuando lo haces con otros, una gran energía se libera atrayendo el goce, la felicidad y las ganas compartidas de honrar la vida.",
+            "image": "/assets/gallery/3 Dana.jpg",
+            "afirmation": "Celebro la vida, sus tránsitos y este instante particular.",
+            "invitation": "Descubro la liviandad y la alegría que se despierta al celebrar."
+        },
+        {
+            "name": "Comunicación",
+            "description": "El primer paso para comunicarte con honestidad es escucharte a vos mismo. La comunicación con el interior es una invitación a ahondar en la quietud, templando la mente y dejando que el oído del alma escuche respuestas en el silencio.\nLa práctica de la meditación es una puerta sagrada para comunicarte con el ser sabio y divino que habita en vos.\nComunícate con claridad a través de la palabra, la acción y la intención. Todos percibirán la resonancia de la verdad y confiarán en ti.",
+            "image": "/assets/gallery/7 Sacca.jpg",
+            "afirmation": "Me comunico con claridad y honestidad.",
+            "invitation": "En el silencio meditativo escucho y confio en mi verdad interior."
+        },
+        {
+            "name": "Confianza",
+            "description": "Cuando confías en ti mismo eres capaz de volver consciente la sabiduría y fuerza que llevas dentro.   Para nutrir la confianza en ti es importante dejar a un lado la búsqueda de aprobación y expectativas ajenas. Confía en tu intuición y en tu propia experiencia. Si la mente esta muy atareada y es difícil escuchar, confía en las señales de tu cuerpo. Al cultivar la confianza, tu espíritu se ilumina y tu luz te guía con determinación.",
+            "image": "/assets/gallery/2 Sila.jpg",
+            "afirmation": "Confío en mi y dejo que mi sabiduria guie mis pasos.",
+            "invitation": "Recuerda las veces que superaste adversidades."
+        },
+        {
+            "name": "Creatividad",
+            "description": "A medida que permitimos que el poder creativo fluya dentro nuestro alimentamos la energía del cambio. Al canalizar tu fuerza, das y recibes vida, ya que la creatividad no es un movimiento solitario. Allí donde pasa, atrae a quien sepa oír, ver y percibir.\nDejando de lado los juicios y exigencias, nos reconocemos co creadores de lo Divino, explorando así nuestro inmenso y particular potencial. Usa tu poder creativo para crear la vida que sueñas.",
+            "image": "/assets/gallery/6 Kshanti.jpg",
+            "afirmation": "Dejó que mi poder creativo se exprese pleno de alegría.",
+            "invitation": "Pongo en practica mi creatividad y creo la vida que sueño."
         }
     ],
     
     "en": [
         {
             "name": "Acceptance",
-            "description": "La aceptación es la capacidad para asumir la vida y a los otros tal como son, sin intentar cambiar o luchar contra aquello que no podemos controlar. Aceptar que hay realidades que exceden tu control, no es una actitud estática, es una decisión activa, que nos invita a no cargar  ninguna malicia hacia nada o nadie. Al reconocer la diversidad, somos capaces de transformarnos. Al aceptar aquello que te hace único, eso particular que habita en vos, te vuelves más confiado y tu ser divino se revela.",
+            "description": "La aceptación es la capacidad para asumir la vida y a los otros tal como son, sin intentar cambiar o luchar contra aquello que no podemos controlar. Aceptar que hay realidades que exceden tu control, no es una actitud estática, es una decisión activa, que te invita a no cargar ninguna malicia hacia nada o nadie. Al reconocer la diversidad, somos capaces de transformarnos. Al aceptar aquello que te hace único, eso particular que habita en vos, te vuelves más confiado y tu ser divino se revela.",
             "image": "/assets/gallery/8 Addhitthana.jpg",
-            "afirmation": "Acepto quien soy y lo que me rodea.",
-            "invitation": "Dale aceptate como sos!"
+            "afirmation": "Acepto y honro quién soy.",
+            "invitation": "Suelto el exceso de control y acepto lo que me rodea aquí y ahora."
         },
         {
             "name": "Beauty",
-            "description": "Experimentar un profundo placer en un mundo lleno de muchas clases de belleza es una alegría de la vida. Creer que existe una sola clase de belleza equivale a no prestar atenciòn a la naturaleza. Poder ver lo bello aun en la apariencia más desafiante es un alimento para el alma. A medida que sintonizas con la particular belleza de tu ser, de los otros y de la naturaleza, tu resonancia se convierte en la de la belleza, y se irradia hacia todo lo que te rodea, volviéndolo luminoso.",
+            "description": "Creer que existe una sola clase de belleza equivale a no prestar atención a la vida y sus multiples expresiones. Poder ver lo bello aún en la apariencia más desafiante es un alimento para el alma.\nA medida que sintonizas con la particular belleza de tu ser, de los otros y de la naturaleza, tu resonancia se convierte en la de la belleza, y se irradia hacia todo lo que te rodea, volviéndote en una expresión de luz que invita a los otros a ver lo bello también.",
             "image": "/assets/gallery/9 Metta.jpg",
-            "afirmation": "Iluminó mi belleza y la de los otros.",
-            "invitation": "Me miro al espejo y digo, Soy una bella partícula"
+            "afirmation": "Reconozco mi belleza y la de los otros.",
+            "invitation": "Mi mirada percibe lo bello aún en la apariencia más desafiante."
+        },
+        {
+            "name": "Celebration",
+            "description": "Celebrar cada experiencia que la vida te regala despierta una actitud de gratitud que alimenta la vision de nuevas celebraciones. Siempre hay un motivo para celebrar y cuando lo haces con otros, una gran energía se libera atrayendo el goce, la felicidad y las ganas compartidas de honrar la vida.",
+            "image": "/assets/gallery/4 Dana.jpg",
+            "afirmation": "Celebro la vida, sus tránsitos y este instante particular.",
+            "invitation": "Descubro la liviandad y la alegría que se despierta al celebrar."
+        },
+        {
+            "name": "Communication",
+            "description": "El primer paso para comunicarte con honestidad es escucharte a vos mismo. La comunicación con el interior es una invitación a ahondar en la quietud, templando la mente y dejando que el oído del alma escuche respuestas en el silencio.\nLa práctica de la meditación es una puerta sagrada para comunicarte con el ser sabio y divino que habita en vos.\nComunícate con claridad a través de la palabra, la acción y la intención. Todos percibirán la resonancia de la verdad y confiarán en ti.",
+            "image": "/assets/gallery/7 Sacca.jpg",
+            "afirmation": "Me comunico con claridad y honestidad.",
+            "invitation": "En el silencio meditativo escucho y confio en mi verdad interior."
+        },
+        {
+            "name": "Confidence",
+            "description": "Cuando confías en ti mismo eres capaz de volver consciente la sabiduría y fuerza que llevas dentro.   Para nutrir la confianza en ti es importante dejar a un lado la búsqueda de aprobación y expectativas ajenas. Confía en tu intuición y en tu propia experiencia. Si la mente esta muy atareada y es difícil escuchar, confía en las señales de tu cuerpo. Al cultivar la confianza, tu espíritu se ilumina y tu luz te guía con determinación.",
+            "image": "/assets/gallery/2 Sila.jpg",
+            "afirmation": "Confío en mi y dejo que mi sabiduria guie mis pasos.",
+            "invitation": "Recuerda las veces que superaste adversidades, pon valor en esas experiencia."
+        },
+        {
+            "name": "Creativity",
+            "description": "A medida que permitimos que el poder creativo fluya dentro nuestro alimentamos la energía del cambio. Al canalizar tu fuerza, das y recibes vida, ya que la creatividad no es un movimiento solitario. Allí donde pasa, atrae a quien sepa oír, ver y percibir.\nDejando de lado los juicios y exigencias, nos reconocemos co creadores de lo Divino, explorando así nuestro inmenso y particular potencial. Usa tu poder creativo para crear la vida que sueñas.",
+            "image": "/assets/gallery/6 Kshanti.jpg",
+            "afirmation": "Dejó que mi poder creativo se exprese pleno de alegría.",
+            "invitation": "Pongo en practica mi creatividad y creo la vida que sueño."
         }
     ]
 }

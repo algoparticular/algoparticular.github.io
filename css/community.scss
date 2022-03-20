@@ -1,35 +1,4 @@
 section {
-    h2.svg {
-        height: 50px;
-
-        &.protonTitle {
-            &.es {
-                background-image: url(/assets/titles/title_proton_es.svg);
-            }
-            &.en {
-                background-image: url(/assets/titles/title_proton_en.svg);
-            }
-        }
-    
-        &.neutronTitle {
-            &.es {
-                background-image: url(/assets/titles/title_neutron_es.svg);
-            }
-            &.en {
-                background-image: url(/assets/titles/title_neutron_en.svg);
-            }
-        }
-    
-        &.electronTitle {
-            &.es {
-                background-image: url(/assets/titles/title_electron_es.svg);
-            }
-            &.en {
-                background-image: url(/assets/titles/title_electron_en.svg);
-            }
-        }
-    }
-
     .drawingWrapper {
         &.particle {
             background: $color-black;

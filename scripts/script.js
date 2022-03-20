@@ -98,9 +98,11 @@ const VueApp = {
         closeCardModal() {
             this.showCard = false;
             this.randomCard = {};
+
+            this.loadingCard = false;
         },
         renderMessage() {
-            this.loadingCard = false;
+            // this.loadingCard = false;
 
             let randomNumber = Math.random() * (this.cards[localStorage.lang].length - 1);
             randomNumber = randomNumber.toFixed();
@@ -148,6 +150,8 @@ const VueApp = {
         this.updateShops();
 
         this.populateFromJson();
+
+        localStorage.setItem("lang", 'es');
     }
   };
 
