@@ -107,7 +107,7 @@ const VueApp = {
             this.loadingCard = false;
         },
         renderMessage() {
-            // this.loadingCard = false;
+            console.log(localStorage.lang);
 
             let randomNumber = Math.random() * (this.cards[localStorage.lang].length - 1);
             randomNumber = randomNumber.toFixed();
@@ -156,9 +156,9 @@ const VueApp = {
 
         this.populateFromJson();
 
-        // if (localStorage.lang == null) {
-        //     localStorage.setItem("lang", 'es');
-        // }
+        if (localStorage.lang == null) {
+            localStorage.setItem("lang", 'es');
+        }
     }
   };
 

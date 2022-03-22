@@ -965,6 +965,8 @@ section .drawingWrapper.particle:hover + p {
   #card-modal .card-container img {
     width: 100%;
     height: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   #card-modal .card-container .textWrapper {
     width: 100%;
