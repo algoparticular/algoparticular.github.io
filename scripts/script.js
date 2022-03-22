@@ -2,6 +2,8 @@ import CommunityParticle from './CommunityParticle.js';
 import MessageCard from './MessageCard.js';
 import ModalGallery from './ModalGallery.js';
 import ModalCard from './ModalCard.js';
+import LayoutHeader from './LayoutHeader.js';
+import LayoutFooter from './LayoutFooter.js';
 
 // Configure Vue here
 const VueApp = {
@@ -9,7 +11,9 @@ const VueApp = {
         CommunityParticle,
         MessageCard,
         ModalGallery,
-        ModalCard
+        ModalCard,
+        LayoutHeader,
+        LayoutFooter
     },
 
     // Put variables here
@@ -42,6 +46,7 @@ const VueApp = {
     methods: {
         langChanged(lang) {
             localStorage.setItem("lang", lang);
+            console.log('pase por aqui '+ lang);
         },
         populateFromJson() {
             //Particles object
@@ -151,7 +156,9 @@ const VueApp = {
 
         this.populateFromJson();
 
-        localStorage.setItem("lang", 'es');
+        // if (localStorage.lang == null) {
+        //     localStorage.setItem("lang", 'es');
+        // }
     }
   };
 

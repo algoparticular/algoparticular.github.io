@@ -20,24 +20,13 @@ header {
         justify-content: center;
         
         img {
-           height: 80px; 
-        }
-
-        &.community {
-            img {
-                height: 50px;
-            }
-        }
+        //    height: 80px; 
+            width: 320px;
+        }        
         
         @media screen and (max-width: 600px) {            
             img {
-                height: 60px;
-            }
-
-            &.community {
-                img {
-                    height: 40px;
-                }
+                width: 220px;
             }
         }
     }
@@ -85,13 +74,4 @@ header {
         }
     }
 
-    &.not-home {
-
-        @media screen and (max-width: 600px) {
-            //        height: 10vh;
-            //        flex-direction: column-reverse;
-            //        gap: 40px;
-            //        margin-top: 16px;
-        }
-    }
 }

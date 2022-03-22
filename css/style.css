@@ -346,19 +346,12 @@ header #logo {
 }
 
 header #logo img {
-  height: 80px;
-}
-
-header #logo.community img {
-  height: 50px;
+  width: 320px;
 }
 
 @media screen and (max-width: 600px) {
   header #logo img {
-    height: 60px;
-  }
-  header #logo.community img {
-    height: 40px;
+    width: 220px;
   }
 }
 
