@@ -46,7 +46,6 @@ const VueApp = {
     methods: {
         langChanged(lang) {
             localStorage.setItem("lang", lang);
-            console.log('pase por aqui '+ lang);
         },
         populateFromJson() {
             //Particles object
@@ -107,8 +106,6 @@ const VueApp = {
             this.loadingCard = false;
         },
         renderMessage() {
-            console.log(localStorage.lang);
-
             let randomNumber = Math.random() * (this.cards[localStorage.lang].length - 1);
             randomNumber = randomNumber.toFixed();
 
