@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no; viewport-fit=cover">
 
     <meta property="og:title" content="Algo Particular">
     <meta property="og:type" content="website" />
@@ -33,11 +33,11 @@
   <body>
     <div id="app">
         <layout-header v-model:language="$i18n.locale" @change="langChanged($i18n.locale)">
-            <template v-slot:navigation>
+            <!-- <template v-slot:navigation>
                 <a href="/">{{ $t("message.back") }}</a>
-            </template>
+            </template> -->
             <template v-slot:logo>
-                <img alt="Algo Particular Logo" src="/assets/Logo.svg">
+                <a href="/index.html"></a><img alt="Algo Particular Logo" src="/assets/Logo.svg"></a>
             </template>
         </layout-header>
         

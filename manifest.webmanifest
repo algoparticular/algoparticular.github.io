@@ -1,10 +1,10 @@
 {
-    "short_name": "AlgoParticular",
+    "short_name": "Algo Particular",
     "name": "Algo Particular",
     "start_url": "cards.html",
     "display": "standalone",
-    "background_color": "#E9EDD8",
-    "theme_color": "#E9EDD8",
+    "background_color": "#10100F",
+    "theme_color": "#10100F",
     "orientation": "portrait-primary",
     "icons": [
       {
