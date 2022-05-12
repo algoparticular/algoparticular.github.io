@@ -156,6 +156,21 @@ const VueApp = {
         if (localStorage.lang == null) {
             localStorage.setItem("lang", 'es');
         }
+
+        //Progressive Web App
+        var registration = null;
+
+        if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function() {
+            navigator.serviceWorker
+            .register("/scripts/serviceWorker.js")
+            .then(function(reg) {
+                registration = reg;
+                console.log("Service Worker registered");
+            })
+            .catch(err => console.log("Service Worker not registered", err))
+        })
+        }
     }
   };
 

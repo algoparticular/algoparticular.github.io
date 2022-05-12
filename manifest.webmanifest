@@ -1,0 +1,21 @@
+{
+    "short_name": "AlgoParticular",
+    "name": "Algo Particular",
+    "start_url": "cards.html",
+    "display": "standalone",
+    "background_color": "#E9EDD8",
+    "theme_color": "#E9EDD8",
+    "orientation": "portrait-primary",
+    "icons": [
+      {
+        "src": "assets/icon-32.jpg",
+        "type": "image/jpg",
+        "sizes": "32x32" 
+      },
+      {
+        "src": "assets/icon-512.jpg",
+        "type": "image/jpg",
+        "sizes": "512x512" 
+      }
+    ]  
+  }
