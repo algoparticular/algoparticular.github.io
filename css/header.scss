@@ -8,6 +8,10 @@ header {
     gap: 16px;
     // height: 18vh;
 
+    &.inApp {
+        margin-top: 10vh;
+    }
+
     .navigation {
         display: flex;
         justify-content: space-between;
@@ -30,48 +34,4 @@ header {
             }
         }
     }
-    
-    /*NAV*/
-    nav {
-        min-width: 10%;
-        padding: 8px 16px;
-        // border-radius: 8px;
-        // backdrop-filter: blur(4.2px);
-        // -webkit-backdrop-filter: blur(4.2px);
-        display: flex;
-        justify-content: center;
-
-        @media screen and (max-width: 600px) {            
-
-        }
-
-        .lang {
-            color: $color-black;
-            font-weight: 400;
-            padding: 4px 10px;
-            -webkit-appearance: none;
-            background-color: transparent;
-            border-color: $color-black;
-            border-radius: 4px;
-
-            &:hover {
-                color: $color-lorange;
-                -webkit-transition: all 250ms ease-out;
-                -moz-transition: all 250ms ease-out;
-                -o-transition: all 250ms ease-out;
-                transition: all 250ms ease-out;
-            }
-
-            &:focus {
-                box-shadow: rgba(254, 136, 36, 0.36) 0px 0px 0px 4px;
-                outline: 0px;
-
-                -webkit-transition: all 300ms ease-out;
-                -moz-transition: all 300ms ease-out;
-                -o-transition: all 300ms ease-out;
-                transition: all 300ms ease-out;
-            }
-        }
-    }
-
 }

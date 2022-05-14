@@ -4,6 +4,8 @@ import ModalGallery from './ModalGallery.js';
 import ModalCard from './ModalCard.js';
 import LayoutHeader from './LayoutHeader.js';
 import LayoutFooter from './LayoutFooter.js';
+import LayoutHeaderApp from './LayoutHeaderApp.js';
+import LayoutFooterApp from './LayoutFooterApp.js';
 
 // Configure Vue here
 const VueApp = {
@@ -13,7 +15,9 @@ const VueApp = {
         ModalGallery,
         ModalCard,
         LayoutHeader,
-        LayoutFooter
+        LayoutHeaderApp,
+        LayoutFooter,        
+        LayoutFooterApp
     },
 
     // Put variables here
@@ -190,7 +194,7 @@ const VueApp = {
             communityB: 'Neutrones',
             communityC: 'Electrones',
             back: 'Volver',
-            cardMessageIntro: 'Un parte de nuestros átomos y los de todo lo que existe fueron vienen vagando por el Universo desde el principio de los tiempos. Esas partículas cargan con cientos de miles de historias, y cada una de ellas nos comparte un aprendizaje.\n\nCierra tus ojos e intenciona tu mensaje particular de hoy.',
+            cardMessageIntro: 'Una parte de nuestros átomos y los de todo lo que existe fueron vienen vagando por el Universo desde el principio de los tiempos. Esas partículas cargan con cientos de miles de historias, y cada una de ellas nos comparte un aprendizaje.\n\nCierra tus ojos e intenciona tu mensaje particular de hoy.',
             cardMessageButton: 'Descubre tu carta',
             cardAfirmation: 'Afirmación',
             cardInvitation: 'Invitación',
@@ -214,7 +218,7 @@ const VueApp = {
             communityB: 'Neutrons',
             communityC: 'Electrons',
             back: 'Back',
-            cardMessageIntro: 'A part of our atoms and those of everything that exists were wandering around the Universe since the beginning of time. Those particles carry hundreds of thousands of stories, and each one of them shares with us a learning.\n\nClose your eyes and intend your particular message today. (Currently only in Spanish)',
+            cardMessageIntro: 'Part of our atoms and those of everything that exists were wandering around the Universe since the beginning of time. Those particles carry hundreds of thousands of stories, and each one of them shares with us a learning.\n\nClose your eyes and intend your particular message today. (Currently only in Spanish)',
             cardMessageButton: 'Discover your card',
             cardAfirmation: 'Afirmation',
             cardInvitation: 'Invitation',

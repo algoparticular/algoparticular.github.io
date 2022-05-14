@@ -32,14 +32,11 @@
     
   <body>
     <div id="app">
-        <layout-header v-model:language="$i18n.locale" @change="langChanged($i18n.locale)">
-            <!-- <template v-slot:navigation>
-                <a href="/">{{ $t("message.back") }}</a>
-            </template> -->
+        <layout-header-app>
             <template v-slot:logo>
                 <a href="/index.html"><img alt="Algo Particular Logo" src="/assets/Logo.svg"></a>
             </template>
-        </layout-header>
+        </layout-header-app>
         
         <main id="cardDiscover">
             <section class="intro">
@@ -57,9 +54,9 @@
             </svg> -->
         </main>          
 
-        <layout-footer :copyright="false" class="cardsFooter">
+        <layout-footer-app :copyright="false" class="cardsFooter" v-model:language="$i18n.locale" @change="langChanged($i18n.locale)">
             <img src="/assets/ilus/ilus_mushrooms.svg">
-        </layout-footer>       
+        </layout-footer-app>       
 
     </div>
     <div id="grain"></div>

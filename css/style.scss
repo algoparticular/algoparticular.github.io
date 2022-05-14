@@ -61,7 +61,7 @@ body {
     
     font-size: 1em;
     line-height: 1.4375em;
-}
+} 
 
 #app {
     padding: 18px 0;
@@ -86,6 +86,7 @@ body {
 @import './layout.scss';
 @import './texts.scss';
 @import './buttons.scss';
+@import './nav.scss';
 @import './header.scss';
 @import './footer.scss';
 @import './home.scss';
@@ -94,3 +95,4 @@ body {
 @import './community.scss';
 @import './cards.scss';
 @import './error.scss';
+

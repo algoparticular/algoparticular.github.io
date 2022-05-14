@@ -304,6 +304,42 @@ button:focus,
   transition: all 300ms ease-out;
 }
 
+/*NAV*/
+nav {
+  min-width: 10%;
+  padding: 8px 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+nav .lang {
+  color: #10100F;
+  font-weight: 400;
+  padding: 4px 10px;
+  -webkit-appearance: none;
+  background-color: transparent;
+  border-color: #10100F;
+  border-radius: 4px;
+}
+
+nav .lang:hover {
+  color: #F4844C;
+  -webkit-transition: all 250ms ease-out;
+  transition: all 250ms ease-out;
+}
+
+nav .lang:focus {
+  -webkit-box-shadow: rgba(254, 136, 36, 0.36) 0px 0px 0px 4px;
+          box-shadow: rgba(254, 136, 36, 0.36) 0px 0px 0px 4px;
+  outline: 0px;
+  -webkit-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+}
+
 /* Header */
 header {
   position: relative;
@@ -321,7 +357,10 @@ header {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 16px;
-  /*NAV*/
+}
+
+header.inApp {
+  margin-top: 10vh;
 }
 
 header .navigation {
@@ -356,41 +395,6 @@ header #logo img {
   }
 }
 
-header nav {
-  min-width: 10%;
-  padding: 8px 16px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-header nav .lang {
-  color: #10100F;
-  font-weight: 400;
-  padding: 4px 10px;
-  -webkit-appearance: none;
-  background-color: transparent;
-  border-color: #10100F;
-  border-radius: 4px;
-}
-
-header nav .lang:hover {
-  color: #F4844C;
-  -webkit-transition: all 250ms ease-out;
-  transition: all 250ms ease-out;
-}
-
-header nav .lang:focus {
-  -webkit-box-shadow: rgba(254, 136, 36, 0.36) 0px 0px 0px 4px;
-          box-shadow: rgba(254, 136, 36, 0.36) 0px 0px 0px 4px;
-  outline: 0px;
-  -webkit-transition: all 300ms ease-out;
-  transition: all 300ms ease-out;
-}
-
 /* Footer */
 footer {
   display: -webkit-box;
@@ -412,6 +416,10 @@ footer {
 footer .symbol {
   width: 36px;
   margin-bottom: 5vh;
+}
+
+footer nav {
+  margin-top: 24px;
 }
 
 footer .copyright {
@@ -795,6 +803,9 @@ section .drawingWrapper.particle:hover + p {
 @media only screen and (max-width: 600px) {
   #cardDiscover {
     height: 50vh;
+  }
+  #cardDiscover section.intro {
+    padding-top: 5vh;
   }
   #cardDiscover section.intro p {
     width: 100%;
