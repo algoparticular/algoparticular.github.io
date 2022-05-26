@@ -182,7 +182,7 @@ const VueApp = {
     es: {
         message: {
             hello: 'Algo Particular cuenta las historias de una partícula que al volverse consciente de sí, aprende a navegar el Universo libremente.\nBajo la premisa hermética "Como es arriba, es abajo", transmite su verdad: todos somos iguales, todos somos uno, (no) somos (de) aquí.',
-            seeGallery: 'Ver galería',
+            seeGallery: 'Ver galería completa',
             shops: 'Tiendas',
             shopFC: 'Tienda FlashCookie, sólo para Argentina',
             shopTL: 'Tienda Threadless, envíos a todo el mundo',
@@ -207,7 +207,7 @@ const VueApp = {
     en: {
         message: {
             hello: 'Algo Particular tells the stories of a particle that upon becoming self-aware, learns to navigate the Universe freely.\nUnder the Hermetic premise "As above, so below", it conveys its truth: we are all the same, we are all one, we are (not from) here.',
-            seeGallery: 'View gallery',
+            seeGallery: 'View full gallery',
             shops: 'Shops',
             shopFC: 'Flashcookie store, only in Argentina',
             shopTL: 'Threadless store, shipping worldwide from the US',
