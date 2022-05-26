@@ -268,16 +268,10 @@ a .underline {
   background-color: #10100F;
 }
 
-@media screen and (max-width: 767px) {
-  a {
-    font-size: 16px;
-  }
-}
-
 button,
 .button {
   font-weight: 400;
-  font-size: 16px;
+  font-size: 18px;
   border: none;
   background: #10100F;
   height: 40px;
@@ -715,6 +709,14 @@ main section#crypto h2, main section#crypto p {
   }
 }
 
+#gallery.feed {
+  -ms-grid-columns: ([col] 1fr)[3];
+      grid-template-columns: repeat(3, [col] 1fr);
+  grid-column-gap: 32px;
+  grid-row-gap: 26px;
+  margin: 0 auto;
+}
+
 #gallery-modal {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -745,6 +747,30 @@ main section#crypto h2, main section#crypto p {
 @media only screen and (max-width: 600px) {
   #gallery-modal .modal-content {
     width: 100%;
+  }
+}
+
+#gallerySection {
+  padding: 150px 22.5vw 100px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  #gallerySection {
+    padding: 150px 14vw 100px;
+  }
+  #gallerySection #gallery.feed {
+    grid-column-gap: 24px;
+    grid-row-gap: 18px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #gallerySection {
+    padding: 150px 8vw 100px;
+  }
+  #gallerySection #gallery.feed {
+    grid-column-gap: 16px;
+    grid-row-gap: 10px;
   }
 }
 
@@ -1054,5 +1080,24 @@ section .drawingWrapper.particle:hover + p {
           justify-content: center;
   padding: 3vh 0 20vh;
   margin-top: 32px;
+}
+
+.darkMode {
+  background-color: #10100F;
+}
+
+.darkMode a {
+  color: #E9EDD8;
+}
+
+.darkMode button,
+.darkMode .button {
+  background-color: #E9EDD8;
+  color: #10100F;
+}
+
+.darkMode nav .lang {
+  border-color: #E9EDD8;
+  color: #E9EDD8;
 }
 /*# sourceMappingURL=style.css.map */

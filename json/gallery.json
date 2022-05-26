@@ -1,52 +1,142 @@
 [
     {
+        "title": "Coral cell",
+        "image": "/assets/gallery/cell_coral.jpg",
+        "description": ""
+    },
+    {
+        "title": "Plant cell",
+        "image": "/assets/gallery/cell_planta.jpg",
+        "description": ""
+    },
+    {
+        "title": "Fungi cell",
+        "image": "/assets/gallery/cell_fungi.jpg",
+        "description": ""
+    },
+    {
+        "title": "Destinados, Aura",
+        "image": "/assets/gallery/destinados_1.jpg",
+        "description": ""
+    },
+    {
+        "title": "Destinados, Atom",
+        "image": "/assets/gallery/destinados_2.jpg",
+        "description": ""
+    },
+    {
+        "title": "Destinados, Particular",
+        "image": "/assets/gallery/destinados_3.jpg",
+        "description": ""
+    },
+    {
+        "title": "Frenar Particular",
+        "image": "/assets/gallery/frenar_3.jpg",
+        "description": ""
+    },
+    {
+        "title": "Frenar",
+        "image": "/assets/gallery/frenar_2.jpg",
+        "description": ""
+    },
+    {
+        "title": "Frenar Kätus",
+        "image": "/assets/gallery/frenar_1.jpg",
+        "description": ""
+    },
+    {
+        "title": "Laberinto, Aura",
+        "image": "/assets/gallery/laberinto_1.jpg",
+        "description": ""
+    },
+    {
+        "title": "Laberinto",
+        "image": "/assets/gallery/laberinto_2.jpg",
+        "description": ""
+    },
+    {
+        "title": "Laberinto, Vulpes",
+        "image": "/assets/gallery/laberinto_3.jpg",
+        "description": ""
+    },
+    {
+        "title": "Soñar, Samas",
+        "image": "/assets/gallery/sueños_3.jpg",
+        "description": ""
+    },
+    {
+        "title": "Soñar, Particular",
+        "image": "/assets/gallery/sueños_2.jpg",
+        "description": ""
+    },
+    {
+        "title": "Soñar, Vulpes",
+        "image": "/assets/gallery/sueños_1.jpg",
+        "description": ""
+    },
+    {
+        "title": "Ser Superior, Equilibrio",
+        "image": "/assets/gallery/serSuperior_1.jpg",
+        "description": ""
+    },
+    {
+        "title": "Ser Superior, Particular",
+        "image": "/assets/gallery/serSuperior_2.jpg",
+        "description": ""
+    },
+    {
+        "title": "Ser Superior, Transformar",
+        "image": "/assets/gallery/serSuperior_3.jpg",
+        "description": ""
+    },
+    {
         "title": "Nekkhamma",
-        "image": "/assets/gallery/1 Nekkhamma.jpg",
+        "image": "/assets/gallery/parami_1.jpg",
         "description": ""
     },
     {
         "title": "Sila",
-        "image": "/assets/gallery/2 Sila.jpg",
+        "image": "/assets/gallery/parami_2.jpg",
         "description": ""
     },
     {
         "title": "Dana",
-        "image": "/assets/gallery/3 Dana.jpg",
+        "image": "/assets/gallery/parami_3.jpg",
         "description": ""
     },
     {
         "title": "Pañña",
-        "image": "/assets/gallery/4 Pañña.jpg",
+        "image": "/assets/gallery/parami_4.jpg",
         "description": ""
     },
     {
         "title": "Viriya",
-        "image": "/assets/gallery/5 Viriya.jpg",
+        "image": "/assets/gallery/parami_5.jpg",
         "description": ""
     },
     {
         "title": "Kshanti",
-        "image": "/assets/gallery/6 Kshanti.jpg",
+        "image": "/assets/gallery/parami_6.jpg",
         "description": ""
     },
     {
         "title": "Sacca",
-        "image": "/assets/gallery/7 Sacca.jpg",
+        "image": "/assets/gallery/parami_7.jpg",
         "description": ""
     },
     {
         "title": "Addhitthana",
-        "image": "/assets/gallery/8 Addhitthana.jpg",
+        "image": "/assets/gallery/parami_8.jpg",
         "description": ""
     },
     {
         "title": "Metta",
-        "image": "/assets/gallery/9 Metta.jpg",
+        "image": "/assets/gallery/parami_9.jpg",
         "description": ""
     },
     {
         "title": "Upekka",
-        "image": "/assets/gallery/10 Upekka.jpg",
+        "image": "/assets/gallery/parami_10.jpg",
         "description": ""
     }
 ]

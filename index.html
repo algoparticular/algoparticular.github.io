@@ -68,15 +68,18 @@
 
             </section> -->
             
-            <section id="galleryWrapper">
+            <section id="galleryWrapper" class="darkMode">
                 <p>
                     {{ $t("message.hello") }}
                 </p>            
                 <div id="gallery">
                     <a class="gallery-item" v-for="(item, i) of gallery" @click="openGalleryModal(i)">
-                        <img :alt="item.title" :src="item.image">
+                        <img v-if="i < 5" :alt="item.title" :src="item.image">
                     </a>
                 </div>
+                <button onclick="window.location.href='/gallery.html';">
+                    {{ $t("message.seeGallery") }}
+                </button>
             </section>
             <!-- The Modal -->
             <teleport to="body">

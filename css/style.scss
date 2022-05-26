@@ -96,3 +96,25 @@ body {
 @import './cards.scss';
 @import './error.scss';
 
+
+
+///////////
+//DARK MODE
+.darkMode {
+    background-color: $color-black;
+
+    a {
+        color: $color-whiteMana;
+    }
+
+    button,
+    .button {
+        background-color: $color-whiteMana;
+        color: $color-black;
+    }
+
+    nav .lang {
+        border-color: $color-whiteMana;
+        color: $color-whiteMana;
+    }
+}
