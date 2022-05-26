@@ -73,7 +73,7 @@
                     {{ $t("message.hello") }}
                 </p>            
                 <div id="gallery" class="home feed">
-                    <a class="gallery-item" v-for="(item, i) of gallery.slice(0, 3)" @click="openGalleryModal(i)">
+                    <a class="gallery-item" v-for="(item, i) of gallery.reverse().slice(0, 3)" @click="openGalleryModal(i)">
                         <img :alt="item.title" :src="item.image">
                     </a>
                 </div>
