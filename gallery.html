@@ -41,7 +41,7 @@
         
         <section id="gallerySection">                    
             <div id="gallery" class="feed">
-                <a class="gallery-item" v-for="(item, i) of gallery.reverse()" @click="openGalleryModal(i)">
+                <a class="gallery-item" v-for="(item, i) of gallery.slice().reverse()" @click="openGalleryModal(item)">
                     <img :alt="item.title" :src="item.image">
                 </a>
             </div>

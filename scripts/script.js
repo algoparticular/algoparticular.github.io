@@ -62,9 +62,9 @@ const VueApp = {
             fetch('../json/cards.json').then(response => response.json()).then((data) => this.cards = data);
         },
 
-        openGalleryModal(i) {
-            this.modal.image = this.gallery[i].image;
-            this.modal.caption = this.gallery[i].title;
+        openGalleryModal(item) {
+            this.modal.image = item.image;
+            this.modal.caption = item.title;
 
             this.showModal = true;
         },
