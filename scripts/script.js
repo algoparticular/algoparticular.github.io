@@ -28,6 +28,7 @@ const VueApp = {
                 image: '',
                 caption: ''
             },
+            galleryHome: [],
             gallery: [],
 
             shops: {
@@ -57,6 +58,9 @@ const VueApp = {
 
             //Gallery object
             fetch('../json/gallery.json').then(response => response.json()).then((data) => this.gallery = data);
+
+            //Home Gallery object
+            fetch('../json/galleryHome.json').then(response => response.json()).then((data) => this.galleryHome = data);
             
             //Cards object
             fetch('../json/cards.json').then(response => response.json()).then((data) => this.cards = data);
