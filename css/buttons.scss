@@ -4,7 +4,7 @@ a {
     text-decoration: none;
     color: $color-black;  
     width: auto !important;
-    font-size: 18px;
+    font-size: 18px;    
     font-weight: 600;
 
     &.icon-link {
@@ -71,5 +71,9 @@ button,
         -moz-transition: all 300ms ease-out;
         -o-transition: all 300ms ease-out;
         transition: all 300ms ease-out;
+    }
+
+    @media screen and (max-width: 767px) {
+        height: 48px;
     }
 }

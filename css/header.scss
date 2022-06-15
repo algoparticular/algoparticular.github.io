@@ -6,12 +6,7 @@ header {
     align-items: center;
     flex-direction: column;
     gap: 16px;
-    // height: 18vh;
-
-    &.inApp {
-        margin-top: 24px;
-        gap: 80px;
-    }
+    // height: 18vh;    
 
     .navigation {
         display: flex;
@@ -32,6 +27,25 @@ header {
         @media screen and (max-width: 600px) {            
             img {
                 width: 220px;
+            }
+        }
+    }
+
+    &.inApp {
+        gap: 40px;
+
+        nav {
+            align-self: flex-end;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        &.inApp {
+            margin-top: 24px;
+            gap: 80px;
+
+            nav {
+                align-self: auto;
             }
         }
     }
