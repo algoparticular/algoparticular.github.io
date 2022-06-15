@@ -8,7 +8,7 @@ export default {
     <transition name="modal">
     <div v-show="loading" id="card-modal" class="modal">
         <div v-if="show" class="card-container modal-content">
-            <img v-bind:src="card.image"/>
+            <div class="imgWrapper"><img v-bind:src="card.image"/></div>
             
             <div class="textWrapper">
                 <h4>

@@ -1,19 +1,20 @@
 export default {
     props: {
-      copyright: Boolean,
+      hascopyright: Boolean,
+      hasnav: Boolean,
       language: String
     },
     template: `
-    <footer>        
+    <footer class="inApp">        
         <slot></slot>
 
-        <nav>
+        <nav v-if="hasnav">
             <select class="lang" :value="language" @change="$emit('update:language', $event.target.value)">
                 <option v-for="(locale, i) in $i18n.availableLocales" :key="i" :value="locale">{{ locale.toUpperCase() }}</option>
             </select>
         </nav>
 
-        <p v-if="copyright" class="copyright">{{ $t("message.copyrightA") }} <a href="https://juanmanuelynz.com" target="_blank">Juan</a><br>{{ $t("message.copyrightB") }} <a href="/community.html">{{ $t("message.copyrightC") }}</a></p>
+        <p v-if="hascopyright" class="copyright">{{ $t("message.copyrightApp") }} <a href="https://algoparticular.com" target="_blank">Algo Particular</a></p>
     </footer>
     `
 }

@@ -56,4 +56,25 @@ footer {
             }
         }        
     }
+
+    &.inApp {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+
+        // a {
+        //     display: flex;
+        //     justify-content: center;        
+        // }
+    
+        img {
+            width: 7%;
+        }
+    
+        @media only screen and (max-width: 600px){
+            img {
+                width: 18%;
+            }   
+        }
+    }
 }

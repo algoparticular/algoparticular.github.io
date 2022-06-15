@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no; viewport-fit=cover">
 
-    <meta property="og:title" content="Algo Particular">
+    <meta property="og:title" content="Praxis, by Algo Particular">
     <meta property="og:type" content="website" />
     <meta property="og:description" content="Algo Particular cuenta las historias de una partícula que al volverse consciente de sí, aprende a navegar el Universo libremente transmitiendo su verdad: todos somos iguales, todos somos uno, (no) somos (de) aquí.">
     <meta property="og:image" content="https://algoparticular.com/assets/socialImage.jpg">
@@ -17,7 +17,7 @@
 
     <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 
-    <title>Un Mensaje Particular</title>
+    <title>Praxis, by Algo Particular</title>
 
     <link rel="manifest" href="manifest.webmanifest" />
 
@@ -31,10 +31,10 @@
   </head>  
     
   <body>
-    <div id="app">
-        <layout-header-app>
+    <div id="app" class="cardsApp">
+        <layout-header-app :hasnav="true" v-model:language="$i18n.locale" @change="langChanged($i18n.locale)">
             <template v-slot:logo>
-                <a href="/index.html"><img alt="Algo Particular Logo" src="/assets/Logo.svg"></a>
+                <img alt="Praxis, by Algo Particular" src="/assets/Logo_praxis.svg"></a>
             </template>
         </layout-header-app>
         
@@ -54,8 +54,8 @@
             </svg> -->
         </main>          
 
-        <layout-footer-app :copyright="false" class="cardsFooter" v-model:language="$i18n.locale" @change="langChanged($i18n.locale)">
-            <img src="/assets/ilus/ilus_mushrooms.svg">
+        <layout-footer-app :hascopyright="true" :hasnav="false" v-model:language="$i18n.locale" @change="langChanged($i18n.locale)">
+            
         </layout-footer-app>       
 
     </div>

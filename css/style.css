@@ -354,7 +354,8 @@ header {
 }
 
 header.inApp {
-  margin-top: 10vh;
+  margin-top: 24px;
+  gap: 80px;
 }
 
 header .navigation {
@@ -428,6 +429,22 @@ footer .copyright a {
 
 footer .copyright a:hover {
   color: #F4844C;
+}
+
+footer.inApp {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+footer.inApp img {
+  width: 7%;
+}
+
+@media only screen and (max-width: 600px) {
+  footer.inApp img {
+    width: 18%;
+  }
 }
 
 /* Main sections */
@@ -811,6 +828,10 @@ section .drawingWrapper.particle:hover + p {
   }
 }
 
+#app.cardsApp {
+  padding: 0;
+}
+
 #cardDiscover {
   height: 60vh;
   display: -webkit-box;
@@ -826,7 +847,11 @@ section .drawingWrapper.particle:hover + p {
 
 #cardDiscover section.intro p {
   width: 50%;
-  margin-bottom: 40px;
+  margin-bottom: 80px;
+}
+
+#cardDiscover section.intro button {
+  width: 100%;
 }
 
 @media only screen and (max-width: 600px) {
@@ -900,25 +925,6 @@ section .drawingWrapper.particle:hover + p {
   }
 }
 
-.cardsFooter a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.cardsFooter img {
-  width: 7%;
-}
-
-@media only screen and (max-width: 600px) {
-  .cardsFooter img {
-    width: 18%;
-  }
-}
-
 .card-enter-from {
   opacity: 0;
 }
@@ -954,10 +960,19 @@ section .drawingWrapper.particle:hover + p {
           align-items: center;
 }
 
+#card-modal .card-container .imgWrapper {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-shadow: inset 0px 6px 9px rgba(16, 16, 15, 0.36), inset 0px -6px 9px rgba(16, 16, 15, 0.36);
+          box-shadow: inset 0px 6px 9px rgba(16, 16, 15, 0.36), inset 0px -6px 9px rgba(16, 16, 15, 0.36);
+}
+
 #card-modal .card-container img {
-  border-radius: 36px;
   width: 400px;
   height: 400px;
+  position: relative;
+  z-index: -2;
 }
 
 #card-modal .card-container .textWrapper {
@@ -984,8 +999,8 @@ section .drawingWrapper.particle:hover + p {
   top: 8px;
   right: 8px;
   padding: 10px;
-  font-size: 1.5em;
-  color: #E9EDD8;
+  font-size: 2em;
+  color: #10100F;
   cursor: pointer;
 }
 
@@ -1001,7 +1016,7 @@ section .drawingWrapper.particle:hover + p {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding: 48px 32px;
+    padding: 0;
   }
   #card-modal .card-container img {
     width: 100%;
@@ -1010,7 +1025,8 @@ section .drawingWrapper.particle:hover + p {
        object-fit: cover;
   }
   #card-modal .card-container .textWrapper {
-    width: 100%;
+    width: auto;
+    padding: 0 24px;
   }
   #card-modal #cardLoader {
     margin-top: 150%;
