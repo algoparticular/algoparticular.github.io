@@ -5,14 +5,14 @@
             "description": "La aceptación es la capacidad para asumir la vida y a los otros tal como son, sin intentar cambiar o luchar contra aquello que no podemos controlar. Aceptar que hay realidades que exceden tu control, no es una actitud estática, es una decisión activa, que te invita a no cargar ninguna malicia hacia nada o nadie. Al reconocer la diversidad, somos capaces de transformarnos. Al aceptar aquello que te hace único, eso particular que habita en vos, te vuelves más confiado y tu ser divino se revela.",
             "image": "/assets/gallery/parami_8.jpg",
             "afirmation": "Acepto y honro quién soy.",
-            "invitation": "Suelto el exceso de control y acepto lo que me rodea aquí y ahora."
+            "invitation": "Hoy suelto el exceso de control y acepto lo que me rodea aquí y ahora."
         },
         {
             "name": "Belleza",
-            "description": "Creer que existe una sola clase de belleza equivale a no prestar atención a la vida y sus multiples expresiones. Poder ver lo bello aún en la apariencia más desafiante es un alimento para el alma.\nA medida que sintonizas con la particular belleza de tu ser, de los otros y de la naturaleza, tu resonancia se convierte en la de la belleza, y se irradia hacia todo lo que te rodea, volviéndote en una expresión de luz que invita a los otros a ver lo bello también.",
+            "description": "Creer que existe una sola clase de belleza equivale a no prestar atención a la vida y sus multiples expresiones. Poder ver lo bello aún en la apariencia más desafiante es un alimento para el alma.\nA medida que sintonizas con la particular belleza de tu ser, de los otros y de la naturaleza, tu resonancia se convierte en la de la belleza, y se irradia hacia todo lo que te rodea, volviéndote una expresión de luz que invita a los otros a ver lo bello también.",
             "image": "/assets/gallery/parami_9.jpg",
             "afirmation": "Reconozco mi belleza y la de los otros.",
-            "invitation": "Mi mirada percibe lo bello aún en la apariencia más desafiante."
+            "invitation": "Hoy encuentro 3 aspectos bellos en mí."
         },
         {
             "name": "Celebración",
@@ -48,6 +48,13 @@
             "image": "/assets/gallery/parami_6.jpg",
             "afirmation": "Dejó que mi poder creativo se exprese pleno de alegría.",
             "invitation": "Pongo en practica mi creatividad y creo la vida que sueño."
+        },
+        {
+            "name": "Desafío",
+            "description": "El desafío más enriquecedor de todos es encontrar cada día una mejor versión de ti mismo. Los desafíos pueden ser vistos como dificultades insuperables o como oportunidades para la transformación y el crecimiento personal.  Si no existiera cierta cuota de resistencia no podrías descubrir tu propia fuerza. Cada vicisitud de la vida se presenta solo cuando uno está listo para enfrentarla. Por eso, si un desafío ha llegado a tu puerta, alza la mirada y avanza con confianza, descubriendo talentos y fuerzas que hasta entonces mantenías silenciadas.",
+            "image": "/assets/gallery/parami_7.jpg",
+            "afirmation": "Respondo a mis desafios con confianza y descubro nuevos talentos. ",
+            "invitation": "Transformo cada desafío en una sagrada oportunidad."
         }
     ],
     
@@ -57,14 +64,14 @@
             "description": "La aceptación es la capacidad para asumir la vida y a los otros tal como son, sin intentar cambiar o luchar contra aquello que no podemos controlar. Aceptar que hay realidades que exceden tu control, no es una actitud estática, es una decisión activa, que te invita a no cargar ninguna malicia hacia nada o nadie. Al reconocer la diversidad, somos capaces de transformarnos. Al aceptar aquello que te hace único, eso particular que habita en vos, te vuelves más confiado y tu ser divino se revela.",
             "image": "/assets/gallery/parami_8.jpg",
             "afirmation": "Acepto y honro quién soy.",
-            "invitation": "Suelto el exceso de control y acepto lo que me rodea aquí y ahora."
+            "invitation": "Hoy suelto el exceso de control y acepto lo que me rodea aquí y ahora."
         },
         {
             "name": "Beauty",
             "description": "Creer que existe una sola clase de belleza equivale a no prestar atención a la vida y sus multiples expresiones. Poder ver lo bello aún en la apariencia más desafiante es un alimento para el alma.\nA medida que sintonizas con la particular belleza de tu ser, de los otros y de la naturaleza, tu resonancia se convierte en la de la belleza, y se irradia hacia todo lo que te rodea, volviéndote en una expresión de luz que invita a los otros a ver lo bello también.",
             "image": "/assets/gallery/parami_9.jpg",
             "afirmation": "Reconozco mi belleza y la de los otros.",
-            "invitation": "Mi mirada percibe lo bello aún en la apariencia más desafiante."
+            "invitation": "Hoy encuentro 3 aspectos bellos en mí."
         },
         {
             "name": "Celebration",
@@ -100,6 +107,13 @@
             "image": "/assets/gallery/parami_6.jpg",
             "afirmation": "Dejó que mi poder creativo se exprese pleno de alegría.",
             "invitation": "Pongo en practica mi creatividad y creo la vida que sueño."
+        },
+        {
+            "name": "Challenge",
+            "description": "El desafío más enriquecedor de todos es encontrar cada día una mejor versión de ti mismo. Los desafíos pueden ser vistos como dificultades insuperables o como oportunidades para la transformación y el crecimiento personal.  Si no existiera cierta cuota de resistencia no podrías descubrir tu propia fuerza. Cada vicisitud de la vida se presenta solo cuando uno está listo para enfrentarla. Por eso, si un desafío ha llegado a tu puerta, alza la mirada y avanza con confianza, descubriendo talentos y fuerzas que hasta entonces mantenías silenciadas.",
+            "image": "/assets/gallery/parami_7.jpg",
+            "afirmation": "Respondo a mis desafios con confianza y descubro nuevos talentos. ",
+            "invitation": "Transformo cada desafío en una sagrada oportunidad."
         }
     ]
 }

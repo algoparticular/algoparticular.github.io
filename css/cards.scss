@@ -33,6 +33,35 @@
     }
 }
 
+#toolbar {
+    background: radial-gradient(circle at 50% 0%,
+                              rgba(0, 0, 0, 0) var(--radius), 
+                              $color-black var(--radius), 
+                              $color-black 100%);
+
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+
+    button {
+        position: relative;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+
+        bottom: calc(var(--toolbar-height) * 0.7 - var(--radius) + 36px);
+        width: var(--button-size);
+        height: var(--button-size);
+        border-radius: 100%;
+
+        img {
+            width: 80%;
+            height: auto;
+        }
+    }
+}
+
 
 #cardLoader {
     width: 108px;

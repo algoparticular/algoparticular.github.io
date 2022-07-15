@@ -24,6 +24,12 @@ $color-sonicSilver: #777777;
 
 $grid-gutter-width: 24px !default;
 
+:root {
+    --toolbar-height: 80px;
+    --radius: clamp(48px, 4vw, 60px);
+    --button-size: calc(calc(var(--radius) * 2) - 8px);
+}
+
 //HIDE SCROLLBAR
 ::-webkit-scrollbar {
     width: 0px;
@@ -95,7 +101,6 @@ body {
 @import './community.scss';
 @import './cards.scss';
 @import './error.scss';
-
 
 
 ///////////
