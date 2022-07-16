@@ -9,7 +9,7 @@
 :root {
   --toolbar-height: 80px;
   --radius: clamp(48px, 4vw, 60px);
-  --button-size: calc(calc(var(--radius) * 2) - 8px);
+  --button-size: calc(calc(var(--radius) * 2) - 10px);
 }
 
 ::-webkit-scrollbar {
@@ -907,7 +907,7 @@ section .drawingWrapper.particle:hover + p {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  bottom: calc(var(--toolbar-height) * 0.7 - var(--radius) + 37px);
+  bottom: calc(var(--toolbar-height) * 0.7 - var(--radius) + 36px);
   width: var(--button-size);
   height: var(--button-size);
   border-radius: 100%;
