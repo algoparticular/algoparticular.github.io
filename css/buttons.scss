@@ -53,6 +53,23 @@ button,
     color: $color-whiteMana;
     padding: 10px 20px;
     cursor: pointer;
+
+    &.circle {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+
+        width: 60px;
+        height: 60px;
+
+        .icon {
+            fill: $color-white
+        }
+    }
     
     &:hover {
         color: $color-whiteMana;
