@@ -2,7 +2,6 @@ import { createApp } from "vue";
 // import { createI18n } from 'vue-i18n';
 
 import './css/style.css';
-// import './css/style_new.css';
 import App from "./App.vue";
 
 //Router

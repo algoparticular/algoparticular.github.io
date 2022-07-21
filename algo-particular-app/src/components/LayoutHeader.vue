@@ -1,90 +1,38 @@
 <script setup>
-    import { onMounted, ref } from 'vue';
-    import { useRouter } from 'vue-router';
-    import { getAuth, onAuthStateChanged, signOut } from 'firebase/auth';
-
-    const isLoggedIn = ref(false);
-    const router = useRouter();
-    let auth;
-
-    onMounted (() => {
-        //check user logged in or not
-        auth = getAuth();
-        onAuthStateChanged (auth, (user) => {
-            if (user) {
-            isLoggedIn.value = true;
-            } else {
-            isLoggedIn.value = false;
-            }
-        });
-    });
-
-    //handle sign out
-    const handleSignOut = () => {
-        signOut(auth).then (() => {
-            router.push('/');
-        });
-    };
-
-    const props = defineProps({
-        hasnav: Boolean,
-        language: String
-    });
+    import Menu from './Menu.vue';
 </script>
 
 <template>
     <header>
-        <nav v-if="hasnav">
-            <router-link to="/">?</router-link> 
-
-            <div v-if="isLoggedIn">
-                <router-link to="/feed">Collection</router-link>
-                <button @click="handleSignOut" v-if="isLoggedIn">Exit</button>
-            </div>
-            <div v-else>
-                <router-link to="/register"> Register </router-link>
-                <router-link to="/sign-in"> Dive in </router-link>
-            </div>
-        </nav>  
+        <Menu />
 
         <div id="logo">
             <img src="../assets/icon_praxis.svg"/>
-        </div>
-
-        <!-- <nav v-if="hasnav">
-            <select class="lang" :value="language" @change="$emit('update:language', $event.target.value)">
-                <option v-for="(locale, i) in $i18n.availableLocales" :key="i" :value="locale">{{ locale.toUpperCase() }}</option>
-            </select>
-        </nav> -->              
+        </div>                   
     </header>
 </template>
 
-<style>
-    #logo img {
-        width: 50%;
-    }
-
+<style>    
     header {
-        padding: 16px;
+        padding: 16px 5%;
         position: relative;
         display: flex;
         justify-content: space-between;
+        align-items: center;
         position: fixed;
-        width: 100%;
+        width: 90%;
+
+        background: rgba(247, 248, 241, 0.18);
+        backdrop-filter: blur(6px);
+    }    
+
+    #logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    nav {        
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        gap: 32px;
+    #logo img {
+        width: 50px;
     }
-
-    nav div {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        gap: 32px;
-    }
-    
 </style>

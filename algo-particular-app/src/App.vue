@@ -1,7 +1,6 @@
 <script setup>
 
-	import LayoutHeader from './components/LayoutHeader.vue';
-	import Toolbar from './components/Toolbar.vue';
+	import LayoutHeader from './components/LayoutHeader.vue';	
 
 	import { onMounted, ref } from 'vue';  	
 
@@ -34,7 +33,6 @@
 
 <template>
     <!-- v-model:language="$i18n.locale" @change="langChanged($i18n.locale)" -->
-    <layout-header :hasnav="true" ></layout-header>
-    <router-view />
-	<Toolbar />
+    <LayoutHeader />	
+    <router-view />	
 </template>

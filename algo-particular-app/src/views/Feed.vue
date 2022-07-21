@@ -1,4 +1,6 @@
 <script setup>	
+	import Toolbar from '../components/Toolbar.vue';
+
 	import { getAuth } from 'firebase/auth';
 	import { useRouter } from 'vue-router';
 	import { onBeforeUnmount } from 'vue';
@@ -8,7 +10,7 @@
 
 	const authListener = auth.onAuthStateChanged(function(user) {
 		if (!user) { // not logged in
-			alert('you must be logged in to view this. redirecting to the home page');
+			// alert('you must be logged in to view this. redirecting to the home page');
 			router.push('/');
 		}
 	});
@@ -21,7 +23,8 @@
 
 <template>
 	<main id="deck">
-		<h2>My deck</h2>
+		<h2>Mi colección</h2>
 		<p>you can do it</p>
 	</main>
+	<Toolbar />
 </template>

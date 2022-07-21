@@ -1,4 +1,5 @@
 <script setup>
+	import Toolbar from '../components/Toolbar.vue';
 	// import { onMounted, ref } from 'vue';
 	// import { useRouter } from 'vue-router';
 
@@ -24,6 +25,7 @@
 		<!-- <button @click="getMessage()">{{ $t("message.cardMessageButton") }}</button> -->
 	</section>
   </main> 
+  <Toolbar />
 </template>
 
 <style>
@@ -37,7 +39,7 @@
 	}
 
 	#home .title {
-		width: 20vw;
+		width: 50vw;
 	}
 
 	section {
@@ -45,7 +47,7 @@
 	}
 
 	section p {
-		width: 312px;
+		width: 326px;
 		text-align: justify;
 
 	}

@@ -1,11 +1,3 @@
-<template>
-    <div id="cardDeck">
-        <template v-for="cardItem in deckData">
-            <DeckItem :card="cardItem" />
-        </template>        
-    </div>
-</template>
-
 <script>
     import { onMounted, ref } from 'vue';    
     import { cards } from "../json/cards.json";
@@ -35,19 +27,29 @@
                 deckData,
             };
         },
-        mounted() {
-            console.log("deck");
+        mounted() {            
         },
 
         components: { DeckItem }
     }
 </script>
 
+<template>
+    <main id="cardDeck">
+        <p>Escoje una carta</p>
+        <div class="deckWrapper">
+            <template v-for="cardItem in deckData">
+                <DeckItem :card="cardItem" :loading="false" />
+            </template>
+        </div>                
+    </main>
+</template>
+
 <style scoped>
-    #cardDeck {
+    .deckWrapper {
         display: flex;
         flex-wrap: wrap;
-        width: 80vw;
+        width: calc(94px * 3 + 8px * 2);
         margin: 0 auto;
         gap: 8px;
     }

@@ -1,12 +1,3 @@
-<template>
-    <h1>Create an Account</h1>
-    <p><input type="text" placeholder="Email" v-model="email" /></p>
-    <p><input type="password" placeholder="Password" v-model="password" /></p>
-    <p v-if="errorMessage">{{ errorMessage }}</p>
-    <p><button @click="register">Submit</button></p>
-    <!-- <p><button @click="signInWithGoogle">Sign in with Google</button></p> -->
-</template>
-
 <script setup>
     import { ref } from 'vue';
     import { useRouter } from 'vue-router';
@@ -50,3 +41,25 @@
             });
     }
 </script>
+
+<template>
+    <main class="formWrapper">
+        <div class="heading">
+            <h2>Crea una cuenta</h2>
+            <p>Bienvenido, crea tu cuenta con tu email y contraseña</p>
+        </div>  
+        <div class="form">
+            <input type="text" placeholder="Email" v-model="email" />
+            <input type="password" placeholder="Contraseña" v-model="password" />
+            <span v-if="errorMessage">{{ errorMessage }}</span>
+        </div>      
+        <div class="actions">
+            <button @click="register">Quiero sumergirme</button>
+            <!-- <button @click="signInWithGoogle">Sign in with Google</button> -->
+        </div>
+    </main>
+</template>
+
+<style scoped>
+
+</style>
