@@ -169,15 +169,15 @@ const VueApp = {
         var registration = null;
 
         if ("serviceWorker" in navigator) {
-        window.addEventListener("load", function() {
-            navigator.serviceWorker
-            .register("/scripts/serviceWorker.js")
-            .then(function(reg) {
-                registration = reg;
-                console.log("Service Worker registered");
-            })
-            .catch(err => console.log("Service Worker not registered", err))
-        })
+            window.addEventListener("load", function() {
+                navigator.serviceWorker
+                .register("/scripts/serviceWorker.js")
+                .then(function(reg) {
+                    registration = reg;
+                    console.log("Service Worker registered");
+                })
+                .catch(err => console.log("Service Worker not registered", err))
+            });
         }
     }
   };
