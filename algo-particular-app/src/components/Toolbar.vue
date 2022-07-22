@@ -11,8 +11,10 @@
 		router.push('/deck');
 	}
 
-    function collectCard() {
+    function collectCard() {        
 		console.log('collected');
+
+        router.push('/deck'); //temp
 	}
 
 	//ON MOUNTED
@@ -32,15 +34,18 @@
     #toolbar {
         position: fixed;
         bottom: 0;
-        width: 100%;
-        height: 60px;
-        z-index: 1;
+        width: 100vw;
+        height: 40px;
 
-        background: url(../assets/toolbar.svg) no-repeat;
-        background-position: 50% -3px;   
+        /* background: url(../assets/toolbar.svg) no-repeat; */
+        /* background-position: 50% -3px;    */
         
-        background-color: rgba(247, 248, 241, 0.18);
-        backdrop-filter: blur(6px);     
+        background: rgba(255, 255, 255, 0.36);
+        border-radius: 18px 18px 0 0;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+        border: 1px solid rgba(255, 255, 255, 0.3);  
     }
 
     button.main {     
@@ -55,10 +60,10 @@
         width: 60px;
         height: 60px;
 
-        bottom: calc(var(--toolbar-height) - 33px);
+        bottom: 35px;
         box-shadow: 0px 2px 6px rgba(16, 16, 15, 0.36); 
         
-        background-image: url('../assets/icon/Particular.svg');
+        background-image: url('../assets/icon/Seed.svg');
         background-color: #F4844C;
         background-repeat: no-repeat;
         background-position: 50%;
@@ -70,6 +75,6 @@
     }
 
     button.collect {
-        background-image: url('../assets/icon/Piringundin.svg');
+        background-image: url('../assets/icon/Brote.svg');
     }
 </style>

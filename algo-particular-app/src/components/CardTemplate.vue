@@ -14,13 +14,15 @@
             }, 3200)
         })
     }
+
+    console.log(props.cardData);
     
     const data = ref(await loadCardData());
 </script>
 
 <template>
 	<main class="cardWrapper">
-        <div class="imgWrapper" :style="{ backgroundImage: `url('${props.cardData.image}')` }"></div>
+        <div class="imgWrapper" :style="{ backgroundImage: 'url(/src/assets/cards/' + props.cardData.id + '.jpg)' }"></div>
         
         <div class="textWrapper">
             <h4>
@@ -43,13 +45,7 @@
     </main>
 </template>
 
-<style scoped>
-    .cardWrapper {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
+<style>
     .imgWrapper {
         width: 100%;
         height: 0;
@@ -87,5 +83,18 @@
 
     .bottom p {
         text-align: center;
+    }
+
+    /* DESKTOP */
+    @media screen and (min-width: 768px) {
+        .imgWrapper {
+            width: 40%;
+            padding-top: 40%;
+            border-radius: 60px;
+        }
+
+        .textWrapper {
+            width: 40%;
+        }
     }
 </style>

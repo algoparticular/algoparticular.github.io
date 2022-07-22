@@ -47,7 +47,6 @@
 </template>
 
 <style scoped>
-
     .overlay {
         width: 100vw;
         height: 100vh;
@@ -67,51 +66,7 @@
     }
 
     /* CARD */
-    .cardWrapper {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        
-    }
-
     .imgWrapper {
-        z-index: -1;
-        width: 100%;
-        height: 0;
-        padding-top: 100%;
-        overflow: hidden;
-        position: relative;
-
         background: #F7F8F1;
-        box-shadow: inset 0px 6px 9px rgba(16, 16, 15, 0.36), inset 0px -6px 9px rgba(16, 16, 15, 0.36);
-    }
-
-    .textWrapper {
-        padding: 16px 24px;
-    }
-
-    .textWrapper h4 {
-        
-    }
-
-    .textWrapper p {
-        padding: 0;
-        text-align: justify;
-        white-space: pre-line;
-    }
-
-    .bottom {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-        padding-top: 24px;
-    }
-
-    .bottom h5 {
-        text-align: center;
-    }
-
-    .bottom p {
-        text-align: center;
     }
 </style>

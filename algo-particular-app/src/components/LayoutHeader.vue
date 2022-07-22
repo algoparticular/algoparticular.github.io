@@ -7,7 +7,7 @@
         <Menu />
 
         <div id="logo">
-            <img src="../assets/icon_praxis.svg"/>
+            <!-- <img src="../assets/icon_praxis.svg"/> -->
         </div>                   
     </header>
 </template>
@@ -22,14 +22,15 @@
         position: fixed;
         width: 90%;
 
-        background: rgba(247, 248, 241, 0.18);
-        backdrop-filter: blur(6px);
+        /* background: rgba(247, 248, 241, 0.18); */
+        /* backdrop-filter: blur(6px); */
     }    
 
     #logo {
         display: flex;
         justify-content: center;
         align-items: center;
+        filter: drop-shadow(0px 2px 3px rgba(16, 16, 15, .36));
     }
 
     #logo img {

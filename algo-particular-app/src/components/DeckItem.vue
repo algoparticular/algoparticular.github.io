@@ -24,11 +24,13 @@
 	function loadCard() {
 		// router.push('/card');
         router.push({ name: 'card', params: {
+            id: props.card.id,
             name: props.card.name,
             description: props.card.description,
-            image: props.card.image,
             afirmation: props.card.afirmation,
-            invitation: props.card.invitation
+            invitation: props.card.invitation,
+            category: props.card.category,
+            rarity: props.card.rarity,
             }});
 	}
 

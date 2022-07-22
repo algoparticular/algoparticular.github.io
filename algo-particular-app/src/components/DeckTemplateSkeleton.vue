@@ -5,14 +5,12 @@
 </script>
 
 <template>
-     <main id="cardDeck">
-        <p>Escoje una carta</p>
-        <div class="deckWrapper">
-            <template v-for="item in 18">
-                <DeckItem :loading="true"  />
-            </template>
-        </div>                
-    </main>
+    <p>Mezclando cartas...</p>
+    <div class="deckWrapper">
+        <template v-for="item in 60">
+            <DeckItem :loading="true"  />
+        </template>
+    </div>
 </template>
 
 <style>
@@ -22,5 +20,12 @@
         width: calc(94px * 3 + 8px * 2);
         margin: 0 auto;
         gap: 8px;
+    }
+
+    /* DESKTOP */
+    @media screen and (min-width: 900px) {
+        .deckWrapper {
+            width: calc(94px * 9 + 8px * 8);
+        }
     }
 </style>

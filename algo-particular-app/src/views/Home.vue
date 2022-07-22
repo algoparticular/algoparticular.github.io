@@ -40,6 +40,7 @@
 
 	#home .title {
 		width: 50vw;
+		max-width: 300px;
 	}
 
 	section {

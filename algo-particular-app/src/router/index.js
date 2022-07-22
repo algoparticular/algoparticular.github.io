@@ -1,38 +1,50 @@
 import { createRouter, createWebHistory } from "vue-router";
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 
+import Home from '../views/Home.vue';
+import Register from '../views/Register.vue';
+import SignIn from '../views/SignIn.vue';
+import Deck from '../views/Deck.vue';
+import Card from '../views/Card.vue';
+import Collection from '../views/Collection.vue';
+import PageNotFound from '../views/PageNotFound.vue';
+
 // Navigation object
 const router = createRouter({
   history: createWebHistory(),
   routes: [
     {
       path: "/",
-      component: () => import("../views/Home.vue"),
+      component: Home,
     },
     {
       path: "/register",
-      component: () => import("../views/Register.vue"),
+      component: Register,
     },
     {
       path: "/sign-in",
-      component: () => import("../views/SignIn.vue"),
+      component: SignIn,
     },
     {
       path: "/deck",
-      component: () => import("../views/Deck.vue"),
+      component: Deck,
     },
     {
       name: "card",
       path: "/card",
-      component: () => import("../views/Card.vue"),
+      component: Card,
       props: true
     },
     {
-      path: "/feed",
-      component: () => import("../views/Feed.vue"),
+      path: "/collection",
+      component: Collection,
       meta: {
         requiresAuth: true
       }
+    },
+    {
+      path: "/:pathMatch(.*)",
+      component: PageNotFound,
     },
   ],
 });

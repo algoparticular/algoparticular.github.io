@@ -1,6 +1,6 @@
 <script setup>
 
-	import LayoutHeader from './components/LayoutHeader.vue';	
+	import LayoutHeader from './components/LayoutHeader.vue';
 
 	import { onMounted, ref } from 'vue';  	
 
@@ -10,8 +10,9 @@
 
 	//ON MOUNTED
 	onMounted (() => {		
-		if (localStorage.lang == null) {
-			localStorage.setItem("lang", 'es');
+		console.log('language: ' + localStorage.lang);
+		if (localStorage.lang == null) {			
+			localStorage.setItem("lang", 'es');			
 		}
 
 		//Progressive Web App
@@ -32,7 +33,24 @@
 </script>
 
 <template>
-    <!-- v-model:language="$i18n.locale" @change="langChanged($i18n.locale)" -->
-    <LayoutHeader />	
-    <router-view />	
+	<!-- v-model:language="$i18n.locale" @change="langChanged($i18n.locale)" -->
+	<LayoutHeader />
+	<router-view />	
+	<!-- <router-view v-slot="{ Component }">
+		<transition name="fade" mode="out-in">
+			<component :is="Component" />
+		</transition>
+	</router-view>	 -->
 </template>
+
+<style>
+	.fade-enter-from,
+	.fade-leave-to {
+		opacity: 0;
+	}
+
+	.fade-enter-active,
+	.fade-leave-active {
+		transition: opacity .5s ease-out;
+	}
+</style>

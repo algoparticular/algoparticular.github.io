@@ -20,7 +20,7 @@
 
                 console.log(auth.currentUser);
 
-                router.push('/feed'); // redirect to the feed
+                router.push('/collection'); // redirect to the feed
             })
             .catch((error) => {
                 console.log(error.code);
@@ -34,7 +34,7 @@
         signInWithPopup(getAuth, provider)
             .then((result) => {
                 console.log(result.user);
-                router.push('/feed');
+                router.push('/collection');
             })
             .catch((error) => {
                 
