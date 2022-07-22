@@ -35,12 +35,14 @@
 <template>
 	<!-- v-model:language="$i18n.locale" @change="langChanged($i18n.locale)" -->
 	<LayoutHeader />
-	<router-view />	
-	<!-- <router-view v-slot="{ Component }">
-		<transition name="fade" mode="out-in">
-			<component :is="Component" />
-		</transition>
-	</router-view>	 -->
+	<!-- <router-view />	 -->
+	<div class="content">
+		<router-view v-slot="{ Component }">
+			<transition name="fade">
+				<component :is="Component" />
+			</transition>
+		</router-view>	
+	</div>	
 </template>
 
 <style>
