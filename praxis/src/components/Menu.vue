@@ -48,26 +48,27 @@
     <button class="transparent" @click="toggleMenu">
         <img src="../assets/icon/Menu.svg"/>
     </button>
-    <nav v-if="showMenu">
-        <button class="transparent" @click="toggleMenu">
-            <img src="../assets/icon/Menu_white.svg"/>
-        </button>
-        <!-- <router-link to="/">Info</router-link>  -->
-        <a @click="navigate('/')">Info</a>
+    <transition name="push">
+        <nav v-if="showMenu">
+            <button class="transparent" @click="toggleMenu">
+                <img src="../assets/icon/Menu_white.svg"/>
+            </button>
+            <!-- <router-link to="/">Info</router-link>  -->
+            <a @click="navigate('/')">Info</a>
 
-        <div v-if="isLoggedIn">
-            <!-- <router-link to="/collection">Collection</router-link> -->
-            <a @click="navigate('/collection')">Collection</a>
-            <a class="logout" @click="handleSignOut" v-if="isLoggedIn">Exit</a>
-        </div>
-        <div v-else>
-            <!-- <router-link to="/register">Register</router-link>
-            <router-link to="/sign-in">Dive in</router-link> -->
-            <a @click="navigate('/register')">Create account</a>
-            <a @click="navigate('/sign-in')">Sign in</a>
-        </div>
-    </nav>  
-
+            <div v-if="isLoggedIn">
+                <!-- <router-link to="/collection">Collection</router-link> -->
+                <a @click="navigate('/collection')">Collection</a>
+                <a class="logout" @click="handleSignOut" v-if="isLoggedIn">Exit</a>
+            </div>
+            <div v-else>
+                <!-- <router-link to="/register">Register</router-link>
+                <router-link to="/sign-in">Dive in</router-link> -->
+                <a @click="navigate('/register')">Create account</a>
+                <a @click="navigate('/sign-in')">Sign in</a>
+            </div>
+        </nav>  
+    </transition>
     <!-- 
     <select class="lang" :value="language" @change="$emit('update:language', $event.target.value)">
         <option v-for="(locale, i) in $i18n.availableLocales" :key="i" :value="locale">{{ locale.toUpperCase() }}</option>
@@ -132,4 +133,15 @@
     button.transparent:hover {
         background: transparent;
     }
+
+    .push-enter-from,
+    .push-leave-to {
+        transform: translateX(-100%);
+    }
+
+	.push-enter-active,
+	.push-leave-active {
+		/* transition: opacity .3s ease-out; */
+        transition: transform .2s ease-out;
+	}
 </style>

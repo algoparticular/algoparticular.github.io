@@ -48,15 +48,17 @@
 </script>
 
 <template>
-    <Suspense>
-    <template #default>
-        <CardTemplate :cardData="cardData"/>
-    </template>
-    <template #fallback> 
-        <CardTemplateSkeleton />
-    </template>
-  </Suspense>
-  <Toolbar :isCollect="true"/>
+    <div class="content">
+        <Suspense>
+            <template #default>
+                <CardTemplate :cardData="cardData"/>
+            </template>
+            <template #fallback> 
+                <CardTemplateSkeleton />
+            </template>
+        </Suspense>
+        <Toolbar :isCollect="true"/>
+    </div>
 </template>
 
 <style>

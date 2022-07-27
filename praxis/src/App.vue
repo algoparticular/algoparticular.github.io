@@ -35,14 +35,12 @@
 <template>
 	<!-- v-model:language="$i18n.locale" @change="langChanged($i18n.locale)" -->
 	<LayoutHeader />
-	<!-- <router-view />	 -->
-	<div class="content">
-		<router-view v-slot="{ Component }">
-			<transition name="fade">
-				<component :is="Component" />
-			</transition>
-		</router-view>	
-	</div>	
+	
+	<router-view v-slot="{ Component }">
+		<transition name="fade" mode="out-in">
+			<component :is="Component" :key="$router.path" />
+		</transition>
+	</router-view>	
 </template>
 
 <style>
@@ -53,6 +51,6 @@
 
 	.fade-enter-active,
 	.fade-leave-active {
-		transition: opacity .5s ease-out;
+		transition: opacity .3s ease-out;
 	}
 </style>

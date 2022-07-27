@@ -22,9 +22,11 @@
 </script>
 
 <template>
-	<main id="deck">
-		<h2>Mi colección</h2>
-		<p>you can do it</p>
-	</main>
-	<Toolbar />
+	<div class="content">
+		<main id="deck">
+			<h2>Mi colección</h2>
+			<p>you can do it</p>
+		</main>
+		<Toolbar />
+	</div>
 </template>

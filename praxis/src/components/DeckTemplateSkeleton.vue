@@ -23,9 +23,16 @@
     }
 
     /* DESKTOP */
-    @media screen and (min-width: 900px) {
+    @media screen and (min-width: 900px) and (max-width: 1280px) {
         .deckWrapper {
             width: calc(94px * 9 + 8px * 8);
+        }
+    }
+
+    /* XL */
+    @media screen and (min-width: 1281px) {
+        .deckWrapper {
+            width: calc(94px * 11 + 8px * 10);
         }
     }
 </style>

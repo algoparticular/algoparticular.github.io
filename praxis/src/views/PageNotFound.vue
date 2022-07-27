@@ -3,15 +3,17 @@
 </script>
 
 <template>
-  <main id="home">
-	<img class="title" alt="Praxis, by Algo Particular" src="../assets/Logo_praxis.svg">
+<div class="content">
+	<main id="home">
+		<img class="title" alt="Praxis, by Algo Particular" src="../assets/Logo_praxis.svg">
 
-	<section class="intro">
-		<p>Un espacio vacío...</p>
-        <p>Ve y elige una carta! clickea debajo</p>
-	</section>
-  </main> 
-  <Toolbar />
+		<section class="intro">
+			<p>Un espacio vacío...</p>
+			<p>Ve y elige una carta! clickea debajo</p>
+		</section>
+	</main> 
+	<Toolbar />
+</div>
 </template>
 
 <style>

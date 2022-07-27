@@ -5,17 +5,19 @@
 </script>
 
 <template>
-    <main id="cardDeck">        
-        <Suspense>
-            <template #default>
-                <DeckTemplate />
-            </template>
-            <template #fallback> 
-                <DeckTemplateSkeleton />
-            </template>
-        </Suspense>
-    </main>
-    <Toolbar />
+    <div class="content">
+        <main id="cardDeck">        
+            <Suspense>
+                <template #default>
+                    <DeckTemplate />
+                </template>
+                <template #fallback> 
+                    <DeckTemplateSkeleton />
+                </template>
+            </Suspense>
+        </main>
+        <Toolbar />
+    </div>
 </template>
 
 <style scoped>

@@ -43,21 +43,23 @@
 </script>
 
 <template>
-    <main class="formWrapper">
-        <div class="heading">
-            <h2>Crea una cuenta</h2>
-            <p>Bienvenido, crea tu cuenta con tu email y contraseña</p>
-        </div>  
-        <div class="form">
-            <input type="text" placeholder="Email" v-model="email" />
-            <input type="password" placeholder="Contraseña" v-model="password" />
-            <span v-if="errorMessage">{{ errorMessage }}</span>
-        </div>      
-        <div class="actions">
-            <button @click="register">Quiero sumergirme</button>
-            <!-- <button @click="signInWithGoogle">Sign in with Google</button> -->
-        </div>
-    </main>
+    <div class="content">
+        <main class="formWrapper">
+            <div class="heading">
+                <h2>Crea una cuenta</h2>
+                <p>Bienvenido, crea tu cuenta con tu email y contraseña</p>
+            </div>  
+            <div class="form">
+                <input type="text" placeholder="Email" v-model="email" />
+                <input type="password" placeholder="Contraseña" v-model="password" />
+                <span v-if="errorMessage">{{ errorMessage }}</span>
+            </div>      
+            <div class="actions">
+                <button @click="register">Quiero sumergirme</button>
+                <!-- <button @click="signInWithGoogle">Sign in with Google</button> -->
+            </div>
+        </main>
+    </div>
 </template>
 
 <style scoped>

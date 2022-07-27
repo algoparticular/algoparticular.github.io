@@ -85,10 +85,10 @@
             {
                 "id": 7,
                 "name": "Addhitthana",
-                "description": "",
+                "description": "Al practicar Addhitthana estas trabajando tu determinación, esa que es necesaria para sostener en el tiempo hábitos y decisiones que te ayuden a ser cada día más feliz. Debes saber que aun atravesando toda vicisitud mereces ser feliz. Para construir una vida plena y feliz es necesario alimentar tu autoridad interior, ordenando tu voluntad y desarrollando tu individualidad. Ser determinada es abandonar el ámbito de la comodidad y despertar tu poder personal. Al desarrollar Addhitthana estarás nutriendo la certeza de que la fortaleza se enciende en vos al enfrentar cualquier desafío, eso es madurar álmicamente, es abrirle la puerta a la transformación hacia tu evolución y propósito.",
                 "image": "",
-                "afirmation": "",
-                "invitation": "",
+                "afirmation": "Soy determinanda en nutrir hábitos que hagan a mi felicidad y plenitud.",
+                "invitation": "Por 21 días me comprometo a implementar ese hábito que hace tiempo deseo.",
                 "category": "parami",
                 "rarity": 1
             },
@@ -611,6 +611,16 @@
                 "invitation": "",
                 "category": "regular",
                 "rarity": 2
+            },
+            {
+                "id": 60,
+                "name": "...",
+                "description": "...",
+                "image": "",
+                "afirmation": "Afirmo lo que ya mi ser interior sabe.",
+                "invitation": "",
+                "category": "regular",
+                "rarity": 0
             }
         ],
         
