@@ -13,7 +13,7 @@ h1 {
 }
 
 h2 {
-  font-family: 'particular', sans-serif;
+  font-family: 'particular', 'Inter', helvetica, sans-serif;
   font-weight: 600;
   font-size: 48px;
   line-height: 1.1em;
@@ -22,7 +22,7 @@ h2 {
 }
 
 h3 {
-  font-family: 'particular', sans-serif;
+  font-family: 'particular', 'Inter', helvetica, sans-serif;
   font-weight: 400;
   font-size: 40px;
   line-height: 1.2em;
@@ -31,7 +31,7 @@ h3 {
 }
 
 h4 {
-    font-family: 'particular', sans-serif;
+  font-family: 'particular', 'Inter', helvetica, sans-serif;
     font-weight: 400;
     font-size: 32px;
     line-height: 1.5em;
@@ -40,7 +40,7 @@ h4 {
 }
 
 h5 {
-    font-family: 'Inter', helvetiva, sans-serif;
+    font-family: 'Inter', helvetica, sans-serif;
     font-weight: 700;
     font-size: 1em;
     line-height: 1.4em;
@@ -49,6 +49,7 @@ h5 {
   }
 
 p {
+  font-family: 'Inter', helvetica, sans-serif;
   line-height: 150%;
   font-size: 18px;
   margin: 0 0 24px;   

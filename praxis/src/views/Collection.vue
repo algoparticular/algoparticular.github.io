@@ -1,6 +1,4 @@
-<script setup>	
-	import Toolbar from '../components/Toolbar.vue';
-
+<script setup>
 	import { getAuth } from 'firebase/auth';
 	import { useRouter } from 'vue-router';
 	import { onBeforeUnmount } from 'vue';
@@ -27,6 +25,5 @@
 			<h2>Mi colección</h2>
 			<p>you can do it</p>
 		</main>
-		<Toolbar />
 	</div>
 </template>

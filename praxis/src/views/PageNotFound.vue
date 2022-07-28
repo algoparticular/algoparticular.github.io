@@ -1,5 +1,5 @@
 <script setup>
-	import Toolbar from '../components/Toolbar.vue';
+
 </script>
 
 <template>
@@ -12,7 +12,6 @@
 			<p>Ve y elige una carta! clickea debajo</p>
 		</section>
 	</main> 
-	<Toolbar />
 </div>
 </template>
 

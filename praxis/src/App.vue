@@ -1,16 +1,20 @@
 <script setup>
-
-	import LayoutHeader from './components/LayoutHeader.vue';
-
+	import Toolbar from './components/Toolbar.vue';
+	
 	import { onMounted, ref } from 'vue';  	
+	import { useRouter } from 'vue-router';
+
+	const router = useRouter();
 
 	function langChanged(lang) {
 		localStorage.setItem("lang", lang);
 	}
 
 	//ON MOUNTED
-	onMounted (() => {		
+	onMounted (() => {
+
 		console.log('language: ' + localStorage.lang);
+
 		if (localStorage.lang == null) {			
 			localStorage.setItem("lang", 'es');			
 		}
@@ -28,22 +32,24 @@
 				})
 				.catch(err => console.log("Service Worker not registered", err))
 			});
-		}
+		}		
 	});
+	
 </script>
 
 <template>
 	<!-- v-model:language="$i18n.locale" @change="langChanged($i18n.locale)" -->
-	<LayoutHeader />
+	<!-- <LayoutHeader /> -->
 	
 	<router-view v-slot="{ Component }">
 		<transition name="fade" mode="out-in">
 			<component :is="Component" :key="$router.path" />
 		</transition>
+		<Toolbar :path="router.currentRoute.value.path"/>
 	</router-view>	
 </template>
 
-<style>
+<style scoped>
 	.fade-enter-from,
 	.fade-leave-to {
 		opacity: 0;

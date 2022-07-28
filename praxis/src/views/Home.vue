@@ -1,15 +1,5 @@
 <script setup>
-	import Toolbar from '../components/Toolbar.vue';
-	// import { onMounted, ref } from 'vue';
-	// import { useRouter } from 'vue-router';
-
-	// const router = useRouter();
-    
-
-	// //ON MOUNTED
-	// onMounted (() => {
-		
-	// });
+	
 </script>
 
 <template>
@@ -26,7 +16,6 @@
 				<!-- <button @click="getMessage()">{{ $t("message.cardMessageButton") }}</button> -->
 			</section>
 		</main> 
-		<Toolbar />
 	</div>
 </template>
 
@@ -37,7 +26,7 @@
 		justify-content: center;
 		align-items: center;
 
-		padding-top: 80px;
+		/* padding-top: 80px; */
 	}
 
 	#home .title {
