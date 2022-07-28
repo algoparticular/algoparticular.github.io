@@ -15,132 +15,18 @@
     <meta name="twitter:site" content="@algoparticular">
     <meta name="twitter:image:alt" content="Welcome particles!">
 
-    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="/src/assets/favicon.svg">
+
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
+    <link rel="manifest" href="manifest.webmanifest" />
 
     <title>Algo Particular</title>
-
-    <!-- import the webpage's stylesheet -->    
-    <link rel="stylesheet" href="/css/style.css">
-
-    <!-- This is Vue -->
-	<script src="https://unpkg.com/vue@next"></script>
-    <script src="https://unpkg.com/vue-i18n@9"></script>
-    
-  </head>  
-    
+  </head>
+  
   <body>
-    <div id="app">
-        <layout-header v-model:language="$i18n.locale" @change="langChanged($i18n.locale)">
-            <template v-slot:logo>
-                <img alt="Algo Particular Logo" src="/assets/Logo.svg">
-            </template>
-        </layout-header>
-        
-        <main>
-            <section id="hero">
-                <div class="column">
-                    <div class="drawingWrapper">
-                        <img src="assets/ilus.png" alt="Personajes dando la bienvenida"/>
-                    </div> 
-
-                    <ul class="social-nav">                    
-                        <li class="social">
-                            <a class="twit" href="https://www.twitter.com/in/algoparticular" target="_blank">                        
-                                <svg class="icon twitter" viewBox="0 0 50 50" fill="#10100F" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M44.748 14.3406C44.7782 14.7781 44.7782 15.2156 44.7782 15.6571C44.7782 29.1108 34.5363 44.6269 15.8085 44.6269V44.6188C10.2762 44.6269 4.85886 43.0422 0.201599 40.0543C1.00603 40.1511 1.8145 40.1995 2.62499 40.2015C7.20966 40.2055 11.6633 38.6672 15.2701 35.8345C10.9133 35.7519 7.09273 32.9112 5.75805 28.764C7.28426 29.0583 8.85684 28.9978 10.3548 28.5886C5.60483 27.6289 2.18749 23.4555 2.18749 18.6087C2.18749 18.5644 2.18749 18.522 2.18749 18.4797C3.60281 19.268 5.18749 19.7055 6.80845 19.7539C2.33466 16.764 0.955631 10.8124 3.65724 6.15914C8.8266 12.52 16.4536 16.387 24.6411 16.7962C23.8206 13.2599 24.9415 9.5543 27.5867 7.06842C31.6875 3.21358 38.1371 3.41116 41.9919 7.50995C44.2722 7.06035 46.4576 6.22366 48.4576 5.03817C47.6976 7.39503 46.1068 9.39705 43.9818 10.6692C46 10.4313 47.9718 9.891 49.8286 9.0664C48.4617 11.1148 46.7399 12.8991 44.748 14.3406Z"/>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="social">
-                            <a class="insta" href="https://instagram.com/algo.particular" target="_blank">
-                                <svg class="icon instagram" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 551.034 551.034" xml:space="preserve" fill="#10100F">
-                                    <path d="M386.878,0H164.156C73.64,0,0,73.64,0,164.156v222.722 c0,90.516,73.64,164.156,164.156,164.156h222.722c90.516,0,164.156-73.64,164.156-164.156V164.156 C551.033,73.64,477.393,0,386.878,0z M495.6,386.878c0,60.045-48.677,108.722-108.722,108.722H164.156 c-60.045,0-108.722-48.677-108.722-108.722V164.156c0-60.046,48.677-108.722,108.722-108.722h222.722 c60.045,0,108.722,48.676,108.722,108.722L495.6,386.878L495.6,386.878z"/>
-                                    <path d="M275.517,133C196.933,133,133,196.933,133,275.516 s63.933,142.517,142.517,142.517S418.034,354.1,418.034,275.516S354.101,133,275.517,133z M275.517,362.6 c-48.095,0-87.083-38.988-87.083-87.083s38.989-87.083,87.083-87.083c48.095,0,87.083,38.988,87.083,87.083 C362.6,323.611,323.611,362.6,275.517,362.6z"/>
-                                    <circle cx="418.306" cy="134.072" r="34.149"/>
-                                </svg>
-                            </a>
-                        </li>                    
-                    </ul>                
-                </div>
-            </section>  
-            
-            <!-- <section id="takeCard">
-
-            </section> -->
-            
-            <section id="galleryWrapper" class="darkMode">
-                <p>
-                    {{ $t("message.hello") }}
-                </p>            
-                <div id="gallery" class="home feed">
-                    <div class="gallery-item" v-for="(item, i) of galleryHome">
-                        <img :alt="item.title" :src="item.image">
-                    </div>
-                </div>
-                <button onclick="window.location.href='/gallery.html';">
-                    {{ $t("message.seeGallery") }}
-                </button>
-            </section>
-            <!-- The Modal -->
-            <teleport to="body">
-                <modal-gallery :show="showModal" :content="modal" @close="closeGalleryModal()"></modal-gallery>            
-            </teleport>
-
-            <section id="shops">
-                <h2 class="shopTitle">{{ $t("message.shops") }}</h2>
-                                
-                <div class="grid">
-                    <div class="column col-6 col-sm-4">
-                        <a id="flashcookie" class="drawingWrapper atom shop" href="https://algoparticular.flashcookie.com" target="_blank">
-                            <img v-bind:src="shops.current_fc" alt="Flashcookie merchandising"/>
-                        </a>
-                        <p class="">
-                            {{ $t("message.shopFC") }}
-                        </p>
-                    </div>
-                    <div class="column col-6 col-sm-4">
-                        <a id="threadless" class="drawingWrapper atom shop" href="https://algoparticular.threadless.com" target="_blank">
-                            <img v-bind:src="shops.current_tl" alt="Threadless merchandising"/>
-                        </a>
-                        <p class="">
-                            {{ $t("message.shopTL") }}
-                        </p>
-                    </div>
-                </div>
-            </section>
-            
-            <section id="crypto">
-                <h2 class="nftTitle">NFTs</h2>            
-                <div class="row">
-                    <div class="column col-6 col-sm-4">
-                        <a class="drawingWrapper zoom" href="https://hicetnunc.art/algoparticular" target="_blank">
-                            <img src="assets/shop/HEN_white.svg" alt="HEN merchandising"/>
-                        </a>              
-                        <p class="">
-                            {{ $t("message.shopHEN") }}
-                        </p>
-                    </div>                
-                </div>
-            </section>      
-        </main>  
-
-        <layout-footer :copyright="true">
-            <a href="/cards.html">
-                <svg class="symbol seed" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 59 56" @mouseenter="zoomAnim" @mouseleave="leaveZoomAnim" >
-                    <path class="a" d="M27.93,43.12v-8c-.13-3.81-.4-4.08-4.15-3.95C17.31,31.41,5.34,33.19,3,33.18A2.85,2.85,0,0,1,.28,31.41a2.83,2.83,0,0,1,.55-3.2,8.84,8.84,0,0,1,7.08-2.93,126,126,0,0,0,13.42-.89c5.79-.61,5.79-.61,5.79-6.54,0-3.06-.75-6-1.16-9.06a19.41,19.41,0,0,1-.27-5A4.09,4.09,0,0,1,29.43.35C31.14.48,32.16,1.64,32.5,4c.41,4.83.75,9.6.88,14.3,0,4.36.14,4.36,4.36,4.36,4.91,0,12.74.13,17.51.13,2,0,3.74,1.3,3.74,2.8s-1.18,5-4.15,4.63c-5.85-1.21-13.35,0-18.66-.14-1.91,0-2.46.75-2.32,2.45.27,6,.41,11.11.89,17A4.28,4.28,0,0,1,32.57,54c-2.32,1.29-4.64.14-4.77-2.66C27.8,49,27.8,46.05,27.93,43.12Z"/>
-                    <path class="a" d="M49.05,49.52c.27-2.45,2.18-4.36,4.36-4.22a3.76,3.76,0,0,1,3.47,4.09,4.9,4.9,0,0,1-4.63,4.08A3.68,3.68,0,0,1,49.05,49.52Z"/>
-                    <path class="a" d="M11.32,6.55C11.32,8,8.59,10.63,7,10.77A3.69,3.69,0,0,1,3.35,7.09C3.48,4.91,5.53,2.6,7.09,2.6,9,2.8,11.32,5,11.32,6.55Z"/>
-                    <path class="a" d="M48.09,4.5C48.23,1.57,49.8-.13,52.45,0a3.5,3.5,0,0,1,3.07,3.47c-.14,2.18-2.32,4.63-4.16,4.63S48.09,6.68,48.09,4.5Z"/>
-                    <path class="a" d="M8.73,56a2.84,2.84,0,0,1-2.86-3.2A4.64,4.64,0,0,1,10.5,48.3a3.5,3.5,0,0,1,3.06,3.33A5,5,0,0,1,8.73,56Z"/>
-                </svg>
-            </a>
-        </layout-footer>
-
-    </div>
-    <div id="grain"></div>
-      
-    <!-- import the webpage's javascript file -->
-    <script src="/plugins/anime.min.js"></script>  
-    <script type="module" src="/scripts/script.js"></script>
+    <div id="app" class="praxis"></div>
+    <script src="/src/plugins/anime.min.js"></script>  
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>
