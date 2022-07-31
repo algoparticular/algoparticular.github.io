@@ -10,12 +10,12 @@
     const loadCardData = async () => {
         return new Promise((resolve) => {
             setTimeout(() => {
-                resolve()
+                // resolve()
             }, 3200)
         })
     }
 
-    console.log(props.cardData);
+    // console.log(props.cardData);
     
     const data = ref(await loadCardData());
 </script>

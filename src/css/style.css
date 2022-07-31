@@ -77,7 +77,7 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 60px auto 100px;
+  margin: 0 auto;
   z-index: 0;
 }
 
@@ -85,6 +85,11 @@ main.formWrapper {
   margin: 0 auto;
   width: 60vw;
   max-width: 250px;
+  height: 100vh;
+}
+
+.content {
+  width: 100vw;
   height: 100vh;
 }
 
@@ -387,11 +392,6 @@ nav .lang:focus {
   #cardDiscover section.intro button {
     width: 100%;
   }
-}
-
-#cardLoader {
-  width: 108px;
-  margin: 0 auto;
 }
 
 .card-container p {

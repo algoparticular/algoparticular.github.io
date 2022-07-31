@@ -4,7 +4,7 @@
 </script>
 
 <template>
-    <div class="content">
+    <div class="content deck">
         <main id="cardDeck">        
             <Suspense>
                 <template #default>
@@ -19,5 +19,18 @@
 </template>
 
 <style scoped>
-    
+    .content.deck {
+        padding-top: 9vh;
+    }
+
+    /* DESKTOP */
+    @media screen and (min-width: 768px) {
+        .content.deck {
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
 </style>

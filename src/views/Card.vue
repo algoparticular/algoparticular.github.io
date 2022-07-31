@@ -64,7 +64,6 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin-top: 0;
     }
 
     /* DESKTOP */
@@ -74,7 +73,8 @@
             align-items: center;
             justify-content: center;
             gap: 48px;
-            margin-top: 100px;
+            width: 100vw;
+            height: 100vh;
         }
     }
 </style>

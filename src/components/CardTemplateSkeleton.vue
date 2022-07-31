@@ -1,24 +1,55 @@
-<script setup>
-	import { onMounted, ref } from 'vue';  
+<script>
+import { Motion } from "motion/vue";
+import { animate } from "motion";
 
-    onMounted (() => {
-        anime({
-            targets: '#cardLoader path',
-            strokeDashoffset: [0, anime.setDashoffset],
-            easing: 'easeInQuint',
-            duration: 2700,
-            delay: 500,
-            complete: function(){}
-        }); 
-    });        
+export default {
+  components: { Motion },
+  
+  data() {
+    return {
+      randomPhrase: '',
+      loadingPhrases: [
+                        "Talking with the Masters...",
+                        "Reading particles' stories...",
+                        "Downloading particles' data...",
+                        "Connecting with the Source...",
+                        "Calibrating the frequency...",
+                        "Harmonizing the vibration...",
+                        "Breathing in, breathing out...",
+                    ]
+    }
+  },
+
+  methods: {
+    randomizePhrase() {
+        let randomIndex = Math.floor(Math.random() * this.loadingPhrases.length) ; //+ 1
+
+        this.randomPhrase = this.loadingPhrases[randomIndex];
+    },
+    animateLaberintou() {
+        const paths = document.querySelectorAll("#cardLoader path");
+
+        animate(paths, 
+            {strokeDasharray: 1000},
+            {   duration: 4, 
+                easing: [.63, 0, .72, 0]
+            });
+    },   
+  },
+  mounted() {
+        this.randomizePhrase();
+        this.animateLaberintou();
+  }
+}
 </script>
 
 <template>
     <div class="overlay">
-        <svg id="cardLoader" width="283" height="264" viewBox="0 0 283 264" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M160.8 218.6C160.8 218.6 237.9 226.6 237.9 141.5C237.9 88.2 194.7 45.1 141.5 45.1C88.3 45.1 45.1 88.3 45.1 141.5C45.1 162.8 62.4 180.1 83.7 180.1H160.8C182.1 180.1 199.4 162.8 199.4 141.5C199.4 109.5 173.5 83.6 141.5 83.6C109.5 83.6 83.6 109.5 83.6 141.5" stroke="#10100F" stroke-width="13" stroke-miterlimit="10" stroke-linecap="round" style="stroke-dashoffset: 0px;"/>
-            <path d="M83.6 218.6C41 218.6 6.5 184.1 6.5 141.5C6.5 66.9 66.9 6.5 141.5 6.5C216.1 6.5 276.5 66.9 276.5 141.5C276.5 263.1 160.8 257.4 160.8 257.4C139.5 257.4 122.2 240.1 122.2 218.8V218.6V141.5C122.2 130.8 130.9 122.2 141.5 122.2C152.2 122.2 160.8 130.8 160.8 141.5" stroke="#10100F" stroke-width="13" stroke-miterlimit="10" stroke-linecap="round" style="stroke-dashoffset: 0px;"/>
+        <svg id="cardLoader" width="283" height="264" viewBox="0 0 283 264" xmlns="http://www.w3.org/2000/svg">            
+            <path class="onePath" d="M160.8 218.6C160.8 218.6 237.9 226.6 237.9 141.5C237.9 88.2 194.7 45.1 141.5 45.1C88.3 45.1 45.1 88.3 45.1 141.5C45.1 162.8 62.4 180.1 83.7 180.1H160.8C182.1 180.1 199.4 162.8 199.4 141.5C199.4 109.5 173.5 83.6 141.5 83.6C109.5 83.6 83.6 109.5 83.6 141.5"/>
+            <path d="M83.6 218.6C41 218.6 6.5 184.1 6.5 141.5C6.5 66.9 66.9 6.5 141.5 6.5C216.1 6.5 276.5 66.9 276.5 141.5C276.5 263.1 160.8 257.4 160.8 257.4C139.5 257.4 122.2 240.1 122.2 218.8V218.6V141.5C122.2 130.8 130.9 122.2 141.5 122.2C152.2 122.2 160.8 130.8 160.8 141.5"/>
         </svg>
+        <p>{{ randomPhrase }}</p>
     </div>
 	<main class="cardWrapper">
         <div class="imgWrapper"></div>
@@ -53,20 +84,110 @@
         position: absolute;
         background: rgba(247, 248, 241, 0.18);
         backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+        gap: 32px;
+
+        padding-top: 9vh;
     }
 
     #cardLoader {
         width: 140px;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 100%;
+        height: auto;
+    }
+
+    #cardLoader path {
+        fill: transparent;
+        stroke: #F7F8F1;
+        stroke-width: 13px;
+        stroke-dasharray: 200;
+        /* stroke-dashoffset: 0; */
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-miterlimit: 10;
+        /* visibility: hidden; */
+        /* opacity: 1; */
+    }
+
+    .overlay p {
+        font-size: 21px;
+        color: #F7F8F1;
+        margin-bottom: 0;
     }
 
     /* CARD */
     .imgWrapper {
-        background: #F7F8F1;
+        background: #10100F;
+    }
+
+    /* DESKTOP */
+    @media screen and (min-width: 768px) {
+        .overlay {
+            padding: 0;
+            justify-content: center;
+        }
+
+        #cardLoader path {
+            stroke: #10100F;
+        }
+
+        .overlay p {
+            color: #10100F;
+        }
     }
 </style>
+
+
+<!-- <script setup>
+	import { onMounted, ref } from 'vue';
+    import { Motion } from "motion/vue";
+
+    const randomPhrase = ref('');
+    const loadingPhrases = ref([
+        "Talking with the Masters...",
+        "Reading particles' stories...",
+        "Downloading particles' data...",
+        "Connecting with the Source...",
+        "Calibrating the frequency...",
+        "Harmonizing the vibration...",
+        "Breathing in, breathing out...",
+    ]);
+
+    function randomizePhrase() {
+        let randomIndex = Math.floor(Math.random() * loadingPhrases.value.length) ; //+ 1
+        randomPhrase.value = loadingPhrases.value[randomIndex];
+    }
+
+    onMounted (() => {
+        randomizePhrase();
+    });   
+
+    const draw = (progress) => ({
+        // This property makes the line "draw" in when animated
+        strokeDashoffset: 1 - progress,
+        
+        // Each line will be hidden until it starts drawing
+        // to fix a bug in Safari where the line can be
+        // partially visible even when progress is at 0
+        visibility: "visible",
+    });         
+</script> -->
+<!-- <Motion
+    tag="path"
+    d="M160.8 218.6C160.8 218.6 237.9 226.6 237.9 141.5C237.9 88.2 194.7 45.1 141.5 45.1C88.3 45.1 45.1 88.3 45.1 141.5C45.1 162.8 62.4 180.1 83.7 180.1H160.8C182.1 180.1 199.4 162.8 199.4 141.5C199.4 109.5 173.5 83.6 141.5 83.6C109.5 83.6 83.6 109.5 83.6 141.5"
+    pathLength="1"
+    :initial="{opacity: 0}"
+    :animate="{opacity: 1}"
+    :transition="{ duration: 1.8, ease: 'ease-out' }"
+/>
+<Motion
+    tag="path"
+    d="M83.6 218.6C41 218.6 6.5 184.1 6.5 141.5C6.5 66.9 66.9 6.5 141.5 6.5C216.1 6.5 276.5 66.9 276.5 141.5C276.5 263.1 160.8 257.4 160.8 257.4C139.5 257.4 122.2 240.1 122.2 218.8V218.6V141.5C122.2 130.8 130.9 122.2 141.5 122.2C152.2 122.2 160.8 130.8 160.8 141.5"
+    pathLength="1"
+    :animate="draw(1)"
+    :transition="{ duration: 1.2, delay: 0.6, ease: 'ease-out' }"
+/> -->
