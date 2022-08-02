@@ -13,7 +13,6 @@
 
     const props = defineProps({
         path: String,
-        language: String,
     });        
 
     function collectCard() {        
@@ -40,8 +39,23 @@
         showMenu.value = false;
     };
 
+    //handle language change
+    function langChanged(lang) {		
+		localStorage.setItem("lang", lang);
+	}
+
 	//ON MOUNTED
 	onUpdated (() => {
+        //check user logged in or not
+        auth = getAuth();
+        onAuthStateChanged (auth, (user) => {
+            if (user) {
+                isLoggedIn.value = true;
+            } else {
+                isLoggedIn.value = false;
+            }
+        });
+
         //Update depending path		
         switch(props.path) {
             case '/card':
@@ -62,15 +76,10 @@
                 hideToolbar.value = false;
         }
 
-        //check user logged in or not
-        auth = getAuth();
-        onAuthStateChanged (auth, (user) => {
-            if (user) {
-                isLoggedIn.value = true;
-            } else {
-                isLoggedIn.value = false;
-            }
-        });
+        // lang storage fallback
+        if (localStorage.lang == null) {			
+			localStorage.setItem("lang", 'es');			
+		}
 	});
 </script>
 
@@ -87,18 +96,26 @@
         <transition name="fade" mode="out-in">
             <nav v-if="showMenu">
                             
-                <a @click="navigate('/')">Info</a>
-                <a target="_blank" href="https://cafecito.app/algoparticular">Buy us a tee</a>
+                <a @click="navigate('/')">{{ $t("message.praxisNavInfo") }}</a>
+                <a target="_blank" href="https://cafecito.app/algoparticular">{{ $t("message.praxisNavDonate") }}</a>
+
+                <div id="languageSelect">
+                    <input type="radio" id="lang-es" value="es" v-model="$i18n.locale" @change="langChanged($i18n.locale)"/>
+                    <label for="lang-es" :class="{active: $i18n.locale == 'es'}">ES</label>
+                    <span>|</span>
+                    <input type="radio" id="lang-en" value="en" v-model="$i18n.locale" @change="langChanged($i18n.locale)"/>
+                    <label for="lang-en" :class="{active: $i18n.locale == 'en'}">EN</label>
+                </div>
 
                 <div v-if="isLoggedIn">
                     <!-- <router-link to="/collection">Collection</router-link> -->                    
-                    <a class="logout" @click="handleSignOut" v-if="isLoggedIn">Take me out of here</a>
+                    <a class="logout" @click="handleSignOut" v-if="isLoggedIn">{{ $t("message.praxisNavLogout") }}</a>
                 </div>
                 <div v-else>
                     <!-- <router-link to="/register">Register</router-link>
                     <router-link to="/sign-in">Dive in</router-link> -->
-                    <a @click="navigate('/register')">I want an account</a>
-                    <a @click="navigate('/sign-in')">Log me in</a>
+                    <a @click="navigate('/register')">{{ $t("message.praxisNavRegister") }}</a>
+                    <a @click="navigate('/sign-in')">{{ $t("message.praxisNavSignin") }}</a>
                 </div>
             </nav>  
         </transition>
@@ -132,7 +149,7 @@
         flex-direction: column;
 
         height: 30vh;
-        gap: 16px;
+        gap: 4px;
     }
 
     #toolbar.hidden {
@@ -207,12 +224,15 @@
         gap: 24px;
     }
 
-    nav a {
+    nav a,
+    #languageSelect label {
         font-size: 21px;
         font-family: 'particular', 'Inter', helvetica, sans-serif;
+        cursor: pointer;
     }
 
-    nav a:hover {
+    nav a:hover,
+    #languageSelect label:hover {
         color: #363636;
     }
 
@@ -229,4 +249,31 @@
 	.fade-leave-active {
         transition: opacity .8s ease-out;
 	}
+
+    #languageSelect {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #languageSelect input {
+        display: none;
+    }
+
+    #languageSelect label.active {
+        color: #F4844C;
+    }
+
+    #languageSelect span {
+        font-size: 21px;
+        font-family: 'particular', 'Inter', helvetica, sans-serif;
+
+        /* NOT SELECTABLE */
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+        -khtml-user-select: none; /* Konqueror HTML */
+        -moz-user-select: none; /* Old versions of Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+                user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+    }
 </style>

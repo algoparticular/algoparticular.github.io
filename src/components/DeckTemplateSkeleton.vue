@@ -34,7 +34,7 @@
 </script>
 
 <template>
-    <p>Mezclando cartas...</p>
+    <p>{{ $t("message.praxisDeckLoading") }}</p>
     <div class="deckWrapper">
         <template v-for="item in 60" :key="item">
             <DeckItem :loading="true"  />

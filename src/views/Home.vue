@@ -8,12 +8,7 @@
 			<img class="title" alt="Praxis, by Algo Particular" src="../assets/Logo_praxis.svg">
 
 			<section class="intro">
-				<p>Una parte de nuestros átomos, y los de todo lo que existe, vienen navegando el Universo desde el principio de los tiempos. Esas partículas cargan con cientos de miles de historias, y cada una de ellas nos comparte un aprendizaje. 
-					<br><br>
-				Cierra tus ojos e intenciona el mensaje que estas partículas tienen para vos.
-					<br><br>  
-				Cuando estés listx, elije una carta del maso.</p>
-				<!-- <button @click="getMessage()">{{ $t("message.cardMessageButton") }}</button> -->
+				<p>{{ $t("message.praxisIntro") }}</p>
 			</section>
 		</main> 
 	</div>

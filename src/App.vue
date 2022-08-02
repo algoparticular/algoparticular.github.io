@@ -4,21 +4,10 @@
 	import { onMounted, ref } from 'vue';  	
 	import { useRouter } from 'vue-router';
 
-	const router = useRouter();
-
-	function langChanged(lang) {
-		localStorage.setItem("lang", lang);
-	}
+	const router = useRouter();	
 
 	//ON MOUNTED
 	onMounted (() => {
-
-		console.log('language: ' + localStorage.lang);
-
-		if (localStorage.lang == null) {			
-			localStorage.setItem("lang", 'es');			
-		}
-
 		//Progressive Web App
 		let registration = null;
 

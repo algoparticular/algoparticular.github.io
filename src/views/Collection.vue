@@ -22,8 +22,8 @@
 <template>
 	<div class="content">
 		<main id="deck">
-			<h2>Mi colección</h2>
-			<p>you can do it</p>
+			<h2>{{ $t("message.praxisCollectionTitle") }}</h2>
+			<p>{{ $t("message.praxisCollectionDescrip") }}</p>
 		</main>
 	</div>
 </template>

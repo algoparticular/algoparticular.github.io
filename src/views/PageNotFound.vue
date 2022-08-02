@@ -8,8 +8,9 @@
 		<img class="title" alt="Praxis, by Algo Particular" src="../assets/Logo_praxis.svg">
 
 		<section class="intro">
-			<p>Un espacio vacío...</p>
-			<p>Ve y elige una carta! clickea debajo</p>
+			<h2>{{ $t("message.notFound") }}</h2>
+			<p>{{ $t("message.notFoundCopy") }}</p>
+			<!-- <p>{{ $t("message.notFoundButton") }}</p> -->
 		</section>
 	</main> 
 </div>

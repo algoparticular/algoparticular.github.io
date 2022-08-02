@@ -56,7 +56,7 @@ export default {
         
         <div class="textWrapper">
             <h4>
-                Skeleton
+                Acard
             </h4>
             <p class="">
                 Esta es una carta skeleton, guardala para la buena vibra huesitica. Estoy escribiendo para rellenar con texto y que de fondo parezca que se está cargando la carta.
@@ -65,11 +65,11 @@ export default {
             </p>
             <div class="bottom">
                 <div>
-                    <h5>Afirmación</h5>
+                    <h5>{{ $t("message.cardAfirmation") }}</h5>
                     <p>Yo soy un texto re placeholder</p>
                 </div>
                 <div>
-                    <h5>Invitación</h5>
+                    <h5>{{ $t("message.cardInvitation") }}</h5>
                     <p>Yo soy un texto re placeholder</p>
                 </div>
             </div>

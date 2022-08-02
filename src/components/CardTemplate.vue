@@ -33,11 +33,11 @@
             </p>
             <div class="bottom">
                 <div>
-                    <h5>Afirmación</h5>
+                    <h5>{{ $t("message.cardAfirmation") }}</h5>
                     <p>{{ props.cardData.afirmation }}</p>
                 </div>
                 <div>
-                    <h5>Invitación</h5>
+                    <h5>{{ $t("message.cardInvitation") }}</h5>
                     <p>{{ props.cardData.invitation }}</p>
                 </div>
             </div>

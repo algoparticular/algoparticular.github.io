@@ -35,7 +35,7 @@
 </script>
 
 <template>
-    <p>Elige una carta</p>
+    <p>{{ $t("message.praxisDeck") }}</p>
     <div class="deckWrapper">
         <template v-for="cardItem in deckData">
             <DeckItem :card="cardItem" :loading="false" />
