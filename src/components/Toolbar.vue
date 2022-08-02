@@ -5,6 +5,7 @@
     
     const isLoggedIn = ref(false);
     const showMenu = ref(false);
+    const hideToolbar = ref(false);
     const highlightIcon = ref(false);
     const collectButton = ref(false);
     const router = useRouter();
@@ -45,13 +46,20 @@
         switch(props.path) {
             case '/card':
                 collectButton.value = true;
+                hideToolbar.value = false;
                 break;
             case '/collection':
                 highlightIcon.value = true;
+                hideToolbar.value = false;
+                break;
+            case '/deck':
+                //esconder toolbar
+                hideToolbar.value = true;
                 break;
             default:
                 collectButton.value = false;
                 highlightIcon.value = false;
+                hideToolbar.value = false;
         }
 
         //check user logged in or not
@@ -67,7 +75,7 @@
 </script>
 
 <template>
-    <div id="toolbar" :class="{active: showMenu}">
+    <div id="toolbar" :class="{active: showMenu, hidden: hideToolbar}">
         <div class="buttons">
             <button class="secondary collection" :class="{active: highlightIcon}" @click="navigate('/collection')"></button>
 
@@ -99,6 +107,7 @@
 
 <style scoped>
     #toolbar {
+        display: block;
         position: fixed;
         bottom: 0;
         width: 90vw;
@@ -124,6 +133,10 @@
 
         height: 30vh;
         gap: 16px;
+    }
+
+    #toolbar.hidden {
+        display: none;
     }
 
     div.buttons {

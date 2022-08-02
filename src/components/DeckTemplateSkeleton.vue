@@ -1,13 +1,42 @@
-<script setup>
-    import { onMounted, ref } from 'vue';    
+<script>    
     import DeckItem from "./DeckItem.vue";
+    import { animate } from "motion";
+
+    export default {
+        components: { DeckItem },
+        
+        data() {
+            return {
+            
+            }
+        },
+
+        methods: {        
+            animateList() {
+                // const paths = document.querySelectorAll("#cardLoader path");
+
+        console.log('animation list');
+
+                // animate(paths, 
+                //     {strokeDasharray: 1000},
+                //     {   duration: 3.6, 
+                //         easing: [.63, 0, .72, 0]
+                //     });
+
+        console.log('animation list end');
+            },   
+        },
+        mounted() {    
+                // this.animateList();
+        }
+    }
 
 </script>
 
 <template>
     <p>Mezclando cartas...</p>
     <div class="deckWrapper">
-        <template v-for="item in 60">
+        <template v-for="item in 60" :key="item">
             <DeckItem :loading="true"  />
         </template>
     </div>

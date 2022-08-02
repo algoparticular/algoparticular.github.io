@@ -10,8 +10,8 @@
     const loadCardData = async () => {
         return new Promise((resolve) => {
             setTimeout(() => {
-                // resolve()
-            }, 3200)
+                resolve();
+            }, 4000)
         })
     }
 

@@ -1,7 +1,7 @@
 {
   "name": "praxis",
   "private": true,
-  "version": "0.0.1",
+  "version": "0.0.3",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -21,6 +21,7 @@
     "@vitejs/plugin-vue": "^3.0.0",
     "autoprefixer": "^10.4.7",
     "postcss": "^8.4.14",
+    "postcss-easings": "^3.0.1",
     "tailwindcss": "^3.1.6",
     "vite": "^3.0.0"
   }

@@ -18,7 +18,7 @@
     </div>
 </template>
 
-<style scoped>
+<style>
     .content.deck {
         padding-top: 9vh;
     }
@@ -26,11 +26,13 @@
     /* DESKTOP */
     @media screen and (min-width: 768px) {
         .content.deck {
-            padding: 0;
+            padding: 40px 0;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            height: auto;
         }
     }
+    
 </style>
