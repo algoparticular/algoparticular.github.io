@@ -1,0 +1,648 @@
+{
+    "en": {
+        "message": {
+            "hello": "Algo Particular tells the stories of a particle that upon becoming self-aware, learns to navigate the Universe freely.\nUnder the Hermetic premise 'As above, so below', it conveys its truth: we are all the same, we are all one, we are (not from) here.",
+            "seeGallery": "View full gallery",
+            "shops": "Shops",
+            "shopFC": "Flashcookie store, only in Argentina",
+            "shopTL": "Threadless store, shipping worldwide from the US",
+            "shopHEN": "Collect particles on Hic et Nunc!",
+            "copyrightA": "Ideated by",
+            "copyrightB": "co-created with the ❤ of a",
+            "copyrightC": "community",
+            "copyrightApp": "2022 copyright ©",
+            "community": "Algo Particular could not seek and transmit its purpose if it were not for other particles that, along the way, co-create or collaborate with the development and expression of this Universe.\nTo all of them I am infinitely grateful.",
+            "communityA": "Protons",
+            "communityB": "Neutrons",
+            "communityC": "Electrons",
+            "back": "Back",
+            "notFound": "Just empty space...",
+            "notFoundCopy": "Error or not, I invite you to take this opportunity to be here. No social mask is needed on this 404 page.\n\nA simple opportunity to close your eyes and exhale all the air. Releasing every muscle in our face, making very slow movements while we scan our body.\n\nHow did I get to this page? What frequency am I vibrating at?\n\nAnd when you need it, open your eyes again. Smile and express gratitude to someone, to something, and specially to yourself.\n\nThank you, now you can continue browsing.",
+            "notFoundButton": "Go back to site",
+            "praxisNavInfo": "Info",
+            "praxisNavDonate": "Buy as a cup of tee",
+            "praxisNavSignin": "Dive me",
+            "praxisNavRegister": "I want an account",
+            "praxisNavLogout": "Take me out of here",
+            "registerTitle": "Create an account",
+            "registerDescrip": "You can collect and work on every card that comes your way.",
+            "registerSubmit": "I want to dive",
+            "registerGoogle": "I will use my Gmail account",
+            "signinTitle": "Sign in",
+            "signinDescrip": "Log in with you email and password",
+            "signinSubmit": "I want to dive",
+            "signinGoogle": "I will use my Gmail account",
+            "formEmail": "Email",
+            "formPassword": "Password",
+            "praxisIntro": "Part of our atoms, and those of everything that exists, were navigating around the Universe since the beginning of time. Those particles carry thousands stories, and each one of them shares a learning with us.\n\nClose your eyes and intend the message these particles have for you.\n\nWhen you are ready, click below to see it. (Currently only in Spanish)",
+            "praxisDeck": "Feel and choose your card",
+            "praxisDeckLoading": "Shuffling cards with today's frequency...",
+            "cardAfirmation": "Afirmation",
+            "cardInvitation": "Invitation",
+            "praxisCollectionTitle": "The deck",
+            "praxisCollectionDescrip": "you can do it"
+            },
+        "cards": [
+            {
+                "id": 0,
+                "name": "Nekkhamma",
+                "description": "Nekkhamma te invita al desapego, llamando a tu capacidad de soltar los deseos de un ego que te hace creer que sos lo que posees. \nUn ego identificado con lo limitado y separado del otro. Practicando la renunciación logramos la liviandad necesaria para encarar el Camino y reconocer que nuestro ser es ilimitado y en unión con todo lo que existe. Recuerda que abrazar tu materialidad no es identificarte con ella, es reconocer su sacralidad.",
+                "image": "",
+                "afirmation": "Reconozco que soy mucho más que este cuerpo físico y sus posesiones.",
+                "invitation": "Practica la renunciación, suelta alguna de esas cosas que ya no necesitas y anda liviana.",
+                "category": "parami",
+                "rarity": 1
+            },
+            {
+                "id": 1,
+                "name": "Sila",
+                "description": "Sila es una invitación a la moralidad, a hacer el bien en resonancia con una corriente de vida interconectada. La voz del corazón es la guía frente a las distracciones que se presentan ante nuestros sentidos. Así el cuerpo, mente y alma se integran para descansar en una paz que inspira a no irrumpir el camino de ningún otro. ",
+                "image": "",
+                "afirmation": "Encuentro paz e integridad al ser honesto en nuestros pensamientos, palabras y actos.",
+                "invitation": "En secreto, sin que nadie lo sepa, busco hacer una acción beneficiosa para otros.",
+                "category": "parami",
+                "rarity": 1
+            },
+            {
+                "id": 2,
+                "name": "Dana",
+                "description": "",
+                "image": "",
+                "afirmation": "Soy feliz al dar sin esperar nada a cambio.",
+                "invitation": "Hoy práctica tu altruismo y regala algo de tu tiempo y energía aquel que lo necesite.",
+                "category": "parami",
+                "rarity": 1
+            },
+            {
+                "id": 3,
+                "name": "Pañña",
+                "description": "Al practicar Pañña estás trabajando la sabiduría,  esa certeza innata que todos llevamos dentro. Por ser una virtud divina que nos habita dista del conocimiento que se aprende. Reconoce y acciona desde esa sabiduría que habita en ti, esa que fluye de la Fuente de toda creación y nos recuerda la gracia y belleza que nos rodea, pudiendo observar la vida desde una perspectiva más amplia.",
+                "image": "",
+                "afirmation": "Mi centro calmo y silencio escucha la instancia Divina dentro de mí.",
+                "invitation": "Preguntale a tu sabiduria Divina, ¿Qué debo hacer frente a esta situación o persona que me esta inquietando? Escucha en silencio.",
+                "category": "parami",
+                "rarity": 1
+            },
+            {
+                "id": 4,
+                "name": "Viriya",
+                "description": "Al practicar Viriya estás trabajando la diligencia. Ser fiel a tu propio Camino requiere determinación, perseverancia en la búsqueda de tu mejor versión. Viriya te invita a ser responsable recordando que cada día es una nueva oportunidad. Una nueva posibilidad para ser fiel a tu verdad y encontrar paso a paso una mejor versión de vos misma. Un día a la vez, una cosa a la vez. El cambio y la transformación son posibles si la determinación y el compromiso con tu verdad guían tus pasos.",
+                "image": "",
+                "afirmation": "Escucho mi corazón y sigo su verdad con determinaciòn.",
+                "invitation": "Hoy disfruto de mi compromiso con ese cambio que estoy buscando.",
+                "category": "parami",
+                "rarity": 1
+            },
+            {
+                "id": 5,
+                "name": "Kshanti",
+                "description": "Al practicar Kshanti estás trabajando la tolerancia. Ser tolerante es aceptar a todos exactamente como son sin juzgar, culpar o querer cambiarlos.  La tolerancia es una virtud que se relaciona con la fortaleza y la amplitud de tu consciencia. Te permite encontrarte profundamente con los otros reconociendo la verdad que te conecta con todo lo que Es.  Ser paciente con vos mismo y los demás es reconocer que cada uno avanza en su propio camino espiritual. De este modo la irritación se esfuma y el amor asoma.",
+                "image": "",
+                "afirmation": "Mi divinidad se expande al ser tolerante con mi camino espiritual y el de los otros.",
+                "invitation": "Hoy sere tolerante y paciente conmigo. Respeto mis tiempos sin exigencias.",
+                "category": "parami",
+                "rarity": 1
+            },
+            {
+                "id": 6,
+                "name": "Sacca",
+                "description": "Al practicar Sacca estás abriéndole la puerta a la verdad. La verdad es tu propósito, aquello a lo que estás invitado a ser. Buscar ese propósito es el primer paso para dejar de lado una vida en automático y volverte más consciente del milagro que estás experimentando cada día. Al caminar desde tu verdad le darás lugar a la sincronicidad, descubriendo que no sos el único en nada, todos somos parte de un plan mayor. Hoy practica compartir tu verdad e inspirar a otros a hacerlo también, descubriendo que en lo más intimo la verdad es una sola.",
+                "image": "",
+                "afirmation": "Me comprometo con mi verdad y le abro la puerta a mi próposito.",
+                "invitation": "Estate atento a las sincronicidades que te rodean cuando sigues tu verdad.",
+                "category": "parami",
+                "rarity": 1
+            },
+            {
+                "id": 7,
+                "name": "Addhitthana",
+                "description": "Al practicar Addhitthana estas trabajando tu determinación, esa que es necesaria para sostener en el tiempo hábitos y decisiones que te ayuden a ser cada día más feliz. Debes saber que aun atravesando toda vicisitud mereces ser feliz. Para construir una vida plena y feliz es necesario alimentar tu autoridad interior, ordenando tu voluntad y desarrollando tu individualidad. Ser determinada es abandonar el ámbito de la comodidad y despertar tu poder personal. Al desarrollar Addhitthana estarás nutriendo la certeza de que la fortaleza se enciende en vos al enfrentar cualquier desafío, eso es madurar álmicamente, es abrirle la puerta a la transformación hacia tu evolución y propósito.",
+                "image": "",
+                "afirmation": "Soy determinanda en nutrir hábitos que hagan a mi felicidad y plenitud.",
+                "invitation": "Por 21 días me comprometo a implementar ese hábito que hace tiempo deseo.",
+                "category": "parami",
+                "rarity": 1
+            },
+            {
+                "id": 8,
+                "name": "Metta",
+                "description": "",
+                "image": "",
+                "afirmation": "",
+                "invitation": "",
+                "category": "parami",
+                "rarity": 1
+            },
+            {
+                "id": 9,
+                "name": "Upekkha",
+                "description": "",
+                "image": "",
+                "afirmation": "",
+                "invitation": "",
+                "category": "parami",
+                "rarity": 1
+            },
+            {
+                "id": 10,
+                "name": "Empty card",
+                "description": "...",
+                "image": "",
+                "afirmation": "Afirmo lo que ya mi ser interior sabe.",
+                "invitation": "",
+                "category": "special",
+                "rarity": 1
+            },
+            {
+                "id": 11,
+                "name": "Acceptance",
+                "description": "La aceptación es la capacidad para asumir la vida y a los otros tal como son, sin intentar cambiar o luchar contra aquello que no podemos controlar. Aceptar que hay realidades que exceden tu control, no es una actitud estática, es una decisión activa, que te invita a no cargar ninguna malicia hacia nada o nadie. Al reconocer la diversidad, somos capaces de transformarnos. Al aceptar aquello que te hace único, eso particular que habita en vos, te vuelves más confiado y tu ser divino se revela.",
+                "image": "",
+                "afirmation": "Acepto y honro quién soy.",
+                "invitation": "Hoy suelto el exceso de control y acepto lo que me rodea aquí y ahora.",
+                "category": "regular",
+                "rarity": 3
+            },
+            {
+                "id": 12,
+                "name": "Love",
+                "description": "Al nacer el amor es lo único que prima, los bebés y los niños no conocen más que ese amor. Ese estado de amor en abundancia es lo que somos. Quizás el propósito de esta experiencia es recordar que el amor es lo que somos, que nadie puede alterar ese amor eterno. Aprendes todo lo que enseñas. Enseña solamente amor, y aprende que el amor es tuyo y que tú eres amor. Enseña solamente amor, pues eso es lo que eres.",
+                "image": "",
+                "afirmation": "Soy una expresión de amor. ",
+                "invitation": "Reconozco el amor que me rodea y lo agradezco.",
+                "category": "regular",
+                "rarity": 3
+            },
+            {
+                "id": 13,
+                "name": "Harmony",
+                "description": "La armonía en la música se encuentra cuando existe un equilibrio entre la variedad y proporción de sonidos y pausas. Buscar la armonía en tu vida es una invitación al balance ya sea en la quietud o en el movimiento. Para poder hacerlo el primer paso es regalarte un tiempo de silencio interior. Un momento de pausa para discernir y encontrar el equilibrio. Entonces, toda relación, ambiente y tarea devendrá en una melodía armoniosa.\nClaro que a veces el camino es inverso, un ambiente o persona en armonía puede ayudarte a redescubrir el equilibrio en tu interior. Por lo que siempre busca rodearte de gente de hermosa vibración, porque todos somos influenciados por lo que nos rodea.",
+                "image": "",
+                "afirmation": "Vibro en armonía en mi aquí y ahora.",
+                "invitation": "Creo un espacio armonioso y me regalo un tiempo de encuentro interior.",
+                "category": "regular",
+                "rarity": 3
+            },
+            {
+                "id": 14,
+                "name": "Beauty",
+                "description": "Creer que existe una sola clase de belleza equivale a no prestar atención a la vida y sus multiples expresiones. Poder ver lo bello aún en la apariencia más desafiante es un alimento para el alma.\nA medida que sintonizas con la particular belleza de tu ser, de los otros y de la naturaleza, tu resonancia se convierte en la de la belleza, y se irradia hacia todo lo que te rodea, volviéndote una expresión de luz que invita a los otros a ver lo bello también.",
+                "image": "",
+                "afirmation": "Reconozco mi belleza y la de los otros.",
+                "invitation": "Hoy encuentro 3 aspectos bellos en mí.",
+                "category": "regular",
+                "rarity": 2
+            },
+            {
+                "id": 15,
+                "name": "Kindness",
+                "description": "",
+                "image": "",
+                "afirmation": "",
+                "invitation": "",
+                "category": "regular",
+                "rarity": 3
+            },
+            {
+                "id": 16,
+                "name": "Celebration",
+                "description": "Celebrar cada experiencia que la vida te regala despierta una actitud de gratitud que alimenta la vision de nuevas celebraciones. Siempre hay un motivo para celebrar y cuando lo haces con otros, una gran energía se libera atrayendo el goce, la felicidad y las ganas compartidas de honrar la vida.",
+                "image": "",
+                "afirmation": "Celebro la vida, sus tránsitos y este instante particular.",
+                "invitation": "Descubro la liviandad y la alegría que se despierta al celebrar.",
+                "category": "regular",
+                "rarity": 3
+            },
+            {
+                "id": 17,
+                "name": "Cycles",
+                "description": "Al contemplar la impermanencia somos capaces de reconocer los ciclos de la vida. Todo cierre de ciclo es también una bienvenida al nuevo comienzo. Cada día nacemos de nuevo. Cada día es una nueva oportunidad para dar inicio a hábitos sanos que quieras emprender.\nSi este mensaje ha llegado a ti es para invitarte a preguntarte, si estás en un tiempo oportuno para dar cierre a cierta etapa, relación o hábito. Deja que el corazón guíe, ¿Qué es tiempo de soltar? ¿Qué nuevo inicio te esta llamando? \nQue la gratitud prime al cerrar ciclos, para solo entonces comenzar nuevos capítulos con frescura y liviandad.",
+                "image": "",
+                "afirmation": "Agradezco quien fui, honro quien soy y proyecto quien quiero ser. ",
+                "invitation": "¿Qué es tiempo de dejar ir? ¿Qué nuevo comienzo anhela mi corazón?",
+                "category": "regular",
+                "rarity": 3
+            },
+            {
+                "id": 18,
+                "name": "Clarity",
+                "description": "",
+                "image": "",
+                "afirmation": "",
+                "invitation": "",
+                "category": "regular",
+                "rarity": 3
+            },
+            {
+                "id": 19,
+                "name": "Compassion",
+                "description": "",
+                "image": "",
+                "afirmation": "",
+                "invitation": "",
+                "category": "regular",
+                "rarity": 3
+            },
+            {
+                "id": 20,
+                "name": "Commitment",
+                "description": "Al comprometerte con tu visión alineando tus pensamientos e intenciones por alcanzar aquello que anhelas, encuentras la paz de saber que estas avanzando en la dirección correcta. Tu camino se ilumina por el solo hecho de comprometerte con tu búsqueda, cualquiera ella sea. Si aún no hay claridad en la visión de tu deseo, lleva tu intención a iluminar tu búsqueda. Mientras la búsqueda hacia el anhelo del alma este activa habrá paz.",
+                "image": "",
+                "afirmation": "Estoy comprometida con mi búsqueda y visión.",
+                "invitation": "Hoy me comprometo a seguir el camino de mi corazón.",
+                "category": "regular",
+                "rarity": 3
+            },
+            {
+                "id": 21,
+                "name": "Communication",
+                "description": "El primer paso para comunicarte con honestidad es escucharte a vos mismo. La comunicación con el interior es una invitación a ahondar en la quietud, templando la mente y dejando que el oído del alma escuche respuestas en el silencio.\nLa práctica de la meditación es una puerta sagrada para comunicarte con el ser sabio y divino que habita en vos.\nComunícate con claridad a través de la palabra, la acción y la intención. Todos percibirán la resonancia de la verdad y confiarán en ti.",
+                "image": "",
+                "afirmation": "Me comunico con claridad y honestidad.",
+                "invitation": "En el silencio meditativo escucho y confio en mi verdad interior.",
+                "category": "regular",
+                "rarity": 2
+            },
+            {
+                "id": 22,
+                "name": "Trust",
+                "description": "Cuando confías en ti mismo eres capaz de volver consciente la sabiduría y fuerza que llevas dentro.   Para nutrir la confianza en ti es importante dejar a un lado la búsqueda de aprobación y expectativas ajenas. Confía en tu intuición y en tu propia experiencia. Si la mente esta muy atareada y es difícil escuchar, confía en las señales de tu cuerpo. Al cultivar la confianza, tu espíritu se ilumina y tu luz te guía con determinación.",
+                "image": "",
+                "afirmation": "Confío en mi y dejo que mi sabiduria guie mis pasos.",
+                "invitation": "Recuerda las veces que superaste adversidades.",
+                "category": "regular",
+                "rarity": 3
+            },
+            {
+                "id": 23,
+                "name": "Courage",
+                "description": "En el silencio somos capaces de escuchar nuestra voz interior que como un faro en medio del oceano nos guía. La voz interna te invita a elegir en función a tu deseo, te invita acallar voces y patrones externos y de ese modo crear y hacerle lugar a tu magia. Pero solo es posible escuchar esa voz si te vistes de coraje. Para amar hay que ser valiente. Para soltar viejos puertos y adentrarse en la mar hay que ser valiente. Si este mensaje ha llegado a ti es porque es tiempo de ver y darle lugar al coraje que llevas dentro. Respira, siempre se puede comenzar de nuevo. ",
+                "image": "",
+                "afirmation": "Reconozco mi valentia, mi fuerza interior guía mis pasos.",
+                "invitation": "Inhalo coraje. Exhalo miedo. Inhalo coraje. Exhalo miedo.",
+                "category": "regular",
+                "rarity": 3
+            },
+            {
+                "id": 24,
+                "name": "Creativity",
+                "description": "A medida que permitimos que el poder creativo fluya dentro nuestro alimentamos la energía del cambio. Al canalizar tu fuerza, das y recibes vida, ya que la creatividad no es un movimiento solitario. Allí donde pasa, atrae a quien sepa oír, ver y percibir.\nDejando de lado los juicios y exigencias, nos reconocemos co creadores de lo Divino, explorando así nuestro inmenso y particular potencial. Usa tu poder creativo para crear la vida que sueñas.",
+                "image": "",
+                "afirmation": "Dejó que mi poder creativo se exprese pleno de alegría.",
+                "invitation": "Pongo en practica mi creatividad y creo la vida que sueño.",
+                "category": "regular",
+                "rarity": 3
+            },
+            {
+                "id": 25,
+                "name": "Challenge",
+                "description": "El desafío más enriquecedor de todos es encontrar cada día una mejor versión de ti mismo. Los desafíos pueden ser vistos como dificultades insuperables o como oportunidades para la transformación y el crecimiento personal.  Si no existiera cierta cuota de resistencia no podrías descubrir tu propia fuerza. Cada vicisitud de la vida se presenta solo cuando uno está listo para enfrentarla. Por eso, si un desafío ha llegado a tu puerta, alza la mirada y avanza con confianza, descubriendo talentos y fuerzas que hasta entonces mantenías silenciadas.",
+                "image": "",
+                "afirmation": "Respondo a mis desafios con confianza y descubro nuevos talentos. ",
+                "invitation": "Transformo cada desafío en una sagrada oportunidad.",
+                "category": "regular",
+                "rarity": 3
+            }, 
+            {
+                "id": 26,
+                "name": "Discernment",
+                "description": "",
+                "image": "",
+                "afirmation": "",
+                "invitation": "",
+                "category": "regular",
+                "rarity": 3
+            },
+            {
+                "id": 27,
+                "name": "Hope",
+                "description": "",
+                "image": "",
+                "afirmation": "",
+                "invitation": "",
+                "category": "regular",
+                "rarity": 3
+            },
+            {
+                "id": 28,
+                "name": "Spiritual Evolution",
+                "description": "Tu misión particular en esta tierra es tu puerta para el mayor de los propósitos, evolucionar espiritualmente. La evolución espiritual es el encuentro con la presencia de un alma ensanchada, capaz de ver, sentir, y aceptar al otro y a uno mismo. Un alma que sabe de honestidad e integridad.\nEl camino espiritual es único y personal, por lo que no lo busques en los demás, cada uno está haciendo su propio recorrido. Puedes preguntarte a tí mismo, ¿este camino tiene corazón? Si la respuesta es sí, vas por el sendero correcto.\nRecuerda siempre que una alma iluminada es capaz de transformar cada atmósfera que habita, siendo faro para otros.",
+                "image": "",
+                "afirmation": "Mi alma evoluciona cada dia. ",
+                "invitation": "Pregúntate, ¿Mi camino tiene corazón? ",
+                "category": "regular",
+                "rarity": 2
+            },
+            {
+                "id": 29,
+                "name": "Faith",
+                "description": "Son dos las clases de fuerza que habitan en vos, la fuerza de tus músculos y la fuerza inconmovible de tu alma. La fe es reconocer la existencia de esa fuerza en tu interior, dejando de lado la duda y el miedo.\nAún en los momentos de mayor incertidumbre, recuerda nutrir la fe en ti mismo, el universo te apoyará removiendo barreras y permitiendo que la luminosidad de tu ser se manifieste. \nRegálate una pausa de silencio, percibe la calma, repítete, ‘Todo está bien. Todo estará bien.’ Escucha dentro incrementando tu fe en el poder infinito que te habita.",
+                "image": "",
+                "afirmation": "Tengo fé en la fuerza inconmovible de mi alma.",
+                "invitation": "Confio en mi mismo y en la asistencia del universo. ",
+                "category": "regular",
+                "rarity": 3
+            },
+            {
+                "id": 30,
+                "name": "Happiness",
+                "description": "",
+                "image": "",
+                "afirmation": "",
+                "invitation": "",
+                "category": "regular",
+                "rarity": 3
+            },
+            {
+                "id": 31,
+                "name": "Flexibility",
+                "description": "",
+                "image": "",
+                "afirmation": "",
+                "invitation": "",
+                "category": "regular",
+                "rarity": 3
+            },
+            {
+                "id": 32,
+                "name": "Generosity",
+                "description": "",
+                "image": "",
+                "afirmation": "",
+                "invitation": "",
+                "category": "regular",
+                "rarity": 3
+            },
+            {
+                "id": 33,
+                "name": "Gratitude",
+                "description": "El solo hecho de despertar cada mañana es una razón para agradecer. La gratitud es la madre de todas las virtudes porque te invita a valorar los pequeños y grandes milagros que te rodean.\nAl dar las gracias tu corazón se ilumina y una actitud positiva se despierta en el interior. Hoy regálate una pausa y agradece tu proceso, tus búsquedas, tus seres queridos, tus errores e intentos… Da las gracias por quien sos y desde allí sueña y proyecta quién quieres ser.",
+                "image": "",
+                "afirmation": "Agradezco quien soy y todo lo que me rodea.",
+                "invitation": "Hoy agradecele a ese ser querido especial.",
+                "category": "regular",
+                "rarity": 3
+            },
+            {
+                "id": 34,
+                "name": "Home",
+                "description": "El hogar es ese lugar tuyo, único y especial, que viaja con vos vayas donde vayas. Al dedicar cada día un momento para nutrir tu mundo interior, estas creando tu hogar, dando lugar a escuchar respuestas y recordar quién eres.\nLos lugares físicos a los que usualmente llamamos hogar, son tan sólo el vehículo. El silencio, la contemplación, el movimiento consciente, la música, el arte, detenerte a oír y ver el mar, son algunas de las puertas que invitan a viajar dentro y pausar el tiempo en vos. Al hacerlo estas volviendo al ‘Hogar’. Recuerda que siempre puedes regresar a él, porque tu Hogar viaja con vos, tu interior es tu Hogar. ¡Feliz reencuentro!",
+                "image": "",
+                "afirmation": "Cada día regreso a mi hogar y nutro mi mundo interior.",
+                "invitation": "Reivindico tiempo para mí y disfruto de estar en contacto conmigo.",
+                "category": "regular",
+                "rarity": 3
+            },
+            {
+                "id": 35,
+                "name": "Honesty",
+                "description": "La honestidad es poner en práctica la integridad de quienes somos, pudiendo compartir nuestra verdad a través de nuestras acciones y palabras.\nPara poder ser honestos con otros primero debemos ser honestos con nosotros mismos. La transparencia en los vínculos da lugar a relaciones sanas y plenas.\nHas una pausa para escuchar tu verdad, eso que te hace particularmente único en este universo, y luego compártela con otros, invitándolos a hacer lo mismo también.",
+                "image": "",
+                "afirmation": "Soy honesta conmigo misma y la Verdad guía mis pasos.",
+                "invitation": "En silencio, escucho la Verdad que habita en mí.",
+                "category": "regular",
+                "rarity": 2
+            },
+            {
+                "id": 36,
+                "name": "Ilumination",
+                "description": "",
+                "image": "",
+                "afirmation": "",
+                "invitation": "",
+                "category": "regular",
+                "rarity": 2
+            },
+            {
+                "id": 37,
+                "name": "Integrity",
+                "description": "",
+                "image": "",
+                "afirmation": "",
+                "invitation": "",
+                "category": "regular",
+                "rarity": 3
+            },
+            {
+                "id": 38,
+                "name": "Light",
+                "description": "",
+                "image": "",
+                "afirmation": "",
+                "invitation": "",
+                "category": "regular",
+                "rarity": 3
+            },
+            {
+                "id": 39,
+                "name": "Opportunity",
+                "description": "",
+                "image": "",
+                "afirmation": "",
+                "invitation": "",
+                "category": "regular",
+                "rarity": 3
+            },
+            {
+                "id": 40,
+                "name": "Patience",
+                "description": "La maestra naturaleza nos enseña que la paciencia amorosa trae grandes recompensas y que cada etapa del camino tiene un valor único y necesario en el ciclo de la vida.\nSer pacientes ante los cambios, las transiciones, lo nuevo, te regalara paz y confianza. Como una madre que espera a su bebe, recuerda que cada acontecimiento sucede en el momento perfecto y que no.\nEl universo sabe escucharte, muchas veces tus tiempos no coinciden con los tiempos divinos, descansa en la espera. Más adelante entenderás por qué las cosas sucedieron de ese modo. Estate atento para descubrir señales y sugerencias divinas durante tu periodo de espera. Que estés leyendo este mensaje ya es una señal, recíbela con gratitud.",
+                "image": "",
+                "afirmation": "Soy paciente conmigo misma y descubro milagros a cada instante.",
+                "invitation": "Observo la naturaleza y sus ciclos, aprendo de su paciente sabiduría en cada transición.",
+                "category": "regular",
+                "rarity": 3
+            },
+            {
+                "id": 41,
+                "name": "Peace",
+                "description": "",
+                "image": "",
+                "afirmation": "",
+                "invitation": "",
+                "category": "regular",
+                "rarity": 3
+            },
+            {
+                "id": 42,
+                "name": "Forgiveness",
+                "description": "Al perdonar sanamos y nos volvemos más compasivos. Saber perdonar a otros y a uno mismo es dejar a un lado la idea de perfeccionismo, pudiendo entender que equivocarnos es parte del camino y reconocer el error es una gran oportunidad para el aprendizaje.\nEl perdón nos invita a andar livianos sin culpas ni rencores, dejando atrás el pasado y abriéndole la puerta al presente consciente.\nRecuerda que al perdonar no solo estas sanando los vínculos con los otros sino también es un regalo de paz que te haces a ti mismo.",
+                "image": "",
+                "afirmation": "Me perdono a mi mismo y a los otros. ",
+                "invitation": "Inhalo amor. Exhalo perdón.",
+                "category": "regular",
+                "rarity": 2
+            },
+            {
+                "id": 43,
+                "name": "Purpose",
+                "description": "",
+                "image": "",
+                "afirmation": "",
+                "invitation": "",
+                "category": "regular",
+                "rarity": 3
+            },
+            {
+                "id": 44,
+                "name": "Surrender",
+                "description": "",
+                "image": "",
+                "afirmation": "",
+                "invitation": "",
+                "category": "regular",
+                "rarity": 3
+            },
+            {
+                "id": 45,
+                "name": "Wisdom",
+                "description": "",
+                "image": "",
+                "afirmation": "",
+                "invitation": "",
+                "category": "regular",
+                "rarity": 3
+            },
+            {
+                "id": 46,
+                "name": "Serenity",
+                "description": "",
+                "image": "",
+                "afirmation": "",
+                "invitation": "",
+                "category": "regular",
+                "rarity": 3
+            },
+            {
+                "id": 47,
+                "name": "Silence",
+                "description": "",
+                "image": "",
+                "afirmation": "",
+                "invitation": "",
+                "category": "regular",
+                "rarity": 3
+            },
+            {
+                "id": 48,
+                "name": "Simplicity",
+                "description": "",
+                "image": "",
+                "afirmation": "",
+                "invitation": "",
+                "category": "regular",
+                "rarity": 3
+            },
+            {
+                "id": 49,
+                "name": "Synchronicity",
+                "description": "Las sincronicidades suceden cuando somos capaces de estar en armonía con todo lo que nos rodea. Si este mensaje ha llegado a ti, alégrate porque es una señal de que te encuentras en el lugar indicado para tu crecimiento. Abre tus ojos para poder ver el fluir de la sincronicidad en tu vida.\nRecuerda que nadie está donde está por casualidad y nada en el plan Divino es al azar, cada acontecimiento sucede en el momento y lugar indicado para tu beneficio.\nAdvertir o buscar las señales es una invitación a reconocer la interconexión que existe en este maravilloso universo, pudiendo contemplar que detrás de cada acontecimiento hay una razón Divina de ser.",
+                "image": "",
+                "afirmation": "Estoy en el momento y lugar indicado para mi crecimiento. ",
+                "invitation": "Reconozco el constante fluir de las sincronicidades en mi vida.",
+                "category": "regular",
+                "rarity": 2
+            },
+            {
+                "id": 50,
+                "name": "Transformation",
+                "description": "",
+                "image": "",
+                "afirmation": "",
+                "invitation": "",
+                "category": "regular",
+                "rarity": 3
+            },
+            {
+                "id": 51,
+                "name": "True",
+                "description": "",
+                "image": "",
+                "afirmation": "",
+                "invitation": "",
+                "category": "regular",
+                "rarity": 3
+            },
+            {
+                "id": 52,
+                "name": "Vision",
+                "description":"",
+                "image": "",
+                "afirmation": "",
+                "invitation": "",
+                "category": "regular",
+                "rarity": 3
+            },
+            {
+                "id": 53,
+                "name": "First Chakra",
+                "description": "No basta con que algo esté servido también hay que tomarlo. Al igual que las raíces de las plantas absorben los nutrientes de la tierra, el primer chakra, situado en la base de la columna, te invita a tomar lo que está disponible para vos y sentirte merecedora de hacerlo.\nLa tarea de este chakra, es la conservación personal, invitándonos a recordar nuestro derecho a existir, fortaleciendo tu confianza y seguridad.\nSolo así es posible alcanzar el propósito de reconocer la expresión de tu alma en tu templo físico y sentar las bases para tu crecimiento espiritual.",
+                "image": "",
+                "afirmation": "Honro mi templo sagrado, cuido de él y dejó que la vida cuide de mi.",
+                "invitation": "Hoy nutre la conexión dinámica con la única presencia viva que tenes garantizada durante toda tu vida: tu cuerpo.",
+                "category": "regular",
+                "rarity": 2
+            },
+            {
+                "id": 54,
+                "name": "Second Chakra",
+                "description": "Este chakra situado en tu plexo sacro te invita a fluir a través de tu intuición, navegando en el mar de tus sentidos.\nLos Samas están presentes en el instante y sienten infinito placer. Tal como ellos al sentir placer nos integramos permitiendo una conexión sincera con el otro, con uno mismo y el exterior. Por eso el placer es el que te invita a escuchar el anhelo de tu alma y seguir avanzando.\nAl desear tus sentidos como los de los Samas se encienden y la voluntad se nutre, el deseo es tu combustible para la acción. Cuando no nos apegamos al objeto del deseo nos dejamos guiar por la brújula interior, el anhelo del alma.",
+                "image": "",
+                "afirmation": "Siento placer por ser quien soy.",
+                "invitation": "Hoy me permito sentir, expresar y experimentar placer.",
+                "category": "regular",
+                "rarity": 2
+            },
+            {
+                "id": 55,
+                "name": "Third Chakra",
+                "description": "Este chakra situado en el plexo solar,  te invita a encender la confianza en el poder que te habita para solo entonces reconocer quien realmente sos y podes llegar a ser.\nNuestro cuerpo es el vehículo, nuestras emociones el combustible y tercer chakra  el motor de tu viaje espiritual.  Así como los gatos son determinantes y autónomos el poder del tercer chakra es tu via para la transformación y evolución. Tu capacidad de determinar tu destino.\nEl poder de esta chakra no es un objeto sino es tu via para el desarrollo de tu individualidad.",
+                "image": "",
+                "afirmation": "Reconozco mi poder personal desarrollando mi individualidad.",
+                "invitation": "Al reconocer tu poder, pregúntate ¿qué cambios necesitas hacer para avanzar en tu evolución?",
+                "category": "regular",
+                "rarity": 2
+            },
+            {
+                "id": 56,
+                "name": "Fourth Chakra",
+                "description": "",
+                "image": "",
+                "afirmation": "",
+                "invitation": "",
+                "category": "regular",
+                "rarity": 2
+            },
+            {
+                "id": 57,
+                "name": "Fifth Chakra",
+                "description": "",
+                "image": "",
+                "afirmation": "",
+                "invitation": "",
+                "category": "regular",
+                "rarity": 2
+            },
+            {
+                "id": 58,
+                "name": "Sixth Chakra",
+                "description": "",
+                "image": "",
+                "afirmation": "",
+                "invitation": "",
+                "category": "regular",
+                "rarity": 2
+            },
+            {
+                "id": 59,
+                "name": "Seventh Chakra",
+                "description": "",
+                "image": "",
+                "afirmation": "",
+                "invitation": "",
+                "category": "regular",
+                "rarity": 2
+            }
+        ]
+    }
+}

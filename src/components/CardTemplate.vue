@@ -2,10 +2,8 @@
 	import { onMounted, ref } from 'vue';    
 
     const props = defineProps({
-        cardData: Object
-    });
-    
-    // console.log(props.cardData);
+        cardId: String
+    });    
 
     const loadCardData = async () => {
         return new Promise((resolve) => {
@@ -14,31 +12,29 @@
             }, 4000)
         })
     }
-
-    // console.log(props.cardData);
     
     const data = ref(await loadCardData());
 </script>
 
 <template>
 	<main class="cardWrapper">
-        <div class="imgWrapper" :style="{ backgroundImage: 'url(/src/assets/cards/' + props.cardData.id + '.jpg)' }"></div>
+        <div class="imgWrapper" :style="{ backgroundImage: 'url(/src/assets/cards/' + props.cardId + '.jpg)' }"></div>
         
         <div class="textWrapper">
             <h4>
-                {{ props.cardData.name }}
+                {{ $t("cards["+props.cardId+"].name") }}
             </h4>
             <p class="">
-                {{ props.cardData.description }}
+                {{ $t("cards["+props.cardId+"].description") }}
             </p>
             <div class="bottom">
                 <div>
                     <h5>{{ $t("message.cardAfirmation") }}</h5>
-                    <p>{{ props.cardData.afirmation }}</p>
+                    <p>{{ $t("cards["+props.cardId+"].afirmation") }}</p>
                 </div>
                 <div>
                     <h5>{{ $t("message.cardInvitation") }}</h5>
-                    <p>{{ props.cardData.invitation }}</p>
+                    <p>{{ $t("cards["+props.cardId+"].invitation") }}</p>
                 </div>
             </div>
         </div>        

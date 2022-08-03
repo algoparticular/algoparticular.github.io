@@ -2,7 +2,8 @@ import { createApp } from "vue";
 import { createI18n } from 'vue-i18n';
 
 import './css/style.css';
-import { messages } from "./json/copy.json";
+import { es } from "./json/copy_es.json";
+import { en } from "./json/copy_en.json";
 
 import App from "./App.vue";
 
@@ -29,9 +30,12 @@ initializeApp(firebaseConfig);
 // Initialize Lang
 // localStorage.lang != null ? localStorage.lang : 
 const i18n = createI18n({
-  locale: 'es', // set locale
+  locale: localStorage.lang != null ? localStorage.lang : 'es', // set locale
   fallbackLocale: 'en', // set fallback locale
-  messages, // set locale messages
+  messages: {
+    es: es,
+    en: en
+  }, // set locale messages
 });
 ///////////////////
 

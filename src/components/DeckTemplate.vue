@@ -1,9 +1,13 @@
 <script>
     import { onMounted, ref } from 'vue';    
-    import { cards } from "../json/cards.json";
-    import DeckItem from "./DeckItem.vue";
+    import DeckItem from "./DeckItem.vue";   
 
-    function shuffleArray(array) {
+    function shuffleNumbers() {
+        let array=[];
+
+        //create array with shuffled amount of cards -> 60
+        for (let i = 0; i < 60; ++i) array[i]= "" + i;
+
         for (let i = array.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
             const temp = array[i];
@@ -15,11 +19,12 @@
 
     const loadDeckData = async () => {
         return new Promise((resolve) => {
-            setTimeout(() => {
-                resolve(shuffleArray(cards.es))
+            setTimeout(() => {                
+                resolve(shuffleNumbers())
             }, 2500)
         })
     }
+
     export default {
         async setup() {
             const deckData = ref(await loadDeckData());
@@ -27,9 +32,16 @@
                 deckData,
             };
         },
+        data() {
+            return {
+                
+            }
+        },
+        methods: {
+            
+        },
         mounted() {            
         },
-
         components: { DeckItem }
     }
 </script>
@@ -37,8 +49,8 @@
 <template>
     <p>{{ $t("message.praxisDeck") }}</p>
     <div class="deckWrapper">
-        <template v-for="cardItem in deckData">
-            <DeckItem :card="cardItem" :loading="false" />
+        <template v-for="cardItem in deckData" :key="cardItem">
+            <DeckItem :cardId="cardItem" :loading="false" />
         </template>
     </div>
 </template>

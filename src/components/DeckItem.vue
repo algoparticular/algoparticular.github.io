@@ -15,26 +15,17 @@
     import { useRouter } from 'vue-router';
 
     const props = defineProps({
-        card: Object,
+        cardId: String,
         loading: Boolean,
     });
 
 	const router = useRouter();
     
 	function loadCard() {
-		// router.push('/card');
         router.push({ name: 'card', params: {
-            id: props.card.id,
-            name: props.card.name,
-            description: props.card.description,
-            afirmation: props.card.afirmation,
-            invitation: props.card.invitation,
-            category: props.card.category,
-            rarity: props.card.rarity,
+            id: props.cardId
             }});
 	}
-
-    // console.log(props.card.name);
 </script>
 
 

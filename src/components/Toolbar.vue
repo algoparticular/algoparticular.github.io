@@ -148,8 +148,10 @@
         display: flex;
         flex-direction: column;
 
-        height: 30vh;
-        gap: 4px;
+        /* default size + listItem-height * amount of items */
+        /* height: calc(50px + 40px * 5); */
+        height: 280px;
+        justify-content: space-around;
     }
 
     #toolbar.hidden {
@@ -189,6 +191,10 @@
         background-size: 50%;
     }
 
+    #toolbar.active button.main {
+        bottom: 40px;
+    }
+
     button.main:hover {
         background-color: #10100F;
     }
@@ -215,6 +221,10 @@
 
      button.secondary.collection.active {
         background-image: url('../assets/icon/active/Collection.svg');        
+    }
+
+    nav {
+        padding-bottom: 24px;
     }
 
     nav, nav div {
