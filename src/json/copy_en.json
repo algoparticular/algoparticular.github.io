@@ -41,7 +41,27 @@
             "cardInvitation": "Invitation",
             "praxisCollectionTitle": "The deck",
             "praxisCollectionDescrip": "you can do it"
+        },
+        "categories": {
+            "regular": {
+                "text":""
             },
+            "parami": {
+                "text":"Pāramīs, virtudes que te invitan a vivir una vida sin obstrucciones hacia el camino de la iluminación."
+            },
+            "chakra": {
+                "text":""
+            }
+        },
+        "loading": [
+            "Talking with the Masters...",
+            "Reading particles' stories...",
+            "Downloading particles' data...",
+            "Connecting with the Source...",
+            "Calibrating the frequency...",
+            "Harmonizing the vibration...",
+            "Breathing in, breathing out..."
+        ],
         "cards": [
             {
                 "id": 0,

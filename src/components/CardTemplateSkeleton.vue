@@ -1,30 +1,25 @@
+<script setup>
+    const props = defineProps({
+        cardId: String
+    });
+</script>
+
 <script>
 // import { Motion } from "motion/vue";
 import { animate } from "motion";
 
 export default {
 //   components: { Motion },
-  
+
   data() {
     return {
-      randomPhrase: '',
-      loadingPhrases: [
-                        "Talking with the Masters...",
-                        "Reading particles' stories...",
-                        "Downloading particles' data...",
-                        "Connecting with the Source...",
-                        "Calibrating the frequency...",
-                        "Harmonizing the vibration...",
-                        "Breathing in, breathing out...",
-                    ]
+      randomIndex: 0
     }
   },
 
   methods: {
     randomizePhrase() {
-        let randomIndex = Math.floor(Math.random() * this.loadingPhrases.length) ; //+ 1
-
-        this.randomPhrase = this.loadingPhrases[randomIndex];
+        this.randomIndex = Math.floor(Math.random() * 7) ; //+ 1
     },
     animateLaberintou() {
         const paths = document.querySelectorAll("#cardLoader path");
@@ -49,28 +44,26 @@ export default {
             <path d="M160.8 218.6C160.8 218.6 237.9 226.6 237.9 141.5C237.9 88.2 194.7 45.1 141.5 45.1C88.3 45.1 45.1 88.3 45.1 141.5C45.1 162.8 62.4 180.1 83.7 180.1H160.8C182.1 180.1 199.4 162.8 199.4 141.5C199.4 109.5 173.5 83.6 141.5 83.6C109.5 83.6 83.6 109.5 83.6 141.5"/>
             <path d="M83.6 218.6C41 218.6 6.5 184.1 6.5 141.5C6.5 66.9 66.9 6.5 141.5 6.5C216.1 6.5 276.5 66.9 276.5 141.5C276.5 263.1 160.8 257.4 160.8 257.4C139.5 257.4 122.2 240.1 122.2 218.8V218.6V141.5C122.2 130.8 130.9 122.2 141.5 122.2C152.2 122.2 160.8 130.8 160.8 141.5"/>
         </svg>
-        <p>{{ randomPhrase }}</p>
+        <p>{{ $t("loading["+randomIndex+"]") }}</p>
     </div>
 	<main class="cardWrapper">
         <div class="imgWrapper"></div>
         
         <div class="textWrapper">
             <h4>
-                Acard
+                {{ $t("cards["+props.cardId+"].name") }}
             </h4>
             <p class="">
-                Esta es una carta skeleton, guardala para la buena vibra huesitica. Estoy escribiendo para rellenar con texto y que de fondo parezca que se está cargando la carta.
-                Esta es una carta skeleton, guardala para la buena vibra huesitica. Estoy escribiendo para rellenar con texto y que de fondo parezca que se está cargando la carta.
-                Esta es una carta skeleton, guardala para la buena vibra huesitica.
+                {{ $t("cards["+props.cardId+"].description") }}
             </p>
             <div class="bottom">
                 <div>
                     <h5>{{ $t("message.cardAfirmation") }}</h5>
-                    <p>Yo soy un texto re placeholder</p>
+                    <p>{{ $t("cards["+props.cardId+"].afirmation") }}</p>
                 </div>
                 <div>
                     <h5>{{ $t("message.cardInvitation") }}</h5>
-                    <p>Yo soy un texto re placeholder</p>
+                    <p>{{ $t("cards["+props.cardId+"].invitation") }}</p>
                 </div>
             </div>
         </div>        

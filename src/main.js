@@ -28,7 +28,6 @@ initializeApp(firebaseConfig);
 /////////////////////////////
 
 // Initialize Lang
-// localStorage.lang != null ? localStorage.lang : 
 const i18n = createI18n({
   locale: localStorage.lang != null ? localStorage.lang : 'es', // set locale
   fallbackLocale: 'en', // set fallback locale

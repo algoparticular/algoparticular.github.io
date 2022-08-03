@@ -42,6 +42,26 @@
             "praxisCollectionTitle": "El mazo",
             "praxisCollectionDescrip": "you can do it"
         },
+        "categories": {
+            "regular": {
+                "text":""
+            },
+            "parami": {
+                "text":"Pāramīs, virtudes que te invitan a vivir una vida sin obstrucciones hacia el camino de la iluminación."
+            },
+            "chakra": {
+                "text":""
+            }
+        },
+        "loading": [
+            "Conversando con los maestros...",
+            "Leyendo las historias de las partículas...",
+            "Descargando la información de las partículas...",
+            "Conectando con la fuente...",
+            "Calibrando la frecuencia...",
+            "Armonizando la vibración...",
+            "Inspirando, Exhalando..."
+        ],
         "cards": [
             {
                 "id": 0,

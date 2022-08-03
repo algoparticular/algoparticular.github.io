@@ -2,14 +2,24 @@
     import CardTemplate from '../components/CardTemplate.vue';
     import CardTemplateSkeleton from '../components/CardTemplateSkeleton.vue';
     
-    import { onMounted, ref } from 'vue';
+    import { onBeforeMount, onMounted, ref } from 'vue';
 
     const props = defineProps({
         id: String
     });
 
+    let cardId = "10";
+
+    if (props.id != null) {
+        cardId = props.id;
+    }
+
+    onBeforeMount (() => {
+        
+    });
+
     onMounted (() => {
-       
+        console.log(cardId);
     });
 </script>
 
@@ -17,11 +27,10 @@
     <div class="content">
         <Suspense>
             <template #default>
-                <!-- <CardTemplate :cardData="cardData"/> -->
-                <CardTemplate :cardId="props.id"/>
+                <CardTemplate :cardId="cardId"/>
             </template>
             <template #fallback> 
-                <CardTemplateSkeleton />
+                <CardTemplateSkeleton :cardId="cardId"/>
             </template>
         </Suspense>
     </div>
