@@ -2,8 +2,11 @@
     import DeckTemplate from '../components/DeckTemplate.vue';
     import DeckTemplateSkeleton from '../components/DeckTemplateSkeleton.vue';
 
+    import { onMounted, ref } from 'vue';
     import { useRouter } from 'vue-router';
+    
     const router = useRouter();
+    const cardsAmount = ref(60);
 
     const navigate = (url) => {
         router.push({ path: url, replace: true });
@@ -15,10 +18,10 @@
         <main id="cardDeck">        
             <Suspense>
                 <template #default>
-                    <DeckTemplate />
+                    <DeckTemplate :amountOfCards="cardsAmount"/>
                 </template>
                 <template #fallback> 
-                    <DeckTemplateSkeleton />
+                    <DeckTemplateSkeleton :amountOfCards="cardsAmount"/>
                 </template>
             </Suspense>
         </main>

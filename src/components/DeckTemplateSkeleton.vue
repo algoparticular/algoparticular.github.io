@@ -1,3 +1,11 @@
+<script setup>
+    import { onMounted, ref } from 'vue';  
+
+    const props = defineProps({
+        amountOfCards: Number
+    });
+</script>
+
 <script>    
     import DeckItem from "./DeckItem.vue";
     import { animate } from "motion";
@@ -36,7 +44,7 @@
 <template>
     <p>{{ $t("message.praxisDeckLoading") }}</p>
     <div class="deckWrapper">
-        <template v-for="item in 60" :key="item">
+        <template v-for="item in props.amountOfCards" :key="item">
             <DeckItem :loading="true"  />
         </template>
     </div>

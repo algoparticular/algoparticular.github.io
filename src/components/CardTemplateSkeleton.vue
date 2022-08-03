@@ -75,7 +75,7 @@ export default {
         width: 100vw;
         height: 100vh;
         position: absolute;
-        background: rgba(247, 248, 241, 0.18);
+        background: rgba(247, 248, 241, 0.42);
         backdrop-filter: blur(6px);
         -webkit-backdrop-filter: blur(6px);
 
@@ -113,6 +113,12 @@ export default {
     /* CARD */
     .imgWrapper {
         background: #10100F;
+    }
+
+    .textWrapper h4, 
+    .textWrapper p {
+        color: transparent;
+        text-shadow: 0 0 5px rgba(0,0,0,0.5);
     }
 
     /* DESKTOP */

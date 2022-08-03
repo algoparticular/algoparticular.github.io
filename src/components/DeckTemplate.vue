@@ -1,12 +1,16 @@
-<script>
-    import { onMounted, ref } from 'vue';    
-    import DeckItem from "./DeckItem.vue";   
+<script setup>
+    import { onMounted, ref } from 'vue'; 
+    import DeckItem from "./DeckItem.vue";     
+
+    const props = defineProps({
+        amountOfCards: Number
+    });    
 
     function shuffleNumbers() {
         let array=[];
 
         //create array with shuffled amount of cards -> 60
-        for (let i = 0; i < 60; ++i) array[i]= "" + i;
+        for (let i = 0; i < props.amountOfCards; ++i) array[i]= "" + i;
 
         for (let i = array.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
@@ -25,25 +29,7 @@
         })
     }
 
-    export default {
-        async setup() {
-            const deckData = ref(await loadDeckData());
-            return {
-                deckData,
-            };
-        },
-        data() {
-            return {
-                
-            }
-        },
-        methods: {
-            
-        },
-        mounted() {            
-        },
-        components: { DeckItem }
-    }
+    const deckData = ref(await loadDeckData());
 </script>
 
 <template>
