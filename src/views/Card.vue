@@ -19,7 +19,7 @@
     });
 
     onMounted (() => {
-        console.log(cardId);
+        // console.log(cardId);
     });
 </script>
 

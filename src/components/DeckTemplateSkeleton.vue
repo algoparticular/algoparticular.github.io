@@ -42,7 +42,7 @@
 </script>
 
 <template>
-    <p>{{ $t("message.praxisDeckLoading") }}</p>
+    <p class="deckIntro">{{ $t("message.praxisDeckLoading") }}</p>
     <div class="deckWrapper">
         <template v-for="item in props.amountOfCards" :key="item">
             <DeckItem :loading="true"  />
@@ -57,6 +57,13 @@
         width: calc(94px * 3 + 8px * 2);
         margin: 0 auto;
         gap: 8px;
+    }
+
+    p.deckIntro {
+        font-family: 'particular', 'Inter', helvetica, sans-serif;
+        font-size: 24px;
+        color: #363636;
+        text-align: center;
     }
 
     /* DESKTOP */

@@ -22,7 +22,7 @@
 
 <template>
 	<main class="cardWrapper">
-        <div class="imgWrapper" :style="{ backgroundImage: 'url(/src/assets/cards/' + props.cardId + '.jpg)' }"></div>
+        <div class="imgWrapper" :style="{ backgroundImage: 'url(/cards/' + props.cardId + '.jpg)' }"></div>
         
         <div class="textWrapper">
             <h4>
@@ -57,7 +57,7 @@
     }
 
     .textWrapper {
-        padding: 16px 24px;
+        padding: 16px 24px 100px;
     }
 
     .textWrapper h4 {

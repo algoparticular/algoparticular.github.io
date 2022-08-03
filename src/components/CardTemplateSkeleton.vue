@@ -105,9 +105,11 @@ export default {
     }
 
     .overlay p {
-        font-size: 21px;
+        font-family: 'particular', 'Inter', helvetica, sans-serif;
+        font-size: 24px;
         color: #F7F8F1;
         margin-bottom: 0;
+        text-align: center;
     }
 
     /* CARD */

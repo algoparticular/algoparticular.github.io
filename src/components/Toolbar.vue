@@ -42,6 +42,7 @@
     //handle language change
     function langChanged(lang) {		
 		localStorage.setItem("lang", lang);
+        showMenu.value = false;
 	}
 
 	//ON MOUNTED
@@ -86,7 +87,7 @@
 <template>
     <div id="toolbar" :class="{active: showMenu, hidden: hideToolbar}">
         <div class="buttons">
-            <button class="secondary collection" :class="{active: highlightIcon}" @click="navigate('/collection')"></button>
+            <button class="secondary collection" :class="{active: highlightIcon}" @click="navigate('/')"></button>
 
             <button v-if="collectButton" class="main collect" @click="collectCard()"></button>
             <button v-else class="main" @click="navigate('/deck')"></button>
@@ -221,6 +222,10 @@
 
      button.secondary.collection.active {
         background-image: url('../assets/icon/active/Collection.svg');        
+    }
+    
+    button.secondary:focus {
+        box-shadow: none;
     }
 
     nav {

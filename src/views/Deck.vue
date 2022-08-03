@@ -25,17 +25,22 @@
                 </template>
             </Suspense>
         </main>
-        <button @click="navigate('/')"></button>
+        <button class="back" @click="navigate('/')"></button>
     </div>
 </template>
 
 <style>
     .content.deck {
         padding-top: 9vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;      
     }
 
-    .deck button {   
-        margin-top: 48px;     
+    .deck button.back {   
+        margin: 48px 0;     
         height: 40px;
         background-repeat: no-repeat;
         background-color: transparent;
@@ -47,11 +52,6 @@
     @media screen and (min-width: 768px) {
         .content.deck {
             padding: 40px 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: auto;
         }
     }
     
