@@ -1,4 +1,4 @@
-!/usr/bin/env sh
+#!/usr/bin/env sh
 
 # abort on errors
 set -e
@@ -13,12 +13,12 @@ cd dist
 # echo 'www.example.com' > CNAME
 
 git init
-git checkout -b main
+git checkout -b praxis-live
 git add -A
 git commit -m 'deploy'
 
 # if you are deploying to https://<USERNAME>.github.io
-git push -f git@github.com:algoparticular/algoparticular.github.io.git praxis-live
+git push -f git@github.com:algoparticular/algoparticular.github.io.git origin praxis-live
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
 # git push -f git@github.com:<USERNAME>/<REPO>.git main:gh-pages
