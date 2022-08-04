@@ -193,7 +193,7 @@
     }
 
     #toolbar.active button.main {
-        bottom: 40px;
+        bottom: 30px;
     }
 
     button.main:hover {
@@ -243,6 +243,7 @@
     #languageSelect label {
         font-size: 21px;
         font-family: 'particular', 'Inter', helvetica, sans-serif;
+        font-weight: 400;
         cursor: pointer;
     }
 
@@ -279,8 +280,9 @@
     }
 
     #languageSelect span {
-        font-size: 21px;
+        font-size: 24px;
         font-family: 'particular', 'Inter', helvetica, sans-serif;
+        font-weight: 400;
 
         /* NOT SELECTABLE */
         -webkit-touch-callout: none; /* iOS Safari */
