@@ -1,7 +1,7 @@
 {
     "short_name": "Algo Particular",
     "name": "Algo Particular",
-    "start_url": "cards.html",
+    "start_url": "/praxis/index.html",
     "display": "standalone",
     "background_color": "#10100F",
     "theme_color": "#10100F",
