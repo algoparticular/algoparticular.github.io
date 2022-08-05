@@ -45,7 +45,7 @@
         background-repeat: no-repeat;
         background-color: transparent;
         background-image: url('../assets/icon/Back.svg');
-        filter: drop-shadow(0px 2px 6px rgba(16, 16, 15, 0.36));
+        filter: drop-shadow(0px 2px 3px rgb(199, 190, 142));
     }
 
     /* DESKTOP */

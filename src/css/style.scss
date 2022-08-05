@@ -8,6 +8,8 @@
     font-style: normal;
 }
 
+$color-background: #202221;
+
 $color-white: #F7F8F1;
 $color-black: #10100F;
 $color-whiteMana: #E9EDD8;
@@ -52,7 +54,7 @@ html {
 body {
     margin: 0;
     position: relative;
-    background-color: $color-whiteMana;
+    background-color: $color-background;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -98,6 +100,179 @@ main {
     height: 100vh;    
 }
 
+////////////////////////////////////
+/// ////////////////////////////////////
+/// ////////////////////////////////////
+/// TEXT ELEMENTS
+/// 
+/// /* TEXTs */
+h1,h2,h3,h4,h5,h6 {
+    color: #52B69A;
+}
+
+h1 { 
+  font-family: 'particular', sans-serif;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 1em;
+  letter-spacing: -0.01em;
+  margin: 0 0 8px;
+}
+
+h2 {
+  font-family: 'particular', 'Inter', helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 1.1em;
+  letter-spacing: -0.03em;
+  margin: 0; 
+}
+
+h3 {
+  font-family: 'particular', 'Inter', helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1.2em;
+  letter-spacing: -0.01em;
+  margin: 0 0 8px;
+}
+
+h4 {
+  font-family: 'particular', 'Inter', helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 1.5em;
+    letter-spacing: -0.01em;
+    margin: 0 0 8px;
+}
+
+h5 {
+    font-family: 'Inter', helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 1em;
+    line-height: 1.4em;
+    letter-spacing: -0.01em;
+    margin: 0 0 8px;
+  }
+
+p {
+  font-family: 'Inter', helvetica, sans-serif;
+  line-height: 150%;
+  font-size: 18px;
+  margin: 0 0 24px;   
+  white-space: pre-line; 
+  color: $color-white;
+    
+    @media screen and (max-width: 600px) {
+        // font-size: 16px;
+        padding: 0 16px;
+    }
+}
+
+span {
+    color: $color-sonicSilver;
+}
+
+ul {   
+    &.no-bullets {
+        list-style-type: none;
+        padding: 0;
+//        margin-top: 16px;
+    }
+    li {
+        margin-bottom: 8px;
+        font-size: 16px;        
+        
+        span {
+            font-weight: 700;
+        }        
+    }
+}
+
+
+////////////////////////////////////
+/// ////////////////////////////////////
+/// ////////////////////////////////////
+/// BUTTONS
+a {
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+    color: $color-white;  
+    width: auto !important;
+    font-size: 18px;    
+    font-weight: 600;
+
+    &.icon-link {
+        display: contents;
+    }
+    
+    &:hover {
+        color: $color-lorange;
+        text-decoration: none;
+    }
+   
+    &:focus {
+        border-radius: 4px;
+        box-shadow: rgba(12, 151, 139, .3) 0px 0px 0px 4px;
+        outline: 0px;
+
+        -webkit-transition: all 300ms ease-out;
+        -moz-transition: all 300ms ease-out;
+        -o-transition: all 300ms ease-out;
+        transition: all 300ms ease-out;
+    }
+    
+    .underline {
+        display: block;
+        position: absolute;
+        bottom: -1.8px;
+        left: 0; // Animated via JS
+        width: 0; // Animated via JS
+        height: 2px;
+        background-color: $color-white;
+    }
+    
+}
+
+button, 
+.button {
+    font-weight: 400;
+    font-size: 18px;
+    border: none;
+    background: $color-white;
+    height: 48px;
+    border-radius: 8px;
+    color: $color-black;
+    padding: 10px 20px;
+    cursor: pointer;
+    
+    &:hover {
+        color: $color-white;
+        background: $color-lorange;
+        -webkit-transition: all 250ms ease-out;
+        -moz-transition: all 250ms ease-out;
+        -o-transition: all 250ms ease-out;
+        transition: all 250ms ease-out;
+    }
+    
+    &:focus {
+        box-shadow: rgba(12, 151, 139, .3) 0px 0px 0px 4px;
+        outline: 0px;
+
+        -webkit-transition: all 300ms ease-out;
+        -moz-transition: all 300ms ease-out;
+        -o-transition: all 300ms ease-out;
+        transition: all 300ms ease-out;
+    }
+
+    @media screen and (min-width: 768px) {
+        height: 40px;
+    }
+}
+
+
+//////////////////////////
 //Form
 .formWrapper {
     gap: 40px;    
@@ -132,10 +307,10 @@ main {
             width: 90%;
             height: 40px;
             background: transparent;
-            border: 2px solid $color-black;
+            border: 2px solid $color-white;
             border-radius: 8px;
             font-size: 16px;
-            color: $color-black;
+            color: $color-white;
             padding: 4px 5%;
 
             &:hover {
@@ -166,10 +341,10 @@ main {
         }
     }
 }
+
+
+
+
 //////
 
-@import './texts.scss';
-@import './buttons.scss';
-@import './nav.scss';
 @import './error.scss';
-

@@ -37,21 +37,5 @@
 </template>
 
 <style>
-    .cardWrapper {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    /* DESKTOP */
-    @media screen and (min-width: 768px) {
-        .cardWrapper {
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            gap: 48px;
-            width: 100vw;
-            height: 100vh;
-        }
-    }
+    
 </style>

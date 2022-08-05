@@ -38,17 +38,19 @@ export default {
 }
 </script>
 
-<template>
+<template>    
     <div class="overlay">
-        <svg id="cardLoader" width="283" height="264" viewBox="0 0 283 264" xmlns="http://www.w3.org/2000/svg">            
-            <path d="M160.8 218.6C160.8 218.6 237.9 226.6 237.9 141.5C237.9 88.2 194.7 45.1 141.5 45.1C88.3 45.1 45.1 88.3 45.1 141.5C45.1 162.8 62.4 180.1 83.7 180.1H160.8C182.1 180.1 199.4 162.8 199.4 141.5C199.4 109.5 173.5 83.6 141.5 83.6C109.5 83.6 83.6 109.5 83.6 141.5"/>
-            <path d="M83.6 218.6C41 218.6 6.5 184.1 6.5 141.5C6.5 66.9 66.9 6.5 141.5 6.5C216.1 6.5 276.5 66.9 276.5 141.5C276.5 263.1 160.8 257.4 160.8 257.4C139.5 257.4 122.2 240.1 122.2 218.8V218.6V141.5C122.2 130.8 130.9 122.2 141.5 122.2C152.2 122.2 160.8 130.8 160.8 141.5"/>
-        </svg>
-        <p>{{ $t("loading["+randomIndex+"]") }}</p>
+        <div class="loader">
+            <svg id="cardLoader" width="283" height="264" viewBox="0 0 283 264" xmlns="http://www.w3.org/2000/svg">            
+                <path d="M160.8 218.6C160.8 218.6 237.9 226.6 237.9 141.5C237.9 88.2 194.7 45.1 141.5 45.1C88.3 45.1 45.1 88.3 45.1 141.5C45.1 162.8 62.4 180.1 83.7 180.1H160.8C182.1 180.1 199.4 162.8 199.4 141.5C199.4 109.5 173.5 83.6 141.5 83.6C109.5 83.6 83.6 109.5 83.6 141.5"/>
+                <path d="M83.6 218.6C41 218.6 6.5 184.1 6.5 141.5C6.5 66.9 66.9 6.5 141.5 6.5C216.1 6.5 276.5 66.9 276.5 141.5C276.5 263.1 160.8 257.4 160.8 257.4C139.5 257.4 122.2 240.1 122.2 218.8V218.6V141.5C122.2 130.8 130.9 122.2 141.5 122.2C152.2 122.2 160.8 130.8 160.8 141.5"/>
+            </svg>
+            <p>{{ $t("loading["+randomIndex+"]") }}</p>
+        </div>
     </div>
 	<main class="cardWrapper">
-        <div class="imgWrapper"></div>
-        
+        <div class="imgWrapper"></div>    
+
         <div class="textWrapper">
             <h4>
                 {{ $t("cards["+props.cardId+"].name") }}
@@ -75,17 +77,21 @@ export default {
         width: 100vw;
         height: 100vh;
         position: absolute;
-        background: rgba(247, 248, 241, 0.42);
+        background: rgba(245, 248, 241, 0.18);
         backdrop-filter: blur(6px);
-        -webkit-backdrop-filter: blur(6px);
-
+        -webkit-backdrop-filter: blur(6px);    
+        z-index: 1;
         display: flex;
         flex-direction: column;
-        /* justify-content: center; */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .loader {        
+        display: flex;
+        flex-direction: column;
         align-items: center;
         gap: 32px;
-
-        padding-top: 9vh;
     }
 
     #cardLoader {
@@ -104,7 +110,7 @@ export default {
         stroke-miterlimit: 10;
     }
 
-    .overlay p {
+    .loader p {
         font-family: 'particular', 'Inter', helvetica, sans-serif;
         font-size: 24px;
         color: #F7F8F1;
@@ -120,7 +126,7 @@ export default {
     .textWrapper h4, 
     .textWrapper p {
         color: transparent;
-        text-shadow: 0 0 5px rgba(0,0,0,0.5);
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
     }
 
     /* DESKTOP */
@@ -130,13 +136,13 @@ export default {
             justify-content: center;
         }
 
-        #cardLoader path {
+        /* #cardLoader path {
             stroke: #10100F;
         }
 
         .overlay p {
             color: #10100F;
-        }
+        } */
     }
 </style>
 

@@ -46,6 +46,12 @@
 </template>
 
 <style>
+    .cardWrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
     .imgWrapper {
         width: 100%;
         height: 0;
@@ -87,14 +93,27 @@
 
     /* DESKTOP */
     @media screen and (min-width: 768px) {
+
+        .cardWrapper {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;            
+            width: 100vw;
+            height: 100vh;
+        }
+
         .imgWrapper {
-            width: 40%;
-            padding-top: 40%;
-            border-radius: 60px;
+            width: 50%;
+            height: 100%;
+            padding-top: 0;
+            border-radius: 0;
+            background-size: cover;
+            background-position: 50%;
         }
 
         .textWrapper {
             width: 40%;
+            padding: 0 5%;
         }
     }
 </style>

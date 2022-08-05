@@ -102,10 +102,10 @@
 
                 <div id="languageSelect">
                     <input type="radio" id="lang-es" value="es" v-model="$i18n.locale" @change="langChanged($i18n.locale)"/>
-                    <label for="lang-es" :class="{active: $i18n.locale == 'es'}">ES</label>
+                    <label for="lang-es" :class="{active: $i18n.locale == 'es'}">es</label>
                     <span>|</span>
                     <input type="radio" id="lang-en" value="en" v-model="$i18n.locale" @change="langChanged($i18n.locale)"/>
-                    <label for="lang-en" :class="{active: $i18n.locale == 'en'}">EN</label>
+                    <label for="lang-en" :class="{active: $i18n.locale == 'en'}">en</label>
                 </div>
 
                 <div v-if="isLoggedIn">
@@ -135,12 +135,12 @@
         /* background: url(../assets/toolbar.svg) no-repeat; */
         /* background-position: 50% -3px;    */
         
-        background: rgba(247, 248, 241, 0.3);
+        background: rgba(243, 243, 243, 0.18);
         border-radius: 18px 18px 0 0;
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(6px);
         -webkit-backdrop-filter: blur(6px);
-        border: 1px solid rgba(255, 255, 255, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.18);
         
         transition: all .18s ease-out;
     }
@@ -186,7 +186,7 @@
         box-shadow: 0px 2px 6px rgba(16, 16, 15, 0.36); 
         
         background-image: url('../assets/icon/Seed.svg');
-        background-color: #F4844C;
+        background-color: #52B69A;
         background-repeat: no-repeat;
         background-position: 50%;
         background-size: 50%;
@@ -197,7 +197,7 @@
     }
 
     button.main:hover {
-        background-color: #10100F;
+        background-color: #76C893;
     }
 
     button.collect {
@@ -208,12 +208,12 @@
         height: 40px;
         background-repeat: no-repeat;
         background-image: url('../assets/icon/Menu.svg');
-        filter: drop-shadow(0px 2px 6px rgba(16, 16, 15, 0.36));
+        filter: drop-shadow(0px 2px 3px rgb(199, 190, 142));
     }
 
     button.secondary.active {
         background-image: url('../assets/icon/active/Menu.svg');
-        filter: drop-shadow(0px 2px 3px rgba(244, 132, 76, 0.56));
+        filter: drop-shadow(0px 2px 3px rgba(114, 246, 171, 0.56));
     }
 
     button.secondary.collection {
@@ -249,11 +249,11 @@
 
     nav a:hover,
     #languageSelect label:hover {
-        color: #363636;
+        color: #52B69A;
     }
 
     a.logout {
-        color: #363636;
+        color: #FF6161;
     }
 
     .fade-enter-from,
@@ -275,8 +275,12 @@
         display: none;
     }
 
+    #languageSelect label {
+        color: #F7F8F1;
+    }
+
     #languageSelect label.active {
-        color: #F4844C;
+        color: #52B69A;
     }
 
     #languageSelect span {
