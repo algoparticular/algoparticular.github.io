@@ -15,9 +15,9 @@
     
     const data = ref(await loadCardData());
 
-    onMounted (() => {
-        // console.log(props.cardId);       
-    });
+    // onMounted (() => {
+    //      console.log(props.cardId);       
+    // });
 </script>
 
 <template>

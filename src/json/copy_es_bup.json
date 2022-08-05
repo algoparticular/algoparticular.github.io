@@ -1,17 +1,68 @@
 {
-    "categories": {
-        "regular": {
-            "text":""
+    "es": {
+        "message": {
+            "hello": "Algo Particular cuenta las historias de una partícula que al volverse consciente de sí, aprende a navegar el Universo libremente.\nBajo la premisa hermética 'Como es arriba, es abajo', transmite su verdad: todos somos iguales, todos somos uno, (no) somos (de) aquí.",
+            "seeGallery": "Ver galería completa",
+            "shops": "Tiendas",
+            "shopFC": "Tienda FlashCookie, sólo para Argentina",
+            "shopTL": "Tienda Threadless, envíos a todo el mundo",
+            "shopHEN": "Colecciona partículas en Hic et Nunc!",
+            "copyrightA": "Ideado por",
+            "copyrightB": "co-creado con el ❤ de una",
+            "copyrightC": "comunidad",
+            "copyrightApp": "2022 copyright ©",
+            "community": "Algo Particular no podría buscar y transmitir su propósito si no fuera por otras partículas que, a lo largo del camino, co-crean o colaboran con el desarrollo y expresión de este Universo.\nA todas ellas les estoy infinitamente agradecido.",
+            "communityA": "Protones",
+            "communityB": "Neutrones",
+            "communityC": "Electrones",
+            "back": "Volver",                
+            "notFound": "Sólo un espacio vacío...",
+            "notFoundCopy": "Con o sin error, te invito a aprovechar esta oportunidad para estar aquí. No se necesita ninguna máscara social en esta página 404.\n\nUna simple oportunidad para cerrar los ojos y exhalar todo el aire. Liberar todos los músculos de la cara, haciendo movimientos muy lentos mientras escudriñamos nuestro cuerpo.\n\n¿Cómo he llegado a esta página? ¿En qué frecuencia estoy vibrando?\n\nY cuando lo necesites, vuelve a abrir los ojos. Sonríe y expresa tu gratitud a alguien, a algo, y especialmente a ti mismo.\n\nGracias, ahora puedes seguir navegando.",
+            "notFoundButton": "Volver al sitio",
+            "praxisNavInfo": "Info",
+            "praxisNavDonate": "Cómpranos un té",
+            "praxisNavSignin": "Sumérgeme",
+            "praxisNavRegister": "Quiero mi cuenta",
+            "praxisNavLogout": "Sácame de aquí",
+            "registerTitle": "Crea una cuenta",
+            "registerDescrip": "Puedes coleccionar y trabajar sobre cada carta que vaya apareciendo en tu camino.",
+            "registerSubmit": "Quiero sumergirme",
+            "registerGoogle": "Voy a ingresar usando mi Gmail",
+            "signinTitle": "Ingresar",
+            "signinDescrip": "Inicia con tu email y contraseña.",
+            "signinSubmit": "Quiero sumergirme",
+            "signinGoogle": "Voy a ingresar usando mi Gmail",
+            "formEmail": "Email",
+            "formPassword": "Contraseña",
+            "praxisIntro": "Una parte de nuestros átomos, y los de todo lo que existe, vienen navegando el Universo desde el principio de los tiempos. Esas partículas cargan con cientos de miles de historias, y cada una de ellas nos comparte un aprendizaje.\n\nCierra tus ojos e intenciona el mensaje que estas partículas tienen para vos.\n\nCuando estés listx, presiona aquí debajo para descubrirlo.",
+            "praxisDeck": "Siente y elige tu carta",
+            "praxisDeckLoading": "Mezclando las cartas con la frecuencia del día...",
+            "cardAfirmation": "Afirmación",
+            "cardInvitation": "Invitación",
+            "praxisCollectionTitle": "El mazo",
+            "praxisCollectionDescrip": "you can do it"
         },
-        "parami": {
-            "text":"Pāramīs, virtudes que te invitan a vivir una vida sin obstrucciones hacia el camino de la iluminación."
+        "categories": {
+            "regular": {
+                "text":""
+            },
+            "parami": {
+                "text":"Pāramīs, virtudes que te invitan a vivir una vida sin obstrucciones hacia el camino de la iluminación."
+            },
+            "chakra": {
+                "text":""
+            }
         },
-        "chakra": {
-            "text":""
-        }
-    },
-    "cards": {
-        "es": [
+        "loading": [
+            "conversando con los Maestros...",
+            "leyendo historias de partículas...",
+            "descargando la información de las partículas...",
+            "conectando con la fuente...",
+            "calibrando la frecuencia...",
+            "armonizando la vibración...",
+            "inspirando, exhalando..."
+        ],
+        "cards": [
             {
                 "id": 0,
                 "name": "Nekkhamma",
@@ -114,12 +165,12 @@
             },
             {
                 "id": 10,
-                "name": "...",
-                "description": "",
+                "name": "Carta Blanca",
+                "description": "...",
                 "image": "",
-                "afirmation": "",
+                "afirmation": "Afirmo lo que ya mi ser interior sabe.",
                 "invitation": "",
-                "category": "parami",
+                "category": "special",
                 "rarity": 1
             },
             {
@@ -611,99 +662,6 @@
                 "invitation": "",
                 "category": "regular",
                 "rarity": 2
-            },
-            {
-                "id": 60,
-                "name": "...",
-                "description": "...",
-                "image": "",
-                "afirmation": "Afirmo lo que ya mi ser interior sabe.",
-                "invitation": "",
-                "category": "regular",
-                "rarity": 0
-            }
-        ],
-        
-        "en": [
-            {
-                "id": 0,
-                "name": "Acceptance",
-                "description": "La aceptación es la capacidad para asumir la vida y a los otros tal como son, sin intentar cambiar o luchar contra aquello que no podemos controlar. Aceptar que hay realidades que exceden tu control, no es una actitud estática, es una decisión activa, que te invita a no cargar ninguna malicia hacia nada o nadie. Al reconocer la diversidad, somos capaces de transformarnos. Al aceptar aquello que te hace único, eso particular que habita en vos, te vuelves más confiado y tu ser divino se revela.",
-                "image": "/assets/gallery/parami_8.jpg",
-                "afirmation": "Acepto y honro quién soy.",
-                "invitation": "Hoy suelto el exceso de control y acepto lo que me rodea aquí y ahora.",
-                "category": "regular",
-                "rarity": 3
-            },
-            {
-                "id": 1,
-                "name": "Beauty",
-                "description": "Creer que existe una sola clase de belleza equivale a no prestar atención a la vida y sus multiples expresiones. Poder ver lo bello aún en la apariencia más desafiante es un alimento para el alma.\nA medida que sintonizas con la particular belleza de tu ser, de los otros y de la naturaleza, tu resonancia se convierte en la de la belleza, y se irradia hacia todo lo que te rodea, volviéndote en una expresión de luz que invita a los otros a ver lo bello también.",
-                "image": "/assets/gallery/parami_9.jpg",
-                "afirmation": "Reconozco mi belleza y la de los otros.",
-                "invitation": "Hoy encuentro 3 aspectos bellos en mí.",
-                "category": "regular",
-                "rarity": 3
-            },
-            {
-                "id": 2,
-                "name": "Celebration",
-                "description": "Celebrar cada experiencia que la vida te regala despierta una actitud de gratitud que alimenta la vision de nuevas celebraciones. Siempre hay un motivo para celebrar y cuando lo haces con otros, una gran energía se libera atrayendo el goce, la felicidad y las ganas compartidas de honrar la vida.",
-                "image": "/assets/gallery/parami_3.jpg",
-                "afirmation": "Celebro la vida, sus tránsitos y este instante particular.",
-                "invitation": "Descubro la liviandad y la alegría que se despierta al celebrar.",
-                "category": "regular",
-                "rarity": 3
-            },
-            {
-                "id": 3,
-                "name": "Commitment",
-                "description": "As you commit to your vision by aligning your thoughts and intentions to achieve what you long for, you find the peace of knowing that you are moving in the right direction. Your path is illuminated by the very act of committing to your quest, whatever it may be. If there is not yet clarity in the vision of your desire, bring your intention to illuminate your quest. As long as the search for the soul's yearning is active there will be peace.",
-                "image": "/assets/gallery/parami_4.jpg",
-                "afirmation": "I am committed to my quest and vision.",
-                "invitation": "Today I commit to follow the path of my heart.",
-                "category": "regular",
-                "rarity": 3
-            },
-            {
-                "id": 4,
-                "name": "Communication",
-                "description": "El primer paso para comunicarte con honestidad es escucharte a vos mismo. La comunicación con el interior es una invitación a ahondar en la quietud, templando la mente y dejando que el oído del alma escuche respuestas en el silencio.\nLa práctica de la meditación es una puerta sagrada para comunicarte con el ser sabio y divino que habita en vos.\nComunícate con claridad a través de la palabra, la acción y la intención. Todos percibirán la resonancia de la verdad y confiarán en ti.",
-                "image": "/assets/gallery/parami_7.jpg",
-                "afirmation": "Me comunico con claridad y honestidad.",
-                "invitation": "En el silencio meditativo escucho y confio en mi verdad interior.",
-                "category": "regular",
-                "rarity": 3
-            },
-            {
-                "id": 5,
-                "name": "Confidence",
-                "description": "Cuando confías en ti mismo eres capaz de volver consciente la sabiduría y fuerza que llevas dentro.   Para nutrir la confianza en ti es importante dejar a un lado la búsqueda de aprobación y expectativas ajenas. Confía en tu intuición y en tu propia experiencia. Si la mente esta muy atareada y es difícil escuchar, confía en las señales de tu cuerpo. Al cultivar la confianza, tu espíritu se ilumina y tu luz te guía con determinación.",
-                "image": "/assets/gallery/parami_2.jpg",
-                "afirmation": "Confío en mi y dejo que mi sabiduria guie mis pasos.",
-                "invitation": "Recuerda las veces que superaste adversidades, pon valor en esas experiencia.",
-                "category": "regular",
-                "rarity": 3
-            },
-            {
-                "id": 6,
-                "name": "Creativity",
-                "description": "A medida que permitimos que el poder creativo fluya dentro nuestro alimentamos la energía del cambio. Al canalizar tu fuerza, das y recibes vida, ya que la creatividad no es un movimiento solitario. Allí donde pasa, atrae a quien sepa oír, ver y percibir.\nDejando de lado los juicios y exigencias, nos reconocemos co creadores de lo Divino, explorando así nuestro inmenso y particular potencial. Usa tu poder creativo para crear la vida que sueñas.",
-                "image": "/assets/gallery/parami_6.jpg",
-                "afirmation": "Dejó que mi poder creativo se exprese pleno de alegría.",
-                "invitation": "Pongo en practica mi creatividad y creo la vida que sueño.",
-                "category": "regular",
-                "rarity": 3
-            },
-            {
-                "id": 7,
-                "name": "Challenge",
-                "description": "El desafío más enriquecedor de todos es encontrar cada día una mejor versión de ti mismo. Los desafíos pueden ser vistos como dificultades insuperables o como oportunidades para la transformación y el crecimiento personal.  Si no existiera cierta cuota de resistencia no podrías descubrir tu propia fuerza. Cada vicisitud de la vida se presenta solo cuando uno está listo para enfrentarla. Por eso, si un desafío ha llegado a tu puerta, alza la mirada y avanza con confianza, descubriendo talentos y fuerzas que hasta entonces mantenías silenciadas.",
-                "image": "/assets/gallery/parami_7.jpg",
-                "afirmation": "Respondo a mis desafios con confianza y descubro nuevos talentos. ",
-                "invitation": "Transformo cada desafío en una sagrada oportunidad.",
-                "category": "regular",
-                "rarity": 3
             }
         ]
     }

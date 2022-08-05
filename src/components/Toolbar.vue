@@ -108,16 +108,13 @@
                     <label for="lang-en" :class="{active: $i18n.locale == 'en'}">en</label>
                 </div>
 
-                <div v-if="isLoggedIn">
-                    <!-- <router-link to="/collection">Collection</router-link> -->                    
+                <!-- <div v-if="isLoggedIn">
                     <a class="logout" @click="handleSignOut" v-if="isLoggedIn">{{ $t("message.praxisNavLogout") }}</a>
                 </div>
                 <div v-else>
-                    <!-- <router-link to="/register">Register</router-link>
-                    <router-link to="/sign-in">Dive in</router-link> -->
                     <a @click="navigate('/register')">{{ $t("message.praxisNavRegister") }}</a>
                     <a @click="navigate('/sign-in')">{{ $t("message.praxisNavSignin") }}</a>
-                </div>
+                </div> -->
             </nav>  
         </transition>
 	</div>
@@ -186,7 +183,7 @@
         box-shadow: 0px 2px 6px rgba(16, 16, 15, 0.36); 
         
         background-image: url('../assets/icon/Seed.svg');
-        background-color: #52B69A;
+        background-color: #FF6F61;
         background-repeat: no-repeat;
         background-position: 50%;
         background-size: 50%;
@@ -197,7 +194,7 @@
     }
 
     button.main:hover {
-        background-color: #76C893;
+        background-color: #FF6F61;
     }
 
     button.collect {
@@ -213,7 +210,7 @@
 
     button.secondary.active {
         background-image: url('../assets/icon/active/Menu.svg');
-        filter: drop-shadow(0px 2px 3px rgba(114, 246, 171, 0.56));
+        filter: drop-shadow(0px 2px 3px rgba(252, 118, 16, 0.56));
     }
 
     button.secondary.collection {
@@ -249,7 +246,7 @@
 
     nav a:hover,
     #languageSelect label:hover {
-        color: #52B69A;
+        color: #FF6F61;
     }
 
     a.logout {
@@ -280,7 +277,7 @@
     }
 
     #languageSelect label.active {
-        color: #52B69A;
+        color: #FF6F61;
     }
 
     #languageSelect span {

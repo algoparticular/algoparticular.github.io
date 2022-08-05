@@ -9,6 +9,7 @@
 }
 
 $color-background: #202221;
+$color-primary: #FF6F61;
 
 $color-white: #F7F8F1;
 $color-black: #10100F;
@@ -107,7 +108,7 @@ main {
 /// 
 /// /* TEXTs */
 h1,h2,h3,h4,h5,h6 {
-    color: #52B69A;
+    color: $color-primary;
 }
 
 h1 { 
@@ -208,7 +209,7 @@ a {
     }
     
     &:hover {
-        color: $color-lorange;
+        color: $color-primary;
         text-decoration: none;
     }
    
@@ -230,7 +231,7 @@ a {
         left: 0; // Animated via JS
         width: 0; // Animated via JS
         height: 2px;
-        background-color: $color-white;
+        background-color: $color-primary;
     }
     
 }
@@ -249,7 +250,7 @@ button,
     
     &:hover {
         color: $color-white;
-        background: $color-lorange;
+        background: $color-primary;
         -webkit-transition: all 250ms ease-out;
         -moz-transition: all 250ms ease-out;
         -o-transition: all 250ms ease-out;

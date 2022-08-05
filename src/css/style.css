@@ -94,7 +94,7 @@ main.formWrapper {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #52B69A;
+  color: #FF6F61;
 }
 
 h1 {
@@ -190,7 +190,7 @@ a.icon-link {
 }
 
 a:hover {
-  color: #F4844C;
+  color: #FF6F61;
   text-decoration: none;
 }
 
@@ -210,7 +210,7 @@ a .underline {
   left: 0;
   width: 0;
   height: 2px;
-  background-color: #F7F8F1;
+  background-color: #FF6F61;
 }
 
 button,
@@ -229,7 +229,7 @@ button,
 button:hover,
 .button:hover {
   color: #F7F8F1;
-  background: #F4844C;
+  background: #FF6F61;
   -webkit-transition: all 250ms ease-out;
   transition: all 250ms ease-out;
 }
