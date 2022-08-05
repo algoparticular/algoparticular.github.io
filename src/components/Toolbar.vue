@@ -129,9 +129,6 @@
         height: 50px;
         padding: 0 5vw;     
 
-        /* background: url(../assets/toolbar.svg) no-repeat; */
-        /* background-position: 50% -3px;    */
-        
         background: rgba(243, 243, 243, 0.18);
         border-radius: 18px 18px 0 0;
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -148,7 +145,8 @@
 
         /* default size + listItem-height * amount of items */
         /* height: calc(50px + 40px * 5); */
-        height: 280px;
+        /* height: 280px; */
+        height: 200px;
         justify-content: space-around;
     }
 
@@ -179,7 +177,7 @@
         width: 60px;
         height: 60px;
 
-        bottom: 30px;
+        top: -30px;
         box-shadow: 0px 2px 6px rgba(16, 16, 15, 0.36); 
         
         background-image: url('../assets/icon/Seed.svg');
@@ -187,14 +185,16 @@
         background-repeat: no-repeat;
         background-position: 50%;
         background-size: 50%;
+
+        /* transition: all .18s ease-out; */
     }
 
     #toolbar.active button.main {
-        bottom: 30px;
+        /* top: -31px; */
     }
 
     button.main:hover {
-        background-color: #FF6F61;
+        background-color: #10100F;
     }
 
     button.collect {

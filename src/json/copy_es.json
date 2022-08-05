@@ -20,15 +20,15 @@
             "notFoundCopy": "Con o sin error, te invito a aprovechar esta oportunidad para estar aquí. No se necesita ninguna máscara social en esta página 404.\n\nUna simple oportunidad para cerrar los ojos y exhalar todo el aire. Liberar todos los músculos de la cara, haciendo movimientos muy lentos mientras escudriñamos nuestro cuerpo.\n\n¿Cómo he llegado a esta página? ¿En qué frecuencia estoy vibrando?\n\nY cuando lo necesites, vuelve a abrir los ojos. Sonríe y expresa tu gratitud a alguien, a algo, y especialmente a ti mismo.\n\nGracias, ahora puedes seguir navegando.",
             "notFoundButton": "Volver al sitio",
             "praxisNavInfo": "Info",
-            "praxisNavDonate": "Cómpranos un té",
-            "praxisNavSignin": "Sumérgeme",
-            "praxisNavRegister": "Quiero mi cuenta",
-            "praxisNavLogout": "Sácame de aquí",
+            "praxisNavDonate": "Ayúdanos comprándonos un té",
+            "praxisNavSignin": "Ingresar",
+            "praxisNavRegister": "Crear una cuenta",
+            "praxisNavLogout": "Salir",
             "registerTitle": "Crea una cuenta",
             "registerDescrip": "Puedes coleccionar y trabajar sobre cada carta que vaya apareciendo en tu camino.",
             "registerSubmit": "Quiero sumergirme",
             "registerGoogle": "Voy a ingresar usando mi Gmail",
-            "signinTitle": "Ingresar",
+            "signinTitle": "Ingresa a tu cuenta",
             "signinDescrip": "Inicia con tu email y contraseña.",
             "signinSubmit": "Quiero sumergirme",
             "signinGoogle": "Voy a ingresar usando mi Gmail",
@@ -332,7 +332,34 @@
                 "invitation": "Reconozco el constante fluir de las sincronicidades en mi vida.",
                 "category": "regular",
                 "rarity": 2
-            }            
+            },
+            {
+                "id": 30,
+                "name": "Esperanza",
+                "description": "¿Qué sería de la vida sin la esperanza? ¿Cómo podría ser posible avanzar sin creer? Porque la esperanza es la virtud que te invita a creer, en primer lugar, creer en vos mismo, recordando que siempre se puede volver a empezar porque cada día es una nueva posibilidad de crear la vida que sueñas. Creer en el apoyo del Universo. Creer que estás acompañado por una energía superior que observa y acompaña tus pasos.\nAl practicar la esperanza, la ansiedad se templa porque la confianza surge y nos recuerda que cuando la duda aparezca solo debes volver a entrar en contacto con tu interior y la sabiduría que habita en vos.",
+                "afirmation": "Tengo esperanza en mi mismo y en la asistencia del Universo.",
+                "invitation": "Templo la ansidad al entrar en contacto con mi interior y creer en mi.",
+                "category": "regular",
+                "rarity": 3
+            },            
+            {
+                "id": 31,
+                "name": "Discernimiento",
+                "description": "La capacidad de discernir es abrirle la puerta a la paz y el orden. Ya que cuando eres capaz de observar todas las circunstancias pudiendo discriminar la una de la otra, es posible darle lugar a esa claridad que te permite ver que no todo es lo mismo, que dentro de ese día complicado también existió, como siempre, esa cuota de milagro. Al poner en práctica el discernimiento sos capaz de ordenar tus prioridades, entendiendo que es lo que realmente importa y como administrar y cuidar tu energía divina.",                
+                "afirmation": "Práctico el discernimiento y encuentro paz al percibir la magía aún en los días más dificiles.",
+                "invitation": "Observa con discernimiento tu realidad y ordena tus prioridades.",
+                "category": "regular",
+                "rarity": 2
+            },
+            {
+                "id": 32,
+                "name": "Transformación",
+                "description": "Lo único permanente es la impermanencia de todas las cosas. La transformación es un proceso natural y constante. Cada día nacemos de nuevo y cada paso del camino es una oportunidad para transformamos en aquello que anhelamos ser.\nDesarrollar la confianza y la calma durante el transcurso del cambio abrirá la mente a ideas y opciones frescas.\nAceptar la posibilidad de que existen otros caminos permite que la fuerza vital fluya dentro tuyo. La alquimia interior es un proceso que necesita de tu sabiduría y paciencia. Confía en tus transiciones y en el fluir de la vida sin resistencia.",
+                "afirmation": "Mi corazón fluye con alegría en el transcurso del cambio.",
+                "invitation": "Hoy confio en las transiciones y ciclos de mi vida. ",
+                "category": "regular",
+                "rarity": 3
+            }
         ]
     }
 }

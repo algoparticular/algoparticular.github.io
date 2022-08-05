@@ -6,7 +6,7 @@
     import { useRouter } from 'vue-router';
     
     const router = useRouter();
-    const cardsAmount = ref(30);
+    const cardsAmount = ref(33);
 
     const navigate = (url) => {
         router.push({ path: url, replace: true });
