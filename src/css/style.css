@@ -269,6 +269,7 @@ button.back {
           justify-content: center;
   gap: 8px;
   height: auto;
+  font-size: 18px;
 }
 
 .button.hasIcon .icon {
@@ -278,6 +279,22 @@ button.back {
 
 .button.hasIcon path {
   fill: #10100F;
+}
+
+.button.hasIcon span {
+  color: #10100F;
+}
+
+.button.hasIcon:hover {
+  background-color: #FF6F61;
+}
+
+.button.hasIcon:hover path {
+  fill: #F7F8F1;
+}
+
+.button.hasIcon:hover span {
+  color: #F7F8F1;
 }
 
 .formWrapper {

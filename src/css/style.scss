@@ -289,6 +289,7 @@ button.back {
     justify-content: center;
     gap: 8px;
     height: auto;
+    font-size: 18px;
 
     .icon {
         width: 32px;
@@ -297,6 +298,22 @@ button.back {
 
     path {
         fill: $color-black;
+    }
+
+    span {
+        color: $color-black;
+    }
+
+    &:hover {
+        background-color: $color-primary;
+
+        path {
+            fill: $color-white;
+        }
+
+        span {
+            color: $color-white;
+        }
     }
 }
 
