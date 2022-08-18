@@ -93,8 +93,12 @@ main.formWrapper {
   height: 100vh;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3 {
   color: #FF6F61;
+}
+
+h4, h5, h6 {
+  color: #E9EDD8;
 }
 
 h1 {
@@ -146,15 +150,9 @@ p {
   font-family: 'Inter', helvetica, sans-serif;
   line-height: 150%;
   font-size: 18px;
-  margin: 0 0 24px;
+  margin: 0 0 24px 0;
   white-space: pre-line;
   color: #F7F8F1;
-}
-
-@media screen and (max-width: 600px) {
-  p {
-    padding: 0 16px;
-  }
 }
 
 span {
@@ -248,6 +246,38 @@ button:focus,
   .button {
     height: 40px;
   }
+}
+
+button.back {
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-image: url("../assets/icon/Back.svg");
+  -webkit-filter: drop-shadow(0px 2px 3px #c7be8e);
+          filter: drop-shadow(0px 2px 3px #c7be8e);
+}
+
+.button.hasIcon {
+  background-color: #E9EDD8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 8px;
+  height: auto;
+}
+
+.button.hasIcon .icon {
+  width: 32px;
+  height: auto;
+}
+
+.button.hasIcon path {
+  fill: #10100F;
 }
 
 .formWrapper {

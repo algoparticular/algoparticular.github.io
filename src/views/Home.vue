@@ -5,7 +5,10 @@
 <template>
 	<div class="content">
 		<main id="home">
-			<img class="title" alt="Praxis, by Algo Particular" src="../assets/Logo_praxis.svg">
+			<!-- <img class="title" alt="Praxis, by Algo Particular" src="../assets/Logo_praxis.svg"> -->
+			<div class="cover">
+
+			</div>
 
 			<section class="intro">
 				<p>{{ $t("message.praxisIntro") }}</p>
@@ -14,23 +17,31 @@
 	</div>
 </template>
 
-<style>
+<style scoped>
 	main#home {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-
-		/* padding-top: 80px; */
 	}
 
-	#home .title {
+	/* #home .title {
 		width: 50vw;
 		max-width: 300px;
+	} */
+
+	#home .cover {
+		width: 100%;
+		height: 0;
+        padding-top: 100%;
+
+		background-image: url('../assets/onboarding_2.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
 	}
 
 	section {
-		padding: 100px 0;
+		padding: 40px 0;
 	}
 
 	section p {

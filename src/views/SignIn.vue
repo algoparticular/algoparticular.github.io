@@ -43,17 +43,17 @@
     <div class="content">
         <main class="formWrapper">
             <div class="heading">
-                <h2>{{ $t("message.signinTitle") }}</h2>
-                <p>{{ $t("message.signinDescrip") }}</p>
+                <h2>{{ $t("auth.signinTitle") }}</h2>
+                <p>{{ $t("auth.signinDescrip") }}</p>
             </div>  
             <div class="form">
-                <input type="text" :placeholder="$t('message.formEmail')" v-model="email" />
-                <input type="password" :placeholder="$t('message.formPassword')" v-model="password" />
+                <input type="text" :placeholder="$t('auth.formEmail')" v-model="email" />
+                <input type="password" :placeholder="$t('auth.formPassword')" v-model="password" />
                 <span v-if="errorMessage">{{ errorMessage }}</span>
             </div>      
             <div class="actions">
-                <button @click="signIn">{{ $t("message.signinSubmit") }}</button>
-                <!-- <button @click="signInWithGoogle">{{ $t("message.signinGoogle") }}</button> -->
+                <button @click="signIn">{{ $t("auth.signinSubmit") }}</button>
+                <!-- <button @click="signInWithGoogle">{{ $t("auth.signinGoogle") }}</button> -->
             </div>
         </main>    
     </div>

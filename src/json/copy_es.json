@@ -18,12 +18,17 @@
             "back": "Volver",                
             "notFound": "Sólo un espacio vacío...",
             "notFoundCopy": "Con o sin error, te invito a aprovechar esta oportunidad para estar aquí. No se necesita ninguna máscara social en esta página 404.\n\nUna simple oportunidad para cerrar los ojos y exhalar todo el aire. Liberar todos los músculos de la cara, haciendo movimientos muy lentos mientras escudriñamos nuestro cuerpo.\n\n¿Cómo he llegado a esta página? ¿En qué frecuencia estoy vibrando?\n\nY cuando lo necesites, vuelve a abrir los ojos. Sonríe y expresa tu gratitud a alguien, a algo, y especialmente a ti mismo.\n\nGracias, ahora puedes seguir navegando.",
-            "notFoundButton": "Volver al sitio",
-            "praxisNavInfo": "Info",
-            "praxisNavDonate": "Ayúdanos comprándonos un té",
-            "praxisNavSignin": "Ingresar",
-            "praxisNavRegister": "Crear una cuenta",
-            "praxisNavLogout": "Salir",
+            "notFoundButton": "Volver al sitio",                        
+            "praxisIntro": "Desconéctate por un momento y conoce el mensaje que el Oráculo de las Partículas tiene para tí.\n\nCierra tus ojos e intenciona, haz foco en lo que te inquieta o mueve tu interior.\n\nCuando estés listx, presiona debajo para tomar una carta."            
+        },
+        "nav": {
+            "about": "¿Qué es esto?",
+            "collaborate": "¿Quieres ayudar?",
+            "signIn": "Ingresar",
+            "register": "Crear una cuenta",
+            "logout": "Salir"
+        },
+        "auth": {
             "registerTitle": "Crea una cuenta",
             "registerDescrip": "Puedes coleccionar y trabajar sobre cada carta que vaya apareciendo en tu camino.",
             "registerSubmit": "Quiero sumergirme",
@@ -33,25 +38,51 @@
             "signinSubmit": "Quiero sumergirme",
             "signinGoogle": "Voy a ingresar usando mi Gmail",
             "formEmail": "Email",
-            "formPassword": "Contraseña",
-            "praxisIntro": "Una parte de nuestros átomos, y los de todo lo que existe, vienen navegando el Universo desde el principio de los tiempos. Esas partículas cargan con cientos de miles de historias, y cada una de ellas nos comparte un aprendizaje.\n\nCierra tus ojos e intenciona el mensaje que estas partículas tienen para vos.\n\nCuando estés listx, presiona aquí debajo para descubrirlo.",
-            "praxisDeck": "Siente y elige tu carta",
-            "praxisDeckLoading": "Mezclando las cartas con la frecuencia del día...",
-            "cardAfirmation": "Afirmación",
-            "cardInvitation": "Invitación",
-            "praxisCollectionTitle": "El mazo",
-            "praxisCollectionDescrip": "you can do it"
+            "formPassword": "Contraseña"
         },
-        "categories": {
-            "regular": {
-                "text":""
-            },
-            "parami": {
-                "text":"Pāramīs, virtudes que te invitan a vivir una vida sin obstrucciones hacia el camino de la iluminación."
-            },
-            "chakra": {
-                "text":""
-            }
+        "about": {
+            "intro": "Gracias por probar Praxis, de",
+            "oracleDeck": "Cartas oráculo escritas por",
+            "oracleAuthor": "Belén Brito",
+            "designedBy": "Desarrollada e ilustrada por",
+            "author": "Juan Yañez",            
+            "praxis": "¿Qué es Praxis?",
+            "praxisDescrip": "Praxis es una propuesta artístico/espiritual creada y desarrollada por Algo Particular.\n\nAl igual que cuando recorremos un lugar, tomamos la guía de un mapa o una brújula, en el camino del autodescubrimiento es beneficiosa la orientación del llamado “Plano Superior”, que no es otra que la guía de nuestro Ser más profundo.\n\nPraxis invita tanto a la acción como a la reflección, buscando conectar con lo que vibra en nuestro interior.",
+            "oracle": "Cartas del Oráculo de las Partículas",
+            "oracleDescrip": "Las Cartas del Oráculo, escritas por Belén Brito son una herramienta para aquellos que creemos que la magia existe. Con su luminosa calma, Belén nos insta a encontrar las respuestas en nuestro interior, utilizando cada carta como un espejo para evaluar o validar nuestro camino.\n\nEs así que las Partículas nos traen esos mensajes que nuestro Ser está necesitando en este momento, en este aquí y ahora.",
+            "seed": "Pulsa la semilla\npara recibir un mensaje",
+            "brote": "Pulsa el brote\npara coleccionarlo",
+            "cta": "¿Quieres ayudar?",
+            "seeMore": "¿Quieres ver algo más de lo que hacemos en Algo Particular?",
+            "seeMoreAction": "Ingresa a algoparticular.com"
+        },
+        "collaborate": {
+            "title": "Próximamente",
+            "intro": "Con tu ayuda podemos seguir creando y haciendo crecer este universo. ",
+            "howToHelp": "¿Cómo ayudar?",
+            "sharing": "Compartiendo nuestro contenido en redes sociales o a esas personas que crees que están necesitando algo de magia en sus vidas.",
+            "donating": "Colaborando con cualquier monto que puedas. Imagina que estamos sentados en una mesa y decides invitar unos tes.",
+            "whatsNext": "¿Qué sigue?",
+            "next": [
+                "Expandir el mazo Oráculo a 60 cartas.",
+                "Implementar autentificación y cuentas de usuario para acceder a nuevas funciones.",
+                "Versión impresa del mazo Oráculo.",
+                "Crear un segundo mazo, tipo Tarot, de 78 cartas.",
+                "Versión impresa del mazo Tarot.",
+                "Realizar música original para cada carta.",
+                "Desarrollo de videojuego de mundo abierto.",
+                "Lanzamiento de colección NFT."
+            ],
+            "forKids": "¿Che y para niñxs?",
+            "kids": "También... algo... pronto..."
+        },
+        "oracle": {
+            "deckCopy": "Siente y elige tu carta",
+            "deckLoading": "Mezclando las cartas con la frecuencia del momento presente...",
+            "cardAfirmattion": "Afirmación",
+            "cardInvitation": "Invitación",
+            "collectionTitle": "El mazo",
+            "collectionDescrip": "you can do it"
         },
         "loading": [
             "conversando con los Maestros...",
@@ -62,6 +93,17 @@
             "armonizando la vibración...",
             "inspirando, exhalando..."
         ],
+        "categories": {
+            "regular": {
+                "text":""
+            },
+            "parami": {
+                "text":"Pāramīs, virtudes que te invitan a vivir una vida sin obstrucciones hacia el camino de la iluminación."
+            },
+            "chakra": {
+                "text":""
+            }
+        },       
         "cards": [
             {
                 "id": 0,
@@ -70,7 +112,9 @@
                 "afirmation": "Reconozco que soy mucho más que este cuerpo físico y sus posesiones.",
                 "invitation": "Practica la renunciación, suelta alguna de esas cosas que ya no necesitas y anda liviana.",
                 "category": "parami",
-                "rarity": 1
+                "rarity": 1,
+                "color": "#3A3B57",
+                "colorAlt": "#D9EFED"
             },
             {
                 "id": 1,
@@ -79,16 +123,20 @@
                 "afirmation": "Encuentro paz e integridad al ser honesto en nuestros pensamientos, palabras y actos.",
                 "invitation": "En secreto, sin que nadie lo sepa, busco hacer una acción beneficiosa para otros.",
                 "category": "parami",
-                "rarity": 1
+                "rarity": 1,
+                "color": "#A7D6B4",
+                "colorAlt": "#046132"
             },
             {
                 "id": 2,
                 "name": "Dana",
-                "description": "",
+                "description": "Al practicar Danna estás buscando alimentar tu generosidad, esa cualidad pura que engrandece tu Espíritu.\nSer de corazón generoso es alegrarse por la buena fortuna de los otros aún cuando no eres tú el que recibe algo a cambio. Practicar el altruismo es abrazar la felicidad de vivir en un Universo abundante, abundancia que olvidamos por miedo a la escasez, eligiendo dejar placares llenos de cosas que hace tiempo no hacen sentido.\nExisten muchos modos de darse a otros, tu tiempo y energía es el modo más generoso de entrega. Recuerda siempre que todo lo que das desde un corazón desinteresado, fluye y vuelve a ti multiplicado.",
                 "afirmation": "Soy feliz al dar sin esperar nada a cambio.",
                 "invitation": "Hoy práctica tu altruismo y regala algo de tu tiempo y energía aquel que lo necesite.",
                 "category": "parami",
-                "rarity": 1
+                "rarity": 1,
+                "color": "#0099A6",
+                "colorAlt": "#F0FAF1"
             },
             {
                 "id": 3,
@@ -97,7 +145,9 @@
                 "afirmation": "Mi centro calmo y silencio escucha la instancia Divina dentro de mí.",
                 "invitation": "Preguntale a tu sabiduria Divina, ¿Qué debo hacer frente a esta situación o persona que me esta inquietando? Escucha en silencio.",
                 "category": "parami",
-                "rarity": 1
+                "rarity": 1,
+                "color": "#008F83",
+                "colorAlt": "#FFE47D"
             },
             {
                 "id": 4,
@@ -106,7 +156,9 @@
                 "afirmation": "Escucho mi corazón y sigo su verdad con determinaciòn.",
                 "invitation": "Hoy disfruto de mi compromiso con ese cambio que estoy buscando.",
                 "category": "parami",
-                "rarity": 1
+                "rarity": 1,
+                "color": "#05807F",
+                "colorAlt": "#FAC795"
             },
             {
                 "id": 5,
@@ -115,7 +167,9 @@
                 "afirmation": "Mi divinidad se expande al ser tolerante con mi camino espiritual y el de los otros.",
                 "invitation": "Hoy sere tolerante y paciente conmigo. Respeto mis tiempos sin exigencias.",
                 "category": "parami",
-                "rarity": 1
+                "rarity": 1,
+                "color": "#ABDCD9",
+                "colorAlt": "#007096"
             },
             {
                 "id": 6,
@@ -124,7 +178,9 @@
                 "afirmation": "Me comprometo con mi verdad y le abro la puerta a mi próposito.",
                 "invitation": "Estate atento a las sincronicidades que te rodean cuando sigues tu verdad.",
                 "category": "parami",
-                "rarity": 1
+                "rarity": 1,
+                "color": "#9AAEE7",
+                "colorAlt": "#FFFBD6"
             },
             {
                 "id": 7,
@@ -133,7 +189,9 @@
                 "afirmation": "Soy determinanda en nutrir hábitos que hagan a mi felicidad y plenitud.",
                 "invitation": "Por 21 días me comprometo a implementar ese hábito que hace tiempo deseo.",
                 "category": "parami",
-                "rarity": 1
+                "rarity": 1,
+                "color": "#002A42",
+                "colorAlt": "#FDC391"
             },
             {
                 "id": 8,
@@ -142,7 +200,9 @@
                 "afirmation": "Soy Amor infinito, reconozco mi escencia más pura.",
                 "invitation": "Esta semana haré una acción beneficiosa para otro sin esperar nada a cambio.",
                 "category": "parami",
-                "rarity": 1
+                "rarity": 1,
+                "color": "#2B5391",
+                "colorAlt": "#FFFFFF"
             },
             {
                 "id": 9,
@@ -151,16 +211,20 @@
                 "afirmation": "Lo único permanente es la impermanencia de todas las cosas.",
                 "invitation": "Fluyo con la corriente de la vida y suelto el exceso de control. ",
                 "category": "parami",
-                "rarity": 1
+                "rarity": 1,
+                "color": "#B1DED1",
+                "colorAlt": "#208F9E"
             },
             {
                 "id": 10,
-                "name": "Carta Blanca",
-                "description": "...",
-                "afirmation": "Afirmo lo que ya mi ser interior sabe.",
+                "name": ".",
+                "description": "...\n\n\n",
+                "afirmation": "Afirmo lo que ya sé en mi interior.",
                 "invitation": "",
                 "category": "special",
-                "rarity": 1
+                "rarity": 1,
+                "color": "#F7F8F2",
+                "colorAlt": "#202221"
             },
             {
                 "id": 11,
@@ -169,7 +233,9 @@
                 "afirmation": "Acepto y honro quién soy.",
                 "invitation": "Hoy suelto el exceso de control y acepto lo que me rodea aquí y ahora.",
                 "category": "regular",
-                "rarity": 3
+                "rarity": 3,
+                "color": "#143DCB",
+                "colorAlt": "#F8F9FC"
             },            
             {
                 "id": 12,
@@ -178,7 +244,9 @@
                 "afirmation": "Vibro en armonía en mi aquí y ahora.",
                 "invitation": "Creo un espacio armonioso y me regalo un tiempo de encuentro interior.",
                 "category": "regular",
-                "rarity": 3
+                "rarity": 3,
+                "color": "#DCEBB2",
+                "colorAlt": "#39509E"
             },
             {
                 "id": 13,
@@ -187,7 +255,9 @@
                 "afirmation": "Reconozco mi belleza y la de los otros.",
                 "invitation": "Hoy encuentro 3 aspectos bellos en mí.",
                 "category": "regular",
-                "rarity": 2
+                "rarity": 3,
+                "color": "#8BCDA7",
+                "colorAlt": "#DCEBB2"
             },           
             {
                 "id": 14,
@@ -196,7 +266,9 @@
                 "afirmation": "Celebro la vida, sus tránsitos y este instante particular.",
                 "invitation": "Descubro la liviandad y la alegría que se despierta al celebrar.",
                 "category": "regular",
-                "rarity": 3
+                "rarity": 3,
+                "color": "",
+                "colorAlt": ""
             },
             {
                 "id": 15,
@@ -205,7 +277,9 @@
                 "afirmation": "Agradezco quien fui, honro quien soy y proyecto quien quiero ser. ",
                 "invitation": "¿Qué es tiempo de dejar ir? ¿Qué nuevo comienzo anhela mi corazón?",
                 "category": "regular",
-                "rarity": 3
+                "rarity": 3,
+                "color": "#FED989",
+                "colorAlt": "#64A57A"
             },            
             {
                 "id": 16,
@@ -214,7 +288,9 @@
                 "afirmation": "Estoy comprometida con mi búsqueda y visión.",
                 "invitation": "Hoy me comprometo a seguir el camino de mi corazón.",
                 "category": "regular",
-                "rarity": 3
+                "rarity": 3,
+                "color": "#64A57A",
+                "colorAlt": "#FFFFFF"
             },
             {
                 "id": 17,
@@ -223,7 +299,9 @@
                 "afirmation": "Me comunico con claridad y honestidad.",
                 "invitation": "En el silencio meditativo escucho y confio en mi verdad interior.",
                 "category": "regular",
-                "rarity": 2
+                "rarity": 3,
+                "color": "",
+                "colorAlt": ""
             },
             {
                 "id": 18,
@@ -232,7 +310,9 @@
                 "afirmation": "Confío en mi y dejo que mi sabiduria guie mis pasos.",
                 "invitation": "Recuerda las veces que superaste adversidades.",
                 "category": "regular",
-                "rarity": 3
+                "rarity": 3,
+                "color": "#ABDCD9",
+                "colorAlt": "#FCEDEE"
             },
             {
                 "id": 19,
@@ -241,7 +321,9 @@
                 "afirmation": "Reconozco mi valentia, mi fuerza interior guía mis pasos.",
                 "invitation": "Inhalo coraje. Exhalo miedo. Inhalo coraje. Exhalo miedo.",
                 "category": "regular",
-                "rarity": 3
+                "rarity": 3,
+                "color": "#22486D",
+                "colorAlt": "#CEE8E5"
             },
             {
                 "id": 20,
@@ -250,7 +332,9 @@
                 "afirmation": "Dejó que mi poder creativo se exprese pleno de alegría.",
                 "invitation": "Pongo en practica mi creatividad y creo la vida que sueño.",
                 "category": "regular",
-                "rarity": 3
+                "rarity": 3,
+                "color": "#71838F",
+                "colorAlt": "#F8A476"
             },
             {
                 "id": 21,
@@ -259,7 +343,9 @@
                 "afirmation": "Respondo a mis desafios con confianza y descubro nuevos talentos. ",
                 "invitation": "Transformo cada desafío en una sagrada oportunidad.",
                 "category": "regular",
-                "rarity": 3
+                "rarity": 3,
+                "color": "#ABDCD9",
+                "colorAlt": "#6E8FC0"
             }, 
             {
                 "id": 22,
@@ -268,7 +354,9 @@
                 "afirmation": "Mi alma evoluciona cada dia. ",
                 "invitation": "Pregúntate, ¿Mi camino tiene corazón? ",
                 "category": "regular",
-                "rarity": 2
+                "rarity": 3,
+                "color": "#71838F",
+                "colorAlt": "#59263D"
             },
             {
                 "id": 23,
@@ -277,7 +365,9 @@
                 "afirmation": "Tengo fé en la fuerza inconmovible de mi alma.",
                 "invitation": "Confio en mi mismo y en la asistencia del universo. ",
                 "category": "regular",
-                "rarity": 3
+                "rarity": 3,
+                "color": "",
+                "colorAlt": ""
             },            
             {
                 "id": 24,
@@ -286,7 +376,9 @@
                 "afirmation": "Agradezco quien soy y todo lo que me rodea.",
                 "invitation": "Hoy agradecele a ese ser querido especial.",
                 "category": "regular",
-                "rarity": 3
+                "rarity": 3,
+                "color": "#72CBCF",
+                "colorAlt": "#023A5A"
             },
             {
                 "id": 25,
@@ -295,7 +387,9 @@
                 "afirmation": "Cada día regreso a mi hogar y nutro mi mundo interior.",
                 "invitation": "Reivindico tiempo para mí y disfruto de estar en contacto conmigo.",
                 "category": "regular",
-                "rarity": 3
+                "rarity": 3,
+                "color": "#7E5E76",
+                "colorAlt": "#F9A477"
             },
             {
                 "id": 26,
@@ -304,7 +398,9 @@
                 "afirmation": "Soy honesta conmigo misma y la Verdad guía mis pasos.",
                 "invitation": "En silencio, escucho la Verdad que habita en mí.",
                 "category": "regular",
-                "rarity": 2
+                "rarity": 3,
+                "color": "",
+                "colorAlt": ""
             },
             {
                 "id": 27,
@@ -313,7 +409,9 @@
                 "afirmation": "Soy paciente conmigo misma y descubro milagros a cada instante.",
                 "invitation": "Observo la naturaleza y sus ciclos, aprendo de su paciente sabiduría en cada transición.",
                 "category": "regular",
-                "rarity": 3
+                "rarity": 3,
+                "color": "#97D8D7",
+                "colorAlt": "#F3F4F6"
             },            
             {
                 "id": 28,
@@ -322,7 +420,9 @@
                 "afirmation": "Me perdono a mi mismo y a los otros. ",
                 "invitation": "Inhalo amor. Exhalo perdón.",
                 "category": "regular",
-                "rarity": 2
+                "rarity": 3,
+                "color": "#007474",
+                "colorAlt": "#E9ECD7"
             },            
             {
                 "id": 29,
@@ -331,7 +431,9 @@
                 "afirmation": "Estoy en el momento y lugar indicado para mi crecimiento. ",
                 "invitation": "Reconozco el constante fluir de las sincronicidades en mi vida.",
                 "category": "regular",
-                "rarity": 2
+                "rarity": 3,
+                "color": "",
+                "colorAlt": ""
             },
             {
                 "id": 30,
@@ -340,7 +442,9 @@
                 "afirmation": "Tengo esperanza en mi mismo y en la asistencia del Universo.",
                 "invitation": "Templo la ansidad al entrar en contacto con mi interior y creer en mi.",
                 "category": "regular",
-                "rarity": 3
+                "rarity": 3,
+                "color": "#FED989",
+                "colorAlt": "#039BA9"
             },            
             {
                 "id": 31,
@@ -349,7 +453,9 @@
                 "afirmation": "Práctico el discernimiento y encuentro paz al percibir la magía aún en los días más dificiles.",
                 "invitation": "Observa con discernimiento tu realidad y ordena tus prioridades.",
                 "category": "regular",
-                "rarity": 2
+                "rarity": 3,
+                "color": "",
+                "colorAlt": ""
             },
             {
                 "id": 32,
@@ -358,7 +464,9 @@
                 "afirmation": "Mi corazón fluye con alegría en el transcurso del cambio.",
                 "invitation": "Hoy confio en las transiciones y ciclos de mi vida. ",
                 "category": "regular",
-                "rarity": 3
+                "rarity": 3,
+                "color": "",
+                "colorAlt": ""
             }
         ]
     }

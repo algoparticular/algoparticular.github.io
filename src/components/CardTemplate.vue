@@ -1,5 +1,6 @@
 <script setup>
-	import { onMounted, ref } from 'vue';    
+	import { onMounted, ref } from 'vue';
+    import { es } from "../json/copy_es.json";
 
     const props = defineProps({
         cardId: String
@@ -21,24 +22,32 @@
 </script>
 
 <template>
-	<main class="cardWrapper">
+	<main class="cardWrapper" :style="{backgroundColor: es.cards[props.cardId].color}">
         <div class="imgWrapper" :style="{ backgroundImage: 'url(/cards/' + props.cardId + '.jpg)' }"></div>
         
         <div class="textWrapper">
-            <h4>
+            <h4 :style="{color: es.cards[props.cardId].colorAlt}">
                 {{ $t("cards["+props.cardId+"].name") }}
             </h4>
-            <p class="">
+            <p class="" :style="{color: es.cards[props.cardId].colorAlt}">
                 {{ $t("cards["+props.cardId+"].description") }}
             </p>
             <div class="bottom">
                 <div>
-                    <h5>{{ $t("message.cardAfirmation") }}</h5>
-                    <p>{{ $t("cards["+props.cardId+"].afirmation") }}</p>
+                    <h5 :style="{color: es.cards[props.cardId].colorAlt}">
+                        {{ $t("oracle.cardAfirmattion") }}
+                    </h5>
+                    <p :style="{color: es.cards[props.cardId].colorAlt}">
+                        {{ $t("cards["+props.cardId+"].afirmation") }}
+                    </p>
                 </div>
                 <div>
-                    <h5>{{ $t("message.cardInvitation") }}</h5>
-                    <p>{{ $t("cards["+props.cardId+"].invitation") }}</p>
+                    <h5 :style="{color: es.cards[props.cardId].colorAlt}">
+                        {{ $t("oracle.cardInvitation") }}
+                    </h5>
+                    <p :style="{color: es.cards[props.cardId].colorAlt}">
+                        {{ $t("cards["+props.cardId+"].invitation") }}
+                    </p>
                 </div>
             </div>
         </div>        
@@ -49,7 +58,8 @@
     .cardWrapper {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
+        /* height: 100vh; */
     }
 
     .imgWrapper {
@@ -63,7 +73,7 @@
     }
 
     .textWrapper {
-        padding: 16px 24px 100px;
+        padding: 32px 40px 100px;
     }
 
     .textWrapper h4 {

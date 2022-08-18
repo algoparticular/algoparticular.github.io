@@ -60,11 +60,11 @@ export default {
             </p>
             <div class="bottom">
                 <div>
-                    <h5>{{ $t("message.cardAfirmation") }}</h5>
+                    <h5>{{ $t("oracle.cardAfirmattion") }}</h5>
                     <p>{{ $t("cards["+props.cardId+"].afirmation") }}</p>
                 </div>
                 <div>
-                    <h5>{{ $t("message.cardInvitation") }}</h5>
+                    <h5>{{ $t("oracle.cardInvitation") }}</h5>
                     <p>{{ $t("cards["+props.cardId+"].invitation") }}</p>
                 </div>
             </div>

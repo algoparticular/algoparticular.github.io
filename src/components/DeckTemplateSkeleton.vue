@@ -42,7 +42,7 @@
 </script>
 
 <template>
-    <p class="deckIntro">{{ $t("message.praxisDeckLoading") }}</p>
+    <p class="deckIntro">{{ $t("oracle.deckLoading") }}</p>
     <div class="deckWrapper">
         <template v-for="item in props.amountOfCards" :key="item">
             <DeckItem :loading="true"  />

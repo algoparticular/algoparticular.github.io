@@ -33,7 +33,7 @@
 </script>
 
 <template>
-    <p class="deckIntro">{{ $t("message.praxisDeck") }}</p>
+    <p class="deckIntro">{{ $t("oracle.deckCopy") }}</p>
     <div class="deckWrapper">
         <template v-for="cardItem in deckData" :key="cardItem">
             <DeckItem :cardId="cardItem" :loading="false" />

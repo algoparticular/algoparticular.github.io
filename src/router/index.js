@@ -8,6 +8,9 @@ import Deck from '../views/Deck.vue';
 import Card from '../views/Card.vue';
 import Collection from '../views/Collection.vue';
 import PageNotFound from '../views/PageNotFound.vue';
+import About from '../views/About.vue';
+import Collaborate from '../views/Collaborate.vue';
+import Onboarding from '../views/Onboarding.vue';
 
 // Navigation object
 const router = createRouter({
@@ -24,6 +27,18 @@ const router = createRouter({
     {
       path: "/sign-in",
       component: SignIn,
+    },
+    {
+      path: "/about",
+      component: About,
+    },
+    {
+      path: "/collaborate",
+      component: Collaborate,
+    },
+    {
+      path: "/onboarding",
+      component: Onboarding,
     },
     {
       path: "/deck",
