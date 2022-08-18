@@ -31,6 +31,18 @@
     //handle menu
     const toggleMenu = () => {
         showMenu.value = !showMenu.value;
+
+        if(showMenu) {
+            document.addEventListener('click', closeIfClickedOutside);
+        }
+    };
+
+    const closeIfClickedOutside = (event) => {
+        if (!document.getElementById('toolbar').contains(event.target)) {
+            showMenu.value = false;
+
+            document.removeEventListener('click', closeIfClickedOutside);
+        }
     };
 
     //handle navigation
