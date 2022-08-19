@@ -10,14 +10,18 @@
 
 			</div>
 
-			<section class="intro">
+			<!-- <section class="intro">
 				<p>{{ $t("message.praxisIntro") }}</p>
-			</section>
+			</section> -->
 		</main> 
 	</div>
 </template>
 
 <style scoped>
+	.content {
+		background-color: #0282BB;
+	}
+
 	main#home {
 		display: flex;
 		flex-direction: column;

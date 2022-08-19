@@ -4,15 +4,28 @@
     import { getAuth, onAuthStateChanged, signOut } from 'firebase/auth';
 
     const isLoggedIn = ref(false);
-    const showMenu = ref(false);
     const router = useRouter();
     let auth;
 
-    const props = defineProps({
-        language: String,
-    });
+    const emit = defineEmits(['navigate','langChanged']); 
 
-    onMounted (() => {
+    //handle sign out
+    const handleSignOut = () => {
+        signOut(auth).then (() => {
+            router.push('/');
+        });
+    }; 
+
+    const navigate = (path) => {
+        emit('navigate', path);
+    }
+
+    const langChanged = (lang) => {
+        emit('langChanged', lang);
+    }
+
+    //ON MOUNTED
+	onMounted (() => {
         //check user logged in or not
         auth = getAuth();
         onAuthStateChanged (auth, (user) => {
@@ -22,126 +35,99 @@
                 isLoggedIn.value = false;
             }
         });
+
+        // lang storage fallback
+        if (localStorage.lang == null) {			
+			localStorage.setItem("lang", 'es');			
+		}
     });
-
-    //handle sign out
-    const handleSignOut = () => {
-        signOut(auth).then (() => {
-            router.push('/');
-        });
-    }; 
-
-    //handle menu
-    const toggleMenu = () => {
-        showMenu.value = !showMenu.value;
-    };
-
-    //handle navigation
-    const navigate = (url) => {
-        router.push({ path: url, replace: true });
-        showMenu.value = false;
-    };
 </script>
 
 
 <template>
-    <button class="transparent" @click="toggleMenu">
-        <img src="../assets/icon/Menu.svg"/>
-    </button>
-    <transition name="push">
-        <nav v-if="showMenu">
-            <button class="transparent" @click="toggleMenu">
-                <img src="../assets/icon/Menu_white.svg"/>
-            </button>
-            <!-- <router-link to="/">Info</router-link>  -->
-            <a @click="navigate('/')">Info</a>
+    <nav id="menu">        
+        <a @click="navigate('/about')">{{ $t("nav.about") }}</a>
+        <a @click="navigate('/collaborate')">{{ $t("nav.collaborate") }}</a>
 
-            <div v-if="isLoggedIn">
-                <!-- <router-link to="/collection">Collection</router-link> -->
-                <a @click="navigate('/collection')">Collection</a>
-                <a class="logout" @click="handleSignOut" v-if="isLoggedIn">Exit</a>
-            </div>
-            <div v-else>
-                <!-- <router-link to="/register">Register</router-link>
-                <router-link to="/sign-in">Dive in</router-link> -->
-                <a @click="navigate('/register')">Create account</a>
-                <a @click="navigate('/sign-in')">Sign in</a>
-            </div>
-        </nav>  
-    </transition>
-    <!-- 
-    <select class="lang" :value="language" @change="$emit('update:language', $event.target.value)">
-        <option v-for="(locale, i) in $i18n.availableLocales" :key="i" :value="locale">{{ locale.toUpperCase() }}</option>
-    </select>
-    -->   
+        <div id="languageSelect">
+            <input type="radio" id="lang-es" value="es" v-model="$i18n.locale" @change="langChanged($i18n.locale)"/>
+            <label for="lang-es" :class="{active: $i18n.locale == 'es'}">es</label>
+            <span>|</span>
+            <input type="radio" id="lang-en" value="en" v-model="$i18n.locale" @change="langChanged($i18n.locale)"/>
+            <label for="lang-en" :class="{active: $i18n.locale == 'en'}">en</label>
+        </div>
+
+        <!-- <div v-if="isLoggedIn">
+            <a class="logout" @click="handleSignOut" v-if="isLoggedIn">{{ $t("nav.logout") }}</a>
+        </div>
+        <div v-else>
+            <a @click="navigate('/register')">{{ $t("nav.register") }}</a>
+            <a @click="navigate('/sign-in')">{{ $t("nav.signin") }}</a>
+        </div> -->
+    </nav>
 </template>
 
 
 <style scoped>
-    nav {     
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        z-index: 2;
-        width: 255px;
-        height: calc(100vh - 32px);
-        padding: 16px 5vw;
-        display: flex;
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 32px;
-        background: #363636;
-        box-shadow: inset 0px 6px 9px rgba(16, 16, 15, 0.36), inset 0px -6px 9px rgba(16, 16, 15, 0.36);
-        /* background-color: rgba(247, 248, 241, 0.18);
-        backdrop-filter: blur(6px);     */
+    nav {
+        padding-bottom: 24px;
     }
 
-    nav div {
+    nav, nav div {
         display: flex;
-        align-items: flex-start;
+        align-items: center;
         flex-direction: column;
-        gap: 32px;
+        gap: 24px;
     }
 
-    a {
-        color: #E9EDD8;
+    nav a,
+    #languageSelect label {
         font-size: 21px;
-    }    
+        font-family: 'particular', 'Inter', helvetica, sans-serif;
+        font-weight: 400;
+        cursor: pointer;
+    }
+
+    nav a:hover,
+    #languageSelect label:hover {
+        color: #FF6F61;
+    }
 
     a.logout {
-        color: #F18B7E;
+        color: #363636;
     }
 
-    a:hover,
-    a.router-link-active {
-        color: #F7F8F1;
-        text-decoration: underline;
-    }
-
-
-    button.transparent {
-        z-index: 1;
-        padding: 0;
-        background: transparent;
-        filter: drop-shadow(0px 2px 3px rgba(16, 16, 15, .36));
+    /* Language */
+    #languageSelect {
         display: flex;
-        justify-content: center;
-        align-items: center;
+        flex-direction: row;
     }
 
-    button.transparent:hover {
-        background: transparent;
+    #languageSelect input {
+        display: none;
     }
 
-    .push-enter-from,
-    .push-leave-to {
-        transform: translateX(-100%);
+    #languageSelect label {
+        color: #F7F8F1;
     }
 
-	.push-enter-active,
-	.push-leave-active {
-		/* transition: opacity .3s ease-out; */
-        transition: transform .2s ease-out;
-	}
+    #languageSelect label.active {
+        color: #FF6F61;
+    }
+
+    #languageSelect span {
+        font-size: 24px;
+        font-family: 'particular', 'Inter', helvetica, sans-serif;
+        font-weight: 400;
+        color: #F7F8F1;
+
+        /* NOT SELECTABLE */
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+        -khtml-user-select: none; /* Konqueror HTML */
+        -moz-user-select: none; /* Old versions of Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+                user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+    }
 </style>

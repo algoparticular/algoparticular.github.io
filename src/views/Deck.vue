@@ -36,7 +36,8 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: auto;      
+        height: auto;   
+        padding-bottom: 60px;   
     }
 
     .deck button.back {   
