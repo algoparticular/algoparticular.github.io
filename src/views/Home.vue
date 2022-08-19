@@ -1,24 +1,26 @@
 <script setup>
-	
+	import IntroMenu from '../components/IntroMenu.vue';
 </script>
 
 <template>
-	<div class="content">
+	<div class="content home">
 		<main id="home">
 			<!-- <img class="title" alt="Praxis, by Algo Particular" src="../assets/Logo_praxis.svg"> -->
 			<div class="cover">
 
 			</div>
-
-			<!-- <section class="intro">
-				<p>{{ $t("message.praxisIntro") }}</p>
-			</section> -->
-		</main> 
+		</main>
+		<IntroMenu /> 
 	</div>
 </template>
 
-<style scoped>
-	.content {
+<style>
+
+	.home + #toolbar {
+		display: none;
+	}
+
+	.content.home {
 		background-color: #0282BB;
 	}
 
@@ -29,28 +31,15 @@
 		align-items: center;
 	}
 
-	/* #home .title {
-		width: 50vw;
-		max-width: 300px;
-	} */
-
 	#home .cover {
 		width: 100%;
-		height: 0;
-        padding-top: 100%;
+		height: 60vh;
+        /* padding-top: 100%; */
 
 		background-image: url('../assets/onboarding_2.jpg');
 		background-repeat: no-repeat;
 		background-size: cover;
-	}
+		background-position: 50%;
+	}	
 
-	section {
-		padding: 40px 0;
-	}
-
-	section p {
-		width: 326px;
-		text-align: justify;
-
-	}
 </style>

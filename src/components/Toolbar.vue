@@ -52,13 +52,6 @@
         showMenu.value = false;
 	}
 
-	
-    // onMounted (() => {
-    //     isCardPage.value = false;
-    //     isCollectionPage.value = false;
-    //     hideAction.value = false;
-    // });
-    
 
 	onUpdated (() => {
         // //check user logged in or not
@@ -104,6 +97,7 @@
 
 <template>
     <div id="toolbar" :class="{active: showMenu}">
+
         <div class="buttons">
             <button class="secondary collection" :class="{active: isCollectionPage}" @click="handleNavigate('/')"></button>
 
@@ -199,7 +193,7 @@
         /* transition: all .18s ease-out; */
     }
 
-    button.main.hidden {
+    button.hidden {
         display: none;
     }
 

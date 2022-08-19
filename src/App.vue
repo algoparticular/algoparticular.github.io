@@ -1,5 +1,5 @@
 <script setup>
-	import Toolbar from './components/Toolbar.vue';
+	import Toolbar from './components/Toolbar.vue';	
 	
 	import { onMounted, ref } from 'vue';  	
 	import { useRouter } from 'vue-router';
@@ -33,7 +33,7 @@
 	<router-view v-slot="{ Component }">
 		<transition name="fade" mode="out-in">
 			<component :is="Component" :key="$router.path" />
-		</transition>
+		</transition>		
 		<Toolbar :path="router.currentRoute.value.path"/>
 	</router-view>	
 </template>
