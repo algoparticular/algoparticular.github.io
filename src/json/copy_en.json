@@ -22,11 +22,13 @@
             "praxisIntro": "Close your eyes y pon intención verdadera en eso que vibra en tu interior. (Currently only in Spanish)"            
         },
         "nav": {
+            "intro": "Intro",
             "about": "What's this?",
             "collaborate": "Want to help?",
             "signIn": "Sign in",
             "register": "Create an account",
-            "logout": "Salir"
+            "logout": "Leave",
+            "skip": "Skip"
         },
         "auth": {
             "registerTitle": "Create an account",

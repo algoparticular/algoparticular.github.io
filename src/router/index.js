@@ -18,7 +18,7 @@ const router = createRouter({
   routes: [
     {
       path: "/",
-      component: Home,
+      component: Onboarding,
     },
     {
       path: "/register",
@@ -37,8 +37,8 @@ const router = createRouter({
       component: Collaborate,
     },
     {
-      path: "/onboarding",
-      component: Onboarding,
+      path: "/home",
+      component: Home,
     },
     {
       path: "/deck",

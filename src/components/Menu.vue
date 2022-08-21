@@ -12,7 +12,7 @@
     //handle sign out
     const handleSignOut = () => {
         signOut(auth).then (() => {
-            router.push('/');
+            router.push('/home');
         });
     }; 
 
@@ -46,6 +46,7 @@
 
 <template>
     <nav id="menu">        
+        <a @click="navigate('/')">{{ $t("nav.intro") }}</a>
         <a @click="navigate('/about')">{{ $t("nav.about") }}</a>
         <a @click="navigate('/collaborate')">{{ $t("nav.collaborate") }}</a>
 

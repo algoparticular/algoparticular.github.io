@@ -15,7 +15,6 @@
 </template>
 
 <style>
-
 	.home + #toolbar {
 		display: none;
 	}

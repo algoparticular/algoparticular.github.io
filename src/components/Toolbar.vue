@@ -20,7 +20,7 @@
     function collectCard() {        
 		console.log('collected');
 
-        router.push('/');
+        router.push('/home');
 	}    
 
     //handle menu
@@ -81,7 +81,7 @@
                 hideAction.value = true;
                 break;
 
-            case '/':
+            case '/home':
                 hideAction.value = false;
                 isCardPage.value = false;
                 break;
@@ -99,7 +99,7 @@
     <div id="toolbar" :class="{active: showMenu}">
 
         <div class="buttons">
-            <button class="secondary collection" :class="{active: isCollectionPage}" @click="handleNavigate('/')"></button>
+            <button class="secondary collection" :class="{active: isCollectionPage}" @click="handleNavigate('/home')"></button>
 
             <button v-if="isCardPage" class="main collect" @click="collectCard()">                
                 <svg class="icon brote" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
