@@ -15,7 +15,7 @@
             color: "#0282BB"
         },
         {
-            src: "../Oracle_2.jpg",
+            src: "../Oracle_3.jpg",
             color: "#49AFB1"
         },
     ]);
