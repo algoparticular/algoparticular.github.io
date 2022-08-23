@@ -1,4 +1,5 @@
 <script setup>
+    import Toolbar from '../components/Toolbar.vue';	
     import { useRouter } from 'vue-router';
     
     const router = useRouter();
@@ -17,7 +18,7 @@
 
 <template>
     <div class="content">
-        <button class="back" @click="goBack()"></button>
+        <!-- <button class="back" @click="goBack()"></button> -->
 		<main id="about">
 
 			<section class="intro">
@@ -62,6 +63,7 @@
                 <div class="border"></div>
             </section>
 		</main> 
+        <Toolbar />
 	</div>
 </template>
 

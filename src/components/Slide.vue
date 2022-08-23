@@ -32,10 +32,17 @@
 
 	.slide .cover {
 		width: 100%;
-		height: 64vh;
+		height: 66vh;
 
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;
 	}	
+
+    /* DESKTOP */
+    @media screen and (min-width: 769px) {
+        .slide .cover {
+            height: 100vh;
+        }
+    }
 </style>

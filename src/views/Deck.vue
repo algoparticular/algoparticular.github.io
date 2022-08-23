@@ -1,4 +1,5 @@
 <script setup>
+    import Toolbar from '../components/Toolbar.vue';	
     import DeckTemplate from '../components/DeckTemplate.vue';
     import DeckTemplateSkeleton from '../components/DeckTemplateSkeleton.vue';
 
@@ -26,6 +27,8 @@
             </Suspense>
         </main>
         <button class="back" @click="navigate('/')"></button>
+        
+        <Toolbar :hideAction="true"/>
     </div>
 </template>
 
@@ -50,7 +53,7 @@
     }
 
     /* DESKTOP */
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 769px) {
         .content.deck {
             padding: 40px 0;
         }

@@ -109,10 +109,20 @@ main {
 /// /* TEXTs */
 h1,h2,h3 {
     color: $color-primary;
+
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
 }
 
 h4,h5,h6 {
     color: $color-whiteMana;
+
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
 }
 
 h1 { 
@@ -167,6 +177,11 @@ p {
   margin: 0 0 24px 0;   
   white-space: pre-line; 
   color: $color-white;
+
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
     
     @media screen and (max-width: 600px) {
         // padding: 0 16px;
@@ -206,6 +221,7 @@ a {
     width: auto !important;
     font-size: 18px;    
     font-weight: 600;
+    
 
     &.icon-link {
         display: contents;
@@ -251,6 +267,11 @@ button,
     color: $color-black;
     padding: 10px 20px;
     cursor: pointer;
+
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
     
     &:hover {
         color: $color-white;
@@ -272,7 +293,11 @@ button,
     }
 
     @media screen and (min-width: 768px) {
-        height: 40px;
+        // height: 40px;
+    }
+    
+    &.hidden {
+        display: none;
     }
 }
 
@@ -317,6 +342,160 @@ button.back {
         }
     }
 }
+
+button.border {
+    background-color: transparent;
+    border: 2px solid rgba(252, 252, 252, 0.42);
+    filter: drop-shadow(0px 2px 3px rgb(234, 234, 234));
+    border-radius: 18px;
+    color: $color-white;
+
+    transition: all 150ms ease-out;
+
+    span {
+        color: $color-white;
+        font-size: 20px;;
+        letter-spacing: .02em;
+    }
+
+    &:hover {
+        border-color: $color-white;
+    }  
+
+    &.hasIcon {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        .icon {
+            width: 24px;
+
+            path {
+                fill: $color-white;
+            }
+        }
+    }    
+}
+
+button.main {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 100%;
+
+    width: 60px;
+    height: 60px;
+    padding: 0;
+
+    position: absolute;
+    top: -30px;
+    left: 0;
+    right: 0;
+    box-shadow: 0px 2px 6px rgba(16, 16, 15, 0.36); 
+    background-color: $color-white;
+
+    .icon {
+        width: 32px;
+        height: auto;
+
+        path {
+            fill: $color-primary;
+        }
+    }    
+
+    &:hover {
+        background-color: $color-primary;
+
+        .icon path {
+            fill: $color-white;
+        }
+    }
+
+    &.big {
+        position: relative;
+        top: auto;
+        width: 90px;
+        height: 90px;
+
+        .icon {
+            width: 42px;
+        }
+
+        &.fix {
+            position: absolute;
+            top: -45px;
+        }
+    }
+}
+
+button.secondary {
+    width: 50px;
+    height: 50px;  
+    background-color: transparent;    
+    background-image: url('../assets/icon/Menu.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: drop-shadow(0px 2px 3px rgb(199, 190, 142));
+
+    &.active {
+        background-image: url('../assets/icon/active/Menu.svg');
+        filter: drop-shadow(0px 2px 3px rgba(252, 118, 16, 0.56));
+    }
+    
+    &:focus {
+        box-shadow: none;
+    }
+
+    &.collection {
+        background-image: url('../assets/icon/Collection.svg');
+
+        &.active {
+            background-image: url('../assets/icon/active/Collection.svg');        
+        }
+    }
+
+    &.fix {
+        position: absolute;
+        right: 24px;
+        bottom: 8px;
+    }
+}
+
+
+/* TRANSITION */
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity .8s ease-out;
+}    
+
+/* *********** */
+
+.slide-fade-enter-active,
+.slide-fade-leave-active {    
+    transition: all .36s ease-out;
+}
+
+.slide-fade-enter-from {
+    transform: translateY(24px);
+    opacity: 0;
+}
+
+.slide-fade-enter-to,
+.slide-fade-leave-from {
+    transform: translateY(0);
+}
+ 
+.slide-fade-leave-to {
+    transform: translateY(16px);
+    opacity: 0;
+}   
 
 
 //////////////////////////

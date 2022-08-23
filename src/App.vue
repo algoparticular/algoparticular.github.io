@@ -1,6 +1,4 @@
-<script setup>
-	import Toolbar from './components/Toolbar.vue';	
-	
+<script setup>	
 	import { onMounted, ref } from 'vue';  	
 	import { useRouter } from 'vue-router';
 
@@ -8,6 +6,11 @@
 
 	//ON MOUNTED
 	onMounted (() => {
+		// lang storage fallback
+        if (localStorage.lang == null) {			
+			localStorage.setItem("lang", 'es');			
+		}
+
 		//Progressive Web App
 		let registration = null;
 
@@ -33,8 +36,7 @@
 	<router-view v-slot="{ Component }">
 		<transition name="fade" mode="out-in">
 			<component :is="Component" :key="$router.path" />
-		</transition>		
-		<Toolbar :path="router.currentRoute.value.path"/>
+		</transition>
 	</router-view>	
 </template>
 

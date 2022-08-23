@@ -1,4 +1,5 @@
 <script setup>
+    import Toolbar from '../components/Toolbar.vue';	
     import CardTemplate from '../components/CardTemplate.vue';
     import CardTemplateSkeleton from '../components/CardTemplateSkeleton.vue';
     
@@ -33,6 +34,7 @@
                 <CardTemplateSkeleton :cardId="cardId"/>
             </template>
         </Suspense>
+        <Toolbar :isBroteButton="true"/>
     </div>
 </template>
 

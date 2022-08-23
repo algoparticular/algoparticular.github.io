@@ -1,19 +1,20 @@
 <script setup>
-
+	import Toolbar from '../components/Toolbar.vue';	
 </script>
 
 <template>
-<div class="content">
-	<main id="home">
-		<img class="title" alt="Praxis, by Algo Particular" src="../assets/Logo_praxis.svg">
+	<div class="content">
+		<main id="home">
+			<img class="title" alt="Praxis, by Algo Particular" src="../assets/Logo_praxis.svg">
 
-		<section class="intro">
-			<h2>{{ $t("message.notFound") }}</h2>
-			<p>{{ $t("message.notFoundCopy") }}</p>
-			<!-- <p>{{ $t("message.notFoundButton") }}</p> -->
-		</section>
-	</main> 
-</div>
+			<section class="intro">
+				<h2>{{ $t("message.notFound") }}</h2>
+				<p>{{ $t("message.notFoundCopy") }}</p>
+				<!-- <p>{{ $t("message.notFoundButton") }}</p> -->
+			</section>
+		</main> 
+		<Toolbar />
+	</div>
 </template>
 
 <style scoped>

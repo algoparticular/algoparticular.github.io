@@ -1,4 +1,5 @@
 <script setup>
+    import Toolbar from '../components/Toolbar.vue';	
     import { useRouter } from 'vue-router';
     // import { Button } from '../components/Button.vue';
     
@@ -17,7 +18,7 @@
 
 <template>
     <div class="content">
-        <button class="back" @click="goBack()"></button>
+        <!-- <button class="back" @click="goBack()"></button> -->
 		<main id="collaborate">
 			
             <section class="howToHelp">
@@ -64,6 +65,7 @@
                 <img src="../../public/cards/4.jpg" alt="Algo Particular"/>
             </section>
 		</main> 
+        <Toolbar />
 	</div>
 </template>
 

@@ -1,5 +1,5 @@
 <script setup>
-    import { onMounted, ref } from 'vue';
+    import { onMounted, onUpdated, ref } from 'vue';
     import { useRouter } from 'vue-router';
     import { getAuth, onAuthStateChanged, signOut } from 'firebase/auth';
 
@@ -26,6 +26,10 @@
 
     //ON MOUNTED
 	onMounted (() => {
+        
+    });
+
+    onUpdated (() => {
         //check user logged in or not
         auth = getAuth();
         onAuthStateChanged (auth, (user) => {
@@ -35,11 +39,6 @@
                 isLoggedIn.value = false;
             }
         });
-
-        // lang storage fallback
-        if (localStorage.lang == null) {			
-			localStorage.setItem("lang", 'es');			
-		}
     });
 </script>
 
@@ -71,7 +70,11 @@
 
 <style scoped>
     nav {
-        padding-bottom: 24px;
+        padding: 0 0 32px;
+    }
+
+    nav.home {
+        padding-top: 18px;
     }
 
     nav, nav div {

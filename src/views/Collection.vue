@@ -1,4 +1,5 @@
 <script setup>
+	import Toolbar from '../components/Toolbar.vue';	
 	import { getAuth } from 'firebase/auth';
 	import { useRouter } from 'vue-router';
 	import { onBeforeUnmount } from 'vue';
@@ -24,6 +25,7 @@
 		<main id="deck">
 			<h2>{{ $t("message.praxisCollectionTitle") }}</h2>
 			<p>{{ $t("message.praxisCollectionDescrip") }}</p>
-		</main>
+		</main>		
+		<Toolbar :isCollectionPage="true"/>
 	</div>
 </template>
