@@ -248,7 +248,7 @@
 
     button.notShown {
         /* visibility: hidden; */
-        opacity: .36;
+        opacity: .18;
         pointer-events: none;
     }
 

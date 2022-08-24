@@ -62,7 +62,7 @@
             </section>
             <section class="footerSection">
                 <img class="logo" src="../assets/Logo_mana.svg"/>
-                <img src="../../public/cards/4.jpg" alt="Algo Particular"/>
+                <div class="art" alt="Algo Particular"></div>
             </section>
 		</main> 
         <Toolbar />
@@ -94,6 +94,7 @@
 
     section ul {
         list-style: circle outside;
+        width: 310px;
     }
     
     section li {
@@ -126,8 +127,27 @@
         width: 283px;
     }
 
-    .footerSection img {
+    .footerSection .art {
         width: 100%;
         height: auto;
+        padding-top: 100%;
+
+        background-image: url('./cards/4.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        box-shadow: inset 0px 6px 9px rgba(16, 16, 15, 0.36), inset 0px -6px 9px rgba(16, 16, 15, 0.36);
+    }
+
+    /* DESKTOP */
+    @media screen and (min-width: 769px) {
+        section p, section ul {
+			width: 420px;
+		}
+
+        .footerSection .art {
+            padding-top: 70%;
+        }
     }
 </style>

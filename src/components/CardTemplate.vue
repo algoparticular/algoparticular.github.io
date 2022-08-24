@@ -9,7 +9,7 @@
     const loadCardData = async () => {
         return new Promise((resolve) => {
             setTimeout(() => {
-                resolve();
+                // resolve();
             }, 4000)
         })
     }
@@ -34,14 +34,14 @@
             </p>
             <div class="bottom">
                 <div>
-                    <h5 :style="{color: es.cards[props.cardId].colorAlt}" v-if="es.cards[[props.cardId].invitation !== '']">
+                    <h5 v-if="es.cards[props.cardId].invitation != ' '" :style="{color: es.cards[props.cardId].colorAlt}">
                         {{ $t("oracle.cardAfirmattion") }}
                     </h5>
                     <p :style="{color: es.cards[props.cardId].colorAlt}">
                         {{ $t("cards["+props.cardId+"].afirmation") }}
                     </p>
                 </div>
-                <div v-if="es.cards[[props.cardId].invitation !== '']">
+                <div v-if="es.cards[props.cardId].invitation != ' '">
                     <h5 :style="{color: es.cards[props.cardId].colorAlt}">
                         {{ $t("oracle.cardInvitation") }}
                     </h5>

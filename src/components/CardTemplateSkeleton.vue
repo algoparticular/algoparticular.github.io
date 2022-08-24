@@ -6,14 +6,23 @@
 
 <script>
 // import { Motion } from "motion/vue";
-import { animate } from "motion";
+import { animate, stagger } from "motion";
 
 export default {
 //   components: { Motion },
 
   data() {
     return {
-      randomIndex: 0
+      randomIndex: 0,
+      colorWheel: [
+                '#E49414',
+                '#F55F4B',
+                '#FF7E39',
+                '#FFF04D',
+                '#75D090',
+                '#46DBDD',
+                '#B112B1',
+            ],
     }
   },
 
@@ -21,18 +30,37 @@ export default {
     randomizePhrase() {
         this.randomIndex = Math.floor(Math.random() * 7) ; //+ 1
     },
+    randomizeColor() {
+        const randomIndex = Math.floor(Math.random() * 7); //+ 1
+        
+        return this.colorWheel[randomIndex];
+    },
     animateLaberintou() {
         const paths = document.querySelectorAll("#cardLoader path");
 
         animate(paths, 
-            {strokeDasharray: 1000},
-            {   duration: 3.6, 
+            {
+                strokeDasharray: 1000,
+            },
+            {   
+                duration: 3, 
                 easing: 'ease-in'
-            });
+            }
+        );
+        animate(paths, 
+            {
+                stroke:  [this.randomizeColor(),this.randomizeColor(),this.randomizeColor(),this.randomizeColor()]                
+            },
+            {   
+                duration: .3, 
+                repeat: 5,
+                easing: 'ease-in'
+            }
+        );
     },   
   },
   mounted() {    
-        this.randomizePhrase();
+        this.randomizePhrase();       
         this.animateLaberintou();
   }
 }
@@ -107,7 +135,7 @@ export default {
         /* stroke-dashoffset: 0; */
         stroke-linecap: round;
         stroke-linejoin: round;
-        stroke-miterlimit: 10;
+        stroke-miterlimit: 7;
     }
 
     .loader p {
