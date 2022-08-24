@@ -225,13 +225,13 @@
             },
             {
                 "id": 10,
-                "name": "White card",
-                "description": "...",
-                "afirmation": "Afirmo lo que ya mi ser interior sabe.",
+                "name": " ",
+                "description": " ",
+                "afirmation": "Afirmo lo que ya sé en mi interior.",
                 "invitation": "",
                 "category": "special",
                 "rarity": 1,
-                "color": "#F7F8F2",
+                "color": "#E9EDD8",
                 "colorAlt": "#202221"
             },
             {
