@@ -26,7 +26,7 @@
                 </template>
             </Suspense>
         </main>
-        <button class="back" @click="navigate('/')"></button>
+        <!-- <button class="back" @click="navigate('/')"></button> -->
         
         <Toolbar :hideAction="true"/>
     </div>

@@ -56,6 +56,8 @@
         color: #F7F8F1;
         text-align: center;
         letter-spacing: 2px;
+        width: 360px;
+        min-height: 108px;
     }
 
     /* DESKTOP */

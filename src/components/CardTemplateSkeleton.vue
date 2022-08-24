@@ -30,7 +30,7 @@ export default {
     randomizePhrase() {
         this.randomIndex = Math.floor(Math.random() * 7) ; //+ 1
     },
-    randomizeColor() {
+    getRandomColor() {
         const randomIndex = Math.floor(Math.random() * 7); //+ 1
         
         return this.colorWheel[randomIndex];
@@ -49,7 +49,7 @@ export default {
         );
         animate(paths, 
             {
-                stroke:  [this.randomizeColor(),this.randomizeColor(),this.randomizeColor(),this.randomizeColor()]                
+                stroke:  [this.getRandomColor(),this.getRandomColor(),this.getRandomColor(),this.getRandomColor()]                
             },
             {   
                 duration: .3, 

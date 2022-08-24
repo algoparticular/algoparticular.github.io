@@ -15,27 +15,43 @@
         
         data() {
             return {
-            
+                colorWheel: [
+                    '#E49414',
+                    '#F55F4B',
+                    '#FF7E39',
+                    '#FFF04D',
+                    '#75D090',
+                    '#46DBDD',
+                    '#B112B1',
+                ],
             }
         },
 
-        methods: {        
+        methods: {  
+            getRandomColor() {
+                const randomIndex = Math.floor(Math.random() * 7); //+ 1
+                
+                return this.colorWheel[randomIndex];
+            },      
             animateList() {
-                // const paths = document.querySelectorAll("#cardLoader path");
+                const cards = document.querySelectorAll(".deckItem");
 
-        console.log('animation list');
-
-                // animate(paths, 
-                //     {strokeDasharray: 1000},
-                //     {   duration: 3.6, 
-                //         easing: [.63, 0, .72, 0]
-                //     });
-
-        console.log('animation list end');
+                for (var i = 0; i < cards.length; i++) {
+                    animate(cards[i], 
+                        {
+                            borderColor:  [this.getRandomColor(),this.getRandomColor(),this.getRandomColor(),this.getRandomColor()]                
+                        },
+                        {
+                            duration: 1, 
+                            repeat: Infinity,
+                            easing: 'ease-in'
+                        }    
+                    );
+                }                
             },   
         },
         mounted() {    
-                // this.animateList();
+                this.animateList();
         }
     }
 
