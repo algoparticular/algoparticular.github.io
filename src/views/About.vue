@@ -43,11 +43,11 @@
                 <h4 class="title">{{ $t("about.oracle") }}</h4>
                 <p>{{ $t("about.oracleDescrip") }}</p>
                 <div>
-                    <button class="main seed"></button>
+                    <button class="fake seed"></button>
                     <p>{{ $t("about.seed") }}</p>
                 </div>
                 <div>
-                    <button class="main brote"></button>
+                    <button class="fake brote"></button>
                     <p>{{ $t("about.brote") }}</p>
                 </div>
             </section>            
@@ -71,7 +71,7 @@
 <style scoped>
     main {
         gap: 108px;
-        padding-bottom: 108px;
+        padding: 60px 0 108px;
     }
 
     .content button.back {   
@@ -135,7 +135,7 @@
         text-align: center;
     }
 
-    .faq button.main {
+    .faq button.fake {
         border-radius: 100%;
 
         width: 60px;

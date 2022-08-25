@@ -44,7 +44,8 @@
                         {
                             duration: 1, 
                             repeat: Infinity,
-                            easing: 'ease-in'
+                            easing: 'ease-in',
+                            direction: 'alternate'
                         }    
                     );
                 }                
