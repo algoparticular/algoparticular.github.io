@@ -154,5 +154,9 @@
 		#panel.menuActive {
 			height: 27vh;
 		}
+
+		#panel p {
+			max-width: 420px;
+		}
     }
 </style>

@@ -6,7 +6,7 @@
     const router = useRouter();
 
     const navigate = (url) => {
-        router.push({ path: url, replace: true });
+        router.push({ path: url });
     };
 
     function goBack() {

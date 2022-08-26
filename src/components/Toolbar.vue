@@ -51,7 +51,7 @@
     //handle navigation
     const handleNavigate = (url) => {        
         showMenu.value = false;
-        router.push({ path: url, replace: true });
+        router.push({ path: url, replace: false });
     };
 
     //handle language change
@@ -130,4 +130,10 @@
         justify-content: space-around;
     }
          
+    /* DESKTOP */
+    @media screen and (min-width: 769px) {
+        #toolbar {
+            
+        }
+    }
 </style>

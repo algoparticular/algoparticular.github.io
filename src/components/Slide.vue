@@ -42,7 +42,7 @@
     /* DESKTOP */
     @media screen and (min-width: 769px) {
         .slide .cover {
-            height: 100vh;
+            height: 87vh;
         }
     }
 </style>

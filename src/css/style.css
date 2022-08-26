@@ -294,6 +294,7 @@ button.back {
           filter: drop-shadow(0px 2px 3px #c7be8e);
 }
 
+button.hasIcon,
 .button.hasIcon {
   background-color: #E9EDD8;
   display: -webkit-box;
@@ -310,32 +311,39 @@ button.back {
   font-size: 18px;
 }
 
+button.hasIcon .icon,
 .button.hasIcon .icon {
   width: 32px;
   height: auto;
 }
 
+button.hasIcon path,
 .button.hasIcon path {
   fill: #10100F;
 }
 
+button.hasIcon span,
 .button.hasIcon span {
   color: #10100F;
 }
 
+button.hasIcon:hover,
 .button.hasIcon:hover {
   background-color: #FF6F61;
 }
 
+button.hasIcon:hover path,
 .button.hasIcon:hover path {
   fill: #F7F8F1;
 }
 
+button.hasIcon:hover span,
 .button.hasIcon:hover span {
   color: #F7F8F1;
 }
 
-button.border {
+button.border,
+.button.border {
   background-color: transparent;
   border: 2px solid rgba(252, 252, 252, 0.42);
   -webkit-filter: drop-shadow(0px 2px 3px #eaeaea);
@@ -346,31 +354,25 @@ button.border {
   transition: all 150ms ease-out;
 }
 
-button.border span {
+button.border span,
+.button.border span {
   color: #F7F8F1;
-  font-size: 20px;
-  letter-spacing: .02em;
+  font-size: 18px;
+  letter-spacing: .01em;
 }
 
-button.border:hover {
+button.border:hover,
+.button.border:hover {
   border-color: #F7F8F1;
 }
 
-button.border.hasIcon {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 8px;
-}
-
-button.border.hasIcon .icon {
+button.border.hasIcon .icon,
+.button.border.hasIcon .icon {
   width: 24px;
 }
 
-button.border.hasIcon .icon path {
+button.border.hasIcon .icon path,
+.button.border.hasIcon .icon path {
   fill: #F7F8F1;
 }
 

@@ -22,7 +22,7 @@
 </script>
 
 <template>
-	<main class="cardWrapper" :style="{backgroundColor: es.cards[props.cardId].color}">
+	<main class="cardWrapper" :style="{backgroundColor: es.cards[props.cardId].color}" :class="{fixedHeight: es.cards[props.cardId].invitation === ' '}">
         <div class="imgWrapper" :style="{ backgroundImage: 'url(/cards/' + props.cardId + '.jpg)' }"></div>
         
         <div class="textWrapper">
@@ -59,7 +59,11 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        /* height: 100vh; */
+    }
+
+    .cardWrapper.fixedHeight {
+        height: 100vh;
+        justify-content: flex-start;
     }
 
     .imgWrapper {

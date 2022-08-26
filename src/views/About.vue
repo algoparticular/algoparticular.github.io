@@ -5,7 +5,7 @@
     const router = useRouter();
 
     const navigate = (url) => {
-        router.push({ path: url, replace: true });
+        router.push({ path: url});
     };
 
     function goBack() {
@@ -46,10 +46,10 @@
                     <button class="fake seed"></button>
                     <p>{{ $t("about.seed") }}</p>
                 </div>
-                <div>
+                <!-- <div>
                     <button class="fake brote"></button>
                     <p>{{ $t("about.brote") }}</p>
-                </div>
+                </div> -->
             </section>            
             <section class="cta">
                 <button @click="navigate('/collaborate')">{{ $t("about.cta") }}</button>
@@ -151,7 +151,7 @@
 
     }
 
-    .faq button.main.brote  {
+    .faq button.fake.brote  {
         background-image: url('../assets/icon/Brote.svg');
     }
 
@@ -193,5 +193,13 @@
         border: 2px solid rgba(252, 252, 252, 0.42);
         filter: drop-shadow(0px 2px 3px rgb(234, 234, 234));
         border-radius: 18px; 
+    }
+
+    /* DESKTOP */
+    @media screen and (min-width: 769px) {
+       .faq,
+       .promo {
+            max-width: 420px;
+       }
     }
 </style>

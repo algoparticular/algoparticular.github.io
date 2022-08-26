@@ -34,13 +34,12 @@
 
 <style>
     .content.deck {
-        padding-top: 9vh;
+        padding: 9vh 0 108px; 
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: auto;   
-        padding-bottom: 60px;   
+        height: auto;            
     }
 
     .deck button.back {   

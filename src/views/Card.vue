@@ -34,7 +34,7 @@
                 <CardTemplateSkeleton :cardId="cardId"/>
             </template>
         </Suspense>
-        <Toolbar :isBroteButton="true"/>
+        <Toolbar :hideAction="true"/>
     </div>
 </template>
 

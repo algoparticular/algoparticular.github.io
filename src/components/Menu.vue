@@ -73,9 +73,9 @@
         padding: 0 0 32px;
     }
 
-    nav.home {
+    /* nav.home {
         padding-top: 18px;
-    }
+    } */
 
     nav, nav div {
         display: flex;
