@@ -69,6 +69,11 @@
 
 
 <style scoped>
+    .content {
+        background-color: #143246;
+        height: auto;
+    }
+
     main {
         gap: 108px;
         padding: 60px 0 108px;
@@ -180,7 +185,7 @@
         background-position: 50%;
         height: 150px;
         display: block;
-
+        z-index: 1;
     }
 
     .promo .border {
@@ -189,7 +194,7 @@
         bottom: 0;
         left: 0;
         right: 0;
-        z-index: -1;
+        z-index: 0;
         border: 2px solid rgba(252, 252, 252, 0.42);
         filter: drop-shadow(0px 2px 3px rgb(234, 234, 234));
         border-radius: 18px; 

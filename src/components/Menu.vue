@@ -12,7 +12,7 @@
     //handle sign out
     const handleSignOut = () => {
         signOut(auth).then (() => {
-            router.push('/home');
+            router.push('/');
         });
     }; 
 
@@ -45,7 +45,7 @@
 
 <template>
     <nav id="menu">        
-        <a @click="navigate('/')">{{ $t("nav.intro") }}</a>
+        <a @click="navigate('/oracle')">{{ $t("nav.intro") }}</a>
         <a @click="navigate('/about')">{{ $t("nav.about") }}</a>
         <a @click="navigate('/collaborate')">{{ $t("nav.collaborate") }}</a>
 
@@ -133,5 +133,12 @@
             -ms-user-select: none; /* Internet Explorer/Edge */
                 user-select: none; /* Non-prefixed version, currently
                                     supported by Chrome, Edge, Opera and Firefox */
+    }
+
+    /* DESKTOP */
+    @media screen and (min-width: 769px) {
+        nav {
+            padding: 0;
+        }
     }
 </style>

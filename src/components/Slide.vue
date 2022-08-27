@@ -4,7 +4,8 @@
 	const props = defineProps({        
         index: Number,
         source: String,
-        color: String
+        color: String,
+        position: String
     });
 
     // const emit = defineEmits(['active']); 
@@ -17,7 +18,7 @@
 
 <template>
 	<div class="slide" :style="`background-color:${props.color}`">
-        <div class="cover" :style="`background-image:url(${props.source})`">
+        <div class="cover" :style="{ backgroundImage: 'url(' + props.source + ')', backgroundPosition: props.position }">
 
         </div>
 	</div>
@@ -37,7 +38,7 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;
-	}	
+	}
 
     /* DESKTOP */
     @media screen and (min-width: 769px) {

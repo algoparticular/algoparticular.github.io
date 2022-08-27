@@ -1,5 +1,6 @@
 <script setup>
     import Toolbar from '../components/Toolbar.vue';	
+    // import { onMounted, ref } from 'vue';
     import { useRouter } from 'vue-router';
     // import { Button } from '../components/Button.vue';
     
@@ -13,6 +14,10 @@
         console.log(router);
         // router.back();
     }
+
+    // onMounted(() => {
+		
+	// });
 </script>
 
 
@@ -71,8 +76,13 @@
 
 
 <style scoped>
+    .content {
+        background-color: #143246;
+        height: auto;
+    }
+
     main {
-        margin-top: 40px;
+        padding-top: 40px;
         gap: 108px;
         padding-bottom: 108px;
         text-align: center;
@@ -94,7 +104,6 @@
 
     section ul {
         list-style: circle outside;
-        width: 310px;
     }
     
     section li {

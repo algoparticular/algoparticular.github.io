@@ -28,7 +28,7 @@
     function collectCard() {        
 		console.log('collected');
 
-        router.push('/home');
+        router.push('/');
 	}    
 
     //handle menu
@@ -68,7 +68,7 @@
 <template>
     <div id="toolbar" :class="{active: showMenu}">
         <div class="topContainer">
-            <button class="secondary collection" :class="{active: props.isCollectionPage}" @click="handleNavigate('/home')"></button>
+            <button class="secondary collection" :class="{active: props.isCollectionPage}" @click="handleNavigate('/')"></button>
 
             <button v-if="props.isBroteButton" class="main collect" @click="collectCard()">                
                 <svg class="icon brote" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
@@ -127,13 +127,11 @@
         flex-direction: column;
 
         height: v-bind(activeHeight);
-        justify-content: space-around;
+        justify-content: flex-start;
     }
          
     /* DESKTOP */
     @media screen and (min-width: 769px) {
-        #toolbar {
-            
-        }
+        
     }
 </style>

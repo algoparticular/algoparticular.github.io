@@ -18,7 +18,7 @@ const router = createRouter({
   routes: [
     {
       path: "/",
-      component: Onboarding,
+      component: Home,
     },
     {
       path: "/register",
@@ -37,8 +37,8 @@ const router = createRouter({
       component: Collaborate,
     },
     {
-      path: "/home",
-      component: Home,
+      path: "/oracle",
+      component: Onboarding,
     },
     {
       path: "/deck",
@@ -80,6 +80,8 @@ const getCurrentUser = () => {
 
 // Check user permission to see a page
 router.beforeEach(async (to, from, next) => {
+    window.scrollTo(0, 0);
+
     if(to.matched.some((record) => record.meta.requiresAuth)) {
         if (await getCurrentUser()) {
             next();

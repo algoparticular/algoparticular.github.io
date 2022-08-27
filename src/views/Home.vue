@@ -102,7 +102,7 @@
         position: fixed;
         bottom: 0;
         width: calc(90vw - 2px);
-        height: 20vh;
+        height: 25vh;
         padding: 64px 5vw 0;     
 
         background: rgba(243, 243, 243, 0.18);
@@ -116,7 +116,7 @@
     }
 
 	#panel.menuActive {
-		height: 32vh;
+		height: 25vh;
 	}
 
     #panel > div {
@@ -133,7 +133,7 @@
         font-size: 20px;
         line-height: 150%;
         letter-spacing: 0.02em;
-        margin: 0 24px;
+        margin: 0;
         text-align: center;
 
 		max-width: 370px;
@@ -148,15 +148,15 @@
 		}
 
 		#panel {
-			height: 15vh;
+			height: 20vh;
 		}
 
 		#panel.menuActive {
-			height: 27vh;
+			height: 20vh;
 		}
 
 		#panel p {
-			max-width: 420px;
+			max-width: 500px;
 		}
     }
 </style>
