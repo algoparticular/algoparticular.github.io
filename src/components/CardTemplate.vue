@@ -81,7 +81,7 @@
     }
 
     .textWrapper h4 {
-        
+        letter-spacing: .03em;
     }
 
     .textWrapper p {

@@ -130,7 +130,7 @@
     #panel p {
         font-family: 'particular', 'Inter', helvetica, sans-serif;
         font-weight: 400;
-        font-size: 20px;
+        font-size: 18px;
         line-height: 150%;
         letter-spacing: 0.02em;
         margin: 0;
@@ -145,6 +145,7 @@
     @media screen and (min-width: 769px) {
         #home .cover {
 			height: 100vh;
+			background-size: contain;
 		}
 
 		#panel {
@@ -157,6 +158,7 @@
 
 		#panel p {
 			max-width: 500px;
+			font-size: 20px;
 		}
     }
 </style>

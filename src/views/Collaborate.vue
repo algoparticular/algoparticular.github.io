@@ -82,7 +82,7 @@
     }
 
     main {
-        padding-top: 40px;
+        padding-top: 80px;
         gap: 108px;
         padding-bottom: 108px;
         text-align: center;
@@ -141,7 +141,7 @@
         height: auto;
         padding-top: 100%;
 
-        background-image: url('./cards/4.jpg');
+        background-image: url('../cards/4.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;

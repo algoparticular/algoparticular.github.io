@@ -62,7 +62,7 @@
 
     ////////////
     // SLIDER //
-    const activeUp = () => {
+    const slideUp = () => {
         if (active.value == slides.value.length-1) {
             active.value = slides.value.length-1;                       
         } else {
@@ -78,7 +78,7 @@
         }     
     };
 
-    const activeDown = () => {  
+    const slideDown = () => {  
         if (active.value == 0) {
             active.value = 0;
         } else {
@@ -95,7 +95,7 @@
     };
 
     const next = () => {
-        activeUp();
+        slideUp();
         slider.value.scrollTo({
             left: window.innerWidth * active.value,
             behavior: 'smooth'
@@ -103,7 +103,7 @@
     };
 
     const prev = () => {
-        activeDown();
+        slideDown();
         slider.value.scrollTo({
             left: window.innerWidth * active.value,
             behavior: 'smooth'
@@ -139,6 +139,7 @@
 						@navigate="handleNavigate"
 						@langChanged="handleLangChanged"
 						class="home"
+                        :isOracle="true"
 						/>  
 
 				    <div v-else class="contentContainer">
@@ -158,7 +159,7 @@
                     </button>  
 
                     <div class="menuWrapper">
-                    <button class="border hasIcon skip" @click="navigate('/deck')" :class="{notShown: isLast}">
+                    <button class="border hasIcon skip" @click="handleNavigate('/deck')" :class="{notShown: isLast || showMenu}">
                         <svg class="icon seed" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
                             <path d="M19.0458 29.3486C19.0458 27.7255 19.0458 26.144 19.0458 24.4377C18.9627 22.1072 18.7964 21.9407 16.5107 22.0239C12.5626 22.1904 8.573 22.4817 4.70805 23.106C4.45869 23.106 4.08466 23.2725 3.83531 23.2725C3.12882 23.1892 2.50544 23.0227 2.17297 22.1904C1.8405 21.4829 2.00674 20.8586 2.50544 20.2344C3.66909 18.9026 5.16519 18.4448 6.82754 18.4448C9.57041 18.4448 12.2717 18.1951 15.0146 17.9038C18.5471 17.5293 18.5471 17.5293 18.5471 13.9085C18.5471 12.0358 18.0899 10.2462 17.8406 8.37344C17.7575 7.37463 17.5081 6.41743 17.6743 5.33537C17.9237 4.08685 18.9211 3.21289 19.9601 3.21289C20.999 3.29613 21.6224 4.00362 21.8302 5.46023C22.0796 8.41506 22.2873 11.3283 22.3705 14.1999C22.3705 16.8634 22.4536 16.8634 25.0302 16.8634C28.0224 16.8634 32.8017 16.9466 35.7108 16.9466C36.9575 16.9466 37.9965 17.7373 37.9965 18.6529C38.0796 19.6517 36.6666 21.3997 35.4614 21.2332C32.303 20.6922 27.3159 21.4829 24.0744 21.3997C22.9107 21.3997 22.5783 21.8575 22.6614 22.8979C22.8276 26.5602 22.9107 29.6815 23.2016 33.3022C23.2847 34.5508 22.8692 35.3415 21.8717 35.9657C20.4588 36.7565 19.0458 36.049 18.9626 34.3427C18.9626 32.9277 18.9627 31.1381 19.0458 29.3486Z" />
                             <path d="M32.9656 33.3542C33.1379 31.8015 34.3438 30.5939 35.722 30.6801C37.0141 30.7664 38.0908 31.974 37.9185 33.2679C37.7463 34.6481 36.2819 35.942 34.9899 35.8557C33.7839 35.7694 32.8795 34.5618 32.9656 33.3542Z" />
@@ -201,7 +202,7 @@
         flex-direction: column;
         position: fixed;
         bottom: 0;
-        padding: 40px 0 32px;
+        padding: 48px 0 32px;
         /* min-height: 336px; */
         width: calc(100vw - 2px);
 
@@ -215,6 +216,10 @@
 
         transition: all .18s ease-in;
     }     
+
+    .onboardingPanel.inMenu {
+        padding-top: 64px;
+    } 
     
     .contentContainer {
         width: 100vw;
@@ -298,12 +303,12 @@
     /* DESKTOP */
     @media screen and (min-width: 769px) {
         .onboardingPanel {
-            padding: 24px 0 0;
-        }
+            padding: 48px 0 0;
+        } 
         
-        .onboardingPanel.inMenu {
-            padding: 64px 0 0;
-        }
+        /* .onboardingPanel.inMenu {
+            
+        }  */
 
         .onboardingPanel p {
 			max-width: 560px;

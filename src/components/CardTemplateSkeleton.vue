@@ -38,6 +38,12 @@ export default {
     animateLaberintou() {
         const paths = document.querySelectorAll("#cardLoader path");
 
+        paths.forEach(element => {
+            element.style.strokeDasharray = 0
+            
+            // console.log(element.style.strokeDasharray);
+        });
+
         animate(paths, 
             {
                 strokeDasharray: 1000,
@@ -60,7 +66,7 @@ export default {
     },   
   },
   mounted() {    
-        this.randomizePhrase();       
+        this.randomizePhrase();
         this.animateLaberintou();
   }
 }

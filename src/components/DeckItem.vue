@@ -103,6 +103,10 @@ export default {
         transition: all 250ms ease-out;
     }
 
+    .deckItem.loading {
+        filter: none;
+    }
+
     .deckItem .icon {
         /* fill: rgba(252, 252, 252, 0.72); */
         fill: #F7F8F1;

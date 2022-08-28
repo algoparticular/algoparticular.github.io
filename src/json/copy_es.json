@@ -22,6 +22,7 @@
             "praxisIntro": "Bienvenidx al Oráculo de las Partículas.\n\nPresiona el símbolo para tomar tu mensaje, pon intención verdadera en eso que vibra en tu interior."
         },
         "nav": {
+            "home": "Inicio",
             "intro": "el Oráculo",
             "about": "¿Qué es esto?",
             "collaborate": "¿Quieres ayudar?",
@@ -53,7 +54,8 @@
             "oracleDeck": "Cartas oráculo escritas por",
             "oracleAuthor": "Belén Brito",
             "designedBy": "Desarrollada e ilustrada por",
-            "author": "Juan Yañez",            
+            "author": "Juan Yañez",
+            "authorLink": "https://juanmanuelynz.com",
             "praxis": "¿Qué es Praxis?",
             "praxisDescrip": "Praxis es una propuesta artístico/espiritual creada y desarrollada por Algo Particular.\n\nAl igual que cuando recorremos un lugar, tomamos la guía de un mapa o una brújula, en el camino del autodescubrimiento es beneficiosa la orientación del llamado “Plano Superior”, que no es otra que la guía de nuestro Ser más profundo.\n\nPraxis invita tanto a la acción como a la reflección, buscando conectar con lo que vibra en nuestro interior.",
             "oracle": "Cartas del Oráculo de las Partículas",

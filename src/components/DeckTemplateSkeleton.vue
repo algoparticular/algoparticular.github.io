@@ -62,7 +62,7 @@
     <p class="deckIntro">{{ $t("oracle.deckLoading") }}</p>
     <div class="deckWrapper">
         <template v-for="item in props.amountOfCards" :key="item">
-            <DeckItem :loading="true"  />
+            <DeckItem :loading="true"/>
         </template>
     </div>
 </template>

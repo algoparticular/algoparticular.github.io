@@ -51,7 +51,7 @@
     //handle navigation
     const handleNavigate = (url) => {        
         showMenu.value = false;
-        router.push({ path: url, replace: false });
+        router.push({ path: url });
     };
 
     //handle language change
@@ -101,6 +101,7 @@
         display: block;
         position: fixed;
         bottom: 0;
+        z-index: 7;
 
         width: calc(90vw - 2px);
         height: 50px;

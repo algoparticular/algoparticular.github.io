@@ -7,6 +7,10 @@
     const router = useRouter();
     let auth;
 
+    const props = defineProps({
+        isOracle: Boolean
+    });
+
     const emit = defineEmits(['navigate','langChanged']); 
 
     //handle sign out
@@ -44,8 +48,10 @@
 
 
 <template>
-    <nav id="menu">        
-        <a @click="navigate('/oracle')">{{ $t("nav.intro") }}</a>
+    <nav id="menu">
+        <a v-if="props.isOracle" @click="navigate('/')">{{ $t("nav.home") }}</a>
+        <a v-else @click="navigate('/oracle')">{{ $t("nav.intro") }}</a>
+        
         <a @click="navigate('/about')">{{ $t("nav.about") }}</a>
         <a @click="navigate('/collaborate')">{{ $t("nav.collaborate") }}</a>
 
@@ -69,19 +75,15 @@
 
 
 <style scoped>
-    nav {
-        padding: 0 0 32px;
-    }
-
-    /* nav.home {
-        padding-top: 18px;
-    } */
-
     nav, nav div {
         display: flex;
         align-items: center;
         flex-direction: column;
         gap: 24px;
+    }
+
+    nav {
+        padding: 0 0 16px;
     }
 
     nav a,

@@ -43,7 +43,8 @@
     /* DESKTOP */
     @media screen and (min-width: 769px) {
         .slide .cover {
-            height: 87vh;
+            height: 90vh;
+            /* background-size: contain; */
         }
     }
 </style>

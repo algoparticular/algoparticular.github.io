@@ -79,9 +79,7 @@ const getCurrentUser = () => {
 };
 
 // Check user permission to see a page
-router.beforeEach(async (to, from, next) => {
-    window.scrollTo(0, 0);
-
+router.beforeEach(async (to, from, next) => {    
     if(to.matched.some((record) => record.meta.requiresAuth)) {
         if (await getCurrentUser()) {
             next();
@@ -92,6 +90,7 @@ router.beforeEach(async (to, from, next) => {
     } else {
         next();
     }
+    window.scrollTo(0, 0);
 });
 
 export default router;

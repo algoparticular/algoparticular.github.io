@@ -1,6 +1,7 @@
 <script setup>
     import Toolbar from '../components/Toolbar.vue';	
     import { useRouter } from 'vue-router';
+    import { es } from "../json/copy_es.json";
     
     const router = useRouter();
 
@@ -12,7 +13,7 @@
         console.log(router);
 
         // router.back();
-    }
+    }    
 </script>
 
 
@@ -32,7 +33,7 @@
                 </div> -->
                 <div>
                     <p>{{ $t("about.designedBy") }}</p>
-                    <p class="by">{{ $t("about.author") }}</p>
+                    <a class="by" :href="es.about.authorLink" target="_blank">{{ $t("about.author") }}</a>
                 </div>
             </section>          
             <section class="faq">
@@ -109,12 +110,14 @@
         margin-bottom: 0;
     }
 
-    .credits p.by {
+    .credits .by {
         font-weight: 600;
+        text-align: center;
     }
 
     .faq {
         padding: 40px;
+        max-width: 420px;
         display: flex;
         flex-direction: column;
         gap: 24px;
@@ -165,8 +168,9 @@
     } */
 
     .promo {
-        margin: 0 40px;    
+        margin: 0 25px;    
         position: relative;           
+        max-width: 420px;
     }
     
     .promo .wrapper {
@@ -175,6 +179,7 @@
 
     .promo .wrapper p {
         text-align: center;
+        /* min-width: 267px; */
     }
 
     .promo .wrapper a {
@@ -202,9 +207,6 @@
 
     /* DESKTOP */
     @media screen and (min-width: 769px) {
-       .faq,
-       .promo {
-            max-width: 420px;
-       }
+       
     }
 </style>

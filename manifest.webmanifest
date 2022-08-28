@@ -1,6 +1,6 @@
 {
-    "short_name": "Algo Particular",
-    "name": "Algo Particular",
+    "short_name": "Praxis",
+    "name": "Praxis, Algo Particular",
     "start_url": "/index.html",
     "display": "standalone",
     "background_color": "#10100F",
@@ -8,12 +8,12 @@
     "orientation": "portrait-primary",
     "icons": [
       {
-        "src": "./src/assets/icon-32.png",
+        "src": "/icon-32.png",
         "type": "image/png",
         "sizes": "32x32" 
       },
       {
-        "src": "./src/assets/icon-512.png",
+        "src": "/icon-512.png",
         "type": "image/png",
         "sizes": "512x512" 
       }
