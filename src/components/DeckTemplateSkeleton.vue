@@ -58,13 +58,15 @@
 
 </script>
 
-<template>
-    <p class="deckIntro">{{ $t("oracle.deckLoading") }}</p>
-    <div class="deckWrapper">
-        <template v-for="item in props.amountOfCards" :key="item">
-            <DeckItem :loading="true"/>
-        </template>
-    </div>
+<template> 
+    <main id="cardDeck" class="loading">  
+        <p class="deckIntro">{{ $t("oracle.deckLoading") }}</p>
+        <div class="deckWrapper">
+            <template v-for="item in props.amountOfCards" :key="item">
+                <DeckItem :loading="true"/>
+            </template>
+        </div>
+    </main>
 </template>
 
 <style>

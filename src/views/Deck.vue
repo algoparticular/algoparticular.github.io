@@ -15,17 +15,15 @@
 </script>
 
 <template>
-    <div class="content deck">        
-        <main id="cardDeck">        
-            <Suspense>
-                <template #default>
-                    <DeckTemplate :amountOfCards="cardsAmount"/>
-                </template>
-                <template #fallback> 
-                    <DeckTemplateSkeleton :amountOfCards="cardsAmount"/>
-                </template>
-            </Suspense>
-        </main>
+    <div class="content deck"> 
+        <Suspense>
+            <template #default>
+                <DeckTemplate :amountOfCards="cardsAmount"/>
+            </template>
+            <template #fallback> 
+                <DeckTemplateSkeleton :amountOfCards="cardsAmount"/>
+            </template>
+        </Suspense>
         <!-- <button class="back" @click="navigate('/')"></button> -->
         
         <Toolbar :hideAction="true"/>

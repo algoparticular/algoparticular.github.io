@@ -449,6 +449,10 @@ button.secondary {
         box-shadow: none;
     }
 
+    &.home {
+        background-image: url('../assets/icon/home.svg');
+    }
+
     &.collection {
         background-image: url('../assets/icon/Collection.svg');
 

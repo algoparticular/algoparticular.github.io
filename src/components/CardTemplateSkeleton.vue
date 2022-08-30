@@ -82,7 +82,7 @@ export default {
             <p>{{ $t("loading["+randomIndex+"]") }}</p>
         </div>
     </div>
-	<main class="cardWrapper">
+	<main class="cardWrapper loading">
         <div class="imgWrapper"></div>    
 
         <div class="textWrapper">

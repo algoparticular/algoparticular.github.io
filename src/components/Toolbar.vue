@@ -68,7 +68,7 @@
 <template>
     <div id="toolbar" :class="{active: showMenu}">
         <div class="topContainer">
-            <button class="secondary collection" :class="{active: props.isCollectionPage}" @click="handleNavigate('/')"></button>
+            <button class="secondary home" @click="handleNavigate('/')"></button>
 
             <button v-if="props.isBroteButton" class="main collect" @click="collectCard()">                
                 <svg class="icon brote" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
@@ -129,6 +129,12 @@
 
         height: v-bind(activeHeight);
         justify-content: flex-start;
+    }
+
+    /* HIDE TOOLBAR IN LOADINGS */
+    #cardDeck.loading + #toolbar,
+    .cardWrapper.loading + #toolbar {
+        visibility: hidden;
     }
          
     /* DESKTOP */
