@@ -1,37 +1,18 @@
 <script setup>
     import Toolbar from '../components/Toolbar.vue';	
     import CardTemplate from '../components/CardTemplate.vue';
-    import CardTemplateSkeleton from '../components/CardTemplateSkeleton.vue';
-    
-    import { onBeforeMount, onMounted, ref } from 'vue';
+    import CardTemplateSkeleton from '../components/CardTemplateSkeleton.vue';    
 
-    const props = defineProps({
-        id: String
-    });
-
-    let cardId = "10";
-
-    if (props.id != null) {
-        cardId = props.id;
-    }
-
-    onBeforeMount (() => {
-        
-    });
-
-    onMounted (() => {
-        // console.log(cardId);
-    });
 </script>
 
 <template>
     <div class="content">
         <Suspense>
             <template #default>
-                <CardTemplate :cardId="cardId"/>
+                <CardTemplate :id="$route.params.id"/>
             </template>
             <template #fallback> 
-                <CardTemplateSkeleton :cardId="cardId"/>
+                <CardTemplateSkeleton :id="$route.params.id"/>
             </template>
         </Suspense>
         <Toolbar :hideAction="true"/>

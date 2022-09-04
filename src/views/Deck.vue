@@ -3,15 +3,18 @@
     import DeckTemplate from '../components/DeckTemplate.vue';
     import DeckTemplateSkeleton from '../components/DeckTemplateSkeleton.vue';
 
-    import { onMounted, ref } from 'vue';
+    import { onBeforeMount, ref } from 'vue';
     import { useRouter } from 'vue-router';
-    
+
     const router = useRouter();
     const cardsAmount = ref(33);
 
     const navigate = (url) => {
         router.push({ path: url, replace: true });
     };
+
+    onBeforeMount (() => {
+    });    
 </script>
 
 <template>

@@ -138,6 +138,7 @@
 
 		max-width: 370px;
         min-height: 100px;
+		color: #F7F8F1;
     }    
     
 

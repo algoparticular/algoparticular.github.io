@@ -21,6 +21,7 @@
         return array;
     }
 
+    //This make possible the loading skeleton state
     const loadDeckData = async () => {
         return new Promise((resolve) => {
             setTimeout(() => {                

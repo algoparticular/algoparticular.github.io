@@ -46,9 +46,8 @@ const router = createRouter({
     },
     {
       name: "card",
-      path: "/card",
+      path: "/card/:id",
       component: Card,
-      props: true
     },
     {
       path: "/collection",

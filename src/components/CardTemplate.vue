@@ -1,11 +1,20 @@
 <script setup>
-	import { onMounted, ref } from 'vue';
-    import { es } from "../json/copy_es.json";
+	import { onBeforeMount, ref } from 'vue';
+
+    //Database
+    import Airtable from "airtable";
+    const base = new Airtable({ apiKey: "keyLdBi48iZZkEOMG" }).base("appgHXHkRRjGjbYgM");
 
     const props = defineProps({
-        cardId: String
-    });    
+        id: String
+    });
 
+    const card = ref({});
+    const cover = ref('');
+    const color = ref('');
+    const colorAlt = ref('');  
+
+    //This make possible the loading skeleton state
     const loadCardData = async () => {
         return new Promise((resolve) => {
             setTimeout(() => {
@@ -16,37 +25,47 @@
     
     const data = ref(await loadCardData());
 
-    // onMounted (() => {
-    //      console.log(props.cardId);       
-    // });
+    onBeforeMount (() => {
+        base('Oracle cards').select({
+            view: 'List'
+        }).firstPage(function(err, records) {
+            if (err) { console.error(err); return; }
+
+            card.value = records[props.id].fields;
+
+            cover.value = 'url(' + card.value.image[0].url + ')';
+            color.value = card.value.color;
+            colorAlt.value = card.value.colorAlt;
+        });
+    });   
 </script>
 
 <template>
-	<main class="cardWrapper" :style="{backgroundColor: es.cards[props.cardId].color}" :class="{fixedHeight: es.cards[props.cardId].invitation === ' '}">
-        <div class="imgWrapper" :style="{ backgroundImage: 'url(/cards/' + props.cardId + '.jpg)' }"></div>
+	<main class="cardWrapper" :class="{fixedHeight: card.invitation === ' '}">
+        <div class="imgWrapper"></div>
         
         <div class="textWrapper">
-            <h4 :style="{color: es.cards[props.cardId].colorAlt}">
-                {{ $t("cards["+props.cardId+"].name") }}
+            <h4>
+                {{ card['name_'+this.$i18n.locale] }}
             </h4>
-            <p class="" :style="{color: es.cards[props.cardId].colorAlt}">
-                {{ $t("cards["+props.cardId+"].description") }}
+            <p class="">
+                {{ card['description_'+this.$i18n.locale] }}
             </p>
             <div class="bottom">
                 <div>
-                    <h5 v-if="es.cards[props.cardId].invitation != ' '" :style="{color: es.cards[props.cardId].colorAlt}">
+                    <h5 v-if="card.invitation != ' '">
                         {{ $t("oracle.cardAfirmattion") }}
                     </h5>
-                    <p :style="{color: es.cards[props.cardId].colorAlt}">
-                        {{ $t("cards["+props.cardId+"].afirmation") }}
+                    <p>
+                        {{ card['affirmation_'+this.$i18n.locale] }}
                     </p>
                 </div>
-                <div v-if="es.cards[props.cardId].invitation != ' '">
-                    <h5 :style="{color: es.cards[props.cardId].colorAlt}">
+                <div v-if="card.invitation != ' '">
+                    <h5>
                         {{ $t("oracle.cardInvitation") }}
                     </h5>
-                    <p :style="{color: es.cards[props.cardId].colorAlt}">
-                        {{ $t("cards["+props.cardId+"].invitation") }}
+                    <p>
+                        {{ card['invitation_'+this.$i18n.locale] }}
                     </p>
                 </div>
             </div>
@@ -55,10 +74,16 @@
 </template>
 
 <style>
+    h4, h5, p {
+        color: v-bind(colorAlt);
+    }
+
     .cardWrapper {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+
+        background-color: v-bind(color);
     }
 
     .cardWrapper.fixedHeight {
@@ -72,6 +97,7 @@
         padding-top: 100%;
         overflow: hidden;
 
+        background-image: v-bind(cover);
         background-size: cover;
         box-shadow: inset 0px 6px 9px rgba(16, 16, 15, 0.36), inset 0px -6px 9px rgba(16, 16, 15, 0.36);              
     }
