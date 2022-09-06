@@ -12,7 +12,7 @@
     const card = ref({});
     const cover = ref('');
     const color = ref('');
-    const colorAlt = ref('');  
+    const colorAlt = ref('');
 
     //This make possible the loading skeleton state
     const loadCardData = async () => {
@@ -25,7 +25,8 @@
     
     const data = ref(await loadCardData());
 
-    onBeforeMount (() => {
+    onBeforeMount (() => {        
+
         base('Oracle cards').select({
             view: 'List'
         }).firstPage(function(err, records) {
@@ -35,7 +36,7 @@
 
             cover.value = 'url(' + card.value.image[0].url + ')';
             color.value = card.value.color;
-            colorAlt.value = card.value.colorAlt;
+            colorAlt.value = card.value.colorAlt;            
         });
     });   
 </script>
@@ -46,10 +47,10 @@
         
         <div class="textWrapper">
             <h4>
-                {{ card['name_'+this.$i18n.locale] }}
+                {{ card['name_'+$i18n.locale] }}
             </h4>
             <p class="">
-                {{ card['description_'+this.$i18n.locale] }}
+                {{ card['description_'+$i18n.locale] }}
             </p>
             <div class="bottom">
                 <div>
@@ -57,7 +58,7 @@
                         {{ $t("oracle.cardAfirmattion") }}
                     </h5>
                     <p>
-                        {{ card['affirmation_'+this.$i18n.locale] }}
+                        {{ card['affirmation_'+$i18n.locale] }}
                     </p>
                 </div>
                 <div v-if="card.invitation != ' '">
@@ -65,7 +66,7 @@
                         {{ $t("oracle.cardInvitation") }}
                     </h5>
                     <p>
-                        {{ card['invitation_'+this.$i18n.locale] }}
+                        {{ card['invitation_'+$i18n.locale] }}
                     </p>
                 </div>
             </div>
@@ -73,7 +74,7 @@
     </main>
 </template>
 
-<style>
+<style scoped>
     h4, h5, p {
         color: v-bind(colorAlt);
     }
@@ -154,6 +155,15 @@
         .textWrapper {
             width: 40%;
             padding: 0 5%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            overflow-y: scroll;
+        }
+
+        .textWrapper p { 
+            font-size: 16px;
         }
     }
 </style>

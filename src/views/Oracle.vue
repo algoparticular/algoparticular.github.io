@@ -3,40 +3,22 @@
     import DeckTemplate from '../components/DeckTemplate.vue';
     import DeckTemplateSkeleton from '../components/DeckTemplateSkeleton.vue';
 
-    import { onBeforeMount, onBeforeUnmount, ref } from 'vue'; 
-	import { getAuth } from 'firebase/auth';
-	import { useRouter } from 'vue-router';    
+    import { onBeforeMount, ref } from 'vue';
+    import { useRouter } from 'vue-router';
 
-	const router = useRouter();
-	const auth = getAuth();
-
-	//Harcoded amount of cards.. help me :P
-	// 
-	const cardsAmount = ref(33);
-
-	const authListener = auth.onAuthStateChanged(function(user) {
-		if (!user) { // not logged in
-			// alert('you must be logged in to view this. redirecting to the home page');
-			router.push('/');
-		}
-	});
-
-	onBeforeUnmount(() => {
-		// clear up listener
-		authListener();
-	});
+    const router = useRouter();
+    const cardsAmount = ref(33);
 
     const navigate = (url) => {
         router.push({ path: url, replace: true });
     };
 
+    onBeforeMount (() => {
+    });    
 </script>
 
 <template>
     <div class="content deck"> 
-		<h2>{{ $t("message.praxisCollectionTitle") }}</h2>
-		<p>{{ $t("message.praxisCollectionDescrip") }}</p>
-
         <Suspense>
             <template #default>
                 <DeckTemplate :amountOfCards="cardsAmount"/>

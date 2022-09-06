@@ -4,13 +4,14 @@ import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import Home from '../views/Home.vue';
 import Register from '../views/Register.vue';
 import SignIn from '../views/SignIn.vue';
-import Deck from '../views/Deck.vue';
+import Oracle from '../views/Oracle.vue';
 import Card from '../views/Card.vue';
-import Collection from '../views/Collection.vue';
+import Deck from '../views/Deck.vue';
 import PageNotFound from '../views/PageNotFound.vue';
 import About from '../views/About.vue';
 import Collaborate from '../views/Collaborate.vue';
 import Onboarding from '../views/Onboarding.vue';
+import Share from '../views/Share.vue';
 
 // Navigation object
 const router = createRouter({
@@ -37,12 +38,12 @@ const router = createRouter({
       component: Collaborate,
     },
     {
-      path: "/oracle",
+      path: "/intro",
       component: Onboarding,
     },
     {
-      path: "/deck",
-      component: Deck,
+      path: "/oracle",
+      component: Oracle,
     },
     {
       name: "card",
@@ -50,8 +51,13 @@ const router = createRouter({
       component: Card,
     },
     {
-      path: "/collection",
-      component: Collection,
+      name: "share",
+      path: "/share/:id",
+      component: Share,
+    },
+    {
+      path: "/deck",
+      component: Deck,
       meta: {
         requiresAuth: true
       }

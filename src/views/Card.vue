@@ -1,8 +1,7 @@
 <script setup>
     import Toolbar from '../components/Toolbar.vue';	
     import CardTemplate from '../components/CardTemplate.vue';
-    import CardTemplateSkeleton from '../components/CardTemplateSkeleton.vue';    
-
+    import CardTemplateSkeleton from '../components/CardTemplateSkeleton.vue';
 </script>
 
 <template>
