@@ -92,7 +92,8 @@
             "cardAfirmattion": "Afirmación",
             "cardInvitation": "Invitación",
             "collectionTitle": "El mazo",
-            "collectionDescrip": "you can do it"
+            "collectionDescrip": "you can do it",
+            "linkCopied": "Copiado!"
         },
         "loading": [
             "conversando con los Maestros...",

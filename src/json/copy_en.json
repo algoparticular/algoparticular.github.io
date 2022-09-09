@@ -91,7 +91,8 @@
             "cardAfirmattion": "Afirmation",
             "cardInvitation": "Invitation",
             "collectionTitle": "The deck",
-            "collectionDescrip": "you can do it"
+            "collectionDescrip": "you can do it",
+            "linkCopied": "Copied!"
         },        
         "loading": [
             "talking with the Masters...",

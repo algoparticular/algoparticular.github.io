@@ -2,6 +2,7 @@
     import Toolbar from '../components/Toolbar.vue';	
     import CardTemplate from '../components/CardTemplate.vue';
     import CardTemplateSkeleton from '../components/CardTemplateSkeleton.vue';
+
 </script>
 
 <template>
@@ -14,7 +15,7 @@
                 <CardTemplateSkeleton :id="$route.params.id"/>
             </template>
         </Suspense>
-        <Toolbar :hideAction="true"/>
+        <Toolbar :shareAction="true" :cardId="$route.params.id"/> 
     </div>
 </template>
 

@@ -18,15 +18,26 @@
     const loadCardData = async () => {
         return new Promise((resolve) => {
             setTimeout(() => {
-                resolve();
+                base('Oracle cards').select({
+                    view: 'List'
+                }).firstPage(function(err, records) {
+                    if (err) { console.error(err); return; }
+
+                    card.value = records[props.id].fields;
+
+                    cover.value = 'url(' + card.value.image[0].url + ')';
+                    color.value = card.value.color;
+                    colorAlt.value = card.value.colorAlt;    
+                    
+                    resolve();        
+                });                
             }, 4000)
         })
     }
     
     const data = ref(await loadCardData());
 
-    onBeforeMount (() => {        
-
+    // onBeforeMount (() => {
         base('Oracle cards').select({
             view: 'List'
         }).firstPage(function(err, records) {
@@ -38,7 +49,7 @@
             color.value = card.value.color;
             colorAlt.value = card.value.colorAlt;            
         });
-    });   
+    // });   
 </script>
 
 <template>
