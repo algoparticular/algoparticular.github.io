@@ -16,7 +16,7 @@
 
     console.log(router);
 
-    const shareUrl = 'https://algoparticular.com/'+route.params.id;
+    const shareUrl = 'https://algoparticular.com/card/'+route.params.id;
 
     const copyUrl = () => {
         navigator.clipboard.writeText(shareUrl);

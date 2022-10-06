@@ -109,9 +109,10 @@ export default {
         width: 100vw;
         height: 100vh;
         position: absolute;
-        background: rgba(245, 248, 241, 0.18);
+        /* background: rgba(245, 248, 241, 0.18);
         backdrop-filter: blur(6px);
-        -webkit-backdrop-filter: blur(6px);    
+        -webkit-backdrop-filter: blur(6px);     */
+        background: #143246;
         z-index: 1;
         display: flex;
         flex-direction: column;
