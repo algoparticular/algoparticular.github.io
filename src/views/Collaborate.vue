@@ -67,7 +67,7 @@
             </section>
             <section class="footerSection">
                 <img class="logo" src="../assets/Logo_mana.svg"/>
-                <div class="art" alt="Algo Particular"></div>
+                <!-- <div class="art" alt="Algo Particular"></div> -->
             </section>
 		</main> 
         <Toolbar />
