@@ -10,7 +10,9 @@
 <template>
 	<div class="content landing">
         <Header>
-            
+            <template v-slot:logo>
+                <img alt="Algo Particular" src="../assets/SeedWhite.svg">
+            </template>
         </Header>
 
         <section id="hero">
@@ -72,7 +74,7 @@
             height: 30vh;
             width: 13vw;
 
-            bottom: 27vh;
+            bottom: 11vh;
             right: 9vw;            
     }
 
@@ -82,14 +84,14 @@
             width: 12vw;
 
             top: 13vh;
-            right: 27vw;
+            right: 18vw;
     }
     .cell.three {
             background-image: url('../assets/hero/cell-three.png');            
             height: 18vh;
             width: 15vw;
 
-            bottom: 25vh;
+            bottom: 9vh;
             left: 3vw;
     }    
 

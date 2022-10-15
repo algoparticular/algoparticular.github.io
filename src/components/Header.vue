@@ -7,7 +7,6 @@
 
     const router = useRouter();
     
-    
     //handle menu
     const toggleMenu = () => {
         showMenu.value = !showMenu.value;
@@ -40,8 +39,12 @@
 
 <template>
     <header>
+        <div class="justABox">
+
+        </div>
+
         <div id="logo">
-            <!-- <img src="../assets/icon_praxis.svg"/> -->
+            <slot name="logo"></slot>
         </div>  
 
         <Transition name="slide-fade" mode="out-in">
@@ -61,7 +64,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        position: fixed;
+        position: absolute;
         z-index: 11;
         width: 96vw;
 
@@ -77,7 +80,10 @@
     }
 
     #logo img {
-        width: 50px;
+        width: 40px;
     }
 
+    .justABox {
+        width: 50px;
+    }
 </style>
