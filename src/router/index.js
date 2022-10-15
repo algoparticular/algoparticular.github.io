@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 
+import Landing from '../views/Landing.vue';
 import Home from '../views/Home.vue';
 import Register from '../views/Register.vue';
 import SignIn from '../views/SignIn.vue';
@@ -20,6 +21,10 @@ const router = createRouter({
     {
       path: "/",
       component: Home,
+    },
+    {
+      path: "/landing",
+      component: Landing,
     },
     {
       path: "/register",
