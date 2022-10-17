@@ -2,24 +2,22 @@
     "en": {
         "message": {
             "hello": "Algo Particular tells the stories of a particle that upon becoming self-aware, learns to navigate the Universe freely.\nUnder the Hermetic premise 'As above, so below', it conveys its truth: we are all the same, we are all one, we are (not from) here.",
-            "seeGallery": "View full gallery",
-            "shops": "Shops",
-            "shopFC": "Flashcookie store, only in Argentina",
-            "shopTL": "Threadless store, shipping worldwide from the US",
-            "shopHEN": "Collect particles on Hic et Nunc!",
-            "copyrightA": "Ideated by",
-            "copyrightB": "co-created with the ❤ of a",
-            "copyrightC": "community",
-            "copyrightApp": "2022 copyright ©",
-            "community": "Algo Particular could not seek and transmit its purpose if it were not for other particles that, along the way, co-create or collaborate with the development and expression of this Universe.\nTo all of them I am infinitely grateful.",
-            "communityA": "Protons",
-            "communityB": "Neutrons",
-            "communityC": "Electrons",
+            "copyright": "© Algo Particular is a project from ",
             "back": "Back",
             "notFound": "Just empty space...",
             "notFoundCopy": "Error or not, I invite you to take this opportunity to be here. No social mask is needed on this 404 page.\n\nA simple opportunity to close your eyes and exhale all the air. Releasing every muscle in our face, making very slow movements while we scan our body.\n\nHow did I get to this page? What frequency am I vibrating at?\n\nAnd when you need it, open your eyes again. Smile and express gratitude to someone, to something, and specially to yourself.\n\nThank you, now you can continue browsing.",
             "notFoundButton": "Go back to site",
             "praxisIntro": "Welcome to the Particles' Oracle.\n\nClose your eyes y pon intención verdadera en eso que vibra en tu interior. (Currently only in Spanish)"            
+        },
+        "landing": {
+            "intro": "¿Y tú qué tienes de particular?",
+            "oracleTitle": "Orienta a tu intuición",
+            "oracleDescrip": "Al igual que cuando recorremos un lugar, tomamos la guía de un mapa o una brújula, al navegar el Universo de forma consciente necesitamos contar con la ayuda de herramientas que guíen nuestra intuición.",
+            "oracleAction": "Consulta al Oráculo",
+            "aboutTitle": "Navega el Universo",
+            "aboutDescrip": "Nuestra misión es invitar a las personas tanto a la acción como a la reflección. Utilizando el arte y la filosofía, buscamos conectar con lo que hace vibrar nuestro interior, esa brújula interna que nos invita a un camino con corazón.",
+            "aboutAction": "¿Quieres ayudar?",
+            "uno": "“Todos somos iguales, todos somos uno, (no) somos (de) aquí.”"
         },
         "nav": {
             "home": "Home",

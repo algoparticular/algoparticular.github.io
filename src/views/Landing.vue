@@ -17,7 +17,7 @@
         </Header>
 
         <section id="hero">
-            <h2>{{ $t("message.landingIntro") }}</h2>
+            <h2>{{ $t("landing.intro") }}</h2>
 
             <div class="splash particle"></div>
             <div class="splash cell one"></div>
@@ -29,11 +29,11 @@
         <section id="oracle">
             <div class="copy">
                 <div class="heading">
-                    <img/>
-                    <h3>{{ $t("message.landingOracleTitle") }}</h3>
+                    <img src="../assets/icon/Lab.svg"/>
+                    <h3>{{ $t("landing.oracleTitle") }}</h3>
                 </div>
-                <p>{{ $t("message.landingOracleDescrip") }}</p>
-                <button>{{ $t("message.landingOracleAction") }}</button>
+                <p>{{ $t("landing.oracleDescrip") }}</p>
+                <button>{{ $t("landing.oracleAction") }}</button>
             </div>
         
             <div class="oracle particle"></div>
@@ -46,16 +46,16 @@
 
             <div class="copy">
                 <div class="heading">
-                    <img/>
-                    <h3>{{ $t("message.landingAboutTitle") }}</h3>
+                    <img src="../assets/icon/Brote.svg"/>
+                    <h3>{{ $t("landing.aboutTitle") }}</h3>
                 </div>
-                <p>{{ $t("message.landingAboutDescrip") }}</p>
-                <button>{{ $t("message.landingAboutAction") }}</button>
+                <p>{{ $t("landing.aboutDescrip") }}</p>
+                <button>{{ $t("landing.aboutAction") }}</button>
             </div>
         </section>
 
         <section id="uno">
-            <h3>{{ $t("message.uno") }}</h3>
+            <h3>{{ $t("landing.uno") }}</h3>
         </section>
 
         <Footer />
@@ -161,7 +161,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 40px;
+        gap: 40px;        
     }
 
     .copy .heading {
@@ -175,7 +175,7 @@
     .copy .heading img {
         width: 48px;
         height: 48px;
-        background: #F7F8F1;
+        filter: drop-shadow(0px 2px 3px #C7BE8E);        
     }
 
     .copy .heading h3 {
@@ -188,6 +188,8 @@
         color: #F7F8F1;
         font-size: 18px;
         line-height: 135%;
+        text-align: center;
+        max-width: 310px;
     }
 
     .copy button {
@@ -230,17 +232,12 @@
         box-shadow: inset 0px -6px 81px rgba(255, 111, 97, 0.36), inset 0px 6px 81px rgba(20, 50, 70, 0.23);
     }
 
-    #about .copy {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 40px;
+    #about .copy {        
         width: 100vw;
     }
 
     #about .copy .heading img {
-        background: #FF6F61;
+        filter: drop-shadow(0px 2px 3px rgba(255, 111, 97, 0.56));
     }
 
     #about .copy .heading h3 {
