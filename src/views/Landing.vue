@@ -1,11 +1,24 @@
 <script setup>
 	import { onMounted, ref } from 'vue';
     import { useRouter } from 'vue-router';
+    import { animate, scroll } from "motion";
 
     import Header  from '../components/Header.vue';
     import Footer  from '../components/Footer.vue';
     
     const router = useRouter();
+
+    const items = document.querySelectorAll("li");   
+
+    //ON MOUNTED
+	onMounted (() => {   
+        // scroll(
+        //     animate("ul", {
+        //         transform: ["none", `translateX(-${items.length - 1}00vw)`]
+        //     }),
+        //     { target: document.querySelector("section") }
+        // );
+    });
 </script>
 
 <template>
@@ -42,7 +55,13 @@
         </section>
 
         <section id="about">
-            <div class="imageWrapper"></div>
+            <ul class="imageWrapper">
+                <li :style="{backgroundImage: 'url(/gallery/27.jpg)'}"></li>
+                <li :style="{backgroundImage: 'url(gallery/3.jpg)'}"></li>
+                <li :style="{backgroundImage: 'url(gallery/29.jpg)'}"></li>
+                <li :style="{backgroundImage: 'url(gallery/4.jpg)'}"></li>
+                <li :style="{backgroundImage: 'url(gallery/20.jpg)'}"></li>
+            </ul>
 
             <div class="copy">
                 <div class="heading">
@@ -187,13 +206,14 @@
     .copy p {
         color: #F7F8F1;
         font-size: 18px;
-        line-height: 135%;
+        line-height: 150%;
         text-align: center;
         max-width: 310px;
     }
 
     .copy button {
         color: #0381BA;
+        min-width: 310px;
     }
 
     .copy button:hover {
@@ -226,14 +246,43 @@
     }
 
     #about .imageWrapper {
+        display: flex;
+        position: sticky;
+        top: 0;
+        z-index: 0; 
+        list-style: none;
+
+        margin: 0;
+        padding: 0;
+        /* overflow: scroll; */
         width: 100vw;
         height: 100vh;
-        background-color: #A4DAD9;
-        box-shadow: inset 0px -6px 81px rgba(255, 111, 97, 0.36), inset 0px 6px 81px rgba(20, 50, 70, 0.23);
+        background-color: #A4DAD9;        
+    }
+
+    #about .imageWrapper li {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        flex: 0 0 auto;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        overflow: hidden;
+
+        margin: 0;
+        padding: 0;
+
+        background-size: cover;
+        background-position: center;
+        box-shadow: inset 0px -6px 81px rgba(255, 111, 97, 0.36), inset 0px 6px 81px rgba(20, 50, 70, 0.23);     
     }
 
     #about .copy {        
         width: 100vw;
+        height: 100%;
+        background-color: #F7F8F1;
+        z-index: 1;
     }
 
     #about .copy .heading img {
@@ -283,7 +332,7 @@
         }
 
         #about .imageWrapper {
-            width: 50vw;
+            width: 50vw;            
         }
 
         #about .copy {

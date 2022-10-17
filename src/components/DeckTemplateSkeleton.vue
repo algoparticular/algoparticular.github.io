@@ -52,7 +52,7 @@
             },   
         },
         mounted() {    
-                this.animateList();
+            this.animateList();
         }
     }
 
