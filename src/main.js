@@ -1,6 +1,7 @@
 import { createApp } from "vue";
 import { createI18n } from 'vue-i18n';
 import VueSocialSharing from 'vue-social-sharing';
+import VueKinesis from "vue-kinesis";
 
 import './css/style.css';
 import { es } from "./json/copy_es.json";
@@ -45,5 +46,6 @@ const app = createApp(App);
 app.use(i18n);
 app.use(router);
 app.use(VueSocialSharing);
+app.use(VueKinesis);
 
 app.mount("#app");

@@ -1,14 +1,17 @@
 <script setup>
 	import { onMounted, ref } from 'vue';
     import { useRouter } from 'vue-router';
-    import { animate, scroll } from "motion";
+    // import { animate, scroll, timeline } from "motion";
 
     import Header  from '../components/Header.vue';
     import Footer  from '../components/Footer.vue';
+
+    import { KinesisContainer, KinesisElement} from 'vue-kinesis';
     
     const router = useRouter();
 
-    const items = document.querySelectorAll("li");   
+    // const items = document.querySelectorAll("li");   
+    
 
     //ON MOUNTED
 	onMounted (() => {   
@@ -18,6 +21,13 @@
         //     }),
         //     { target: document.querySelector("section") }
         // );
+        
+        // scroll(animate(
+        //     ".splash.cell.one", { transform: "translateX(15vw) translateY(-10vh)" }, { duration: .3 }
+        // ));
+        // scroll(animate(
+        //     ".splash.cell.two", { transform: "translateX(-15vw) translateY(-5vh)" }, { duration: .3 }
+        // ));
     });
 </script>
 
@@ -29,17 +39,45 @@
             </template>
         </Header>
 
-        <section id="hero">
+        <!-- <section id="hero">
             <h2>{{ $t("landing.intro") }}</h2>
-
+            
             <div class="splash particle"></div>
             <div class="splash cell one"></div>
             <div class="splash cell two"></div>
             <div class="splash cell three"></div>
             <div class="splash background"></div>            
-        </section>
+        </section> -->
+        <kinesis-container id="hero" tag="section" easing="cubic-bezier(0.23, 1, 0.32, 1)">
+            <kinesis-element
+                tag="h2">
+                {{ $t("landing.intro") }}
+            </kinesis-element>
+            
+            <kinesis-element 
+                class="splash particle"
+                strength="30"
+                type="translate"/>
+            <kinesis-element 
+                class="splash cell one"
+                strength="20"   
+                transformOrigin="top left"
+                type="translate"/>
+            <kinesis-element 
+                class="splash cell two"
+                strength="60"
+                transformOrigin="bottom left"
+                type="translate"/>
+            <kinesis-element 
+                class="splash cell three"
+                strength="10"
+                transformOrigin="bottom right"
+                type="translate"/>
 
-        <section id="oracle">
+            <div class="splash background"></div>            
+        </kinesis-container>
+
+        <kinesis-container id="oracle" tag="section" event="scroll">
             <div class="copy">
                 <div class="heading">
                     <img src="../assets/icon/Lab.svg"/>
@@ -49,10 +87,17 @@
                 <button>{{ $t("landing.oracleAction") }}</button>
             </div>
         
-            <div class="oracle particle"></div>
-            <div class="oracle tree"></div>
+            <kinesis-element 
+                class="oracle particle"
+                strength="200"
+                type="translate"/>
+            <kinesis-element 
+                class="oracle tree"
+                strength="100"
+                type="translate"/>
+
             <div class="oracle stars"></div>
-        </section>
+        </kinesis-container>
 
         <section id="about">
             <ul class="imageWrapper">
