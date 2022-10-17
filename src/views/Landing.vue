@@ -3,6 +3,7 @@
     import { useRouter } from 'vue-router';
 
     import Header  from '../components/Header.vue';
+    import Footer  from '../components/Footer.vue';
     
     const router = useRouter();
 </script>
@@ -57,7 +58,7 @@
             <h3>{{ $t("message.uno") }}</h3>
         </section>
 
-        <!-- <Footer></Footer> -->
+        <Footer />
 	</div>
 </template>
 
@@ -110,29 +111,29 @@
     }
 
     .splash.cell.one {
-            background-image: url('../assets/hero/cell-one.png');
-            height: 30vh;
-            width: 13vw;
+        background-image: url('../assets/hero/cell-one.png');
+        height: 30vh;
+        width: 13vw;
 
-            top: 63vh;
-            right: 9vw;            
+        top: 63vh;
+        right: 9vw;            
     }
 
     .splash.cell.two {
-            background-image: url('../assets/hero/cell-two.png');
-            height: 22vh;
-            width: 12vw;
+        background-image: url('../assets/hero/cell-two.png');
+        height: 22vh;
+        width: 12vw;
 
-            top: 13vh;
-            right: 18vw;
+        top: 13vh;
+        right: 20vw;
     }
     .splash.cell.three {
-            background-image: url('../assets/hero/cell-three.png');            
-            height: 18vh;
-            width: 15vw;
+        background-image: url('../assets/hero/cell-three.png');            
+        height: 18vh;
+        width: 15vw;
 
-            top: 81vh;
-            left: 3vw;
+        top: 73vh;
+        left: 3vw;
     }    
 
     .splash.background {
@@ -141,7 +142,8 @@
         
         top: 0;
         z-index: 0;
-        
+        width: 100vw;
+        height: 100%;
     }
   
     /* ORACLE */
