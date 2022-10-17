@@ -52,7 +52,6 @@
             <div class="oracle particle"></div>
             <div class="oracle tree"></div>
             <div class="oracle stars"></div>
-            <div class="oracle background"></div>            
         </section>
 
         <section id="about">
@@ -171,8 +170,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 70vw;
-        padding: 0 15vw;
+        width: 100vw;
+        /* padding: 0 15vw; */
     }
 
     .copy {
@@ -181,6 +180,12 @@
         justify-content: center;
         align-items: center;
         gap: 40px;        
+    }
+
+    #oracle .copy {
+        position: absolute;
+        top: 15vh;
+        left: 5vw;
     }
 
     .copy .heading {
@@ -223,18 +228,18 @@
 
     .oracle.particle {
         background-image: url('../assets/oracle/particle.png');                
-        height: 40vh;
-        width: 42vw;
+        height: 50vh;
+        width: 50vw;
 
         top: 20vh;
-        right: 11vw;
+        right: 6vw;
         z-index: 9;
     }
 
     .oracle.tree {
         background-image: url('../assets/oracle/tree.png');                
-        height: 13vh;
-        width: 13vw;
+        height: 20vh;
+        width: 20vw;
 
         top: 23vh;
         right: 8vw;
@@ -244,22 +249,13 @@
     .oracle.stars {
         background-image: url('../assets/oracle/stars.png');
         background-size: contain;
+        background-repeat: repeat-x;
         
         top: 0;
         z-index: 3;
-        width: 95vw;
-        height: 95%;
-    }
-
-    .oracle.background {
-        background-image: url('../assets/oracle/background.png');
-        background-size: cover;
-        
-        top: 0;
-        z-index: 0;
         width: 100vw;
         height: 100%;
-    }
+    }    
 
     /* ABOUT */
     #about {
@@ -353,6 +349,11 @@
 
         #oracle {
             justify-content: flex-start;
+        }
+
+        #oracle .copy {
+            top: 20vh;
+            left: 15vw;
         }
 
         #about .imageWrapper {
