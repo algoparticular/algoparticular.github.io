@@ -109,7 +109,7 @@
         line-height: 130%;
     }
 
-    .splash {        
+    .splash, .oracle {        
         position: absolute;
         z-index: 3;
         
@@ -120,7 +120,6 @@
 
     .splash.particle {
         background-image: url('../assets/hero/particle.png');
-        background-repeat: no-repeat;        
         height: 70vh;
         width: 36vw;
 
@@ -221,12 +220,14 @@
         background-color: #E8E974;
     }
 
-    .oracle {
-
-    }
-
     .oracle.particle {
+        background-image: url('../assets/hero/particle.png');                
+        height: 70vh;
+        width: 36vw;
 
+        top: 20vh;
+        right: 11vw;
+        z-index: 9;
     }
 
     .oracle.tree {
