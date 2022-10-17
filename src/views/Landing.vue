@@ -51,6 +51,7 @@
         
             <div class="oracle particle"></div>
             <div class="oracle tree"></div>
+            <div class="oracle stars"></div>
             <div class="oracle background"></div>            
         </section>
 
@@ -221,9 +222,9 @@
     }
 
     .oracle.particle {
-        background-image: url('../assets/hero/particle.png');                
-        height: 70vh;
-        width: 36vw;
+        background-image: url('../assets/oracle/particle.png');                
+        height: 40vh;
+        width: 42vw;
 
         top: 20vh;
         right: 11vw;
@@ -231,11 +232,33 @@
     }
 
     .oracle.tree {
+        background-image: url('../assets/oracle/tree.png');                
+        height: 13vh;
+        width: 13vw;
+
+        top: 23vh;
+        right: 8vw;
+        z-index: 7;
+    }
+
+    .oracle.stars {
+        background-image: url('../assets/oracle/stars.png');
+        background-size: contain;
         
+        top: 0;
+        z-index: 3;
+        width: 95vw;
+        height: 95%;
     }
 
     .oracle.background {
+        background-image: url('../assets/oracle/background.png');
+        background-size: cover;
         
+        top: 0;
+        z-index: 0;
+        width: 100vw;
+        height: 100%;
     }
 
     /* ABOUT */
