@@ -147,20 +147,21 @@
         background-color: #6A428D;
         height: 90vh;
         padding: 5vh 0;
+        box-shadow: inset 0px 6px 63px rgb(255 111 97 / 36%), inset 0px -6px 64px rgb(20 50 70 / 90%);
     }
 
     h1 {
         color: #F7F8F1;
         position: absolute;
         z-index: 10;
-        top: 50vh;
-        left: 42vw; 
+        top: 23vh;
+        left: 7vw; 
         
-        width: 36vw;
         text-align: center;
-        font-size: 40px;
-        letter-spacing: 3px;
-        line-height: 130%;
+        width: 86vw;        
+        font-size: 36px;
+        letter-spacing: 2px;
+        line-height: 120%;
     }
 
     .splash, .oracle {        
@@ -173,51 +174,99 @@
     }
 
     .splash.particle {
-        background-image: url('../assets/hero/particle.png');
-        height: 70vh;
-        width: 36vw;
-
-        top: 20vh;
-        left: 11vw;
+        background-image: url('../assets/hero/particle.png');        
         z-index: 9;
+        height: 40vh;
+        width: 80vw;
+
+        top: 36vh;
+        left: 10vw;
     }
 
     .splash.cell.one {
         background-image: url('../assets/hero/cell-one.png');
-        height: 30vh;
-        width: 13vw;
+        height: 23vh;
+        width: 23vw;
 
-        top: 63vh;
+        top: 72vh;
         right: 9vw;            
     }
 
     .splash.cell.two {
         background-image: url('../assets/hero/cell-two.png');
-        height: 22vh;
-        width: 12vw;
+        height: 23vh;
+        width: 23vw;
 
-        top: 13vh;
-        right: 20vw;
+        top: 7vh;
+        left: 13vw;
     }
     .splash.cell.three {
         background-image: url('../assets/hero/cell-three.png');            
-        height: 18vh;
-        width: 15vw;
+        height: 23vh;
+        width: 23vw;
 
-        top: 73vh;
-        left: 3vw;
+        top: 80vh;
+        left: 9vw;
     }    
 
     .splash.background {
         background-image: url('../assets/hero/background.png');
-        background-size: cover;
+        background-size: cover;        
         
         top: 0;
         z-index: 0;
         width: 100vw;
         height: 100%;
     }
-  
+
+    /* DESKTOP */
+    @media screen and (min-width: 769px) {
+        h1 {
+            top: 50vh;
+            left: 42vw; 
+            
+            width: 36vw;        
+            font-size: 40px;
+            letter-spacing: 3px;
+            line-height: 130%;
+        }
+
+        .splash.particle {
+            height: 70vh;
+            width: 36vw;
+
+            top: 20vh;
+            left: 11vw;
+        }
+
+        .splash.cell.one {
+            height: 30vh;
+            width: 13vw;
+
+            top: 63vh;
+            right: 9vw;
+        }
+
+        .splash.cell.two {
+            height: 22vh;
+            width: 12vw;
+
+            top: 13vh;
+            left: auto;
+            right: 20vw;
+        }
+
+        .splash.cell.three {
+            height: 18vh;
+            width: 15vw;
+
+            top: 73vh;
+            left: 3vw;
+        }
+    }
+</style>
+
+<style scoped>
     /* ORACLE */
     #oracle {
         background-color: #0381BA;   
@@ -237,8 +286,9 @@
 
     #oracle .copy {
         position: absolute;
-        top: 15vh;
+        top: 10vh;
         left: 5vw;
+        width: 90vw;
         z-index: 9;
     }
 
@@ -281,54 +331,86 @@
     }
 
     .oracle.particle {
-        background-image: url('../assets/oracle/particle.png');                
-        height: 50vh;
-        width: 50vw;
+        background-image: url('../assets/oracle/particle.png');   
+        z-index: 9;             
+        height: 24vh;
+        width: 80vw;
 
-        top: 20vh;
-        right: 6vw;
-        z-index: 9;
+        top: 66vh;
+        left: 10vw;        
     }
 
     .oracle.tree {
-        background-image: url('../assets/oracle/tree.png');                
+        background-image: url('../assets/oracle/tree.png');     
+        z-index: 7;           
         height: 20vh;
         width: 20vw;
 
-        top: 23vh;
-        right: 8vw;
-        z-index: 7;
+        top: 63vh;
+        right: 18vw;        
     }
 
     .oracle.stars {
         background-image: url('../assets/oracle/stars.png');
         background-size: contain;
-        background-repeat: repeat-x;
+        background-repeat: repeat;
         
         top: 0;
         z-index: 3;
         width: 100vw;
         height: 100%;
-    }    
+    }
 
+    /* DESKTOP */
+    @media screen and (min-width: 769px) {
+        #oracle {
+            flex-direction: row;
+        }
+
+        #oracle {
+            justify-content: flex-start;
+        }
+
+        #oracle .copy {
+            top: 20vh;
+            left: 15vw;
+            width: auto;
+        }
+
+        .oracle.particle {            
+            height: 50vh;
+            width: 50vw;
+
+            top: 20vh;
+            left: auto;
+            right: 6vw;        
+        }
+
+        .oracle.tree {         
+            height: 20vh;
+            width: 20vw;
+
+            top: 23vh;
+            right: 8vw;        
+        }
+
+        .oracle.stars {
+            
+        }
+    }
+</style>
+
+<style scoped>
     /* ABOUT */
     #about {
         background-color: #F7F8F1;
         display: flex;
         align-items: center;
-        flex-direction: column;
+        flex-direction: column;      
+        height: 120vh;      
     }
 
-    #galleryWrapper {
-        /* display: flex;
-        position: sticky;
-        top: 0;
-        z-index: 0; 
-        list-style: none;
-
-        margin: 0;
-        padding: 0;
-        overflow: hidden; */
+    #galleryWrapper {        
         width: 100vw;
         height: 100vh;
         background-color: #A4DAD9;   
@@ -336,32 +418,15 @@
         background-position: center;
         box-shadow: inset 0px -6px 81px rgba(255, 111, 97, 0.36), inset 0px 6px 81px rgba(20, 50, 70, 0.23);    
 
-        background-image: url('/gallery/27.jpg');
-    }
-
-    #about #galleryWrapper li {
-        display: flex;
-        width: 100%;
-        height: 100%;
-        flex: 0 0 auto;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        overflow: hidden;
-
-        margin: 0;
-        padding: 0;
-
-        background-size: cover;
-        background-position: center;
-        box-shadow: inset 0px -6px 81px rgba(255, 111, 97, 0.36), inset 0px 6px 81px rgba(20, 50, 70, 0.23);     
-    }
+        background-image: url('/gallery/27.jpg'); /*default*/
+    }    
 
     #about .copy {        
         width: 100vw;
         height: 100%;
         background-color: #F7F8F1;
         z-index: 1;
+        padding: 5vh 0 15vh;        
     }
 
     #about .copy .heading img {
@@ -386,6 +451,25 @@
         background-color: #E8E974;
     }
 
+    /* DESKTOP */
+    @media screen and (min-width: 769px) {
+        #about {
+            flex-direction: row;
+            height: auto;
+        }
+
+        #galleryWrapper {
+            width: 50vw;            
+        }
+
+        #about .copy {
+            width: 50vw;
+            padding: 0;
+        }
+    }
+</style>
+
+<style scoped>
     /* UNO */
     #uno {
         background-color: #FF6F61;
@@ -397,40 +481,20 @@
 
     #uno h2 {
         color: #F7F8F1;
-        letter-spacing: 2px;
+        letter-spacing: 1px;
         margin: 0;
         padding: 0;
         white-space: pre-line;
         text-align: center;
         line-height: 130%;
+        font-size: 32px;
     }
 
-	/* DESKTOP */
+    /* DESKTOP */
     @media screen and (min-width: 769px) {
-        #oracle,
-        #about {
-            flex-direction: row;
+        #uno h2 {
+            font-size: 48px;
+            letter-spacing: 2px;
         }
-
-        #oracle {
-            justify-content: flex-start;
-        }
-
-        #oracle .copy {
-            top: 20vh;
-            left: 15vw;
-        }
-
-        #galleryWrapper {
-            width: 50vw;            
-        }
-
-        #about .copy {
-            width: 50vw;
-        }
-
-        /* #uno {
-            height: 80vh;
-        } */
     }
 </style>
