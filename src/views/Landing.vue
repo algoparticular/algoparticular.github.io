@@ -51,7 +51,7 @@
        
         <kinesis-container id="hero" tag="section" easing="cubic-bezier(0.23, 1, 0.32, 1)" perspective="100">
             <kinesis-element
-                tag="h2">
+                tag="h1">
                 {{ $t("landing.intro") }}
             </kinesis-element>
             
@@ -123,7 +123,7 @@
         </section>
 
         <section id="uno">
-            <h3>{{ $t("landing.uno") }}</h3>
+            <h2>{{ $t("landing.uno") }}</h2>
         </section>
 
         <Footer />
@@ -144,7 +144,7 @@
         padding: 5vh 0;
     }
 
-    h2 {
+    h1 {
         color: #F7F8F1;
         position: absolute;
         z-index: 10;
@@ -384,12 +384,17 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 80vh;
+        height: 90vh;
     }
 
-    #uno h3 {
+    #uno h2 {
         color: #F7F8F1;
-        max-width: 500px;
+        letter-spacing: 2px;
+        margin: 0;
+        padding: 0;
+        white-space: pre-line;
+        text-align: center;
+        line-height: 130%;
     }
 
 	/* DESKTOP */
@@ -416,8 +421,8 @@
             width: 50vw;
         }
 
-        #uno {
-            height: 42vh;
-        }
+        /* #uno {
+            height: 80vh;
+        } */
     }
 </style>
