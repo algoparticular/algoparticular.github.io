@@ -70,7 +70,7 @@
 <template>
     <div id="toolbar" :class="{active: showMenu}">
         <div class="topContainer">
-            <button class="secondary home" @click="handleNavigate('/')"></button>
+            <button class="secondary home" @click="handleNavigate('/home')"></button>
 
             <button v-if="props.isBroteButton" class="main collect" @click="collectCard()">                
                 <svg class="icon brote" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">

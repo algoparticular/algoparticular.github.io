@@ -49,7 +49,7 @@
 
 <template>
     <nav id="menu">
-        <a v-if="props.isOracle" @click="navigate('/')">{{ $t("nav.home") }}</a>
+        <a v-if="props.isOracle" @click="navigate('/home')">{{ $t("nav.home") }}</a>
         <a v-else @click="navigate('/intro')">{{ $t("nav.intro") }}</a>
         
         <a @click="navigate('/about')">{{ $t("nav.about") }}</a>

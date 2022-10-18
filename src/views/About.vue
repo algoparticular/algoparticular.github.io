@@ -9,17 +9,15 @@
         router.push({ path: url});
     };
 
-    function goBack() {
-        console.log(router);
-
-        // router.back();
+    function goBack() {        
+        router.back();
     }    
 </script>
 
 
 <template>
     <div class="content">
-        <!-- <button class="back" @click="goBack()"></button> -->
+        <button class="back" @click="goBack()"></button>
 		<main id="about">
 
 			<section class="intro">
@@ -64,7 +62,7 @@
                 <div class="border"></div>
             </section>
 		</main> 
-        <Toolbar />
+        <!-- <Toolbar /> -->
 	</div>
 </template>
 

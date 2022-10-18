@@ -19,11 +19,11 @@ const router = createRouter({
   history: createWebHistory(),
   routes: [
     {
-      path: "/",
+      path: "/home",
       component: Home,
     },
     {
-      path: "/landing",
+      path: "/",
       component: Landing,
     },
     {

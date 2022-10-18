@@ -21,6 +21,11 @@
 
     const galleryWrapper = document.getElementById('galleryWrapper');
 
+    //handle navigation
+    const handleNavigate = (url) => {
+        router.push({ path: url }); //, replace: true
+    };
+
     // //ON MOUNTED
 	onMounted (() => {   
         setInterval(function(){
@@ -68,7 +73,7 @@
                 type="translate"/>
             <kinesis-element 
                 class="splash cell two"
-                strength="60"
+                strength="40"
                 transformOrigin="bottom right"
                 type="translate"/>
             <kinesis-element 
@@ -87,7 +92,7 @@
                     <h3>{{ $t("landing.oracleTitle") }}</h3>
                 </div>
                 <p>{{ $t("landing.oracleDescrip") }}</p>
-                <button>{{ $t("landing.oracleAction") }}</button>
+                <button @click="handleNavigate('/home')">{{ $t("landing.oracleAction") }}</button>
             </div>
         
             <kinesis-element 
@@ -118,7 +123,7 @@
                     <h3>{{ $t("landing.aboutTitle") }}</h3>
                 </div>
                 <p>{{ $t("landing.aboutDescrip") }}</p>
-                <button>{{ $t("landing.aboutAction") }}</button>
+                <button @click="handleNavigate('/collaborate')">{{ $t("landing.aboutAction") }}</button>
             </div>
         </section>
 
@@ -130,7 +135,7 @@
 	</div>
 </template>
 
-<style>
+<style scoped>
     section {
         height: 100vh;
         width: 100vw;
@@ -234,6 +239,7 @@
         position: absolute;
         top: 15vh;
         left: 5vw;
+        z-index: 9;
     }
 
     .copy .heading {

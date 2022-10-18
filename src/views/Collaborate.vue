@@ -11,8 +11,8 @@
     };
 
     function goBack() {
-        console.log(router);
-        // router.back();
+        // console.log(router);
+        router.back();
     }
 
     // onMounted(() => {
@@ -23,7 +23,7 @@
 
 <template>
     <div class="content">
-        <!-- <button class="back" @click="goBack()"></button> -->
+        <button class="back" @click="goBack()"></button>
 		<main id="collaborate">
 			
             <section class="howToHelp">
@@ -70,7 +70,7 @@
                 <!-- <div class="art" alt="Algo Particular"></div> -->
             </section>
 		</main> 
-        <Toolbar />
+        <!-- <Toolbar /> -->
 	</div>
 </template>
 
