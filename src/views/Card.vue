@@ -6,10 +6,7 @@
 
 </script>
 
-<template>
-    <Header 
-        hasBack="true"
-        hasMenu="true"/>
+<template>    
     <div class="content">
         <Suspense>
             <template #default>
@@ -19,7 +16,7 @@
                 <CardTemplateSkeleton :id="$route.params.id"/>
             </template>
         </Suspense>
-        <Toolbar :shareAction="true" :cardId="$route.params.id"/> 
+        <!-- <Toolbar :shareAction="true" :cardId="$route.params.id"/>  -->
     </div>
 </template>
 

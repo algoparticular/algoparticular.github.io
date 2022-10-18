@@ -59,7 +59,7 @@
 
     main {
         gap: 108px;
-        padding: 80px 0 108px;
+        padding: 108px 0 108px;
     }
 
     .content button.back {   

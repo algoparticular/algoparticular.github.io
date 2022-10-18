@@ -31,7 +31,6 @@
                 <DeckTemplateSkeleton :amountOfCards="cardsAmount"/>
             </template>
         </Suspense>
-        <!-- <button class="back" @click="navigate('/')"></button> -->
         
         <!-- <Toolbar :hideAction="true"/> -->
     </div>
@@ -47,14 +46,6 @@
         height: auto;            
     }
 
-    .deck button.back {   
-        margin: 48px 0;     
-        height: 40px;
-        background-repeat: no-repeat;
-        background-color: transparent;
-        background-image: url('../assets/icon/Back.svg');
-        filter: drop-shadow(0px 2px 3px rgb(199, 190, 142));
-    }
 
     /* DESKTOP */
     @media screen and (min-width: 769px) {

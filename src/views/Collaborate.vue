@@ -76,9 +76,8 @@
     }
 
     main {
-        padding-top: 80px;
+        padding: 108px 0 108px;
         gap: 108px;
-        padding-bottom: 108px;
         text-align: center;
     }
 

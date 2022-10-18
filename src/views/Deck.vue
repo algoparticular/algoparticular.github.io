@@ -55,7 +55,7 @@
     </div>
 </template>
 
-<style>
+<style scoped>
     .content.deck {
         padding: 9vh 0 108px; 
         display: flex;

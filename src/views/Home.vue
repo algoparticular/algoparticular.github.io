@@ -74,8 +74,7 @@
 		gap: 40px;
 
 		position: absolute;
-		right: 15vw;
-		bottom: 18vh;
+		bottom: 9vh;
     }	
 
     #panel p {
@@ -106,8 +105,8 @@
 	.oracle.particle {
         background-image: url('../assets/oracle/particle.png');   
         z-index: 9;             
-        height: 42vh;
-        width: 40vw;
+        height: 36vh;
+        width: 80vw;
 
         top: 18vh;
         left: 10vw;        
@@ -119,14 +118,14 @@
         height: 20vh;
         width: 20vw;
 
-        top: 18vh;
-        left: 33vw;        
+        top: 21vh;
+        left: 63vw;        
     }
 
     .oracle.stars {
         background-image: url('../assets/oracle/stars.png');
         background-size: contain;
-        background-repeat: repeat;
+        background-repeat: round;
         
         top: 0;
         z-index: 3;
@@ -139,7 +138,8 @@
     @media screen and (min-width: 769px) {        
 
 		#panel {
-			
+			right: 15vw;
+			bottom: 18vh;
 		}		
 
 		#panel p {
