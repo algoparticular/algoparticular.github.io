@@ -1,7 +1,7 @@
 <script setup>
 	import { onMounted, ref } from 'vue';
     import { useRouter } from 'vue-router';
-    // import { animate, scroll, timeline } from "motion";
+    import { animate } from "motion";
 
     import Header  from '../components/Header.vue';
     import Footer  from '../components/Footer.vue';
@@ -10,24 +10,34 @@
     
     const router = useRouter();
 
-    // const items = document.querySelectorAll("li");   
-    
+    const gallery = ref([
+        'url(/gallery/27.jpg)',
+        'url(/gallery/4.jpg)',
+        'url(/gallery/29.jpg)',
+        'url(/gallery/3.jpg)',
+        'url(/gallery/20.jpg)'
+    ]);
+    let currentIndex = 0;
 
-    //ON MOUNTED
+    const galleryWrapper = document.getElementById('galleryWrapper');
+
+    // //ON MOUNTED
 	onMounted (() => {   
-        // scroll(
-        //     animate("ul", {
-        //         transform: ["none", `translateX(-${items.length - 1}00vw)`]
-        //     }),
-        //     { target: document.querySelector("section") }
-        // );
-        
-        // scroll(animate(
-        //     ".splash.cell.one", { transform: "translateX(15vw) translateY(-10vh)" }, { duration: .3 }
-        // ));
-        // scroll(animate(
-        //     ".splash.cell.two", { transform: "translateX(-15vw) translateY(-5vh)" }, { duration: .3 }
-        // ));
+        setInterval(function(){
+            animate("#galleryWrapper", {
+                backgroundImage: gallery.value[currentIndex]
+            },
+            {
+                ease: "cubic-bezier(0.23, 1, 0.32, 1)"
+            });
+
+            if(currentIndex+1 == gallery.value.length ) {
+                currentIndex = 0;
+            } else {
+                currentIndex++;
+            }
+            console.log(currentIndex);
+        }, 5000);
     });
 </script>
 
@@ -38,17 +48,8 @@
                 <img alt="Algo Particular" src="../assets/SeedWhite.svg">
             </template>
         </Header>
-
-        <!-- <section id="hero">
-            <h2>{{ $t("landing.intro") }}</h2>
-            
-            <div class="splash particle"></div>
-            <div class="splash cell one"></div>
-            <div class="splash cell two"></div>
-            <div class="splash cell three"></div>
-            <div class="splash background"></div>            
-        </section> -->
-        <kinesis-container id="hero" tag="section" easing="cubic-bezier(0.23, 1, 0.32, 1)">
+       
+        <kinesis-container id="hero" tag="section" easing="cubic-bezier(0.23, 1, 0.32, 1)" perspective="100">
             <kinesis-element
                 tag="h2">
                 {{ $t("landing.intro") }}
@@ -57,27 +58,29 @@
             <kinesis-element 
                 class="splash particle"
                 strength="30"
+                axis="y"
                 type="translate"/>
             <kinesis-element 
                 class="splash cell one"
                 strength="20"   
+                axis="x"
                 transformOrigin="top left"
                 type="translate"/>
             <kinesis-element 
                 class="splash cell two"
                 strength="60"
-                transformOrigin="bottom left"
+                transformOrigin="bottom right"
                 type="translate"/>
             <kinesis-element 
                 class="splash cell three"
                 strength="10"
-                transformOrigin="bottom right"
+                transformOrigin="bottom left"
                 type="translate"/>
 
             <div class="splash background"></div>            
         </kinesis-container>
 
-        <kinesis-container id="oracle" tag="section" event="scroll">
+        <kinesis-container id="oracle" tag="section" easing="cubic-bezier(0.23, 1, 0.32, 1)" event="scroll">
             <div class="copy">
                 <div class="heading">
                     <img src="../assets/icon/Lab.svg"/>
@@ -100,13 +103,14 @@
         </kinesis-container>
 
         <section id="about">
-            <ul class="imageWrapper">
+            <!-- <ul id="galleryWrapper">
                 <li :style="{backgroundImage: 'url(/gallery/27.jpg)'}"></li>
                 <li :style="{backgroundImage: 'url(gallery/3.jpg)'}"></li>
                 <li :style="{backgroundImage: 'url(gallery/29.jpg)'}"></li>
                 <li :style="{backgroundImage: 'url(gallery/4.jpg)'}"></li>
                 <li :style="{backgroundImage: 'url(gallery/20.jpg)'}"></li>
-            </ul>
+            </ul> -->
+            <div id="galleryWrapper"></div>
 
             <div class="copy">
                 <div class="heading">
@@ -216,7 +220,6 @@
         align-items: center;
         justify-content: center;
         width: 100vw;
-        /* padding: 0 15vw; */
     }
 
     .copy {
@@ -310,8 +313,8 @@
         flex-direction: column;
     }
 
-    #about .imageWrapper {
-        display: flex;
+    #galleryWrapper {
+        /* display: flex;
         position: sticky;
         top: 0;
         z-index: 0; 
@@ -319,13 +322,16 @@
 
         margin: 0;
         padding: 0;
-        /* overflow: scroll; */
+        overflow: hidden; */
         width: 100vw;
         height: 100vh;
-        background-color: #A4DAD9;        
+        background-color: #A4DAD9;   
+        background-size: cover; 
+        background-position: center;
+        box-shadow: inset 0px -6px 81px rgba(255, 111, 97, 0.36), inset 0px 6px 81px rgba(20, 50, 70, 0.23);    
     }
 
-    #about .imageWrapper li {
+    #about #galleryWrapper li {
         display: flex;
         width: 100%;
         height: 100%;
@@ -383,6 +389,7 @@
 
     #uno h3 {
         color: #F7F8F1;
+        max-width: 500px;
     }
 
 	/* DESKTOP */
@@ -401,7 +408,7 @@
             left: 15vw;
         }
 
-        #about .imageWrapper {
+        #galleryWrapper {
             width: 50vw;            
         }
 
