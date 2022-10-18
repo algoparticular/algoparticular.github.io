@@ -8,7 +8,11 @@
     let auth;
 
     const props = defineProps({
-        isIntro: Boolean
+        hasIntro: Boolean,
+        hasHome: Boolean,
+        hasPraxis: Boolean,
+        hasAbout: Boolean,
+        hasCollaborate: Boolean,
     });
 
     const emit = defineEmits(['navigate','langChanged']); 
@@ -49,11 +53,12 @@
 
 <template>
     <nav id="menu">
-        <a v-if="props.isIntro" @click="navigate('/home')">{{ $t("nav.home") }}</a>
-        <a v-else @click="navigate('/intro')">{{ $t("nav.intro") }}</a>
+        <a v-if="props.hasHome" @click="navigate('/')">{{ $t("nav.home") }}</a>
+        <a v-if="props.hasPraxis" @click="navigate('/praxis')">{{ $t("nav.praxis") }}</a>
+        <a v-if="props.hasIntro" @click="navigate('/intro')">{{ $t("nav.intro") }}</a>
         
-        <a @click="navigate('/about')">{{ $t("nav.about") }}</a>
-        <a @click="navigate('/collaborate')">{{ $t("nav.collaborate") }}</a>
+        <a v-if="props.hasAbout" @click="navigate('/about')">{{ $t("nav.about") }}</a>
+        <a v-if="props.hasCollaborate" @click="navigate('/collaborate')">{{ $t("nav.collaborate") }}</a>
 
         <div id="languageSelect">
             <input type="radio" id="lang-es" value="es" v-model="$i18n.locale" @change="langChanged($i18n.locale)"/>

@@ -68,9 +68,9 @@
 </script>
 
 <template>
-    <div id="toolbar" :class="{active: showMenu}">
+    <div id="toolbar" class="glass" :class="{active: showMenu}">
         <div class="topContainer">
-            <button class="secondary home" @click="handleNavigate('/home')"></button>
+            <button class="secondary home" @click="handleNavigate('/praxis')"></button>
 
             <button v-if="props.isBroteButton" class="main collect" @click="collectCard()">                
                 <svg class="icon brote" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
@@ -99,6 +99,11 @@
             <Menu v-if="showMenu" 
                   @navigate="handleNavigate"
                   @langChanged="handleLangChanged"
+                  :hasHome="true"
+                  :hasIntro="false"
+                  :hasPraxis="false"
+                  :hasAbout="true"
+                  :hasCollaborate="true"
                   />  
         </transition>
 	</div>
@@ -114,15 +119,8 @@
         width: calc(90vw - 2px);
         height: 50px;
         padding: 0 5vw;     
-
-        background: rgba(243, 243, 243, 0.18);
-        border-radius: 18px 18px 0 0;
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(6px);
-        -webkit-backdrop-filter: blur(6px);
-        border: 1px solid rgba(255, 255, 255, 0.18);
-
-        transition: all .18s ease-out;
+        
+        border-radius: 18px 18px 0 0;        
     }
 
     #toolbar .topContainer {

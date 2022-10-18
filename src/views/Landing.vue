@@ -92,7 +92,7 @@
                     <h3>{{ $t("landing.oracleTitle") }}</h3>
                 </div>
                 <p>{{ $t("landing.oracleDescrip") }}</p>
-                <button @click="handleNavigate('/home')">{{ $t("landing.oracleAction") }}</button>
+                <button @click="handleNavigate('/praxis')">{{ $t("landing.oracleAction") }}</button>
             </div>
         
             <kinesis-element 

@@ -40,7 +40,11 @@
                 class="inFooter"
                 @navigate="handleNavigate"
                 @langChanged="handleLangChanged"
-                :isIntro="true"                
+                :hasHome="false"
+                :hasIntro="false"
+                :hasPraxis="true"
+                :hasAbout="true"
+                :hasCollaborate="true"
                 />
             <span class="copyright">© Algo Particular</span>
         </div>

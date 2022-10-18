@@ -149,7 +149,7 @@ h4 {
   font-weight: 400;
   font-size: 32px;
   line-height: 1.5em;
-  letter-spacing: -0.01em;
+  letter-spacing: 0;
   margin: 0 0 8px;
 }
 
@@ -477,6 +477,18 @@ button.secondary.fix {
   bottom: 8px;
 }
 
+.glass {
+  background-color: rgba(243, 243, 243, 0.18);
+  background-image: url("../assets/noise.png");
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  -webkit-transition: all .18s ease-out;
+  transition: all .18s ease-out;
+}
+
 /* TRANSITION */
 .fade-enter-from,
 .fade-leave-to {
@@ -485,8 +497,8 @@ button.secondary.fix {
 
 .fade-enter-active,
 .fade-leave-active {
-  -webkit-transition: opacity .8s ease-out;
-  transition: opacity .8s ease-out;
+  -webkit-transition: opacity .36s ease-out;
+  transition: opacity .36s ease-out;
 }
 
 /* *********** */

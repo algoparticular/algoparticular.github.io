@@ -1,7 +1,8 @@
 <script setup>
-    import Toolbar from '../components/Toolbar.vue';	
+    	
     import { useRouter } from 'vue-router';
     import { es } from "../json/copy_es.json";
+    import Footer  from '../components/Footer.vue';
     
     const router = useRouter();
 
@@ -22,18 +23,14 @@
 
 			<section class="intro">
 				<p>{{ $t("about.intro") }}</p>
-                <img src="../assets/Logo_mana.svg">
+                <a href="https://samasama.studio" target="_blank"><img src="../assets/samasama.svg"></a>
 			</section>  
             <section class="credits">
-                <!-- <div>
-                    <p>{{ $t("about.oracleDeck") }}</p>
-                    <p class="by">{{ $t("about.oracleAuthor") }}</p>
-                </div> -->
                 <div>
                     <p>{{ $t("about.designedBy") }}</p>
                     <a class="by" :href="es.about.authorLink" target="_blank">{{ $t("about.author") }}</a>
                 </div>
-            </section>          
+            </section>
             <section class="faq">
                 <h4 class="title">{{ $t("about.praxis") }}</h4>
                 <p>{{ $t("about.praxisDescrip") }}</p>
@@ -45,24 +42,12 @@
                     <button class="fake seed"></button>
                     <p>{{ $t("about.seed") }}</p>
                 </div>
-                <!-- <div>
-                    <button class="fake brote"></button>
-                    <p>{{ $t("about.brote") }}</p>
-                </div> -->
             </section>            
             <section class="cta">
                 <button @click="navigate('/collaborate')">{{ $t("about.cta") }}</button>
-            </section>
-            <section class="promo">
-                <div class="wrapper">
-                    <p>{{ $t("about.seeMore") }}</p>
-                    <p>{{ $t("about.seeMoreAction") }}</p>
-                    <a href="https://algoparticular.com" target="_blank"></a>
-                </div>
-                <div class="border"></div>
-            </section>
+            </section>            
 		</main> 
-        <!-- <Toolbar /> -->
+        <Footer />
 	</div>
 </template>
 
@@ -75,7 +60,7 @@
 
     main {
         gap: 108px;
-        padding: 60px 0 108px;
+        padding: 0px 0 108px;
     }
 
     .content button.back {   
@@ -88,8 +73,8 @@
     }
 
     .intro img {
-        width: 283px;
-        margin: 0 40px;
+        width: 220px;
+        margin: 16px 40px 0;
     }
 
     .credits {
@@ -165,43 +150,6 @@
         background-color: #E9EDD8;
     } */
 
-    .promo {
-        margin: 0 25px;    
-        position: relative;           
-        max-width: 420px;
-    }
-    
-    .promo .wrapper {
-        padding: 36px;
-    }
-
-    .promo .wrapper p {
-        text-align: center;
-        /* min-width: 267px; */
-    }
-
-    .promo .wrapper a {
-        background-color: #E9EDD8;
-        background-image: url(../assets/ilus.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: 50%;
-        height: 150px;
-        display: block;
-        z-index: 1;
-    }
-
-    .promo .border {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: 0;
-        border: 2px solid rgba(252, 252, 252, 0.42);
-        filter: drop-shadow(0px 2px 3px rgb(234, 234, 234));
-        border-radius: 18px; 
-    }
 
     /* DESKTOP */
     @media screen and (min-width: 769px) {

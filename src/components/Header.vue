@@ -47,12 +47,19 @@
             <slot name="logo"></slot>
         </div>  
 
-        <Transition name="slide-fade" mode="out-in">
-            <Menu v-if="showMenu" 
+        <Transition name="fade" mode="out-in">
+            <div class="menuOverlay glass" v-if="showMenu">
+            <Menu  
                 @navigate="handleNavigate"
                 @langChanged="handleLangChanged"
                 class="home"
+                :hasHome="true"
+                :hasIntro="false"
+                :hasPraxis="true"
+                :hasAbout="true"
+                :hasCollaborate="true"
                 />
+            </div>
         </Transition>
 		<button id="menuButton" class="secondary menu" :class="{active: showMenu}" @click="toggleMenu()"></button>	                         
     </header>
@@ -76,7 +83,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        filter: drop-shadow(0px 2px 3px rgba(16, 16, 15, .36));
+        /* filter: drop-shadow(0px 2px 3px rgba(16, 16, 15, .36)); */
+        filter: drop-shadow(0px 2px 3px rgba(234, 234, 234, 0.36));
     }
 
     #logo img {
@@ -85,5 +93,28 @@
 
     .justABox {
         width: 50px;
+    }
+
+    .menuOverlay {
+        width: 100vw;
+        height: 100vh;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;        
+    }
+
+    .menuOverlay nav {
+        gap: 56px;
+    }
+
+    .menuOverlay nav a,
+    .menuOverlay nav #languageSelect label,
+    .menuOverlay nav #languageSelect span {
+        font-size: 32px;
     }
 </style>

@@ -20,7 +20,8 @@
             "uno": "“Todos somos iguales,\ntodos somos uno,\n(no) somos (de) aquí.”"
         },
         "nav": {
-            "home": "El Oráculo",
+            "home": "Inicio",
+            "praxis": "El Oráculo",
             "intro": "Intro",
             "about": "¿Qué es esto?",
             "collaborate": "¿Quieres ayudar?",
@@ -48,16 +49,16 @@
             "3": ""
         },
         "about": {
-            "intro": "Gracias por probar Praxis, de",
+            "intro": "Algo Particular es un proyecto de",
             "oracleDeck": "Cartas oráculo escritas por",
             "oracleAuthor": "Belén Brito",
             "designedBy": "Desarrollada e ilustrada por",
             "author": "Juan Yañez",
             "authorLink": "https://juanmanuelynz.com",
-            "praxis": "¿Qué es Praxis?",
-            "praxisDescrip": "Praxis es una propuesta artístico/espiritual creada y desarrollada por Algo Particular.\n\nAl igual que cuando recorremos un lugar, tomamos la guía de un mapa o una brújula, en el camino del autodescubrimiento es beneficiosa la orientación del llamado “Plano Superior”, que no es otra que la guía de nuestro Ser más profundo.\n\nPraxis invita tanto a la acción como a la reflección, buscando conectar con lo que vibra en nuestro interior.",
-            "oracle": "Cartas del Oráculo de las Partículas",
-            "oracleDescrip": "Las Cartas del Oráculo, escritas por Belén Brito son una herramienta para aquellos que creemos que la magia existe. Con su luminosa calma, Belén nos insta a encontrar las respuestas en nuestro interior, utilizando cada carta como un espejo para evaluar o validar nuestro camino.\n\nEs así que las Partículas nos traen esos mensajes que nuestro Ser está necesitando en este momento, en este aquí y ahora.",
+            "praxis": "Entramando Are y Espíritu",
+            "praxisDescrip": "Algo Particular es una propuesta artístico/espiritual creada en 2020.\n\nNuestra misión es invitar a las personas tanto a la acción como a la reflección.\n\nUtilizando el arte y la filosofía, buscamos establecer contacto con nuestra intuición, esa brújula interna que nos invita a un camino con corazón.\n\nComo primer propuesta interactiva generamos Praxis, una versión digital de Cartas Oráculo.",
+            "oracle": "Praxis y las Cartas del Oráculo de las Partículas",
+            "oracleDescrip": "Al igual que cuando recorremos un lugar, tomamos la guía de un mapa o una brújula, en el camino del autodescubrimiento es beneficiosa la orientación del llamado “Plano Superior”, que no es otra que la guía de nuestro Ser más profundo.\n\nPraxis invita tanto a la acción como a la reflección, buscando conectar con lo que vibra en nuestro interior.\n\nLas Cartas del Oráculo, escritas por Belén Brito son una herramienta para aquellos que creemos que la magia existe. Con su luminosa calma, Belén nos insta a encontrar las respuestas de nuestro ser interno, utilizando cada carta como un espejo para evaluar o validar nuestro camino.\n\nEs así que las Partículas nos traen esos mensajes que nuestro Ser está necesitando en este momento, en este aquí y ahora.",
             "seed": "Pulsa la semilla\npara recibir un mensaje",
             "brote": "Pulsa el brote\npara coleccionarlo",
             "cta": "¿Quieres ayudar?",
