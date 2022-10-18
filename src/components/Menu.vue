@@ -8,7 +8,7 @@
     let auth;
 
     const props = defineProps({
-        isOracle: Boolean
+        isIntro: Boolean
     });
 
     const emit = defineEmits(['navigate','langChanged']); 
@@ -49,7 +49,7 @@
 
 <template>
     <nav id="menu">
-        <a v-if="props.isOracle" @click="navigate('/home')">{{ $t("nav.home") }}</a>
+        <a v-if="props.isIntro" @click="navigate('/home')">{{ $t("nav.home") }}</a>
         <a v-else @click="navigate('/intro')">{{ $t("nav.intro") }}</a>
         
         <a @click="navigate('/about')">{{ $t("nav.about") }}</a>
@@ -57,10 +57,10 @@
 
         <div id="languageSelect">
             <input type="radio" id="lang-es" value="es" v-model="$i18n.locale" @change="langChanged($i18n.locale)"/>
-            <label for="lang-es" :class="{active: $i18n.locale == 'es'}">es</label>
+            <label for="lang-es" :class="{active: $i18n.locale == 'es'}">Español</label>
             <span>|</span>
             <input type="radio" id="lang-en" value="en" v-model="$i18n.locale" @change="langChanged($i18n.locale)"/>
-            <label for="lang-en" :class="{active: $i18n.locale == 'en'}">en</label>
+            <label for="lang-en" :class="{active: $i18n.locale == 'en'}">English</label>
         </div>
 
         <!-- <div v-if="isLoggedIn">

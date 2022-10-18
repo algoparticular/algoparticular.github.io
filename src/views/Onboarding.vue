@@ -139,7 +139,7 @@
 						@navigate="handleNavigate"
 						@langChanged="handleLangChanged"
 						class="home"
-                        :isOracle="true"
+                        :isIntro="true"
 						/>  
 
 				    <div v-else class="contentContainer">

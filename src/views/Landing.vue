@@ -17,7 +17,7 @@
         'url(/gallery/3.jpg)',
         'url(/gallery/20.jpg)'
     ]);
-    let currentIndex = 0;
+    let currentIndex = 1;
 
     const galleryWrapper = document.getElementById('galleryWrapper');
 
@@ -27,7 +27,7 @@
     };
 
     // //ON MOUNTED
-	onMounted (() => {   
+	onMounted (() => {           
         setInterval(function(){
             animate("#galleryWrapper", {
                 backgroundImage: gallery.value[currentIndex]
@@ -41,7 +41,7 @@
             } else {
                 currentIndex++;
             }
-            console.log(currentIndex);
+            // console.log(currentIndex);
         }, 5000);
     });
 </script>
@@ -335,6 +335,8 @@
         background-size: cover; 
         background-position: center;
         box-shadow: inset 0px -6px 81px rgba(255, 111, 97, 0.36), inset 0px 6px 81px rgba(20, 50, 70, 0.23);    
+
+        background-image: url('/gallery/27.jpg');
     }
 
     #about #galleryWrapper li {
