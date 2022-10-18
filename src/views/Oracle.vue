@@ -1,4 +1,5 @@
 <script setup>
+    import Header from '../components/Header.vue';
     import Toolbar from '../components/Toolbar.vue';	
     import DeckTemplate from '../components/DeckTemplate.vue';
     import DeckTemplateSkeleton from '../components/DeckTemplateSkeleton.vue';
@@ -18,7 +19,10 @@
 </script>
 
 <template>
-    <div class="content deck"> 
+    <Header 
+            hasBack="true"
+            hasMenu="true"/>
+    <div class="content deck">         
         <Suspense>
             <template #default>
                 <DeckTemplate :amountOfCards="cardsAmount"/>
@@ -29,13 +33,13 @@
         </Suspense>
         <!-- <button class="back" @click="navigate('/')"></button> -->
         
-        <Toolbar :hideAction="true"/>
+        <!-- <Toolbar :hideAction="true"/> -->
     </div>
 </template>
 
 <style>
     .content.deck {
-        padding: 9vh 0 108px; 
+        padding: 13vh 0 108px; 
         display: flex;
         flex-direction: column;
         justify-content: center;

@@ -1,5 +1,6 @@
 <script setup>
     import Toolbar from '../components/Toolbar.vue';	
+    import Header from '../components/Header.vue';	
 
     import { onBeforeMount, ref } from 'vue';
     import { useRoute, useRouter } from 'vue-router';
@@ -14,7 +15,7 @@
     const cover = ref('');
     const showTooltip = ref(false);
 
-    console.log(router);
+    // console.log(router);
 
     const shareUrl = 'https://algoparticular.com/card/'+route.params.id;
 
@@ -48,9 +49,12 @@
 <template>
     <div class="content">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
-
-        <button class="back" @click="goBack()"></button>
-		<main id="share">
+        
+        <Header 
+            hasBack="true"
+            hasMenu="true"/>
+		
+        <main id="share">
             <div class="card">
                 <div class="illustration"></div>
                 <p class="text">{{ card['affirmation_'+$i18n.locale] }}</p>
@@ -110,7 +114,7 @@
             </div>
         </main>
 
-        <Toolbar :hideAction="true"/>
+        <!-- <Toolbar :hideAction="true"/> -->
     </div>
 </template>
 
@@ -118,11 +122,7 @@
     .content {
         background-color: #143246;
         /* height: auto; */
-    }
-
-    button.back {
-        margin: 24px;
-    }
+    }   
 
     #share {
         display: flex;
@@ -130,6 +130,7 @@
         justify-content: center;
         align-items: center;
         gap: 80px;
+        padding-top: 128px;
     }
 
     .card {

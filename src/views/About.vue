@@ -2,25 +2,24 @@
     	
     import { useRouter } from 'vue-router';
     import { es } from "../json/copy_es.json";
+    
     import Footer  from '../components/Footer.vue';
+    import Header from '../components/Header.vue';
     
     const router = useRouter();
 
     const navigate = (url) => {
         router.push({ path: url});
-    };
-
-    function goBack() {        
-        router.back();
-    }    
+    };     
 </script>
 
 
 <template>
     <div class="content">
-        <button class="back" @click="goBack()"></button>
+        <Header 
+            hasBack="true"
+            hasMenu="true"/>
 		<main id="about">
-
 			<section class="intro">
 				<p>{{ $t("about.intro") }}</p>
                 <a href="https://samasama.studio" target="_blank"><img src="../assets/samasama.svg"></a>
@@ -60,7 +59,7 @@
 
     main {
         gap: 108px;
-        padding: 0px 0 108px;
+        padding: 80px 0 108px;
     }
 
     .content button.back {   

@@ -1,4 +1,5 @@
 <script setup>
+    import Header from '../components/Header.vue';
     import Toolbar from '../components/Toolbar.vue';	
     import CardTemplate from '../components/CardTemplate.vue';
     import CardTemplateSkeleton from '../components/CardTemplateSkeleton.vue';
@@ -6,6 +7,9 @@
 </script>
 
 <template>
+    <Header 
+        hasBack="true"
+        hasMenu="true"/>
     <div class="content">
         <Suspense>
             <template #default>

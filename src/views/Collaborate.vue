@@ -1,29 +1,23 @@
 <script setup>
-    import Toolbar from '../components/Toolbar.vue';	
-    // import { onMounted, ref } from 'vue';
+    
     import { useRouter } from 'vue-router';
-    // import { Button } from '../components/Button.vue';
+    import Header from '../components/Header.vue';
+    import Footer from '../components/Footer.vue';
     
     const router = useRouter();
 
     const navigate = (url) => {
         router.push({ path: url });
     };
-
-    function goBack() {
-        // console.log(router);
-        router.back();
-    }
-
-    // onMounted(() => {
-		
-	// });
+    
 </script>
 
 
 <template>
-    <div class="content">
-        <button class="back" @click="goBack()"></button>
+    <div class="content">        
+        <Header 
+            hasBack="true"
+            hasMenu="true"/>
 		<main id="collaborate">
 			
             <section class="howToHelp">
@@ -70,7 +64,7 @@
                 <!-- <div class="art" alt="Algo Particular"></div> -->
             </section>
 		</main> 
-        <!-- <Toolbar /> -->
+        <Footer />
 	</div>
 </template>
 

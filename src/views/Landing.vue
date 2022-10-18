@@ -48,7 +48,7 @@
 
 <template>
 	<div class="landing">
-        <Header>
+        <Header hasMenu="true">
             <template v-slot:logo>
                 <img alt="Algo Particular" src="../assets/SeedWhite.svg">
             </template>
