@@ -70,7 +70,9 @@
                     :hasCollaborate="true" />
             </div>
         </Transition>
-		<button v-if="props.hasMenu" id="menuButton" class="secondary menu" :class="{active: showMenu}" @click="toggleMenu()"></button>	                         
+        <div class="justABox">
+		    <button v-if="props.hasMenu" id="menuButton" class="secondary menu" :class="{active: showMenu}" @click="toggleMenu()"></button>	                         
+        </div>
     </header>
 </template>
 

@@ -40,7 +40,7 @@
                 class="inFooter"
                 @navigate="handleNavigate"
                 @langChanged="handleLangChanged"
-                :hasHome="false"
+                :hasHome="true"
                 :hasIntro="false"
                 :hasPraxis="true"
                 :hasAbout="true"

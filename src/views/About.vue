@@ -17,8 +17,8 @@
 <template>
     <div class="content">
         <Header 
-            hasBack="true"
-            hasMenu="true"/>
+            :hasBack="true"
+            :hasMenu="true"/>
 		<main id="about">
 			<section class="intro">
 				<p>{{ $t("about.intro") }}</p>

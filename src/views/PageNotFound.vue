@@ -1,9 +1,13 @@
 <script setup>
-	import Toolbar from '../components/Toolbar.vue';	
+	import Footer  from '../components/Footer.vue';
+    import Header from '../components/Header.vue';
 </script>
 
 <template>
 	<div class="content">
+		<Header 
+            :hasBack="true"
+            :hasMenu="true"/>
 		<main id="home">
 			<img class="title" alt="Praxis, by Algo Particular" src="../assets/Logo_praxis.svg">
 
@@ -13,7 +17,7 @@
 				<!-- <p>{{ $t("message.notFoundButton") }}</p> -->
 			</section>
 		</main> 
-		<Toolbar />
+		<Footer />
 	</div>
 </template>
 

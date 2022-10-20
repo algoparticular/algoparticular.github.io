@@ -16,8 +16,8 @@
 <template>
     <div class="content">        
         <Header 
-            hasBack="true"
-            hasMenu="true"/>
+            :hasBack="true"
+            :hasMenu="true"/>
 		<main id="collaborate">
 			
             <section class="howToHelp">

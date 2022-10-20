@@ -20,6 +20,8 @@
     //This make possible the loading skeleton state
     const loadCardData = async () => {
         return new Promise((resolve) => {
+            console.log('here loadcarddata');
+
             setTimeout(() => {
                 base('Oracle cards').select({
                     view: 'List'
@@ -33,32 +35,32 @@
                     colorAlt.value = card.value.colorAlt;    
                     
                     resolve();        
-                });                
+                });
             }, 4000)
         })
     }
     
-    const data = ref(await loadCardData());
-
+    const data = ref(await loadCardData());           
+    
     // onBeforeMount (() => {
         base('Oracle cards').select({
             view: 'List'
         }).firstPage(function(err, records) {
             if (err) { console.error(err); return; }
-
+console.log('here bring stuff .. again?');
             card.value = records[props.id].fields;
 
             cover.value = 'url(' + card.value.image[0].url + ')';
             color.value = card.value.color;
             colorAlt.value = card.value.colorAlt;            
-        });
-    // });   
+        });   
+    // }); 
 </script>
 
 <template>
     <Header 
-        hasBack="true"
-        hasMenu="true"/>
+        :hasBack="true"
+        :hasMenu="true"/>
 	<main class="cardWrapper" :class="{fixedHeight: card.invitation === ' '}">
         <div class="imgWrapper"></div>
         
@@ -160,15 +162,16 @@
 
         .cardWrapper {
             flex-direction: row;
-            align-items: center;
+            align-items: flex-start;
             justify-content: space-between;            
             width: 100vw;
             height: 100vh;
+            overflow: hidden;
         }
 
         .imgWrapper {
             width: 50%;
-            height: 100%;
+            height: 100vh;
             padding-top: 0;
             border-radius: 0;
             background-size: cover;
@@ -177,12 +180,12 @@
 
         .textWrapper {
             width: 40%;
-            padding: 0 5%;
-            height: 100vh;
+            padding: 56px 5%;
+            /* height: 100vh; */
             display: flex;
             flex-direction: column;
             justify-content: center;
-            overflow-y: scroll;
+            /* overflow: scroll; */
         }
 
         .textWrapper p { 

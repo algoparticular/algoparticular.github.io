@@ -1,6 +1,5 @@
 <script setup>
-    import Header from '../components/Header.vue';	
-    import Toolbar from '../components/Toolbar.vue';	
+    import Header from '../components/Header.vue';		
     import DeckTemplate from '../components/DeckTemplate.vue';
     import DeckTemplateSkeleton from '../components/DeckTemplateSkeleton.vue';
 
@@ -36,8 +35,8 @@
 <template>
     <div class="content deck"> 
         <Header 
-            hasBack="true"
-            hasMenu="true"/>
+            :hasBack="true"
+            :hasMenu="true"/>
 		<h2>{{ $t("message.praxisCollectionTitle") }}</h2>
 		<p>{{ $t("message.praxisCollectionDescrip") }}</p>
 
@@ -49,9 +48,6 @@
                 <DeckTemplateSkeleton :amountOfCards="cardsAmount"/>
             </template>
         </Suspense>
-        <!-- <button class="back" @click="navigate('/')"></button> -->
-        
-        <Toolbar :hideAction="true"/>
     </div>
 </template>
 

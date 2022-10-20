@@ -48,13 +48,13 @@
 
 <template>
 	<div class="landing">
-        <Header hasMenu="true">
+        <Header :hasMenu="false">
             <template v-slot:logo>
                 <img alt="Algo Particular" src="../assets/SeedWhite.svg">
             </template>
         </Header>
        
-        <kinesis-container id="hero" tag="section" easing="cubic-bezier(0.23, 1, 0.32, 1)" perspective="100">
+        <kinesis-container id="hero" tag="section" easing="cubic-bezier(0.23, 1, 0.32, 1)" :perspective="100">
             <kinesis-element
                 tag="h1">
                 {{ $t("landing.intro") }}
@@ -62,29 +62,29 @@
             
             <kinesis-element 
                 class="splash particle"
-                strength="30"
+                :strength="30"
                 axis="y"
                 type="translate"/>
             <kinesis-element 
                 class="splash cell one"
-                strength="20"   
+                :strength="20"   
                 axis="x"
                 transformOrigin="top left"
                 type="translate"/>
             <kinesis-element 
                 class="splash cell two"
-                strength="40"
+                :strength="40"
                 transformOrigin="bottom right"
                 type="translate"/>
             <kinesis-element 
                 class="splash cell three"
-                strength="10"
+                :strength="10"
                 transformOrigin="bottom left"
                 type="translate"/>
 
             <div class="splash background"></div>            
         </kinesis-container>
-
+<!-- 
         <kinesis-container id="oracle" tag="section" easing="cubic-bezier(0.23, 1, 0.32, 1)" event="scroll">
             <div class="copy">
                 <div class="heading">
@@ -97,24 +97,17 @@
         
             <kinesis-element 
                 class="oracle particle"
-                strength="200"
+                :strength="200"
                 type="translate"/>
             <kinesis-element 
                 class="oracle tree"
-                strength="100"
+                :strength="100"
                 type="translate"/>
 
             <div class="oracle stars"></div>
-        </kinesis-container>
+        </kinesis-container> 
 
-        <section id="about">
-            <!-- <ul id="galleryWrapper">
-                <li :style="{backgroundImage: 'url(/gallery/27.jpg)'}"></li>
-                <li :style="{backgroundImage: 'url(gallery/3.jpg)'}"></li>
-                <li :style="{backgroundImage: 'url(gallery/29.jpg)'}"></li>
-                <li :style="{backgroundImage: 'url(gallery/4.jpg)'}"></li>
-                <li :style="{backgroundImage: 'url(gallery/20.jpg)'}"></li>
-            </ul> -->
+        <section id="about">            
             <div id="galleryWrapper"></div>
 
             <div class="copy">
@@ -132,6 +125,7 @@
         </section>
 
         <Footer />
+-->        
 	</div>
 </template>
 

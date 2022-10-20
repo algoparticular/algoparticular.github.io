@@ -19,13 +19,13 @@ const router = createRouter({
   history: createWebHistory(),
   routes: [
     {
-      path: "/praxis",
-      component: Home,
-    },
-    {
       path: "/",
       component: Landing,
     },
+    {
+      path: "/praxis",
+      component: Home,
+    },    
     {
       path: "/register",
       component: Register,

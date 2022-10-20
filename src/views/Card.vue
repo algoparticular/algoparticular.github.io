@@ -1,9 +1,8 @@
-<script setup>
-    import Header from '../components/Header.vue';
-    import Toolbar from '../components/Toolbar.vue';	
+<script setup>    
     import CardTemplate from '../components/CardTemplate.vue';
     import CardTemplateSkeleton from '../components/CardTemplateSkeleton.vue';
 
+    console.log('card please');
 </script>
 
 <template>    
@@ -16,7 +15,6 @@
                 <CardTemplateSkeleton :id="$route.params.id"/>
             </template>
         </Suspense>
-        <!-- <Toolbar :shareAction="true" :cardId="$route.params.id"/>  -->
     </div>
 </template>
 

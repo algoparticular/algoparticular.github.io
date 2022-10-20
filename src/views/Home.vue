@@ -15,17 +15,17 @@
 
 <template>
 	<div class="content home">
-		<Header hasMenu="true"/>
+		<Header :hasMenu="true"/>
 		<main id="home">			
-			<kinesis-container class="cover" easing="cubic-bezier(0.23, 1, 0.32, 1)" perspective="100">
+			<kinesis-container class="cover" easing="cubic-bezier(0.23, 1, 0.32, 1)" :perspective="100">
 				<kinesis-element 
 					class="oracle particle"
-					strength="200"
+					:strength="200"
 					transformOrigin="bottom right"
 					type="translate"/>
 				<kinesis-element 
 					class="oracle tree"
-					strength="100"
+					:strength="100"
 					type="translate"/>
 
 				<div class="oracle stars"></div>
@@ -48,7 +48,7 @@
 	</div>
 </template>
 
-<style>
+<style scoped>
 	.content.home {
 		background-color: #0282BB;
 	}

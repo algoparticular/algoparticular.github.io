@@ -30,9 +30,6 @@
 </script>
 
 <template>
-	<!-- v-model:language="$i18n.locale" @change="langChanged($i18n.locale)" -->
-	<!-- <LayoutHeader /> -->
-	
 	<router-view v-slot="{ Component }">
 		<transition name="fade" mode="out-in">
 			<component :is="Component" :key="$router.path" />
