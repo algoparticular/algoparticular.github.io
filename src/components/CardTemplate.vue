@@ -127,7 +127,7 @@
         background-image: v-bind(cover);
         background-size: cover;
         background-position: center;
-        box-shadow: inset 0px 4px 42px rgba(16, 16, 15, 0.18), inset 0px -4px 42px rgba(16, 16, 15, 0.18);              
+        box-shadow: 0px 4px 42px rgba(16, 16, 15, 0.18) inset, 0px -4px 42px rgba(16, 16, 15, 0.18) inset;
     }
 
     button.action {
@@ -137,7 +137,11 @@
         bottom: -30px;
         filter: none;
         background-color: v-bind(colorAlt);
-        outline: 6px solid v-bind(color);
+        /* outline: 6px solid v-bind(color); */
+        border: 6px solid v-bind(color);
+        width: 66px;
+        height: 66px;
+
         -webkit-transition: all 250ms ease-out;
         transition: all 250ms ease-out;
     }
