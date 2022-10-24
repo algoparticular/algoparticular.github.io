@@ -1,10 +1,13 @@
 <script setup>
     import { onMounted, ref } from 'vue'; 
+    import { useRouter } from 'vue-router';
     import DeckItem from "./DeckItem.vue";     
 
     const props = defineProps({
         amountOfCards: Number
     });    
+
+    const router = useRouter();
 
     function shuffleNumbers() {
         let array=[];
@@ -31,6 +34,15 @@
     }
 
     const deckData = ref(await loadDeckData());
+
+    //handle take a card
+    const handleTakeCard = (cardId) => {
+        console.log('push the f* card ' + cardId);
+        // console.log(router);
+        // // router.push({ path: '/praxis' });
+        router.push({ name: 'card', params: { id: cardId } });
+       
+    };
 </script>
 
 <template>
@@ -38,18 +50,32 @@
         <p class="deckIntro">{{ $t("oracle.deckCopy") }}</p>
         <div class="deckWrapper">
             <template v-for="cardItem in deckData" :key="cardItem">
-                <DeckItem :cardId="cardItem" :loading="false" />
+                <DeckItem 
+                    :cardId="cardItem" 
+                    :loading="false" 
+                    @takeCard="handleTakeCard"/>
+
+                    <!-- <RouterLink :to="{ name: 'card', params: { id: cardItem } }">
+                    <DeckItem 
+                        :cardId="cardItem" 
+                        :loading="false" 
+                        />
+                </RouterLink> -->
             </template>
         </div>
     </main>
 </template>
 
 <style>
+    #cardDeck {
+        padding-top: 15vh;
+    }
+
     .deckWrapper {
         display: flex;
         flex-wrap: wrap;
         width: calc(94px * 3 + 10px * 2);
-        margin: 0 auto;
+        margin: 0 auto;        
         gap: 8px;
     }
 
@@ -58,13 +84,18 @@
         font-size: 24px;
         color: #F7F8F1;
         text-align: center;
+        
         letter-spacing: 1px;
-        width: 360px;
-        min-height: 108px;
+        min-width: 360px;
+        /* min-height: 108px; */
     }
 
     /* DESKTOP */
-    @media screen and (min-width: 900px) and (max-width: 1280px) {
+    @media screen and (min-width: 769px) {
+        #cardDeck {
+            padding-top: 10vh;
+        }
+
         .deckWrapper {
             width: calc(94px * 9 + 10px * 8);
         }

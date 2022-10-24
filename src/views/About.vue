@@ -31,7 +31,7 @@
                 </div>
             </section>
             <section class="faq">
-                <h4 class="title">{{ $t("about.praxis") }}</h4>
+                <!-- <h4 class="title">{{ $t("about.praxis") }}</h4> -->
                 <p>{{ $t("about.praxisDescrip") }}</p>
             </section>
             <section class="faq">
@@ -43,6 +43,7 @@
                 </div>
             </section>            
             <section class="cta">
+                <h4>{{ $t("about.sustent") }}</h4>
                 <button @click="navigate('/collaborate')">{{ $t("about.cta") }}</button>
             </section>            
 		</main> 
@@ -145,9 +146,16 @@
         background-image: url('../assets/icon/Brote.svg');
     }
 
-    /* .cta button {
-        background-color: #E9EDD8;
-    } */
+    .cta {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+    }
+    .cta button {
+        min-width: 240px;
+    }
 
 
     /* DESKTOP */

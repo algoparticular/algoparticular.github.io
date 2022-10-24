@@ -32,7 +32,7 @@
                     cover.value = 'url(' + card.value.image[0].url + ')';
                     color.value = card.value.color;
                     colorAlt.value = card.value.colorAlt;    
-                    
+                    console.log(card.value);
                     resolve();        
                 });
             }, 4000)
@@ -41,23 +41,23 @@
     
     const data = ref(await loadCardData());           
     
-    // onBeforeMount (() => {
-        base('Oracle cards').select({
-            view: 'List'
-        }).firstPage(function(err, records) {
-            if (err) { console.error(err); return; }
-console.log('here bring stuff .. again?');
-            card.value = records[props.id].fields;
+//     onBeforeMount (() => {
+//         base('Oracle cards').select({
+//             view: 'List'
+//         }).firstPage(function(err, records) {
+//             if (err) { console.error(err); return; }
+// console.log('here bring stuff .. again?');
+//             card.value = records[props.id].fields;
 
-            cover.value = 'url(' + card.value.image[0].url + ')';
-            color.value = card.value.color;
-            colorAlt.value = card.value.colorAlt;            
-        });   
-    // }); 
+//             cover.value = 'url(' + card.value.image[0].url + ')';
+//             color.value = card.value.color;
+//             colorAlt.value = card.value.colorAlt;            
+//         });   
+//     }); 
 </script>
 
 <template>
-	<main class="cardWrapper" :class="{fixedHeight: card.invitation === ' '}">
+	<main class="cardWrapper">
         <div class="imageWrapper">
             <div class="illustration"></div>
             <button class="action" @click="router.push({ path: '/share/'+props.id });">
@@ -69,22 +69,22 @@ console.log('here bring stuff .. again?');
         </div>
         
         <div class="textWrapper">
-            <h4>
+            <h4 v-if="card['affirmation_'+$i18n.locale] != null">
                 {{ card['name_'+$i18n.locale] }}
             </h4>
-            <p class="">
+            <p :class="{onlyDescription: card['affirmation_'+$i18n.locale] == null}">
                 {{ card['description_'+$i18n.locale] }}
             </p>
             <div class="bottom">
                 <div>
-                    <h5 v-if="card.invitation != ' '">
+                    <h5 v-if="card['affirmation_'+$i18n.locale] != null">
                         {{ $t("oracle.cardAfirmattion") }}
                     </h5>
                     <p>
                         {{ card['affirmation_'+$i18n.locale] }}
                     </p>
                 </div>
-                <div v-if="card.invitation != ' '">
+                <div v-if="card['invitation_'+$i18n.locale] != null">
                     <h5>
                         {{ $t("oracle.cardInvitation") }}
                     </h5>
@@ -112,14 +112,10 @@ console.log('here bring stuff .. again?');
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        min-height: 100vh;
 
         background-color: v-bind(color);
-    }
-
-    .cardWrapper.fixedHeight {
-        height: 100vh;
-        justify-content: flex-start;
-    }
+    }    
 
     .imageWrapper {
         position: relative;
@@ -144,6 +140,8 @@ console.log('here bring stuff .. again?');
         filter: none;
         background-color: v-bind(colorAlt);
         outline: 6px solid v-bind(color);
+        -webkit-transition: all 250ms ease-out;
+        transition: all 250ms ease-out;
     }
 
     button.action .icon path {
@@ -151,7 +149,7 @@ console.log('here bring stuff .. again?');
     }    
 
     .textWrapper {
-        padding: 64px 40px 72px;
+        padding: 64px 40px;
     }
 
     .textWrapper h4 {
@@ -162,6 +160,11 @@ console.log('here bring stuff .. again?');
         padding: 0;
         text-align: justify;
         white-space: pre-line;
+    }
+
+    .textWrapper p.onlyDescription {
+        text-align: center;
+        padding: 40px 0;
     }
 
     .bottom {
@@ -188,7 +191,7 @@ console.log('here bring stuff .. again?');
             justify-content: space-around;            
             width: 82vw;
             padding: 56px 9vw;
-            /* height: 100vh;             */
+            min-height: 100vh;            
         }
 
         .imageWrapper {

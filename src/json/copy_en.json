@@ -60,7 +60,8 @@
             "oracleDescrip": "Just as when we travel through a place, we take the guidance of a map or a compass, on the path of self-discovery it is beneficial to take guidance from the so-called 'Higher Frequency', which is none other than the guidance of our deepest Self.\n\nPraxis invites both action and reflection, seeking to connect with what vibrates within.\n\nThe Oracle Cards, written by Belén Brito, are a tool for those of us who believe that magic exists. With her luminous calm, Belén urges us to find the answers to our inner self, using each card as a mirror to evaluate or validate our path.\n\nThus the Particles bring us those messages that our Being is needing in this moment, in this here and now.\n\nTranslated with www.DeepL.com/Translator (free version)",
             "seed": "Press the seed to receive a message",
             "brote": "Pulsa el brote\npara coleccionarlo",
-            "cta": "Want to help?"
+            "cta": "Want to help?",
+            "sustent": "Collaborate with us to develop this universe"
         },
         "collaborate": {
             "title": "Comming next",
@@ -70,14 +71,14 @@
             "donating": "Colaborando con cualquier monto que puedas. Imagina que estamos sentados en una mesa y decides invitar unos tes.",
             "whatsNext": "What's next?",
             "next": [
-                "Expandir el mazo Oráculo a 60 cartas.",
-                "Implementar cuentas de usuario para acceder a nuevas funciones.",
-                "Versión impresa del mazo Oráculo.",
-                "Crear un segundo mazo, tipo Tarot, de 78 cartas.",
-                "Versión impresa del mazo Tarot.",
-                "Realizar música original para cada carta.",
-                "Desarrollo de videojuego de mundo abierto.",
-                "Lanzamiento de colección NFT."
+                "Expand the Oracle deck",
+                "Implement user accounts to access new features.", 
+                "Printed version of the Oracle deck.",                 
+                "Create original music for each card.",
+                "Development of open-world video game.",
+                "Create a second, 78-card Tarot deck.",
+                "Printed version of the Tarot deck",                
+                "Launch of NFT collection."
             ],
             "forKids": "¿Che and for the kids?",
             "kids": "También... algo... soon..."

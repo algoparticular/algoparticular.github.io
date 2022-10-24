@@ -1,13 +1,12 @@
 <script setup>
-    import { onMounted, ref } from 'vue';
-    import { useRouter } from 'vue-router';
+    import { onMounted, ref } from 'vue';    
 
     const props = defineProps({
         cardId: String,
         loading: Boolean,
     });
 
-	const router = useRouter();
+    const emit = defineEmits(['takeCard']); 	
 
     const randomColor = ref('rgba(252, 252, 252, 0.42)');
     const randomShadow = ref('drop-shadow(0px 2px 3px rgb(234, 234, 234))');
@@ -54,15 +53,9 @@
         randomShadow.value = 'drop-shadow(0px 2px 3px rgb(234, 234, 234))';
     }
 
-    function something() {
-        console.log('hago esa cosa ' + props.cardId);
-        // router.back();
-        router.push({ name: 'card', params: { id: props.cardId } });
+    const picked = () => {
+        emit('takeCard', props.cardId);
     }
-    
-	function loadCard() {
-        router.push({ name: 'card', params: { id: props.cardId } });
-	}
 </script>
 
 <template>
@@ -71,7 +64,7 @@
     </div>
     <div class="deckItem tap" 
         :style="{borderColor: randomColor, filter: randomShadow}" 
-        @click="something()"
+        @click="picked()"
         @mouseenter="randomizeColor()" 
         @mouseleave="backColorToDefault()" 
         @touchstart="randomizeColor()" 

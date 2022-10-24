@@ -26,10 +26,6 @@
 		authListener();
 	});
 
-    const navigate = (url) => {
-        router.push({ path: url, replace: true });
-    };
-
 </script>
 
 <template>

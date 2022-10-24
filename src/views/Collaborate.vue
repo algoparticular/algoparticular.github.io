@@ -59,10 +59,9 @@
                 <h4>{{ $t("collaborate.forKids") }}</h4>
                 <p>{{ $t("collaborate.kids") }}</p>
             </section>
-            <section class="footerSection">
-                <img class="logo" src="../assets/Logo_mana.svg"/>
-                <!-- <div class="art" alt="Algo Particular"></div> -->
-            </section>
+            <!-- <section class="footerSection">
+                <img class="logo" src="../assets/Logo_mana.svg"/>                
+            </section> -->
 		</main> 
         <Footer />
 	</div>
@@ -79,6 +78,10 @@
         padding: 108px 0 108px;
         gap: 108px;
         text-align: center;
+    }
+
+    .button {
+        min-width: 240px;
     }
 
     .content button.back {   

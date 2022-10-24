@@ -4,18 +4,16 @@
     import DeckTemplateSkeleton from '../components/DeckTemplateSkeleton.vue';
 
     import { onBeforeMount, ref } from 'vue';
-    import { useRouter } from 'vue-router';
 
-    const router = useRouter();
     const cardsAmount = ref(33);
 
 </script>
 
-<template>
-    <Header 
-        :hasBack="true"
-        :hasMenu="true"/>
+<template>    
     <div class="content deck">         
+        <Header 
+            :hasBack="true"
+            :hasMenu="true"/>
         <Suspense>
             <template #default>
                 <DeckTemplate :amountOfCards="cardsAmount"/>
@@ -29,10 +27,8 @@
 
 <style>
     .content.deck {
-        padding: 13vh 0 108px; 
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
         height: auto;            
     }
@@ -40,9 +36,7 @@
 
     /* DESKTOP */
     @media screen and (min-width: 769px) {
-        .content.deck {
-            padding: 40px 0;
-        }
+        
     }
     
 </style>

@@ -1,7 +1,7 @@
 <script setup>
 	import { onMounted, ref } from 'vue';
     import { useRouter } from 'vue-router';
-    import { animate } from "motion";
+    import { animate, scroll } from "motion";
 
     import Header  from '../components/Header.vue';
     import Footer  from '../components/Footer.vue';
@@ -24,7 +24,8 @@
     //handle navigation
     const handleNavigate = (url) => {
         router.push({ path: url }); //, replace: true
-    };
+    };    
+
 
     // //ON MOUNTED
 	onMounted (() => {           
@@ -43,6 +44,19 @@
             }
             // console.log(currentIndex);
         }, 5000);
+
+        const colorSection = document.querySelectorAll("#uno")[0];
+
+        const scrollOptions = {
+            target: colorSection,
+            offset: ["start end", "end end"]
+        }
+
+        // Pass an animation or timeline to automatically scrub
+        scroll(
+            animate("#uno", { backgroundColor: "#FF6F61" }),
+            scrollOptions
+        );
     });
 </script>
 
@@ -465,7 +479,7 @@
 <style scoped>
     /* UNO */
     #uno {
-        background-color: #FF6F61;
+        background-color: #F7F8F1;
         display: flex;
         align-items: center;
         justify-content: center;
