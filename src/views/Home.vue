@@ -20,12 +20,12 @@
 			<kinesis-container class="cover" easing="cubic-bezier(0.23, 1, 0.32, 1)" :perspective="100">
 				<kinesis-element 
 					class="oracle particle"
-					:strength="200"
+					:strength="100"
 					transformOrigin="bottom right"
 					type="translate"/>
 				<kinesis-element 
 					class="oracle tree"
-					:strength="100"
+					:strength="60"
 					type="translate"/>
 
 				<div class="oracle stars"></div>
@@ -138,7 +138,7 @@
     @media screen and (min-width: 769px) {        
 
 		#panel {
-			right: 15vw;
+			right: 11vw;
 			bottom: 18vh;
 		}		
 

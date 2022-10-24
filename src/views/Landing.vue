@@ -48,7 +48,7 @@
 
 <template>
 	<div class="landing">
-        <Header :hasMenu="false">
+        <Header :hasMenu="true">
             <template v-slot:logo>
                 <img alt="Algo Particular" src="../assets/SeedWhite.svg">
             </template>
@@ -84,7 +84,7 @@
 
             <div class="splash background"></div>            
         </kinesis-container>
-<!-- 
+
         <kinesis-container id="oracle" tag="section" easing="cubic-bezier(0.23, 1, 0.32, 1)" event="scroll">
             <div class="copy">
                 <div class="heading">
@@ -105,9 +105,9 @@
                 type="translate"/>
 
             <div class="oracle stars"></div>
-        </kinesis-container> 
+        </kinesis-container>
 
-        <section id="about">            
+        <section id="about">
             <div id="galleryWrapper"></div>
 
             <div class="copy">
@@ -125,7 +125,6 @@
         </section>
 
         <Footer />
--->        
 	</div>
 </template>
 
@@ -179,10 +178,10 @@
 
     .splash.cell.one {
         background-image: url('../assets/hero/cell-one.png');
-        height: 23vh;
-        width: 23vw;
+        height: 27vh;
+        width: 27vw;
 
-        top: 72vh;
+        top: 69vh;
         right: 9vw;            
     }
 
@@ -192,14 +191,14 @@
         width: 23vw;
 
         top: 7vh;
-        left: 13vw;
+        right: 18vw;
     }
     .splash.cell.three {
         background-image: url('../assets/hero/cell-three.png');            
-        height: 23vh;
-        width: 23vw;
+        height: 27vh;
+        width: 27vw;
 
-        top: 80vh;
+        top: 78vh;
         left: 9vw;
     }    
 

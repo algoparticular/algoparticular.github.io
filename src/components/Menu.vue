@@ -101,7 +101,7 @@
 
     nav a:hover,
     #languageSelect label:hover {
-        color: #FF6F61;
+        color: #143246;
     }
 
     a.logout {
@@ -123,7 +123,7 @@
     }
 
     #languageSelect label.active {
-        color: #FF6F61;
+        color: #143246;
     }
 
     #languageSelect span {

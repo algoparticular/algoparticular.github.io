@@ -45,7 +45,7 @@ const app = createApp(App);
 
 app.use(i18n);
 app.use(router);
-app.use(VueSocialSharing);
 app.use(VueKinesis);
+app.use(VueSocialSharing);
 
 app.mount("#app");

@@ -8,56 +8,62 @@
     });
 
 	const router = useRouter();
+
+    const randomColor = ref('rgba(252, 252, 252, 0.42)');
+    const randomShadow = ref('drop-shadow(0px 2px 3px rgb(234, 234, 234))');
+    const colorWheel = ref([
+        {
+            color: '#E49414',
+            shadow: 'drop-shadow(0px 2px 3px rgb(228, 148, 20))',
+        },
+        {
+            color: '#F55F4B',
+            shadow: 'drop-shadow(0px 2px 3px rgb(245, 95, 75))',
+        },
+        {
+            color: '#FF7E39',
+            shadow: 'drop-shadow(0px 2px 3px rgb(255, 126, 57))',
+        },
+        {
+            color: '#FFF04D',
+            shadow: 'drop-shadow(0px 2px 3px rgb(255, 240, 77))',
+        },
+        {
+            color: '#75D090',
+            shadow: 'drop-shadow(0px 2px 3px rgb(117, 208, 144))',
+        },
+        {
+            color: '#46DBDD',
+            shadow: 'drop-shadow(0px 2px 3px rgb(70, 219, 221))',
+        },
+        {
+            color: '#B112B1',
+            shadow: 'drop-shadow(0px 2px 3px rgb(177, 18, 177))',
+        },
+    ]);
+
+    function randomizeColor() {
+        const randomIndex = Math.floor(Math.random() * 7); //+ 1
+        
+        randomColor.value = colorWheel.value[randomIndex].color;
+        randomShadow.value = colorWheel.value[randomIndex].shadow;
+    }
+
+    function backColorToDefault() {
+        randomColor.value = 'rgba(252, 252, 252, 0.42)';
+        randomShadow.value = 'drop-shadow(0px 2px 3px rgb(234, 234, 234))';
+    }
+
+    function something() {
+        console.log('hago esa cosa ' + props.cardId);
+        // router.back();
+        router.push({ name: 'card', params: { id: props.cardId } });
+    }
     
 	function loadCard() {
-        router.push({ name: 'card', params: {
-                                                id: props.cardId
-                                            }
-        });
+        router.push({ name: 'card', params: { id: props.cardId } });
 	}
 </script>
-
-<script>
-export default {
-    data() {
-        return {
-            randomColor: 'rgba(252, 252, 252, 0.42)',
-            randomShadow: 'drop-shadow(0px 2px 3px rgb(234, 234, 234))',
-            colorWheel: [
-                '#E49414',
-                '#F55F4B',
-                '#FF7E39',
-                '#FFF04D',
-                '#75D090',
-                '#46DBDD',
-                '#B112B1',
-            ],
-            shadowColors: [
-                'drop-shadow(0px 2px 3px rgb(228, 148, 20))',
-                'drop-shadow(0px 2px 3px rgb(245, 95, 75))',
-                'drop-shadow(0px 2px 3px rgb(255, 126, 57))',
-                'drop-shadow(0px 2px 3px rgb(255, 240, 77))',
-                'drop-shadow(0px 2px 3px rgb(117, 208, 144))',
-                'drop-shadow(0px 2px 3px rgb(70, 219, 221))',
-                'drop-shadow(0px 2px 3px rgb(177, 18, 177))',
-            ],
-        }
-    },
-    methods: {
-        randomizeColor() {
-            const randomIndex = Math.floor(Math.random() * 7); //+ 1
-            
-            this.randomColor = this.colorWheel[randomIndex];
-            this.randomShadow = this.shadowColors[randomIndex];
-        },
-        backColorToDefault() {
-            this.randomColor = 'rgba(252, 252, 252, 0.42)';
-            this.randomShadow = 'drop-shadow(0px 2px 3px rgb(234, 234, 234))';
-        }
-    }
-}
-</script>
-
 
 <template>
     <div class="deckItem loading" v-if="loading">
@@ -65,7 +71,7 @@ export default {
     </div>
     <div class="deckItem tap" 
         :style="{borderColor: randomColor, filter: randomShadow}" 
-        @click="loadCard()" 
+        @click="something()"
         @mouseenter="randomizeColor()" 
         @mouseleave="backColorToDefault()" 
         @touchstart="randomizeColor()" 

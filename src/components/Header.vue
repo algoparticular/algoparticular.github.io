@@ -50,7 +50,7 @@
 
 <template>
     <header>
-        <div class="justABox">
+        <div class="navContainer">
             <button v-if="props.hasBack" class="back" @click="handleBack()"></button>
         </div>
 
@@ -70,7 +70,7 @@
                     :hasCollaborate="true" />
             </div>
         </Transition>
-        <div class="justABox">
+        <div class="navContainer">
 		    <button v-if="props.hasMenu" id="menuButton" class="secondary menu" :class="{active: showMenu}" @click="toggleMenu()"></button>	                         
         </div>
     </header>
@@ -102,7 +102,7 @@
         width: 40px;
     }
 
-    .justABox {
+    .navContainer {
         width: 50px;
     }
 
