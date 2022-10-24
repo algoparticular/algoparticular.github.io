@@ -37,9 +37,6 @@
 
     //handle take a card
     const handleTakeCard = (cardId) => {
-        console.log('push the f* card ' + cardId);
-        // console.log(router);
-        // // router.push({ path: '/praxis' });
         router.push({ name: 'card', params: { id: cardId } });
        
     };

@@ -19,8 +19,6 @@
     //This make possible the loading skeleton state
     const loadCardData = async () => {
         return new Promise((resolve) => {
-            console.log('here loadcarddata');
-
             setTimeout(() => {
                 base('Oracle cards').select({
                     view: 'List'

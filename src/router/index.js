@@ -75,33 +75,33 @@ const router = createRouter({
 });
 
 // Persist the logged in user among pages
-// const getCurrentUser = () => {
-//     return new Promise ((resolve, reject) => {
-//         const removeListener = onAuthStateChanged(
-//             getAuth(),
-//             (user) => {
-//                 removeListener();
-//                 resolve(user);
-//             },
-//             reject
-//         );
-//     });
-// };
+const getCurrentUser = () => {
+    return new Promise ((resolve, reject) => {
+        const removeListener = onAuthStateChanged(
+            getAuth(),
+            (user) => {
+                removeListener();
+                resolve(user);
+            },
+            reject
+        );
+    });
+};
 
 // // Check user permission to see a page
-// router.beforeEach(async (to, from, next) => {    
-//     if(to.matched.some((record) => record.meta.requiresAuth)) {
-//         if (await getCurrentUser()) {
-//             next();
-//         } else {
-//             //alert('you dont have acces!');
-//             next('/');
-//         }
-//     } else {
-//         next();
-//     }
-//     window.scrollTo(0, 0);
-// });
+router.beforeEach(async (to, from, next) => {    
+    if(to.matched.some((record) => record.meta.requiresAuth)) {
+        if (await getCurrentUser()) {
+            next();
+        } else {
+            //alert('you dont have acces!');
+            next('/');
+        }
+    } else {
+        next();
+    }
+    window.scrollTo(0, 0);
+});
 
 export default router;
 

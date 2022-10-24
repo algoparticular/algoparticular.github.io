@@ -65,10 +65,12 @@
         },
         "collaborate": {
             "title": "Comming next",
-            "intro": "Con tu ayuda podemos seguir creando y haciendo crecer este universo. ",
+            "intro": "With your help we can continue to create and grow this universe.",
             "howToHelp": "How to help?",
-            "sharing": "Compartiendo nuestro contenido en redes sociales o a esas personas que crees que están necesitando algo de magia en sus vidas.",
-            "donating": "Colaborando con cualquier monto que puedas. Imagina que estamos sentados en una mesa y decides invitar unos tes.",
+            "sharing": "Sharing our content on social media or to those people you think are in need of some magic in their lives.",
+            "cocreate": "Co-creating this space. Since its birth, Algo Particular could not seek and transmit its purpose if it were not for other particles that, along the way, co-create or collaborate with the development and expression of this Universe.\nTo all of them I am infinitely grateful.",
+            "contact": "I'm happy to read you",
+            "donating": "Contributing whatever amount you can. Imagine we are sitting at a table and you decide to invite some tea.",
             "whatsNext": "What's next?",
             "next": [
                 "Expand the Oracle deck",
@@ -80,8 +82,8 @@
                 "Printed version of the Tarot deck",                
                 "Launch of NFT collection."
             ],
-            "forKids": "¿Che and for the kids?",
-            "kids": "También... algo... soon..."
+            "forKids": "¿'Che' and for the kids?",
+            "kids": "Yeah! I'm planning... something... soon..."
         },
         "oracle": {
             "deckCopy": "Feel and choose your card",

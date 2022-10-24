@@ -153,6 +153,10 @@
         justify-content: center;
         gap: 32px;
     }
+    .cta h4 {
+        text-align: center;
+    }
+
     .cta button {
         min-width: 240px;
     }

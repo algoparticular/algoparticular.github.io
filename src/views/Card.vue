@@ -2,8 +2,6 @@
     import CardTemplate from '../components/CardTemplate.vue';
     import CardTemplateSkeleton from '../components/CardTemplateSkeleton.vue';
     import Header from '../components/Header.vue';
-
-    console.log('card please');
 </script>
 
 <template>    
