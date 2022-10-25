@@ -219,7 +219,7 @@
             left: 0;
             right: 0;
             bottom: -104px;
-            outline: none;
+            border: none;
         }
 
         button.action:hover {
